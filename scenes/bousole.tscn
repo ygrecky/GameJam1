@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bfe54hqkti65k"]
+
+[ext_resource type="Script" uid="uid://dvcd7sj7nvep0" path="res://scripts/bousole.gd" id="1_ehad8"]
+[ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="2_an05w"]
+
+[node name="Bousole" type="Node2D" unique_id=538919682]
+script = ExtResource("1_ehad8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1602614179]
+rotation = -1.5707964
+texture = ExtResource("2_an05w")
