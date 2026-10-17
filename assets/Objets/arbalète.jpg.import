@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3ngdttqrirs5"
-path="res://.godot/imported/arbalète sans carreau.jpg-e28c6ea6a9561d91cdb07f68c59c0835.ctex"
+uid="uid://dxe6620yc2cp7"
+path="res://.godot/imported/arbalète.jpg-4110445ab4792c00ce4b9e5b7a5d8934.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objets/arbalète sans carreau.jpg"
-dest_files=["res://.godot/imported/arbalète sans carreau.jpg-e28c6ea6a9561d91cdb07f68c59c0835.ctex"]
+source_file="res://assets/Objets/arbalète.jpg"
+dest_files=["res://.godot/imported/arbalète.jpg-4110445ab4792c00ce4b9e5b7a5d8934.ctex"]
 
 [params]
 

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dbgsqtuqtac8i"]
 
+[ext_resource type="Script" uid="uid://d1yqfdyehesd4" path="res://scripts/inventory_slot.gd" id="1_1ntmo"]
 [ext_resource type="Texture2D" uid="uid://dad4i1rs4a2kl" path="res://Inventaire_texture.png" id="1_ruaot"]
 
 [node name="Inventaire" type="CanvasLayer" unique_id=1760829572]
@@ -7,31 +8,45 @@
 [node name="Control" type="Control" parent="." unique_id=1806326767]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 665.0
+offset_top = 238.0
+offset_right = 705.0
+offset_bottom = 278.0
 
 [node name="Inventaire_texture" type="TextureRect" parent="Control" unique_id=1869920248]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -523.0
+offset_top = 202.0
+offset_right = 329.0
+offset_bottom = 536.0
+texture = ExtResource("1_ruaot")
+expand_mode = 1
 
 [node name="Inventaire_grid" type="GridContainer" parent="Control" unique_id=631339406]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 38.0
+offset_top = 69.0
+offset_right = 78.0
+offset_bottom = 109.0
 
 [node name="Slot_1" type="Control" parent="Control/Inventaire_grid" unique_id=309470050]
 layout_mode = 2
+script = ExtResource("1_1ntmo")
 
-[node name="TextureRect" type="TextureRect" parent="Control/Inventaire_grid/Slot_1" unique_id=2111044478]
+[node name="objet_texture" type="TextureRect" parent="Control/Inventaire_grid/Slot_1" unique_id=2111044478]
 layout_mode = 0
-offset_left = -1139.0
-offset_top = -666.0
-offset_right = 1341.0
-offset_bottom = 2842.0
-texture = ExtResource("1_ruaot")
+offset_left = -567.0
+offset_top = -74.0
+offset_right = -415.0
+offset_bottom = 106.0
 
-[node name="Slot_area" type="Area2D" parent="Control/Inventaire_grid/Slot_1" unique_id=1427699834]
-collision_layer = 32768
+[node name="Slot_2" type="Control" parent="Control/Inventaire_grid" unique_id=1937467634]
+layout_mode = 2
+script = ExtResource("1_1ntmo")
 
-[node name="Slot_collision" type="CollisionShape2D" parent="Control/Inventaire_grid/Slot_1/Slot_area" unique_id=1166192876]
+[node name="objet_texture" type="TextureRect" parent="Control/Inventaire_grid/Slot_2" unique_id=1971636118]
+layout_mode = 0
+offset_left = 760.0
+offset_top = 977.0
+offset_right = 3240.0
+offset_bottom = 4485.0

@@ -4,7 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="4_lbhrr"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="5_iywne"]
+=======
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://bf8sa75aaop53" path="res://scenes/inventaire_objet.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://y1niflgkuws" path="res://scenes/player.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/ravin.tscn" id="7_u5sy4"]
@@ -25,6 +28,7 @@ scale = Vector2(0.5, 0.5)
 [node name="CanvasLayer" parent="." unique_id=1665444524 instance=ExtResource("1_uwrxv")]
 
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("5_iywne")]
+<<<<<<< Updated upstream
 position = Vector2(545, -123)
 [node name="Inventaire_objet" parent="." unique_id=595359068 instance=ExtResource("5_iywne")]
 
@@ -34,3 +38,9 @@ position = Vector2(-261, -73)
 [node name="ravin" parent="." unique_id=1464562848 node_paths=PackedStringArray("player") instance=ExtResource("7_u5sy4")]
 position = Vector2(5, 44)
 player = NodePath("../Player2")
+=======
+offset_left = 545.0
+offset_top = -123.0
+offset_right = 585.0
+offset_bottom = -83.0
+>>>>>>> Stashed changes
