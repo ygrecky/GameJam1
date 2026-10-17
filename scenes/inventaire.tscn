@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dbgsqtuqtac8i"]
 
-[ext_resource type="Script" uid="uid://d1yqfdyehesd4" path="res://scripts/inventory_slot.gd" id="1_1ntmo"]
-[ext_resource type="Texture2D" uid="uid://dad4i1rs4a2kl" path="res://Inventaire_texture.png" id="1_ruaot"]
+[ext_resource type="Script" uid="uid://d1yqfdyehesd4" path="res://scripts/inventory_slot_1.gd" id="1_1ntmo"]
+[ext_resource type="Texture2D" uid="uid://bpubtjeqx4gp6" path="res://assets/Inventaire_texture.png" id="1_o536d"]
+[ext_resource type="Script" uid="uid://df0pytvpnva4" path="res://scripts/inventory_slot_2.gd" id="3_8anfk"]
+[ext_resource type="Texture2D" uid="uid://bvjfbdh3ig1ml" path="res://assets/Objets/soufflet ouvert.png" id="4_o536d"]
+[ext_resource type="Texture2D" uid="uid://dcyf6utmlrbcl" path="res://assets/slot_texture.png" id="5_c2fa3"]
+[ext_resource type="Texture2D" uid="uid://dh54uq3krx6kc" path="res://assets/Objets/arbalète avec carreau.png" id="5_tnoi0"]
 
 [node name="Inventaire" type="CanvasLayer" unique_id=1760829572]
 
@@ -19,7 +23,7 @@ offset_left = -523.0
 offset_top = 202.0
 offset_right = 329.0
 offset_bottom = 536.0
-texture = ExtResource("1_ruaot")
+texture = ExtResource("1_o536d")
 expand_mode = 1
 
 [node name="Inventaire_grid" type="GridContainer" parent="Control" unique_id=631339406]
@@ -34,19 +38,46 @@ layout_mode = 2
 script = ExtResource("1_1ntmo")
 
 [node name="objet_texture" type="TextureRect" parent="Control/Inventaire_grid/Slot_1" unique_id=2111044478]
+visibility_layer = 512
 layout_mode = 0
-offset_left = -567.0
-offset_top = -74.0
-offset_right = -415.0
-offset_bottom = 106.0
+offset_left = -558.0
+offset_top = 114.0
+offset_right = -356.0
+offset_bottom = 365.0
+expand_mode = 1
 
 [node name="Slot_2" type="Control" parent="Control/Inventaire_grid" unique_id=1937467634]
 layout_mode = 2
-script = ExtResource("1_1ntmo")
+script = ExtResource("3_8anfk")
 
 [node name="objet_texture" type="TextureRect" parent="Control/Inventaire_grid/Slot_2" unique_id=1971636118]
 layout_mode = 0
-offset_left = 760.0
-offset_top = 977.0
-offset_right = 3240.0
-offset_bottom = 4485.0
+offset_left = -431.0
+offset_top = 36.0
+offset_right = -212.0
+offset_bottom = 354.0
+texture = ExtResource("4_o536d")
+expand_mode = 1
+
+[node name="Slot_3" type="Control" parent="Control/Inventaire_grid" unique_id=1152076168]
+layout_mode = 2
+script = ExtResource("1_1ntmo")
+
+[node name="TextureButton" type="TextureButton" parent="Control/Inventaire_grid/Slot_3" unique_id=1450064920]
+layout_mode = 0
+offset_left = -255.0
+offset_top = 224.0
+offset_right = -177.0
+offset_bottom = 303.0
+texture_normal = ExtResource("5_c2fa3")
+stretch_mode = 0
+
+[node name="objet_texture" type="TextureRect" parent="Control/Inventaire_grid/Slot_3" unique_id=1450138734]
+visibility_layer = 512
+layout_mode = 0
+offset_left = -304.0
+offset_top = 106.0
+offset_right = -102.0
+offset_bottom = 357.0
+texture = ExtResource("5_tnoi0")
+expand_mode = 1
