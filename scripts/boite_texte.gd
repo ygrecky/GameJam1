@@ -4,9 +4,10 @@ extends CanvasLayer
 @onready var sprite = $Control/VBoxContainer/SpriteCharacter
 @onready var state = $Control
 
-var avancement = 0
+
+
+
 var writing = false
-var target = ""
 var version = 0
 
 
@@ -27,6 +28,8 @@ func Next() -> void:
 	
 func open_window():
 	state.show()
+	version = -1
+	Next()
 
 func close_window():
 	state.hide()
@@ -36,9 +39,9 @@ func close_window():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	state.hide()
-	state = true
 	
+	state.visible = true
+	state.modulate = Color.RED
 	Next()
 	
 
