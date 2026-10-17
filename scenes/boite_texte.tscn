@@ -25,6 +25,7 @@ grow_vertical = 2
 alignment = 2
 
 [node name="SpriteCharacter" type="Sprite2D" parent="Control/VBoxContainer" unique_id=16664767]
+position = Vector2(140, 471)
 
 [node name="Name" type="Label" parent="Control/VBoxContainer" unique_id=447514456]
 layout_mode = 2
