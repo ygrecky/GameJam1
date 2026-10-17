@@ -15,7 +15,7 @@ var player_pos = {}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.game_controller = self
-	current_2d_scene_name = "res://scenes/game.tscn"
+	current_2d_scene_name = "res://scenes/menu.tscn"
 	scenes[current_2d_scene_name] = current_2d_scene
 	player_pos[current_2d_scene_name] = Vector2(0,0)
 	pass # Replace with function body.

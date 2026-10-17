@@ -2,4 +2,4 @@ extends Button
 
 
 func _on_pressed() -> void:
-	pass
+	Global.game_controller.change_2d_scene("res://scenes/game.tscn", true)
