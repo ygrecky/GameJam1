@@ -5,8 +5,10 @@ class_name Feu
 
 @export var feu : PackedScene
 var min_scale = 0.1
-var childrens = [false,false,false,false]
-@export var child_spacing = 40
+var current_child = [self,self,self,self]
+var can_have_child = [true,true,true,true]
+@export var child_spacing = 80
+@export var random_propag = 20
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	scale = Vector2(0,0)
@@ -20,24 +22,23 @@ func _process(delta: float) -> void:
 	pass
 	
 func grow(delta, player_facingX, player_facingY):
-	if(scale< Vector2(max_scale,max_scale)):
-		scale +=  scale_speed*delta*Vector2(1,1)
+	var rotation_index = 0
+	if(player_facingX==1):
+		rotation_index=1
+	if(player_facingX==-1):
+		rotation_index=3
+	if(player_facingY==1):
+		rotation_index=2
+	if(current_child[rotation_index].scale< Vector2(max_scale,max_scale)):
+		current_child[rotation_index].scale +=  scale_speed*delta*Vector2(1,1)
 	else:
-		var rotation_index = 0
-		if(player_facingX==1):
-			rotation_index=1
-		if(player_facingX==-1):
-			rotation_index=3
-		if(player_facingY==1):
-			rotation_index=2
-		
-		if(not(childrens[rotation_index])):
-			childrens[rotation_index]=true
-			
+		if(can_have_child[rotation_index]):
 			
 			var child = duplicate()
 			
-			child.position = position + Vector2(player_facingX*child_spacing, player_facingY*child_spacing)
+			child.position = current_child[rotation_index].position + Vector2(player_facingX*child_spacing +randi_range(-random_propag,random_propag), player_facingY*child_spacing +randi_range(-random_propag,random_propag))
+			child.can_have_child[rotation_index] = false
+			current_child[rotation_index] = child
 			get_tree().root.add_child.call_deferred(child)
 			
 	

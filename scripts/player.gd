@@ -9,7 +9,12 @@ func get_input():
 	action_zone.hide()
 	var direction_x = 0
 	var direction_y = 0
-
+	
+	if Input.is_action_pressed("action_1"):
+		action_pressed = true
+	else:
+		action_pressed = false
+	
 	if Input.is_action_pressed("left"):
 		direction_x = -1
 		rotation_degrees = 90
@@ -44,7 +49,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta):
 	
 	for elt in action_zone.get_overlapping_bodies():
-		if(elt is Feu):
+		if(elt is Feu and action_pressed):
 			elt.grow(delta, facing_x, facing_y)
 	get_input()
 	move_and_slide()
