@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://y1niflgkuws"]
+
+[ext_resource type="Script" uid="uid://bg03lrcrtwok2" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="2_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(127, 137)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7o8b"]
+size = Vector2(126.75, 2533)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q88c"]
+size = Vector2(125.5, 81)
+
+[node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_")]
+position = Vector2(91, 83)
+script = ExtResource("1_3vyb7")
+long_action_zone = NodePath("long_action_zone")
+short_action_zone = NodePath("short_action_zone")
+collision_ = NodePath("CollisionShape2D")
+aimant_acceleration = 70.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=240565828]
+position = Vector2(0, -9)
+texture = ExtResource("2_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1509566794]
+position = Vector2(-0.5, -4.5)
+shape = SubResource("RectangleShape2D_u081y")
+
+[node name="long_action_zone" type="Area2D" parent="." unique_id=1103071841]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long_action_zone" unique_id=855740907]
+position = Vector2(0, 1331.5)
+shape = SubResource("RectangleShape2D_y7o8b")
+
+[node name="short_action_zone" type="Area2D" parent="." unique_id=1003492248]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="short_action_zone" unique_id=62575915]
+position = Vector2(4, 104)
+shape = SubResource("RectangleShape2D_2q88c")

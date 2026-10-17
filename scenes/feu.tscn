@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cspr5mvrkw23x"]
 
-[ext_resource type="Script" uid="uid://ggw0r8l57rxc" path="res://scenes/feu.gd" id="1_kp38y"]
+[ext_resource type="Script" uid="uid://ggw0r8l57rxc" path="res://scripts/feu.gd" id="1_kp38y"]
 [ext_resource type="Texture2D" uid="uid://07ysdp47nkf0" path="res://assets/souris.jpg" id="2_kp38y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]

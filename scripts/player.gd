@@ -1,8 +1,10 @@
 extends CharacterBody2D
-
+class_name Player
 @export var speed = 300
 @export var long_action_zone: Area2D
 @export var short_action_zone : Area2D
+@export var collision_ : Area2D
+
 var facing_x = 0
 var facing_y = -1
 var action_pressed = false
@@ -25,18 +27,21 @@ func get_input():
 		rotation_degrees = 90
 		facing_x = -1
 		facing_y = 0
+
 		
 	if Input.is_action_pressed("right"):
 		direction_x = 1
 		rotation_degrees = -90
 		facing_x = 1
 		facing_y = 0
+
 		
 	if Input.is_action_pressed("down"):
 		direction_y = 1
 		rotation_degrees = 0
 		facing_x = 0
 		facing_y = 1
+
 		
 	if Input.is_action_pressed("up"):
 		direction_y = -1
@@ -59,5 +64,10 @@ func _physics_process(delta):
 		if(elt is BlocMagnetique and action_pressed):
 			aimant_activé = true
 			velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
+	for elt in collision_.get_overlapping_bodies():
+		if(elt!=self):
+			print(elt)
+
 	get_input()
 	move_and_slide()
+	

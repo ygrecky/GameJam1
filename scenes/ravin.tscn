@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b6dposcgekuv2"]
+
+[ext_resource type="Script" uid="uid://dpwa556ng5ht5" path="res://scripts/ravin.gd" id="1_b73sw"]
+[ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="1_icnik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(175, 566)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7o8b"]
+size = Vector2(155, 474)
+
+[node name="ravin" type="StaticBody2D" unique_id=674203935 node_paths=PackedStringArray("collision_", "area")]
+script = ExtResource("1_b73sw")
+collision_ = NodePath("CollisionShape2D")
+area = NodePath("Area2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1829732308]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_u081y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1294680920]
+position = Vector2(-1, 1)
+scale = Vector2(1.3222648, 4.3242188)
+texture = ExtResource("1_icnik")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=35694742]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1361209845]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_y7o8b")

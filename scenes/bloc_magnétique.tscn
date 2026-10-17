@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0tk2qqokmxjw"]
 
-[ext_resource type="Script" uid="uid://co8men4kcxmst" path="res://scenes/bloc_magnétique.gd" id="1_t5usk"]
+[ext_resource type="Script" uid="uid://co8men4kcxmst" path="res://scripts/bloc_magnétique.gd" id="1_t5usk"]
 [ext_resource type="Texture2D" uid="uid://h2a8wj6uoxl1" path="res://assets/arbre1.jpg" id="2_t5usk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
