@@ -56,8 +56,18 @@ func close_window():
 func _ready() -> void:
 	
 	open_window(dialogue)
-	speaker = name
+	
+	print(speaker2)
+	print(sprite2)
+	speaker.text = speaker2
 	sprite = sprite2
+	
+	print(speaker)
+	print(sprite)
+	
+	print($Control/VBoxContainer/SpriteCharacter)
+	print($Control/VBoxContainer/Name)
+	
 	
 
 
