@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://y1niflgkuws" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D" unique_id=439829170]
 
@@ -16,81 +17,4 @@ position = Vector2(91, 79)
 position = Vector2(330, 105)
 scale = Vector2(0.5, 0.5)
 
-[node name="Inventaire" type="CanvasLayer" parent="." unique_id=1135715354]
-
-[node name="Control" type="Control" parent="Inventaire" unique_id=1658136614]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Inventaire_texture" type="TextureRect" parent="Inventaire/Control" unique_id=1935249856]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Inventaire_grid" type="GridContainer" parent="Inventaire/Control" unique_id=1056968008]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot_1" type="Control" parent="Inventaire/Control/Inventaire_grid" unique_id=332176108]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Inventaire/Control/Inventaire_grid/Slot_1" unique_id=431432859]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot_area" type="Area2D" parent="Inventaire/Control/Inventaire_grid/Slot_1" unique_id=1292994817]
-collision_layer = 32768
-
-[node name="Slot_collision" type="CollisionShape2D" parent="Inventaire/Control/Inventaire_grid/Slot_1/Slot_area" unique_id=413907232]
-
-[node name="Slot_2" type="Control" parent="Inventaire/Control/Inventaire_grid" unique_id=1573999244]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Inventaire/Control/Inventaire_grid/Slot_2" unique_id=958326515]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot_area" type="Area2D" parent="Inventaire/Control/Inventaire_grid/Slot_2" unique_id=493358087]
-
-[node name="Slot_collision" type="CollisionShape2D" parent="Inventaire/Control/Inventaire_grid/Slot_2/Slot_area" unique_id=1645642913]
-
-[node name="Slot_3" type="Control" parent="Inventaire/Control/Inventaire_grid" unique_id=509561480]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Inventaire/Control/Inventaire_grid/Slot_3" unique_id=1787384954]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot_area" type="Area2D" parent="Inventaire/Control/Inventaire_grid/Slot_3" unique_id=1578688128]
-
-[node name="Slot_collision" type="CollisionShape2D" parent="Inventaire/Control/Inventaire_grid/Slot_3/Slot_area" unique_id=1259976694]
-
-[node name="Slot_4" type="Control" parent="Inventaire/Control/Inventaire_grid" unique_id=44499198]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Inventaire/Control/Inventaire_grid/Slot_4" unique_id=1439650774]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot_area" type="Area2D" parent="Inventaire/Control/Inventaire_grid/Slot_4" unique_id=1401208376]
-
-[node name="Slot_collision" type="CollisionShape2D" parent="Inventaire/Control/Inventaire_grid/Slot_4/Slot_area" unique_id=248172194]
-
-[node name="Slot_5" type="Control" parent="Inventaire/Control/Inventaire_grid" unique_id=974432171]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Inventaire/Control/Inventaire_grid/Slot_5" unique_id=557627051]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Slot_area" type="Area2D" parent="Inventaire/Control/Inventaire_grid/Slot_5" unique_id=882580660]
-
-[node name="Slot_collision" type="CollisionShape2D" parent="Inventaire/Control/Inventaire_grid/Slot_5/Slot_area" unique_id=1500214430]
+[node name="Inventaire" parent="." unique_id=1760829572 instance=ExtResource("4_lbhrr")]
