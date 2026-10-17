@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://cspr5mvrkw23x"]
 
 [ext_resource type="Script" uid="uid://ggw0r8l57rxc" path="res://scripts/feu.gd" id="1_kp38y"]
-[ext_resource type="Texture2D" uid="uid://07ysdp47nkf0" path="res://assets/souris.jpg" id="2_kp38y"]
+[ext_resource type="Texture2D" uid="uid://khwiorw0qs5i" path="res://assets/flamme.png" id="2_kp38y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
-size = Vector2(126, 125)
+size = Vector2(68, 90)
 
 [node name="Feu" type="StaticBody2D" unique_id=1264664788]
 script = ExtResource("1_kp38y")
+scale_speed = 2.0
+max_scale = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1270497746]
-position = Vector2(6, -6.9999847)
 scale = Vector2(0.052217755, 0.0570838)
 texture = ExtResource("2_kp38y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=164516229]
+position = Vector2(5, -10)
 shape = SubResource("RectangleShape2D_u081y")

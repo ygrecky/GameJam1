@@ -5,12 +5,15 @@ class_name Player
 @export var short_action_zone : Area2D
 @export var collision_ : Area2D
 @export var collision_shape2d : CollisionShape2D
+@export var sprite : Sprite2D
 
 var facing_x = 0
 var facing_y = -1
 var action_pressed = false
 var action_just_pressed = false
 var aimant_activé = false
+@export var fleche_delay: float
+var fleche_ready = true
 
 var inTransition = false
 
@@ -21,7 +24,7 @@ var isTalking = false
 
 func _ready():
 	Global.player = self
-func get_input():
+func get_input(delta):
 	var direction_x = 0
 	var direction_y = 0
 	action_just_pressed = Input.is_action_just_pressed("action_1")
@@ -30,6 +33,17 @@ func get_input():
 	else:
 		action_pressed = false
 		aimant_activé = false
+	
+	if(action_just_pressed and fleche_ready):
+		var fleche = load("res://scenes/flèche.tscn").instantiate()
+		fleche_ready = false
+		fleche.position = position + facing_x*sprite.get_rect().size.x*Vector2(1,0) + facing_y*sprite.get_rect().size.y*Vector2(0,1)
+		fleche.direction_x =facing_x
+		fleche.direction_y = facing_y
+		get_parent().add_child(fleche)
+		await get_tree().create_timer(fleche_delay).timeout
+		(func(): fleche_ready = true).call_deferred()
+		
 	
 	if Input.is_action_pressed("left"):
 		direction_x = -1
@@ -67,7 +81,7 @@ func get_input():
 		Global.player.inTransition = true
 		Global.game_controller.change_2d_scene("res://scenes/game.tscn",false,true)
 	if(not(aimant_activé)):
-		velocity = Vector2(direction_x, direction_y) * speed
+		velocity = Vector2(direction_x, direction_y) * speed*delta*60
 	
 func _process(delta: float) -> void:
 	pass
@@ -94,6 +108,6 @@ func _physics_process(delta):
 				Global.game_controller.change_2d_scene(elt.get_parent().destination_path,false,true)
 			
 
-		get_input()
+		get_input(delta)
 		move_and_slide()
 	
