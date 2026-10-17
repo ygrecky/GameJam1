@@ -19,6 +19,6 @@ func _process(_delta: float) -> void:
 func add_objet(n: int):
 	objet_is_unlocked[n-1] = true
 	if n == 1:
-		$objet_texture.texture("res://assets/Objets/arbalète.jpg")
+		$objet_texture.texture("res://assets/Objets/arbalète avec carreau.png")
 	elif n == 2:
-		$objet_texture.texture("res://assets/Objets/arbalète.jpg")
+		$objet_texture.texture("res://assets/Objets/soufflet ouvert.png")
