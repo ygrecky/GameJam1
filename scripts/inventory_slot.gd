@@ -2,7 +2,7 @@ extends Control
 
 @export var objet_is_unlocked = [false, false]
 
-var objet_1_image = preload("res://assets/Objets/arbalète.jpg").get_image()
+#var objet_1_image = preload("res://assets/Objets/arbalète.jpg").get_image()
 
 func _use_objet(n: int):
 	pass
