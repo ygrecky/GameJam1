@@ -12,6 +12,8 @@ class_name TextBox
 
 var text_number = 0
 var dialogue = []
+var speaker2 = ""
+var sprite2 
 
 func open_window(dialogue): #ouvre la boite de dialogue
 	state.show()
@@ -21,7 +23,8 @@ func open_window(dialogue): #ouvre la boite de dialogue
 func Next() -> void: #passe d'un dialogue à un autre
 	text_number += 1
 	
-	if text_number < dialogue.length():
+	if text_number < dialogue.size():
+
 		text.text = ""  #rafraichit la boite de dialogue
 		add_letters(dialogue[text_number],0,text_number) #la remplit
 	
@@ -36,7 +39,7 @@ func add_letters(target,avancement, version):
 		avancement += 1
 		
 		if avancement != target.length():
-			get_tree().create_timer(0.05).timeout.connect(func() : add_letters(target,avancement + 1,version))
+			get_tree().create_timer(0.05).timeout.connect(func() : add_letters(target,avancement,version))
 		
 	
 
@@ -53,6 +56,8 @@ func close_window():
 func _ready() -> void:
 	
 	open_window(dialogue)
+	speaker = name
+	sprite = sprite2
 	
 
 
