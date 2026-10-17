@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://c5i35xne8a86i"]
 
+[ext_resource type="PackedScene" uid="uid://y1niflgkuws" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_lnu2h"]
+
 [node name="Game" type="Node2D" unique_id=439829170]
+
+[node name="Player" parent="." unique_id=310191065 instance=ExtResource("1_uwrxv")]
+
+[node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("2_yqjtg")]
+position = Vector2(91, 79)
+
+[node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("3_lnu2h")]
+position = Vector2(536, 111)
+scale = Vector2(0.5, 0.5)
