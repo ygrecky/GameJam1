@@ -9,7 +9,7 @@ class_name TextBox
 
 
 
-
+var speakerPnj : Pnj
 var text_number = 0
 var dialogue = []
 var speaker2 = ""
@@ -29,6 +29,7 @@ func Next() -> void: #passe d'un dialogue à un autre
 		add_letters(dialogue[text_number],0,text_number) #la remplit
 	
 	else:
+		Global.player.isTalking = false
 		close_window()
 	
 

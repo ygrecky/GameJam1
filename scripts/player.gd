@@ -9,9 +9,12 @@ class_name Player
 var facing_x = 0
 var facing_y = -1
 var action_pressed = false
+var action_just_pressed = false
 var aimant_activé = false
 
 var inTransition = false
+
+var isTalking = false
 
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
@@ -21,7 +24,7 @@ func _ready():
 func get_input():
 	var direction_x = 0
 	var direction_y = 0
-	
+	action_just_pressed = Input.is_action_just_pressed("action_1")
 	if Input.is_action_pressed("action_1"):
 		action_pressed = true
 	else:
@@ -71,18 +74,22 @@ func _process(delta: float) -> void:
 		
 
 func _physics_process(delta):
-	
-	for elt in short_action_zone.get_overlapping_bodies():
-		if(elt is Feu and action_pressed):
-			elt.grow(delta, facing_x, facing_y)
-	for elt in long_action_zone.get_overlapping_bodies():
-		if(elt is BlocMagnetique and action_pressed):
-			aimant_activé = true
-			velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
-	for elt in collision_.get_overlapping_bodies():
-		if(elt!=self):
-			print(elt)
+	var isPaused = isTalking
+	if(not isPaused):
+		for elt in short_action_zone.get_overlapping_bodies():
+			if(elt is Feu and action_pressed):
+				elt.grow(delta, facing_x, facing_y)
+			if(elt is Pnj and action_just_pressed):
+				isTalking = true
+				elt.talk_to()
+		for elt in long_action_zone.get_overlapping_bodies():
+			if(elt is BlocMagnetique and action_pressed):
+				aimant_activé = true
+				velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
+		for elt in collision_.get_overlapping_bodies():
+			if(elt!=self):
+				print(elt)
 
-	get_input()
-	move_and_slide()
+		get_input()
+		move_and_slide()
 	
