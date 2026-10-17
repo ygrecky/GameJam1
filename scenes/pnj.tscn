@@ -7,13 +7,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
 
 [node name="pnj" type="CharacterBody2D" unique_id=281381040]
+position = Vector2(162, 58)
 script = ExtResource("1_xg58l")
 text_box = ExtResource("2_3is8m")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1018718080]
-visible = false
-scale = Vector2(0.01, 0.01)
-texture = ExtResource("1_0yhv8")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
 shape = SubResource("RectangleShape2D_ayuyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("1_0yhv8")
