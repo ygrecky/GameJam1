@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cbrakomq1kfn3"]
+
+[ext_resource type="Script" uid="uid://b8nsrx65nypys" path="res://scripts/tp_zone.gd" id="1_cp4dn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(76, 25)
+
+[node name="TpZone" type="Node2D" unique_id=1066630093]
+script = ExtResource("1_cp4dn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=849170685]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1141167091]
+position = Vector2(28, 2.5)
+shape = SubResource("RectangleShape2D_u081y")

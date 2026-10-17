@@ -89,6 +89,10 @@ func _physics_process(delta):
 		for elt in collision_.get_overlapping_bodies():
 			if(elt!=self):
 				print(elt)
+		for elt in collision_.get_overlapping_areas():
+			if(elt.get_parent() is TpZone and action_just_pressed):
+				Global.game_controller.change_2d_scene(elt.get_parent().destination_path,false,true)
+			
 
 		get_input()
 		move_and_slide()

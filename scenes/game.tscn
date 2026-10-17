@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bfe54hqkti65k" path="res://scenes/bousole.tscn" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/ravin.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="8_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="8_gee14"]
 
 [node name="Game" type="Node2D" unique_id=439829170]
 
@@ -31,3 +32,11 @@ scale = Vector2(7, 7)
 [node name="Bousole" parent="." unique_id=538919682 instance=ExtResource("7_gee14")]
 position = Vector2(787.0001, 198.99997)
 scale = Vector2(0.2, 0.2)
+
+[node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("8_gee14")]
+position = Vector2(792.99994, 117.99999)
+scale = Vector2(2.365, 2.365)
+destination_path = "res://scenes/test_scene.tscn"
+
+[node name="Bloc magnétique2" parent="." unique_id=1188949750 instance=ExtResource("5_iywne")]
+position = Vector2(544, 786)
