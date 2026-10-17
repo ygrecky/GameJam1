@@ -19,7 +19,7 @@ func open_window(dialogue): #ouvre la boite de dialogue
 	state.show()
 	text_number = -1
 	Next()
-	
+
 func Next() -> void: #passe d'un dialogue à un autre
 	text_number += 1
 	

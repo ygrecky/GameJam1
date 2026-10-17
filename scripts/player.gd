@@ -24,6 +24,8 @@ var isTalking = false
 
 func _ready():
 	Global.player = self
+	$Node2D/interaction_label.visible = false
+
 func get_input(delta):
 	var direction_x = 0
 	var direction_y = 0
@@ -48,6 +50,7 @@ func get_input(delta):
 	if Input.is_action_pressed("left"):
 		direction_x = -1
 		rotation_degrees = 90
+		$Node2D.rotation_degrees = -90
 		facing_x = -1
 		facing_y = 0
 	
@@ -56,6 +59,7 @@ func get_input(delta):
 	if Input.is_action_pressed("right"):
 		direction_x = 1
 		rotation_degrees = -90
+		$Node2D.rotation_degrees = 90
 		facing_x = 1
 		facing_y = 0
 
@@ -63,6 +67,7 @@ func get_input(delta):
 	if Input.is_action_pressed("down"):
 		direction_y = 1
 		rotation_degrees = 0
+		$Node2D.rotation_degrees = 0
 		facing_x = 0
 		facing_y = 1
 
@@ -70,6 +75,7 @@ func get_input(delta):
 	if Input.is_action_pressed("up"):
 		direction_y = -1
 		rotation_degrees = 180
+		$Node2D.rotation_degrees = 180
 		facing_x = 0
 		facing_y = -1
 		
@@ -111,3 +117,13 @@ func _physics_process(delta):
 		get_input(delta)
 		move_and_slide()
 	
+
+
+func _on_short_action_zone_body_entered(body: Node2D) -> void:
+	if body is Pnj:
+		$Node2D/interaction_label.visible = true
+
+
+func _on_short_action_zone_body_exited(body: Node2D) -> void:
+	if body is Pnj:
+		$Node2D/interaction_label.visible = false

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d1yqfdyehesd4" path="res://scripts/inventory_slot_1.gd" id="1_1ntmo"]
 [ext_resource type="Texture2D" uid="uid://bpubtjeqx4gp6" path="res://assets/Inventaire_texture.png" id="1_o536d"]
+[ext_resource type="Script" uid="uid://c2n2dfvivi4i" path="res://inventaire.gd" id="1_qkhb4"]
 [ext_resource type="Script" uid="uid://df0pytvpnva4" path="res://scripts/inventory_slot_2.gd" id="3_8anfk"]
 [ext_resource type="Texture2D" uid="uid://dcyf6utmlrbcl" path="res://assets/slot_texture.png" id="5_c2fa3"]
 [ext_resource type="Script" uid="uid://b26grp73yoa42" path="res://scripts/inventory_slot_3.gd" id="6_vgcyo"]
@@ -18,6 +19,7 @@ offset_left = 665.0
 offset_top = 238.0
 offset_right = 705.0
 offset_bottom = 278.0
+script = ExtResource("1_qkhb4")
 
 [node name="Inventaire_texture" type="TextureRect" parent="Control" unique_id=1869920248]
 layout_mode = 0
