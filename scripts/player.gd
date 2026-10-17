@@ -19,6 +19,12 @@ var inTransition = false
 
 var isTalking = false
 
+var object_unlocked = [true,true,true,false,false,false]
+var actions_pressed = [false,false,false,false,false,false]
+var soufleur_index = 0
+var aimant_index = 1
+var arbalette_index = 2
+
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
 
@@ -27,6 +33,7 @@ func _ready():
 	$Node2D/interaction_label.visible = false
 
 func get_input(delta):
+	aimant_activé = actions_pressed[aimant_index]
 	var direction_x = 0
 	var direction_y = 0
 	action_just_pressed = Input.is_action_just_pressed("action_1")
@@ -34,17 +41,8 @@ func get_input(delta):
 		action_pressed = true
 	else:
 		action_pressed = false
-		aimant_activé = false
 	
-	if(action_just_pressed and fleche_ready):
-		var fleche = load("res://scenes/flèche.tscn").instantiate()
-		fleche_ready = false
-		fleche.position = position + facing_x*sprite.get_rect().size.x*Vector2(1,0) + facing_y*sprite.get_rect().size.y*Vector2(0,1)
-		fleche.direction_x =facing_x
-		fleche.direction_y = facing_y
-		get_parent().add_child(fleche)
-		await get_tree().create_timer(fleche_delay).timeout
-		(func(): fleche_ready = true).call_deferred()
+	
 		
 	
 	if Input.is_action_pressed("left"):
@@ -97,15 +95,9 @@ func _physics_process(delta):
 	var isPaused = isTalking
 	if(not isPaused):
 		for elt in short_action_zone.get_overlapping_bodies():
-			if(elt is Feu and action_pressed):
-				elt.grow(delta, facing_x, facing_y)
 			if(elt is Pnj and action_just_pressed):
 				isTalking = true
 				elt.talk_to()
-		for elt in long_action_zone.get_overlapping_bodies():
-			if(elt is BlocMagnetique and action_pressed):
-				aimant_activé = true
-				velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
 		for elt in collision_.get_overlapping_bodies():
 			if(elt!=self):
 				print(elt)
@@ -115,7 +107,37 @@ func _physics_process(delta):
 			
 
 		get_input(delta)
+		for i in range(6):
+			if(actions_pressed[i] and object_unlocked[i]):
+				use_object(i,delta)
+				
 		move_and_slide()
+
+func use_object(index,delta):
+	if(true):
+		if(index == soufleur_index):
+			for elt in short_action_zone.get_overlapping_bodies():
+				if(elt is Feu):
+					elt.grow(delta, facing_x, facing_y)
+		
+	if(index == aimant_index and actions_pressed):
+		for elt in long_action_zone.get_overlapping_bodies():
+			if(elt is BlocMagnetique):
+				aimant_activé = true
+				velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
+	
+	if(index==arbalette_index):
+		if(fleche_ready):
+			var fleche = load("res://scenes/flèche.tscn").instantiate()
+			fleche_ready = false
+			fleche.position = position + facing_x*sprite.get_rect().size.x*Vector2(1,0) + facing_y*sprite.get_rect().size.y*Vector2(0,1)
+			fleche.direction_x =facing_x
+			fleche.direction_y = facing_y
+			get_parent().add_child(fleche)
+			await get_tree().create_timer(fleche_delay).timeout
+			(func(): fleche_ready = true).call_deferred()
+		
+			
 	
 
 
