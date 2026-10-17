@@ -9,7 +9,7 @@ func talk_to():
 	var bdd = text_box.instantiate()
 	bdd.dialogue = dialogue
 	bdd.speaker2 = pnj_name
-	bdd.sprite2 = $Sprite2D
+	bdd.sprite2 = $Sprite2D.texture
 	get_tree().root.add_child.call_deferred(bdd)
 
 

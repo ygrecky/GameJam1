@@ -57,16 +57,15 @@ func _ready() -> void:
 	
 	open_window(dialogue)
 	
-	print(speaker2)
 	print(sprite2)
 	speaker.text = speaker2
-	sprite = sprite2
+	sprite.texture = sprite2
+	sprite.scale = Vector2(0.05,0.05)
 	
-	print(speaker)
 	print(sprite)
+	print($Sprite2D)
 	
 	print($Control/VBoxContainer/SpriteCharacter)
-	print($Control/VBoxContainer/Name)
 	
 	
 

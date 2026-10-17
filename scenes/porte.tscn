@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bqigdv2txc6pv"]
+
+[ext_resource type="Script" uid="uid://bsd3dfg5glegw" path="res://scripts/porte.gd" id="1_xfqfg"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ayuyq"]
+
+[node name="porte" type="Area2D" unique_id=80626224]
+script = ExtResource("1_xfqfg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590393012]
+shape = SubResource("SegmentShape2D_ayuyq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

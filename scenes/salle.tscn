@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://4hf81b7l0h67"]
+
+[ext_resource type="Script" uid="uid://ogjmgotkgmd" path="res://scripts/salle.gd" id="1_sukma"]
+[ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="2_yfmeb"]
+
+[node name="salle" type="Node2D" unique_id=795148389]
+script = ExtResource("1_sukma")
+pnjs = ExtResource("2_yfmeb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=956301193]
