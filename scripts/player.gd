@@ -1,12 +1,16 @@
 extends CharacterBody2D
 
 @export var speed = 300
-@export var action_zone: Area2D
+@export var long_action_zone: Area2D
+@export var short_action_zone : Area2D
 var facing_x = 0
 var facing_y = -1
 var action_pressed = false
+var aimant_activé = false
+
+@export var aimant_acceleration = 0.1
+@export var aimant_max_speed = 600
 func get_input():
-	action_zone.hide()
 	var direction_x = 0
 	var direction_y = 0
 	
@@ -14,6 +18,7 @@ func get_input():
 		action_pressed = true
 	else:
 		action_pressed = false
+		aimant_activé = false
 	
 	if Input.is_action_pressed("left"):
 		direction_x = -1
@@ -38,9 +43,8 @@ func get_input():
 		rotation_degrees = 180
 		facing_x = 0
 		facing_y = -1
-		
-	velocity = Vector2(direction_x, direction_y) * speed
-	action_zone.show()
+	if(not(aimant_activé)):
+		velocity = Vector2(direction_x, direction_y) * speed
 	
 func _process(delta: float) -> void:
 	pass
@@ -48,8 +52,12 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta):
 	
-	for elt in action_zone.get_overlapping_bodies():
+	for elt in short_action_zone.get_overlapping_bodies():
 		if(elt is Feu and action_pressed):
 			elt.grow(delta, facing_x, facing_y)
+	for elt in long_action_zone.get_overlapping_bodies():
+		if(elt is BlocMagnetique and action_pressed):
+			aimant_activé = true
+			velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
 	get_input()
 	move_and_slide()

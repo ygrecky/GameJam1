@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c0tk2qqokmxjw"]
+
+[ext_resource type="Script" uid="uid://co8men4kcxmst" path="res://scenes/bloc_magnétique.gd" id="1_t5usk"]
+[ext_resource type="Texture2D" uid="uid://h2a8wj6uoxl1" path="res://assets/arbre1.jpg" id="2_t5usk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(131, 125)
+
+[node name="Bloc magnétique" type="StaticBody2D" unique_id=32234192]
+script = ExtResource("1_t5usk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=109963318]
+position = Vector2(11.124999, 0.8250017)
+scale = Vector2(0.09425403, 0.085618585)
+texture = ExtResource("2_t5usk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1421887315]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_u081y")
