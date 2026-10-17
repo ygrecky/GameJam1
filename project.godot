@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Game jam octobre"
+run/main_scene="uid://c5i35xne8a86i"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

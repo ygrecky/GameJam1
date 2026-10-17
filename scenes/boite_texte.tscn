@@ -1,14 +1,40 @@
 [gd_scene format=3 uid="uid://cs6uqe11x4rm3"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1665444524]
+[ext_resource type="Script" uid="uid://dbkwm5rarlq06" path="res://scenes/boite_texte.gd" id="1_1u0ie"]
+
+[node name="TextBox" type="CanvasLayer" unique_id=1665444524]
+visible = false
+script = ExtResource("1_1u0ie")
 
 [node name="Control" type="Control" parent="." unique_id=805666904]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_top = 0.71500003
+anchor_right = 1.0
+anchor_bottom = 1.006
+offset_left = 3.0
+offset_top = -465.32
+offset_right = 1.0
+offset_bottom = 0.11199951
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1729559496]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="SpriteCharacter" type="Sprite2D" parent="Control/VBoxContainer" unique_id=16664767]
+
+[node name="Name" type="Label" parent="Control/VBoxContainer" unique_id=447514456]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="Control/VBoxContainer" unique_id=740199049]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/VBoxContainer" unique_id=1800235023]
+layout_mode = 2
+text = "Next"
+
+[connection signal="button_down" from="Control/VBoxContainer/Button" to="." method="Next"]

@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://c5i35xne8a86i"]
 
+[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="1_uwrxv"]
+
 [node name="Game" type="Node2D" unique_id=439829170]
+
+[node name="CanvasLayer" parent="." unique_id=1665444524 instance=ExtResource("1_uwrxv")]
