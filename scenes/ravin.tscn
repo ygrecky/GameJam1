@@ -7,7 +7,7 @@
 size = Vector2(175, 566)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7o8b"]
-size = Vector2(155, 474)
+size = Vector2(134, 440)
 
 [node name="ravin" type="StaticBody2D" unique_id=674203935 node_paths=PackedStringArray("collision_", "area")]
 script = ExtResource("1_b73sw")
@@ -26,5 +26,5 @@ texture = ExtResource("1_icnik")
 [node name="Area2D" type="Area2D" parent="." unique_id=35694742]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1361209845]
-position = Vector2(0, -24)
+position = Vector2(-1, -7)
 shape = SubResource("RectangleShape2D_y7o8b")

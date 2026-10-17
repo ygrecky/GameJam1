@@ -36,7 +36,8 @@ func change_2d_scene(new_scene : String, delete : bool = false, keep_running : b
 		Global.player.position = player_pos[new_scene]
 		current_2d_scene_name = new_scene
 		scenes[new_scene].visible = true
-		(func(): scenes[new_scene].process_mode = Node.PROCESS_MODE_INHERIT).call_deferred(2)
+		await get_tree().create_timer(0.01).timeout
+		(func(): scenes[new_scene].process_mode = Node.PROCESS_MODE_INHERIT).call_deferred()
 		
 	
 	else:
