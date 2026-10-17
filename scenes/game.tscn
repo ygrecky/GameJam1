@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://y1niflgkuws" path="res://scenes/player.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/ravin.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="8_0tnpc"]
+[ext_resource type="Script" uid="uid://bbyw1y6o1di1w" path="res://scripts/pnj.gd" id="9_vtaks"]
 
 [node name="Game" type="Node2D" unique_id=439829170]
 
@@ -30,3 +32,6 @@ position = Vector2(-261, -73)
 [node name="ravin" parent="." unique_id=1464562848 node_paths=PackedStringArray("player") instance=ExtResource("7_u5sy4")]
 position = Vector2(36, -2)
 player = NodePath("../Player2")
+
+[node name="pnj" parent="." unique_id=281381040 instance=ExtResource("8_0tnpc")]
+script = ExtResource("9_vtaks")
