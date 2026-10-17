@@ -11,6 +11,7 @@ script = ExtResource("1_xg58l")
 text_box = ExtResource("2_3is8m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1018718080]
+visible = false
 scale = Vector2(0.01, 0.01)
 texture = ExtResource("1_0yhv8")
 
