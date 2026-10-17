@@ -1,4 +1,5 @@
 extends CanvasLayer
+class_name TextBox 
 @onready var text = $Control/VBoxContainer/Text
 @onready var speaker = $Control/VBoxContainer/Name
 @onready var sprite = $Control/VBoxContainer/SpriteCharacter
@@ -7,32 +8,46 @@ extends CanvasLayer
 
 
 
-var writing = false
-var version = 0
 
 
-func add_letter(target,avancement, vers):
-	if vers == version :
+var text_number = 0
+var dialogue = []
+var speaker2 = ""
+var sprite2 
+
+func open_window(dialogue): #ouvre la boite de dialogue
+	state.show()
+	text_number = -1
+	Next()
+	
+func Next() -> void: #passe d'un dialogue à un autre
+	text_number += 1
+	
+	if text_number < dialogue.size():
+
+		text.text = ""  #rafraichit la boite de dialogue
+		add_letters(dialogue[text_number],0,text_number) #la remplit
+	
+	else:
+		close_window()
+	
+
+func add_letters(target,avancement, version):
+	if version == text_number :
 		text.text += target[avancement]
 		print(text.text)
 		avancement += 1
 		
 		if avancement != target.length():
-			get_tree().create_timer(0.05).timeout.connect(func() : add_letter(target,avancement + 1,vers))
+			get_tree().create_timer(0.05).timeout.connect(func() : add_letters(target,avancement,version))
 		
 	
-func Next() -> void:
-	version += 1
-	text.text = ""
-	add_letter("paokedonzeciisnci",0,version)
-	
-func open_window():
-	state.show()
-	version = -1
-	Next()
+
+
 
 func close_window():
 	state.hide()
+	self.queue_free()
 	
 
 		
@@ -40,9 +55,19 @@ func close_window():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	state.visible = true
-	state.modulate = Color.RED
-	Next()
+	open_window(dialogue)
+	
+	print(speaker2)
+	print(sprite2)
+	speaker.text = speaker2
+	sprite = sprite2
+	
+	print(speaker)
+	print(sprite)
+	
+	print($Control/VBoxContainer/SpriteCharacter)
+	print($Control/VBoxContainer/Name)
+	
 	
 
 
