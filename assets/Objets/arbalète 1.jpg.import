@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxe6620yc2cp7"
-path="res://.godot/imported/arbalète 1.jpg-35b426264f2a1e72b584e124d06d2de7.ctex"
+uid="uid://br0ovvqmhcrfh"
+path="res://.godot/imported/soufflet ouvert.png-e120ed053e3c13faf6a87c6348f9ba1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objets/arbalète 1.jpg"
-dest_files=["res://.godot/imported/arbalète 1.jpg-35b426264f2a1e72b584e124d06d2de7.ctex"]
+source_file="res://Objets/soufflet ouvert.png"
+dest_files=["res://.godot/imported/soufflet ouvert.png-e120ed053e3c13faf6a87c6348f9ba1d.ctex"]
 
 [params]
 

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c5i35xne8a86i"]
+
+[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bf8sa75aaop53" path="res://scenes/inventaire_objet.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://y1niflgkuws" path="res://scenes/player.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/ravin.tscn" id="7_u5sy4"]
+
+[node name="Game" type="Node2D" unique_id=439829170]
+
+[node name="Player" parent="." unique_id=310191065 instance=ExtResource("1_uwrxv")]
+
+[node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("2_yqjtg")]
+position = Vector2(91, 79)
+
+[node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("3_lnu2h")]
+position = Vector2(258, 180)
+scale = Vector2(0.5, 0.5)
+
+[node name="Inventaire" parent="." unique_id=1760829572 instance=ExtResource("4_lbhrr")]
+
+[node name="CanvasLayer" parent="." unique_id=1665444524 instance=ExtResource("1_uwrxv")]
+
+[node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("5_iywne")]
+offset_left = 545.0
+offset_top = -123.0
+offset_right = 585.0
+offset_bottom = -83.0
+
+[node name="Player2" parent="." unique_id=1778858446 instance=ExtResource("6_p57ef")]
+position = Vector2(-261, -73)
+
+[node name="ravin" parent="." unique_id=1464562848 node_paths=PackedStringArray("player") instance=ExtResource("7_u5sy4")]
+position = Vector2(5, 44)
+player = NodePath("../Player2")

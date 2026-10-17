@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		collision_.disabled = false
 	
 	for elt in area.get_overlapping_bodies():
-		if(elt is Player and elt.aimant_activé):
+		if(elt is Player and not(elt.aimant_activé)):
 			print("mort : Tombé dans le ravin")
 			
 	pass
