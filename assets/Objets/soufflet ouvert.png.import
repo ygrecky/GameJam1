@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b22m2cxu8gnx5"
-path="res://.godot/imported/arbalète sans carreau belle.png-ef246771694427b5677e6e5e8c92674c.ctex"
+uid="uid://dr4iuuwf57m18"
+path="res://.godot/imported/soufflet ouvert.png-4af8b1d525786704a73f3a75ac6200ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objets/arbalète sans carreau belle.png"
-dest_files=["res://.godot/imported/arbalète sans carreau belle.png-ef246771694427b5677e6e5e8c92674c.ctex"]
+source_file="res://assets/Objets/soufflet ouvert.png"
+dest_files=["res://.godot/imported/soufflet ouvert.png-4af8b1d525786704a73f3a75ac6200ce.ctex"]
 
 [params]
 
