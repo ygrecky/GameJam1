@@ -4,6 +4,7 @@ class_name Player
 @export var long_action_zone: Area2D
 @export var short_action_zone : Area2D
 @export var collision_ : Area2D
+@export var collision_shape2d : CollisionShape2D
 
 var facing_x = 0
 var facing_y = -1
@@ -56,8 +57,11 @@ func get_input():
 		facing_y = -1
 		
 	if Input.is_action_just_pressed("debug1"):
+		Global.player.inTransition = true
 		Global.game_controller.change_2d_scene("res://scenes/test_scene.tscn",false,true)
+		
 	if Input.is_action_just_pressed("debug2"):
+		Global.player.inTransition = true
 		Global.game_controller.change_2d_scene("res://scenes/game.tscn",false,true)
 	if(not(aimant_activé)):
 		velocity = Vector2(direction_x, direction_y) * speed

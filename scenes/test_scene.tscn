@@ -2,16 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_wtsjf"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="4_rnaij"]
-[ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/ravin.tscn" id="5_h3xc6"]
 
 [node name="TestScene" type="Node2D" unique_id=1389360753]
 
 [node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("3_wtsjf")]
-position = Vector2(510, 205)
+position = Vector2(-216, 164)
 
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("4_rnaij")]
 position = Vector2(639, -19)
 
-[node name="ravin" parent="." unique_id=674203935 node_paths=PackedStringArray("player") instance=ExtResource("5_h3xc6")]
-position = Vector2(340, 94)
-player = NodePath("")
+[node name="Feu2" parent="." unique_id=1550519419 instance=ExtResource("3_wtsjf")]
+position = Vector2(138, 180)
+
+[node name="Feu3" parent="." unique_id=988197352 instance=ExtResource("3_wtsjf")]
+position = Vector2(-36, -218)

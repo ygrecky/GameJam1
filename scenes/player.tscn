@@ -15,12 +15,13 @@ size = Vector2(125.5, 81)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swyl7"]
 size = Vector2(116, 115)
 
-[node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_")]
+[node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_", "collision_shape2d")]
 position = Vector2(91, 83)
 script = ExtResource("1_3vyb7")
 long_action_zone = NodePath("long_action_zone")
 short_action_zone = NodePath("short_action_zone")
 collision_ = NodePath("Area2D")
+collision_shape2d = NodePath("CollisionShape2D")
 aimant_acceleration = 70.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=240565828]
