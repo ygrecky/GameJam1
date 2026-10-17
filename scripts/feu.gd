@@ -39,7 +39,8 @@ func grow(delta, player_facingX, player_facingY):
 			child.position = current_child[rotation_index].position + Vector2(player_facingX*child_spacing +randi_range(-random_propag,random_propag), player_facingY*child_spacing +randi_range(-random_propag,random_propag))
 			child.can_have_child[rotation_index] = false
 			current_child[rotation_index] = child
-			get_tree().root.add_child.call_deferred(child)
+			get_parent().add_child.call_deferred(child)
+			##get_tree().root.add_child.call_deferred(child)
 			
 	
 	

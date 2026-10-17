@@ -10,8 +10,13 @@ var facing_y = -1
 var action_pressed = false
 var aimant_activé = false
 
+var inTransition = false
+
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
+
+func _ready():
+	Global.player = self
 func get_input():
 	var direction_x = 0
 	var direction_y = 0
@@ -27,6 +32,7 @@ func get_input():
 		rotation_degrees = 90
 		facing_x = -1
 		facing_y = 0
+	
 
 		
 	if Input.is_action_pressed("right"):
@@ -48,6 +54,11 @@ func get_input():
 		rotation_degrees = 180
 		facing_x = 0
 		facing_y = -1
+		
+	if Input.is_action_just_pressed("debug1"):
+		Global.game_controller.change_2d_scene("res://scenes/test_scene.tscn",false,true)
+	if Input.is_action_just_pressed("debug2"):
+		Global.game_controller.change_2d_scene("res://scenes/game.tscn",false,true)
 	if(not(aimant_activé)):
 		velocity = Vector2(direction_x, direction_y) * speed
 	

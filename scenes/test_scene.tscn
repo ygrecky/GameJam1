@@ -1,16 +1,10 @@
 [gd_scene format=3 uid="uid://cbp00qyv8qqmn"]
 
-[ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="1_qjeyg"]
-[ext_resource type="PackedScene" uid="uid://y1niflgkuws" path="res://scenes/player.tscn" id="2_3qnke"]
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_wtsjf"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="4_rnaij"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/ravin.tscn" id="5_h3xc6"]
 
 [node name="TestScene" type="Node2D" unique_id=1389360753]
-
-[node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("1_qjeyg")]
-
-[node name="Player" parent="." unique_id=310191065 instance=ExtResource("2_3qnke")]
 
 [node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("3_wtsjf")]
 position = Vector2(510, 205)
@@ -20,4 +14,4 @@ position = Vector2(639, -19)
 
 [node name="ravin" parent="." unique_id=674203935 node_paths=PackedStringArray("player") instance=ExtResource("5_h3xc6")]
 position = Vector2(340, 94)
-player = NodePath("../Player")
+player = NodePath("")
