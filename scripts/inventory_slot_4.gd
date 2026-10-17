@@ -11,6 +11,7 @@ func _process(_delta: float) -> void:
 		add_objet()
 		if objet_is_unlocked:
 			_use_objet()
+	Global.player.actions_pressed[3] = Input.is_action_pressed("Slot 4")
 
 func add_objet():
 	objet_is_unlocked = true
