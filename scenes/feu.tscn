@@ -9,7 +9,6 @@ size = Vector2(126, 125)
 [node name="Feu" type="StaticBody2D" unique_id=1264664788]
 script = ExtResource("1_kp38y")
 scale_speed = 0.7
-max_scale = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1270497746]
 texture = ExtResource("1_3q6bg")

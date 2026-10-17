@@ -7,12 +7,13 @@
 [node name="Game" type="Node2D" unique_id=439829170]
 
 [node name="Player" parent="." unique_id=310191065 instance=ExtResource("1_uwrxv")]
+position = Vector2(-100, 109)
 
 [node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("2_yqjtg")]
 position = Vector2(91, 79)
 
 [node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("3_lnu2h")]
-position = Vector2(536, 111)
+position = Vector2(330, 105)
 scale = Vector2(0.5, 0.5)
 
 [node name="Inventaire" type="CanvasLayer" parent="." unique_id=1135715354]
