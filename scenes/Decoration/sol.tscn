@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4q1fjw45e8nh"]
 
-[ext_resource type="Texture2D" uid="uid://vuerpdq2f1qw" path="res://assets/tile_green_1.png" id="1_wlbjv"]
+[ext_resource type="Texture2D" uid="uid://c8cfk3wp61fcl" path="res://assets/tiles/tile_green_1.png" id="1_wlbjv"]
 
 [node name="Sol" type="Node2D" unique_id=1363791764]
 z_index = -2

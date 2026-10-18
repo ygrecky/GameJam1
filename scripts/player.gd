@@ -29,10 +29,11 @@ var arbalette_index = 2
 
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
+@export var interaction_label : Label
 
 func _ready():
 	Global.player = self
-	$Node2D/interaction_label.visible = false
+	interaction_label.visible = false
 
 func get_input(delta):
 	aimant_activé = actions_pressed[aimant_index]

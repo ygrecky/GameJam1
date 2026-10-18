@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c85teiosuenrx"]
 
-[ext_resource type="Texture2D" uid="uid://bfww10vqliay" path="res://assets/renard1.jpg" id="1_0yhv8"]
+[ext_resource type="Texture2D" uid="uid://bfww10vqliay" path="res://assets/Personnages/renard1.jpg" id="1_0yhv8"]
 [ext_resource type="Script" uid="uid://bbyw1y6o1di1w" path="res://scripts/pnj.gd" id="1_xg58l"]
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_3is8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
 
-[node name="pnj" type="CharacterBody2D" unique_id=281381040]
+[node name="pnj" type="CharacterBody2D" unique_id=281381040 node_paths=PackedStringArray("sprite")]
 position = Vector2(200, 200)
 script = ExtResource("1_xg58l")
 text_box = ExtResource("2_3is8m")
