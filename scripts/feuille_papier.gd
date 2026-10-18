@@ -9,6 +9,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	for elt in area.get_overlapping_bodies():
@@ -16,4 +17,3 @@ func _physics_process(delta: float) -> void:
 			print("Lecture de la feuille")
 			if not Global.lettre_grimoire:
 				Global.lettre_grimoire = true
-	pass

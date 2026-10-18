@@ -28,7 +28,7 @@ font_size = 55
 font = ExtResource("1_lti8b")
 font_size = 25
 
-[node name="Control" type="Control" unique_id=1638473399]
+[node name="Menu" type="Control" unique_id=1638473399]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

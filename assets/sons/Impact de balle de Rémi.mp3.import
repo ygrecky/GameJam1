@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3npousnyfm2o"
+path="res://.godot/imported/Impact de balle de Rémi.mp3-9cc78b6435c110670a146fc6b2a4de5e.mp3str"
+
+[deps]
+
+source_file="res://assets/sons/Impact de balle de Rémi.mp3"
+dest_files=["res://.godot/imported/Impact de balle de Rémi.mp3-9cc78b6435c110670a146fc6b2a4de5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbjbxkjd6035p"]
 
 [ext_resource type="Script" uid="uid://2a6vnihcvpc2" path="res://scripts/game_controller.gd" id="1_vq0e2"]
+[ext_resource type="PackedScene" uid="uid://12ipmypu4oct" path="res://scenes/resart_boucle.tscn" id="3_h843c"]
 [ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="3_ts4rt"]
 [ext_resource type="PackedScene" uid="uid://tmyu1glooduk" path="res://scenes/feuille_grimoire.tscn" id="4_rc0pn"]
 [ext_resource type="PackedScene" uid="uid://cnx2i1tywxq0i" path="res://scenes/menu.tscn" id="5_h843c"]
@@ -8,13 +9,15 @@
 [node name="Game Controller" type="Node" unique_id=1399786066 node_paths=PackedStringArray("world2D", "gui", "current_gui_scene")]
 script = ExtResource("1_vq0e2")
 world2D = NodePath("World")
-gui = NodePath("Control")
-current_gui_scene = NodePath("Control")
+gui = NodePath("Menu")
+current_gui_scene = NodePath("Menu")
 first_level = "res://scenes/Levels/Forêt.tscn"
 
 [node name="World" type="Node2D" parent="." unique_id=1022516678]
 
-[node name="Control" parent="." unique_id=1638473399 instance=ExtResource("5_h843c")]
+[node name="Menu" parent="." unique_id=1638473399 instance=ExtResource("5_h843c")]
+
+[node name="Resart_boucle" parent="." unique_id=631673236 instance=ExtResource("3_h843c")]
 
 [node name="UI" type="Control" parent="." unique_id=1748935202]
 layout_mode = 3
