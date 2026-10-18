@@ -16,13 +16,12 @@ var speaker2 = ""
 var sprite2 
 var ending_func = func() : pass
 
-func open_window(dialogue, end_func = func() : pass): #ouvre la boite de dialogue
+func open_window(dialogue, ending_func = func() : pass): #ouvre la boite de dialogue
 	state.show()
 	text_number = -1
-	self.ending_func = end_func
-	Next()
+	Next(ending_func)
 
-func Next() -> void: #passe d'un dialogue à un autre
+func Next(ending_func) -> void: #passe d'un dialogue à un autre
 	text_number += 1
 	
 	if text_number < dialogue.size():
@@ -54,32 +53,26 @@ func close_window(ending_func):
 	self.queue_free()
 	
 
-func set_speaker(speaker) :
-	speaker.text = speaker
-	sprite.texture = "res://assets/Personnages/"+speaker+".jpg"
-	sprite.scale = Vector2(0.05,0.05)
-	
 		
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	
 	open_window(dialogue,ending_func)
 	
+	print(sprite2)
 	speaker.text = speaker2
 	sprite.texture = sprite2
 	sprite.scale = Vector2(0.05,0.05)
 	
-
-
+	print(sprite)
+	print($Sprite2D)
 	
-
+	print($Control/VBoxContainer/SpriteCharacter)
 	
 	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("action_1"):
-		Next()
+	pass

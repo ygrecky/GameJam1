@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tmyu1glooduk"]
 
-[ext_resource type="Script" uid="uid://dnfmsrjobnp3c" path="res://affichage_lettre_grimoire.gd" id="1_lt2nm"]
+[ext_resource type="Script" uid="uid://dnfmsrjobnp3c" path="res://scripts/affichage_lettre_grimoire.gd" id="1_lt2nm"]
 [ext_resource type="Texture2D" uid="uid://0g5m0sb31yko" path="res://assets/Objets/feuille_grimoire.png" id="1_u0c74"]
 [ext_resource type="FontFile" uid="uid://02rf7b6ati7f" path="res://assets/fonts/squac___.TTF" id="2_lt2nm"]
 [ext_resource type="FontFile" uid="uid://dh3ighwjb5okn" path="res://assets/fonts/deigratia/DeiGrat.ttf" id="3_np212"]
