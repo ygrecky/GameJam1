@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dhhc5yxb43h51" path="res://scenes/Decoration/bordure_forêt.tscn" id="1_84da0"]
 [ext_resource type="PackedScene" uid="uid://b4q1fjw45e8nh" path="res://scenes/Decoration/sol.tscn" id="2_vkgck"]
 [ext_resource type="PackedScene" uid="uid://cjt3cvbpfol0c" path="res://scenes/Decoration/gros sol.tscn" id="3_o2a7o"]
-[ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="4_t8uv5"]
 [ext_resource type="PackedScene" uid="uid://csql6brr1dlkx" path="res://scenes/Decoration/chemin.tscn" id="5_kquo5"]
 [ext_resource type="PackedScene" uid="uid://bj3lnj4da6ult" path="res://scenes/Decoration/Maison.tscn" id="6_4hvs0"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="7_0dq5c"]
@@ -16,12 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="15_rhp8x"]
 [ext_resource type="PackedScene" uid="uid://8ti3h7q5uibo" path="res://scenes/Decoration/tile_chemin_tournant.tscn" id="16_2d8mv"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
-
-[ext_resource type="PackedScene" uid="uid://dpyhkgr8gw33h" path="res://scenes/PNJ/souris_cachée1.tscn" id="17_hvbxv"]
-
-[ext_resource type="Script" uid="uid://ccqekdiwep2y2" path="res://scenes/PNJ/pretre.gd" id="17_hvbxv"]
-[ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="18_dktky"]
-
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="18_dktky"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
@@ -285,18 +278,10 @@ position = Vector2(1840, -2644)
 [node name="Bloc magnétique10" parent="." unique_id=1735558842 instance=ExtResource("7_0dq5c")]
 position = Vector2(2163, -1998)
 
-[node name="souris_cachée1" parent="." unique_id=2085935034 instance=ExtResource("17_hvbxv")]
-position = Vector2(3280.0005, 2250)
-[node name="pnj2" parent="." unique_id=1086939031 instance=ExtResource("4_t8uv5")]
-position = Vector2(2832, 2305)
-script = ExtResource("17_hvbxv")
-image_link = "res://assets/Personnages/panda.png"
-
 [node name="souris_ev" parent="." unique_id=281381040 instance=ExtResource("18_dktky")]
 position = Vector2(178, -101)
+
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("18_dktky")]
 position = Vector2(1428.0001, 657)
 scale = Vector2(3.35, 3.35)
-destination_path = "res://scenes/Levels/maison_forgeron.tscn"
-
-[editable path="pnj2"]
+destination_path = "res://scenes/Levels/maison forgeron.tscn"
