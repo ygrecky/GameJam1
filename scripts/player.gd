@@ -21,7 +21,7 @@ var inTransition = false
 
 var isTalking = false
 
-var object_unlocked = [true,true,true,true,false,false]
+var object_unlocked = [false,false,false,false,false,false]
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
@@ -180,6 +180,9 @@ func _on_player_area_entered(area: Area2D) -> void:
 	elif area.get_parent() is Papier:
 		interaction_label.visible = true
 		interaction_label.text = "Lire (Espace)"
+	elif area.get_parent() is Aimant:
+		interaction_label.visible = true
+		interaction_label.text = "Récupérer (Espace)"
 		
 	pass # Replace with function body.
 
@@ -188,5 +191,7 @@ func _on_player_area_exited(area: Area2D) -> void:
 	if area.get_parent() is TpZone:
 		interaction_label.visible = false
 	elif area.get_parent() is Papier:
+		interaction_label.visible = false
+	elif area.get_parent() is Aimant:
 		interaction_label.visible = false
 	pass # Replace with function body.

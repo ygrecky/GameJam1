@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cgndvvo5vpwh1"]
+
+[ext_resource type="Texture2D" uid="uid://wi6t5l8udgxq" path="res://assets/Objets/aimant.png" id="1_knxp2"]
+[ext_resource type="Script" uid="uid://dgpllgc3t1vmp" path="res://scenes/aimant.gd" id="1_ubhfy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(1325, 1595)
+
+[node name="Aimant" type="Node2D" unique_id=1938256992 node_paths=PackedStringArray("zone")]
+position = Vector2(-5884, -566)
+script = ExtResource("1_ubhfy")
+zone = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1970311131]
+position = Vector2(25, -3)
+scale = Vector2(0.3375, 0.3608894)
+texture = ExtResource("1_knxp2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=980087342]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1593192557]
+position = Vector2(5.5, -0.5)
+shape = SubResource("RectangleShape2D_u081y")
