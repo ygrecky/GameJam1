@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2mqr4q4hlb5b"
-path="res://.godot/imported/tortue.jpg-fc4c7b8912b3dd3181f7674b4b0a275e.ctex"
+path="res://.godot/imported/tortue.jpg-90ae5e6bc802a335a6b82863445d6b41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tortue.jpg"
-dest_files=["res://.godot/imported/tortue.jpg-fc4c7b8912b3dd3181f7674b4b0a275e.ctex"]
+source_file="res://assets/Personnages/tortue.jpg"
+dest_files=["res://.godot/imported/tortue.jpg-90ae5e6bc802a335a6b82863445d6b41.ctex"]
 
 [params]
 

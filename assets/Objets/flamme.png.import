@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp0x3rqpet3cu"
-path="res://.godot/imported/flamme.png-2bd83da142d77aa2ce58ae41479ef2bd.ctex"
+path="res://.godot/imported/flamme.png-2d28bb8d6b61a7e9f095782965a08108.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/flamme.png"
-dest_files=["res://.godot/imported/flamme.png-2bd83da142d77aa2ce58ae41479ef2bd.ctex"]
+source_file="res://assets/Objets/flamme.png"
+dest_files=["res://.godot/imported/flamme.png-2d28bb8d6b61a7e9f095782965a08108.ctex"]
 
 [params]
 

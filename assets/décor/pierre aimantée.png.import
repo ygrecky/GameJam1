@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw7ud11hrm0ei"
-path="res://.godot/imported/pierre aimantée.png-ec83dfb82420a1baa921ffde3d6ac7fd.ctex"
+path="res://.godot/imported/pierre aimantée.png-f4f4776d9add0cb9de77db19e024b6d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pierre aimantée.png"
-dest_files=["res://.godot/imported/pierre aimantée.png-ec83dfb82420a1baa921ffde3d6ac7fd.ctex"]
+source_file="res://assets/décor/pierre aimantée.png"
+dest_files=["res://.godot/imported/pierre aimantée.png-f4f4776d9add0cb9de77db19e024b6d8.ctex"]
 
 [params]
 
