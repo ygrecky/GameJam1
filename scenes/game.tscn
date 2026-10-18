@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c5i35xne8a86i"]
 
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://xrskya04pwnm" path="res://scenes/texte.tscn" id="3_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bfe54hqkti65k" path="res://scenes/bousole.tscn" id="7_gee14"]
