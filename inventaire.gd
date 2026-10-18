@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Global.player.isTalking == true:
+	if Global.inMenu or Global.player.isTalking:
 		self.visible = false
 	else:
 		self.visible = true

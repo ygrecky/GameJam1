@@ -28,9 +28,11 @@ var arbalette_index = 2
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
 
+@export var interaction_label : Label
+
 func _ready():
 	Global.player = self
-	$Node2D/interaction_label.visible = false
+	interaction_label.visible = false
 
 func get_input(delta):
 	aimant_activé = actions_pressed[aimant_index]
@@ -80,10 +82,14 @@ func get_input(delta):
 	if Input.is_action_just_pressed("debug1"):
 		Global.player.inTransition = true
 		Global.game_controller.change_2d_scene("res://scenes/test_scene.tscn",false,true)
+	
 		
 	if Input.is_action_just_pressed("debug2"):
 		Global.player.inTransition = true
 		Global.game_controller.change_2d_scene("res://scenes/game.tscn",false,true)
+	
+	if Input.is_action_just_pressed("echap"):
+		Global.game_controller.switch_to_menu()
 	if(not(aimant_activé)):
 		velocity = Vector2(direction_x, direction_y) * speed*delta*60
 	
@@ -143,11 +149,28 @@ func use_object(index,delta):
 
 func _on_short_action_zone_body_entered(body: Node2D) -> void:
 	if body is Pnj:
-		$Node2D/interaction_label.visible = true
-		$Node2D/interaction_label/Label.visible = true
+		interaction_label.visible = true
+		interaction_label.text = "Talk (Space)"
+	
+
+		
+		
 
 
 func _on_short_action_zone_body_exited(body: Node2D) -> void:
 	if body is Pnj:
-		$Node2D/interaction_label.visible = false
-		$Node2D/interaction_label/Label.visible = false
+		interaction_label.visible = false
+		
+
+
+func _on_player_area_entered(area: Area2D) -> void:
+	if area.get_parent() is TpZone:
+		interaction_label.visible = true
+		interaction_label.text = "Enter (Space)"
+	pass # Replace with function body.
+
+
+func _on_player_area_exited(area: Area2D) -> void:
+	if area.get_parent() is TpZone:
+		interaction_label.visible = false
+	pass # Replace with function body.

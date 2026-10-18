@@ -12,11 +12,12 @@ func talk_to():
 	bdd.dialogue = dialogue
 	bdd.speaker2 = pnj_name
 	bdd.sprite2 = $Sprite2D.texture
-	get_tree().root.add_child.call_deferred(bdd)
+	Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+	
 
 
 func _ready() -> void:
-	talk_to()
+	pass
 	
 func _process(delta: float) -> void:
 	pass

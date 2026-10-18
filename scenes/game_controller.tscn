@@ -1,30 +1,23 @@
 [gd_scene format=3 uid="uid://cbjbxkjd6035p"]
 
 [ext_resource type="Script" uid="uid://2a6vnihcvpc2" path="res://scripts/game_controller.gd" id="1_vq0e2"]
-[ext_resource type="PackedScene" uid="uid://c5i35xne8a86i" path="res://scenes/game.tscn" id="2_vc4nx"]
-[ext_resource type="PackedScene" uid="uid://y1niflgkuws" path="res://scenes/player.tscn" id="3_ts4rt"]
-[ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="4_rc0pn"]
+[ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="3_ts4rt"]
+[ext_resource type="PackedScene" uid="uid://cnx2i1tywxq0i" path="res://scenes/menu.tscn" id="5_h843c"]
 
-[node name="Game Controller" type="Node" unique_id=1399786066 node_paths=PackedStringArray("world2D", "gui", "current_2d_scene")]
+[node name="Game Controller" type="Node" unique_id=1399786066 node_paths=PackedStringArray("world2D", "gui", "current_gui_scene")]
 script = ExtResource("1_vq0e2")
 world2D = NodePath("World")
 gui = NodePath("Control")
-current_2d_scene = NodePath("World/Game")
-
-[node name="Player" parent="." unique_id=310191065 instance=ExtResource("3_ts4rt")]
-
-[node name="Camera" parent="Player" unique_id=1820779306 instance=ExtResource("4_rc0pn")]
-position = Vector2(-7, -12)
-zoom = Vector2(0.75, 0.75)
-position_smoothing_enabled = true
+current_gui_scene = NodePath("Control")
 
 [node name="World" type="Node2D" parent="." unique_id=1022516678]
 
-[node name="Game" parent="World" unique_id=439829170 instance=ExtResource("2_vc4nx")]
-position = Vector2(2, 58)
+[node name="Control" parent="." unique_id=1638473399 instance=ExtResource("5_h843c")]
 
-[node name="Control" type="Control" parent="." unique_id=910839381]
+[node name="UI" type="Control" parent="." unique_id=1748935202]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Inventaire" parent="." unique_id=1760829572 instance=ExtResource("3_ts4rt")]
