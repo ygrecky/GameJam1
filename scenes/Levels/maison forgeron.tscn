@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(29.870966, 27.100977)
 
-[node name="Maison forgeron" type="Node2D" unique_id=1607215442]
+[node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
 position = Vector2(-2944, -307)
 
 [node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_frwyd")]
