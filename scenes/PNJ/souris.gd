@@ -1,5 +1,4 @@
-extends CharacterBody2D
-class_name Pnj
+
 
 @export var text_box: PackedScene
 
