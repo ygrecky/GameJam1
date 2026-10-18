@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwjhyeghglhqt"
-path="res://.godot/imported/grotte.png-d54660de604423b5e5cd9f5127ae7c8a.ctex"
+path="res://.godot/imported/grotte.png-c2b20eaeb61e103fc4ae85653a646a03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grotte.png"
-dest_files=["res://.godot/imported/grotte.png-d54660de604423b5e5cd9f5127ae7c8a.ctex"]
+source_file="res://assets/grotte.png"
+dest_files=["res://.godot/imported/grotte.png-c2b20eaeb61e103fc4ae85653a646a03.ctex"]
 
 [params]
 
