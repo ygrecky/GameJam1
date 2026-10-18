@@ -3,6 +3,7 @@ var game_controller : GameController
 var player : Player
 var time : int
 var inMenu = true
+var lettre_grimoire = false
 
 func lancer_la_messe():
 	

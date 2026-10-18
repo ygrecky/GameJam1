@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tmyu1glooduk"]
 
-[ext_resource type="Script" uid="uid://blgf3af4f2jge" path="res://scripts/feuille_papier.gd" id="1_lt2nm"]
+[ext_resource type="Script" uid="uid://dnfmsrjobnp3c" path="res://affichage_lettre_grimoire.gd" id="1_lt2nm"]
 [ext_resource type="Texture2D" uid="uid://0g5m0sb31yko" path="res://assets/Objets/feuille_grimoire.png" id="1_u0c74"]
 [ext_resource type="FontFile" uid="uid://02rf7b6ati7f" path="res://assets/fonts/squac___.TTF" id="2_lt2nm"]
 [ext_resource type="FontFile" uid="uid://dh3ighwjb5okn" path="res://assets/fonts/deigratia/DeiGrat.ttf" id="3_np212"]
@@ -26,13 +26,15 @@ font_size = 12
 font_color = Color(0, 0, 0, 1)
 
 [node name="Feuille_grimoire" type="CanvasLayer" unique_id=1217721136]
-script = ExtResource("1_lt2nm")
 
 [node name="Control" type="Control" parent="." unique_id=316681931]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 561.0
+offset_top = 123.0
+offset_right = 601.0
+offset_bottom = 163.0
+script = ExtResource("1_lt2nm")
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=1062946036]
 layout_mode = 1
