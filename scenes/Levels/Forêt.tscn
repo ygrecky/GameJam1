@@ -60,5 +60,6 @@ rotation = 1.5707964
 
 [node name="pnj" parent="." unique_id=281381040 instance=ExtResource("6_twwjl")]
 position = Vector2(999, 5)
+scale = Vector2(1.81, 1.81)
 script = ExtResource("8_epbjm")
 image_link = ""

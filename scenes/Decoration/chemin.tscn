@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://csql6brr1dlkx"]
+
+[ext_resource type="Texture2D" uid="uid://duxdpoeilmkar" path="res://assets/tiles/tile_chemin.png" id="1_xsaet"]
+
+[node name="Chemin" type="Node2D" unique_id=1271939013]
+position = Vector2(-599, 260)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=72501410]
+z_index = -1
+texture_repeat = 2
+position = Vector2(3, 3)
+rotation = 1.5707964
+scale = Vector2(10.825, 5.544)
+texture = ExtResource("1_xsaet")
+region_enabled = true
+region_rect = Rect2(0, -163.59999, 32.80002, 196.39998)
