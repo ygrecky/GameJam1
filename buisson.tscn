@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cdceu3a4nsefr"]
+
+[ext_resource type="Texture2D" uid="uid://deotkbav678xm" path="res://assets/décor/buisson.png" id="1_aes3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(226, 67)
+
+[node name="Buisson" type="StaticBody2D" unique_id=1694913730]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1048024937]
+position = Vector2(-2.9999847, 4)
+scale = Vector2(7.53, 7.53)
+texture = ExtResource("1_aes3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329522922]
+position = Vector2(3, 92)
+shape = SubResource("RectangleShape2D_u081y")

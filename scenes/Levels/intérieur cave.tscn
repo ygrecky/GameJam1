@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="6_mf8xv"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="7_klw4l"]
 
-[node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
+[node name="Maison forgeron3" type="Node2D" unique_id=1607215442]
 position = Vector2(-2944, -307)
 
 [node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_in2po")]
