@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhhc5yxb43h51" path="res://scenes/Decoration/bordure_forêt.tscn" id="1_0tc75"]
 [ext_resource type="PackedScene" uid="uid://idj78xtahws3" path="res://scenes/Decoration/autel.tscn" id="2_idvjd"]
+[ext_resource type="PackedScene" uid="uid://cpq1px774y8xe" path="res://scenes/Decoration/feuille_papier.tscn" id="4_lowvy"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="4_xcmwi"]
 
 [node name="Forêt" type="Node2D" unique_id=1533303300]
@@ -20,14 +21,17 @@ rotation = 1.5707964
 scale = Vector2(1, 2.195)
 
 [node name="Autel" parent="." unique_id=1929311227 instance=ExtResource("2_idvjd")]
-position = Vector2(1, 14)
+position = Vector2(-167, -9)
 
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("4_xcmwi")]
 position = Vector2(873, -213.00002)
 rotation = 1.5707964
 scale = Vector2(7.55, 5.2)
-destination_path = "res://scenes/game.tscn"
+destination_path = "res://scenes/Levels/Place village.tscn"
 
 [node name="Bordure forêt4" parent="." unique_id=1035199119 instance=ExtResource("1_0tc75")]
 position = Vector2(1109, -16)
 rotation = 1.5707964
+
+[node name="FeuillePapier" parent="." unique_id=1749185933 instance=ExtResource("4_lowvy")]
+position = Vector2(377, 4)

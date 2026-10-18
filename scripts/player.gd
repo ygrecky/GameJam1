@@ -156,7 +156,7 @@ func _on_short_action_zone_body_entered(body: Node2D) -> void:
 		$Node2D/interaction_label.visible = true
 		#$Node2D/interaction_label/Label.visible = true
 		interaction_label.visible = true
-		interaction_label.text = "Talk (Space)"
+		interaction_label.text = "Parler (Espace)"
 	
 
 		
@@ -174,11 +174,17 @@ func _on_short_action_zone_body_exited(body: Node2D) -> void:
 func _on_player_area_entered(area: Area2D) -> void:
 	if area.get_parent() is TpZone:
 		interaction_label.visible = true
-		interaction_label.text = "Enter (Space)"
+		interaction_label.text = "Entrer (Espace)"
+	elif area.get_parent() is Papier:
+		interaction_label.visible = true
+		interaction_label.text = "Lire (Espace)"
+		
 	pass # Replace with function body.
 
 
 func _on_player_area_exited(area: Area2D) -> void:
 	if area.get_parent() is TpZone:
+		interaction_label.visible = false
+	elif area.get_parent() is Papier:
 		interaction_label.visible = false
 	pass # Replace with function body.

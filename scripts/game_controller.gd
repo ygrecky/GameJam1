@@ -27,6 +27,7 @@ func _ready() -> void:
 	inventory = $Inventaire
 	
 	camera_limits["res://scenes/Levels/Forêt.tscn"] = [-910,-1043,935,993]
+	camera_limits["res://scenes/Levels/Place village.tscn"] = [-100,-5000,5000,5000]
 	pass # Replace with function body.
 
 
