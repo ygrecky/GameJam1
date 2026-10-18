@@ -1,12 +1,5 @@
 extends Pnj
 
-
-
-
-
-
-
-
 func talk_to():
 	var bdd = text_box.instantiate()
 	bdd.speakerPnj = self
