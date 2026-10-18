@@ -1,6 +1,9 @@
 extends CharacterBody2D
 class_name Pnj
+
 @export var text_box: PackedScene
+
+
 var pnj_name = "Grand Maistre"
 var dialogue = ["Bonjour ","Comment vas tu?","QuOIIIIIIIIIIII","CIAO"]
 var direction_x = -1

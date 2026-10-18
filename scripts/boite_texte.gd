@@ -71,7 +71,7 @@ func _ready() -> void:
 	sprite.texture = sprite2
 	sprite.scale = Vector2(0.05,0.05)
 	
-	print(sprite)
+
 
 	
 
