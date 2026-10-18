@@ -7,6 +7,8 @@ class_name Player
 @export var collision_shape2d : CollisionShape2D
 @export var sprite : Sprite2D
 
+@export var camera : Camera2D
+
 var facing_x = 0
 var facing_y = -1
 var action_pressed = false
@@ -19,7 +21,7 @@ var inTransition = false
 
 var isTalking = false
 
-var object_unlocked = [true,true,true,false,false,false]
+var object_unlocked = [true,true,true,true,false,false]
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
@@ -42,40 +44,39 @@ func get_input(delta):
 	else:
 		action_pressed = false
 	
-	
 		
-	
-	if Input.is_action_pressed("left"):
-		direction_x = -1
-		rotation_degrees = 90
-		$Node2D.rotation_degrees = -90
-		facing_x = -1
-		facing_y = 0
-	
+	if(not(aimant_activé) or velocity == Vector2(0,0)):
+		if Input.is_action_pressed("left"):
+			direction_x = -1
+			rotation_degrees = 90
+			$Node2D.rotation_degrees = -90
+			facing_x = -1
+			facing_y = 0
+		
 
-		
-	if Input.is_action_pressed("right"):
-		direction_x = 1
-		rotation_degrees = -90
-		$Node2D.rotation_degrees = 90
-		facing_x = 1
-		facing_y = 0
+			
+		if Input.is_action_pressed("right"):
+			direction_x = 1
+			rotation_degrees = -90
+			$Node2D.rotation_degrees = 90
+			facing_x = 1
+			facing_y = 0
 
-		
-	if Input.is_action_pressed("down"):
-		direction_y = 1
-		rotation_degrees = 0
-		$Node2D.rotation_degrees = 0
-		facing_x = 0
-		facing_y = 1
+			
+		if Input.is_action_pressed("down"):
+			direction_y = 1
+			rotation_degrees = 0
+			$Node2D.rotation_degrees = 0
+			facing_x = 0
+			facing_y = 1
 
-		
-	if Input.is_action_pressed("up"):
-		direction_y = -1
-		rotation_degrees = 180
-		$Node2D.rotation_degrees = 180
-		facing_x = 0
-		facing_y = -1
+			
+		if Input.is_action_pressed("up"):
+			direction_y = -1
+			rotation_degrees = 180
+			$Node2D.rotation_degrees = 180
+			facing_x = 0
+			facing_y = -1
 		
 	if Input.is_action_just_pressed("debug1"):
 		Global.player.inTransition = true
@@ -133,9 +134,12 @@ func use_object(index,delta):
 			fleche.position = position + facing_x*sprite.get_rect().size.x*Vector2(1,0) + facing_y*sprite.get_rect().size.y*Vector2(0,1)
 			fleche.direction_x =facing_x
 			fleche.direction_y = facing_y
-			get_parent().add_child(fleche)
+			Global.game_controller.current_2d_scene.add_child(fleche)
 			await get_tree().create_timer(fleche_delay).timeout
 			(func(): fleche_ready = true).call_deferred()
+	
+	if(index==3):
+		Global.game_controller.restart_loop()
 		
 
 
@@ -144,8 +148,37 @@ func use_object(index,delta):
 func _on_short_action_zone_body_entered(body: Node2D) -> void:
 	if body is Pnj:
 		$Node2D/interaction_label.visible = true
+		#$Node2D/interaction_label/Label.visible = true
+		interaction_label.visible = true
+		interaction_label.text = "Parler (Espace)"
+	
+
+		
+		
 
 
 func _on_short_action_zone_body_exited(body: Node2D) -> void:
 	if body is Pnj:
 		$Node2D/interaction_label.visible = false
+		#$Node2D/interaction_label/Label.visible = false
+		interaction_label.visible = false
+		
+
+
+func _on_player_area_entered(area: Area2D) -> void:
+	if area.get_parent() is TpZone:
+		interaction_label.visible = true
+		interaction_label.text = "Entrer (Espace)"
+	elif area.get_parent() is Papier:
+		interaction_label.visible = true
+		interaction_label.text = "Lire (Espace)"
+		
+	pass # Replace with function body.
+
+
+func _on_player_area_exited(area: Area2D) -> void:
+	if area.get_parent() is TpZone:
+		interaction_label.visible = false
+	elif area.get_parent() is Papier:
+		interaction_label.visible = false
+	pass # Replace with function body.

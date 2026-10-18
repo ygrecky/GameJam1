@@ -10,7 +10,6 @@ font_color = Color(0, 0, 0, 1)
 [node name="Textes" type="CanvasLayer" unique_id=1090087195]
 
 [node name="BAM !" type="Control" parent="." unique_id=132888010]
-visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

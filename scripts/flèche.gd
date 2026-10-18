@@ -22,3 +22,8 @@ func _physics_process(delta) -> void:
 			queue_free()
 	move_and_slide()
 	pass
+
+
+func _on_hidden() -> void:
+	queue_free()
+	pass # Replace with function body.

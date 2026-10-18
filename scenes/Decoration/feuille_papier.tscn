@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cpq1px774y8xe"]
+
+[ext_resource type="Script" uid="uid://blgf3af4f2jge" path="res://scenes/Decoration/feuille_papier.gd" id="1_x3uyg"]
+[ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="1_yv70s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(347, 314)
+
+[node name="FeuillePapier" type="Node2D" unique_id=1749185933 node_paths=PackedStringArray("area")]
+script = ExtResource("1_x3uyg")
+area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1537941183]
+position = Vector2(-1, 2)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("1_yv70s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1061743867]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=252913175]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_u081y")

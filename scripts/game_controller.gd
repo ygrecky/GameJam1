@@ -7,8 +7,16 @@ class_name GameController
 var current_2d_scene_name : String
 @export var current_gui_scene : Control
 
+@export var first_level : String
+
 var scenes = {}
 var player_pos = {}
+
+var inventory
+
+var restart_scene = "res://scenes/test_scene.tscn"
+
+var camera_limits = {}
 
 
 
@@ -16,7 +24,10 @@ var player_pos = {}
 func _ready() -> void:
 	Global.game_controller = self
 	current_2d_scene_name = "none"
+	inventory = $Inventaire
 	
+	camera_limits["res://scenes/Levels/Forêt.tscn"] = [-910,-1043,935,993]
+	camera_limits["res://scenes/Levels/Place village.tscn"] = [-100,-5000,5000,5000]
 	pass # Replace with function body.
 
 
@@ -25,6 +36,8 @@ func delete_menu():
 	current_gui_scene.queue_free()
 	var player = load("res://scenes/player.tscn").instantiate()
 	get_tree().root.add_child(player)
+	inventory = load("res://scenes/inventaire.tscn").instantiate()
+	get_tree().root.add_child(inventory)
 	
 func switch_to_menu():
 	Global.inMenu = true
@@ -37,7 +50,17 @@ func switch_to_menu():
 		scenes[scene].queue_free()
 		scenes.erase(scene)
 	Global.player.queue_free()
-
+	inventory.queue_free()
+	
+func restart_loop():
+	Global.player.queue_free()
+	inventory.queue_free()
+	var player = load("res://scenes/player.tscn").instantiate()
+	get_tree().root.add_child(player)
+	inventory = load("res://scenes/inventaire.tscn").instantiate()
+	get_tree().root.add_child(inventory)
+	change_2d_scene(restart_scene)
+	
 
 func change_2d_scene(new_scene : String, delete : bool = false, keep_running : bool = true):
 	Global.player.inTransition = true
@@ -68,6 +91,18 @@ func change_2d_scene(new_scene : String, delete : bool = false, keep_running : b
 		current_2d_scene = new
 		Global.player.position = Vector2(0,0)
 		current_2d_scene_name = new_scene
+	
+	if(new_scene in camera_limits):
+		var limits = camera_limits[new_scene]
+		Global.player.camera.limit_left = limits[0]
+		Global.player.camera.limit_top = limits[1]
+		Global.player.camera.limit_right = limits[2]
+		Global.player.camera.limit_bottom = limits[3]
+	else:
+		Global.player.camera.limit_left = -1000000000
+		Global.player.camera.limit_top = -1000000000
+		Global.player.camera.limit_right = 1000000000
+		Global.player.camera.limit_bottom = 100000000
 		
 	Global.player.inTransition=false
 	
