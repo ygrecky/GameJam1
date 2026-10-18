@@ -9,7 +9,7 @@ var direction_x = -1
 var direction_y = 0
 var speed = 200
 
-@export var dialogue : Array[String]
+var dialogue = [["test"],["test"],["aaaazaaaa"]]
 
 func ending_func() : pass
 @export var image_link : String

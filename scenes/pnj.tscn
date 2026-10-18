@@ -13,7 +13,6 @@ position = Vector2(200, 200)
 scale = Vector2(1.66, 1.66)
 script = ExtResource("1_xg58l")
 text_box = ExtResource("2_3is8m")
-dialogue = Array[String](["QUOIIII", "Feur.", "Byyyyye"])
 image_link = "res://assets/Personnages/souris_pixel.png"
 sprite = NodePath("Sprite2D")
 
