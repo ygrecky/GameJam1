@@ -4,7 +4,7 @@ class_name Feu
 @export var max_scale = 0.5
 
 @export var feu : PackedScene
-var min_scale = 0.1
+@export var min_scale = 0.1
 var current_child = [self,self,self,self]
 var can_have_child = [true,true,true,true]
 @export var child_spacing = 80

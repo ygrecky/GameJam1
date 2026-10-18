@@ -73,6 +73,10 @@ text = "Press space to talk"
 [node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("3_qhqgy")]
 position = Vector2(-7, -12)
 zoom = Vector2(0.75, 0.75)
+limit_left = -1000
+limit_top = -1000
+limit_right = 1000
+limit_bottom = 1000
 position_smoothing_enabled = true
 
 [connection signal="body_entered" from="short_action_zone" to="." method="_on_short_action_zone_body_entered"]

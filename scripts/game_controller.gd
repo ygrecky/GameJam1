@@ -7,8 +7,14 @@ class_name GameController
 var current_2d_scene_name : String
 @export var current_gui_scene : Control
 
+@export var first_level : String
+
 var scenes = {}
 var player_pos = {}
+
+var inventory
+
+var restart_scene = "res://scenes/test_scene.tscn"
 
 
 
@@ -16,6 +22,7 @@ var player_pos = {}
 func _ready() -> void:
 	Global.game_controller = self
 	current_2d_scene_name = "none"
+	inventory = $Inventaire
 	
 	pass # Replace with function body.
 
@@ -25,6 +32,8 @@ func delete_menu():
 	current_gui_scene.queue_free()
 	var player = load("res://scenes/player.tscn").instantiate()
 	get_tree().root.add_child(player)
+	inventory = load("res://scenes/inventaire.tscn").instantiate()
+	get_tree().root.add_child(inventory)
 	
 func switch_to_menu():
 	Global.inMenu = true
@@ -37,7 +46,17 @@ func switch_to_menu():
 		scenes[scene].queue_free()
 		scenes.erase(scene)
 	Global.player.queue_free()
-
+	inventory.queue_free()
+	
+func restart_loop():
+	Global.player.queue_free()
+	inventory.queue_free()
+	var player = load("res://scenes/player.tscn").instantiate()
+	get_tree().root.add_child(player)
+	inventory = load("res://scenes/inventaire.tscn").instantiate()
+	get_tree().root.add_child(inventory)
+	change_2d_scene(restart_scene)
+	
 
 func change_2d_scene(new_scene : String, delete : bool = false, keep_running : bool = true):
 	Global.player.inTransition = true

@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://c5i35xne8a86i"]
 
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://xrskya04pwnm" path="res://scenes/texte.tscn" id="3_vtaks"]
-[ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bfe54hqkti65k" path="res://scenes/bousole.tscn" id="7_gee14"]
-[ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/ravin.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="8_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://dcgjlvmvxyi47" path="res://scenes/flèche.tscn" id="9_0tnpc"]
@@ -13,32 +11,125 @@
 [node name="Game" type="Node2D" unique_id=439829170]
 
 [node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("3_lnu2h")]
-position = Vector2(258, 180)
+position = Vector2(-224, 305)
 scale = Vector2(0.5, 0.5)
 
-[node name="Inventaire" parent="." unique_id=1760829572 instance=ExtResource("4_lbhrr")]
-
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("5_iywne")]
-position = Vector2(545, -123)
+position = Vector2(847, -173)
 
 [node name="ravin" parent="." unique_id=1464562848 instance=ExtResource("7_u5sy4")]
-position = Vector2(147, -7)
+position = Vector2(268, 23)
 
 [node name="pnj" parent="." unique_id=281381040 instance=ExtResource("8_0tnpc")]
-position = Vector2(-533, -332)
+position = Vector2(667, 106)
 scale = Vector2(7, 7)
 
 [node name="Bousole" parent="." unique_id=538919682 instance=ExtResource("7_gee14")]
-position = Vector2(787.0001, 198.99997)
+position = Vector2(-275, 88)
 scale = Vector2(0.2, 0.2)
 
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("8_gee14")]
-position = Vector2(792.99994, 117.99999)
+position = Vector2(929.99994, 117.99999)
 scale = Vector2(2.365, 2.365)
 destination_path = "res://scenes/test_scene.tscn"
 
 [node name="Bloc magnétique2" parent="." unique_id=1188949750 instance=ExtResource("5_iywne")]
-position = Vector2(544, 786)
+position = Vector2(-202, -177)
 
 [node name="Flèche" parent="." unique_id=1745330232 instance=ExtResource("9_0tnpc")]
 position = Vector2(-952, -38)
+
+[node name="Blocs" type="Node2D" parent="." unique_id=988447854]
+
+[node name="Bloc magnétique16" parent="Blocs" unique_id=545825099 instance=ExtResource("5_iywne")]
+position = Vector2(1387, -912)
+
+[node name="Bloc magnétique17" parent="Blocs" unique_id=362449344 instance=ExtResource("5_iywne")]
+position = Vector2(1400, -789)
+
+[node name="Bloc magnétique18" parent="Blocs" unique_id=209499609 instance=ExtResource("5_iywne")]
+position = Vector2(1396, -653)
+
+[node name="Bloc magnétique19" parent="Blocs" unique_id=755465883 instance=ExtResource("5_iywne")]
+position = Vector2(1397, -1036)
+
+[node name="Bloc magnétique20" parent="Blocs" unique_id=780353106 instance=ExtResource("5_iywne")]
+position = Vector2(764, -1667)
+
+[node name="Bloc magnétique21" parent="Blocs" unique_id=1125600184 instance=ExtResource("5_iywne")]
+position = Vector2(615, -1669)
+
+[node name="Bloc magnétique22" parent="Blocs" unique_id=121628322 instance=ExtResource("5_iywne")]
+position = Vector2(473, -1667)
+
+[node name="Bloc magnétique23" parent="Blocs" unique_id=1544221501 instance=ExtResource("5_iywne")]
+position = Vector2(331, -1655)
+
+[node name="Bloc magnétique24" parent="Blocs" unique_id=241444500 instance=ExtResource("5_iywne")]
+position = Vector2(167, -1562)
+
+[node name="Bloc magnétique25" parent="Blocs" unique_id=2130922253 instance=ExtResource("5_iywne")]
+position = Vector2(159, -1175)
+
+[node name="Bloc magnétique26" parent="Blocs" unique_id=634183754 instance=ExtResource("5_iywne")]
+position = Vector2(164, -1301)
+
+[node name="Bloc magnétique27" parent="Blocs" unique_id=129930815 instance=ExtResource("5_iywne")]
+position = Vector2(164, -1435)
+
+[node name="Bloc magnétique28" parent="Blocs" unique_id=1840043769 instance=ExtResource("5_iywne")]
+position = Vector2(1287, -557)
+
+[node name="Bloc magnétique29" parent="Blocs" unique_id=1892144550 instance=ExtResource("5_iywne")]
+position = Vector2(1138, -559)
+
+[node name="Bloc magnétique30" parent="Blocs" unique_id=2055126553 instance=ExtResource("5_iywne")]
+position = Vector2(996, -557)
+
+[node name="Bloc magnétique31" parent="Blocs" unique_id=1724242517 instance=ExtResource("5_iywne")]
+position = Vector2(854, -545)
+
+[node name="Bloc magnétique" parent="Blocs" unique_id=1444404204 instance=ExtResource("5_iywne")]
+position = Vector2(1399, -1414)
+
+[node name="Bloc magnétique3" parent="Blocs" unique_id=346053794 instance=ExtResource("5_iywne")]
+position = Vector2(160, -1054)
+
+[node name="Bloc magnétique2" parent="Blocs" unique_id=114275639 instance=ExtResource("5_iywne")]
+position = Vector2(1412, -1291)
+
+[node name="Bloc magnétique4" parent="Blocs" unique_id=59943174 instance=ExtResource("5_iywne")]
+position = Vector2(1408, -1155)
+
+[node name="Bloc magnétique5" parent="Blocs" unique_id=1249652148 instance=ExtResource("5_iywne")]
+position = Vector2(571, -540)
+
+[node name="Bloc magnétique6" parent="Blocs" unique_id=1974597815 instance=ExtResource("5_iywne")]
+position = Vector2(713, -531)
+
+[node name="Bloc magnétique7" parent="Blocs" unique_id=966770134 instance=ExtResource("5_iywne")]
+position = Vector2(293, -515)
+
+[node name="Bloc magnétique8" parent="Blocs" unique_id=1474834688 instance=ExtResource("5_iywne")]
+position = Vector2(152, -667)
+
+[node name="Bloc magnétique9" parent="Blocs" unique_id=1211543941 instance=ExtResource("5_iywne")]
+position = Vector2(157, -793)
+
+[node name="Bloc magnétique10" parent="Blocs" unique_id=1493685902 instance=ExtResource("5_iywne")]
+position = Vector2(157, -927)
+
+[node name="Bloc magnétique11" parent="Blocs" unique_id=1260485322 instance=ExtResource("5_iywne")]
+position = Vector2(1409, -1538)
+
+[node name="Bloc magnétique12" parent="Blocs" unique_id=2033397318 instance=ExtResource("5_iywne")]
+position = Vector2(1301, -1688)
+
+[node name="Bloc magnétique13" parent="Blocs" unique_id=638852485 instance=ExtResource("5_iywne")]
+position = Vector2(1152, -1690)
+
+[node name="Bloc magnétique14" parent="Blocs" unique_id=794160835 instance=ExtResource("5_iywne")]
+position = Vector2(1010, -1688)
+
+[node name="Bloc magnétique15" parent="Blocs" unique_id=495101951 instance=ExtResource("5_iywne")]
+position = Vector2(868, -1676)
