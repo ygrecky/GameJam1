@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcjyuhhxy1aoc"]
 
-[ext_resource type="Script" uid="uid://dh0qoaaa4f7qj" path="res://souris_cachée2.gd" id="1_m45w1"]
+[ext_resource type="Script" uid="uid://dh0qoaaa4f7qj" path="res://scenes/PNJ/souris_cachée2.gd" id="1_m45w1"]
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_pkope"]
 [ext_resource type="Texture2D" uid="uid://dy2mog5dvqljg" path="res://assets/Personnages/souris transp.png" id="3_ijvhk"]
 

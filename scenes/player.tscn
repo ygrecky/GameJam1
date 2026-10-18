@@ -16,6 +16,9 @@ size = Vector2(125.5, 81)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swyl7"]
 size = Vector2(100, 100)
 
+[sub_resource type="LabelSettings" id="LabelSettings_m45w1"]
+font_size = 200
+
 [node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_", "collision_shape2d", "sprite", "camera", "interaction_label")]
 position = Vector2(-448, -88)
 script = ExtResource("1_3vyb7")
@@ -69,12 +72,14 @@ position = Vector2(-2, -149.00005)
 scale = Vector2(0.15, 0.134)
 
 [node name="Label" type="Label" parent="Node2D/interaction_label" unique_id=2001153775]
-offset_left = -539.9995
-offset_top = 52.239136
-offset_right = 700.0
-offset_bottom = 230.23914
+z_index = 15
+offset_left = -713.33154
+offset_top = -74.62634
+offset_right = 715.66846
+offset_bottom = 198.37366
 theme_override_font_sizes/font_size = 130
-text = "Press space to talk"
+text = "Parler (espace)"
+label_settings = SubResource("LabelSettings_m45w1")
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("3_qhqgy")]
