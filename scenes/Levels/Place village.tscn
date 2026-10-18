@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cjt3cvbpfol0c" path="res://scenes/Decoration/gros sol.tscn" id="3_o2a7o"]
 [ext_resource type="PackedScene" uid="uid://csql6brr1dlkx" path="res://scenes/Decoration/chemin.tscn" id="5_kquo5"]
 [ext_resource type="PackedScene" uid="uid://bj3lnj4da6ult" path="res://scenes/Decoration/Maison.tscn" id="6_4hvs0"]
+[ext_resource type="Texture2D" uid="uid://d1mefj16jo70f" path="res://assets/maison_bleue.png" id="6_hvbxv"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="7_0dq5c"]
 [ext_resource type="PackedScene" uid="uid://cqisqshyk32o7" path="res://scenes/Decoration/Eglise.tscn" id="8_qan31"]
 [ext_resource type="PackedScene" uid="uid://bfe54hqkti65k" path="res://scenes/bousole.tscn" id="10_m65ih"]
@@ -15,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="15_rhp8x"]
 [ext_resource type="PackedScene" uid="uid://8ti3h7q5uibo" path="res://scenes/Decoration/tile_chemin_tournant.tscn" id="16_2d8mv"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
+[ext_resource type="Texture2D" uid="uid://dwjhyeghglhqt" path="res://assets/grotte.png" id="17_dktky"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="18_dktky"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
@@ -77,9 +79,15 @@ position = Vector2(5926, -11)
 position = Vector2(653, -387.99994)
 scale = Vector2(8.585, 8.585)
 
+[node name="Sprite2D" parent="Maison" index="0" unique_id=1361344285]
+texture = ExtResource("6_hvbxv")
+
 [node name="Maison2" parent="." unique_id=1323063652 instance=ExtResource("6_4hvs0")]
 position = Vector2(2329, -1087)
 scale = Vector2(10, 10)
+
+[node name="Sprite2D" parent="Maison2" index="0" unique_id=1361344285]
+texture = ExtResource("6_hvbxv")
 
 [node name="Maison3" parent="." unique_id=727810482 instance=ExtResource("6_4hvs0")]
 position = Vector2(1676, 331.0001)
@@ -88,6 +96,9 @@ scale = Vector2(10, 10)
 [node name="Maison4" parent="." unique_id=1822626747 instance=ExtResource("6_4hvs0")]
 position = Vector2(4275, 1995)
 scale = Vector2(10, 10)
+
+[node name="Sprite2D" parent="Maison4" index="0" unique_id=1361344285]
+texture = ExtResource("6_hvbxv")
 
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("7_0dq5c")]
 position = Vector2(4337, 1)
@@ -189,6 +200,9 @@ position = Vector2(10, 1459)
 position = Vector2(1575.0002, 1960)
 scale = Vector2(10, 10)
 
+[node name="Sprite2D" parent="Maison5" index="0" unique_id=1361344285]
+texture = ExtResource("6_hvbxv")
+
 [node name="Chemin virage3" parent="." unique_id=604175554 instance=ExtResource("11_d4wbx")]
 position = Vector2(3631, 2668)
 rotation = 3.1415927
@@ -249,9 +263,9 @@ position = Vector2(14, -3328)
 position = Vector2(3960, -3267)
 
 [node name="ravin" parent="." unique_id=674203935 instance=ExtResource("16_hvbxv")]
-position = Vector2(1902.9999, -2306)
+position = Vector2(1903.9999, -2336.0002)
 rotation = 1.5707964
-scale = Vector2(1.02, 5.97)
+scale = Vector2(2.725, 6.01)
 
 [node name="Bordure foret verticale6" parent="." unique_id=100315914 instance=ExtResource("15_rhp8x")]
 position = Vector2(-43.999996, -2806)
@@ -272,6 +286,9 @@ scale = Vector2(1.895, 1.895)
 [node name="Maison6" parent="." unique_id=2090207498 instance=ExtResource("6_4hvs0")]
 position = Vector2(2531, -3372.9998)
 scale = Vector2(10, 10)
+
+[node name="Sprite2D" parent="Maison6" index="0" unique_id=1361344285]
+texture = ExtResource("17_dktky")
 
 [node name="Bloc magnétique9" parent="." unique_id=1976428260 instance=ExtResource("7_0dq5c")]
 position = Vector2(1840, -2644)
@@ -297,4 +314,35 @@ position = Vector2(2641, 1022)
 scale = Vector2(4.205, 4.205)
 destination_path = "res://scenes/Levels/intérieur église.tscn"
 
+[node name="TpZone4" parent="." unique_id=365409938 instance=ExtResource("18_dktky")]
+position = Vector2(2495, -3032)
+scale = Vector2(3.625, 3.625)
+destination_path = "res://scenes/Levels/intérieur cave.tscn"
+
+[node name="Bordure forêt4" parent="." unique_id=963673157 instance=ExtResource("1_84da0")]
+position = Vector2(671, -4614)
+
+[node name="Bordure forêt5" parent="." unique_id=861078726 instance=ExtResource("1_84da0")]
+position = Vector2(1824, -4606)
+
+[node name="Bordure forêt6" parent="." unique_id=505605979 instance=ExtResource("1_84da0")]
+position = Vector2(2993, -4600)
+
+[node name="Bordure forêt7" parent="." unique_id=1783542592 instance=ExtResource("1_84da0")]
+position = Vector2(4165, -4608)
+
+[node name="Bordure forêt8" parent="." unique_id=1155885851 instance=ExtResource("1_84da0")]
+position = Vector2(710, -4353)
+
+[node name="Bordure forêt9" parent="." unique_id=579897377 instance=ExtResource("1_84da0")]
+position = Vector2(1860, -4353)
+
+[node name="Bordure forêt10" parent="." unique_id=1474732096 instance=ExtResource("1_84da0")]
+position = Vector2(3042, -4353)
+
+[editable path="Maison"]
+[editable path="Maison2"]
+[editable path="Maison4"]
 [editable path="Bousole"]
+[editable path="Maison5"]
+[editable path="Maison6"]
