@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m37rb5lxoeh8"
-path="res://.godot/imported/chien.png-7a0a5d2aa5400605f6a1165c1812c1f6.ctex"
+path="res://.godot/imported/chien.png-40dbd8bc0a28ea28d05b0502cc987a3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personnages/New perso/chien.png"
-dest_files=["res://.godot/imported/chien.png-7a0a5d2aa5400605f6a1165c1812c1f6.ctex"]
+source_file="res://assets/Personnages/chien.png"
+dest_files=["res://.godot/imported/chien.png-40dbd8bc0a28ea28d05b0502cc987a3f.ctex"]
 
 [params]
 
