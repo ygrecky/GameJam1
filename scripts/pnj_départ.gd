@@ -24,7 +24,6 @@ func talk_to():
 
 
 func _ready() -> void:
-	image_link = "res://assets/Personnages/souris.jpg"
 	sprite.texture = load(image_link)
 	var speed = 75
 	

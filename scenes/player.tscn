@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://y1niflgkuws"]
 
 [ext_resource type="Script" uid="uid://bg03lrcrtwok2" path="res://scripts/player.gd" id="1_3vyb7"]
-[ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://bmaukylsqcpdt" path="res://assets/Personnages/renard transparent.png" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
@@ -31,7 +31,8 @@ interaction_label = NodePath("Node2D/interaction_label/Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=240565828]
 position = Vector2(0, -9)
-texture = ExtResource("2_g2els")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1509566794]
 position = Vector2(-0.5, -9)
@@ -66,7 +67,7 @@ scale = Vector2(0.15, 0.134)
 [node name="Label" type="Label" parent="Node2D/interaction_label" unique_id=2001153775]
 offset_left = -539.9995
 offset_top = 52.239136
-offset_right = 627.0005
+offset_right = 700.0
 offset_bottom = 230.23914
 theme_override_font_sizes/font_size = 130
 text = "Press space to talk"

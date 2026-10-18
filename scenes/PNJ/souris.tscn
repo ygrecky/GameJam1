@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://caq46nj70doyh"]
+
+[ext_resource type="Script" uid="uid://bpysdqyk83l7s" path="res://scenes/PNJ/souris.gd" id="1_c72gr"]
+[ext_resource type="Texture2D" uid="uid://dy2mog5dvqljg" path="res://assets/Personnages/souris transp.png" id="2_c72gr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
+size = Vector2(86, 83)
+
+[node name="souris" type="CharacterBody2D" unique_id=281381040]
+z_index = 5
+position = Vector2(200, 200)
+scale = Vector2(1.66, 1.66)
+script = ExtResource("1_c72gr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
+position = Vector2(-5, 63.5)
+scale = Vector2(0.845, 0.845)
+shape = SubResource("RectangleShape2D_ayuyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
+scale = Vector2(6.395, 6.395)
+texture = ExtResource("2_c72gr")

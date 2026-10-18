@@ -5,10 +5,11 @@ class_name Pnj
 
 
 var pnj_name = "Grand Maistre"
-var dialogue = ["Bonjour ","Comment vas tu?","QuOIIIIIIIIIIII","CIAO"]
 var direction_x = -1
 var direction_y = 0
 var speed = 200
+
+var dialogue = [["test"],["test"],["aaaazaaaa"]]
 
 func ending_func() : pass
 @export var image_link : String

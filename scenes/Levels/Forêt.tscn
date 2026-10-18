@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhhc5yxb43h51" path="res://scenes/Decoration/bordure_forêt.tscn" id="1_0tc75"]
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="1_epbjm"]
+[ext_resource type="PackedScene" uid="uid://c1vxwqj6ukppx" path="res://scenes/Decoration/arbre.tscn" id="1_hos08"]
 [ext_resource type="PackedScene" uid="uid://idj78xtahws3" path="res://scenes/Decoration/autel.tscn" id="2_idvjd"]
 [ext_resource type="PackedScene" uid="uid://tmyu1glooduk" path="res://scenes/feuille_grimoire.tscn" id="2_qocma"]
 [ext_resource type="PackedScene" uid="uid://cpq1px774y8xe" path="res://scenes/Decoration/feuille_papier.tscn" id="4_lowvy"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b4q1fjw45e8nh" path="res://scenes/Decoration/sol.tscn" id="5_lowvy"]
 [ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="6_twwjl"]
 [ext_resource type="Script" uid="uid://uhnbr4rrjc57" path="res://scripts/pnj_départ.gd" id="8_epbjm"]
+[ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="10_gte6x"]
 
 [node name="Forêt" type="Node2D" unique_id=1533303300]
 
@@ -17,17 +19,12 @@
 [node name="Feuille_grimoire" parent="." unique_id=1217721136 instance=ExtResource("2_qocma")]
 
 [node name="Bordure forêt" parent="." unique_id=170095540 instance=ExtResource("1_0tc75")]
-position = Vector2(105, -727)
-scale = Vector2(1.89, 2.4)
-
-[node name="Bordure forêt2" parent="." unique_id=1914298677 instance=ExtResource("1_0tc75")]
-position = Vector2(105, 639)
-scale = Vector2(1.89, 2.565)
+position = Vector2(1860.0001, -626)
+scale = Vector2(1.5, 1.5)
 
 [node name="Bordure forêt3" parent="." unique_id=366830749 instance=ExtResource("1_0tc75")]
-position = Vector2(-750, -64)
-rotation = 1.5707964
-scale = Vector2(1, 2.195)
+position = Vector2(237, 558)
+scale = Vector2(1.5, 1.5)
 
 [node name="Autel" parent="." unique_id=1929311227 instance=ExtResource("2_idvjd")]
 position = Vector2(-167, -9)
@@ -39,7 +36,7 @@ scale = Vector2(7.55, 5.2)
 destination_path = "res://scenes/Levels/Place village.tscn"
 
 [node name="Bordure forêt4" parent="." unique_id=1035199119 instance=ExtResource("1_0tc75")]
-position = Vector2(1521, 24)
+position = Vector2(1485, -205)
 rotation = 1.5707964
 
 [node name="FeuillePapier" parent="." unique_id=1749185933 instance=ExtResource("4_lowvy")]
@@ -50,16 +47,72 @@ z_index = -1
 position = Vector2(948, -403)
 scale = Vector2(0.22, 0.22)
 
-[node name="Bordure forêt5" parent="." unique_id=1551083052 instance=ExtResource("1_0tc75")]
-position = Vector2(1287, -790)
-rotation = 1.5707964
-
-[node name="Bordure forêt6" parent="." unique_id=1215209762 instance=ExtResource("1_0tc75")]
-position = Vector2(1279, 702)
-rotation = 1.5707964
-
 [node name="pnj" parent="." unique_id=281381040 instance=ExtResource("6_twwjl")]
-position = Vector2(999, 5)
-scale = Vector2(1.81, 1.81)
+position = Vector2(994, 4.7683716e-07)
+scale = Vector2(1.29, 1.29)
 script = ExtResource("8_epbjm")
-image_link = ""
+
+[node name="Bordure forêt7" parent="." unique_id=2057129823 instance=ExtResource("1_0tc75")]
+position = Vector2(160, -603)
+scale = Vector2(1.5, 1.5)
+
+[node name="Bordure forêt8" parent="." unique_id=174144138 instance=ExtResource("1_0tc75")]
+position = Vector2(1966, 558)
+scale = Vector2(1.5, 1.5)
+
+[node name="Sol2" parent="." unique_id=1031356795 instance=ExtResource("5_lowvy")]
+z_index = -1
+position = Vector2(977.99994, 431.99997)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol3" parent="." unique_id=217824967 instance=ExtResource("5_lowvy")]
+z_index = -1
+position = Vector2(989, -1229)
+scale = Vector2(0.22, 0.22)
+
+[node name="Bordure forêt9" parent="." unique_id=1602712998 instance=ExtResource("1_0tc75")]
+position = Vector2(374.00012, 826)
+scale = Vector2(1.5, 1.5)
+
+[node name="Sol4" parent="." unique_id=1137882598 instance=ExtResource("5_lowvy")]
+z_index = -1
+position = Vector2(-994, 429)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol5" parent="." unique_id=1833871390 instance=ExtResource("5_lowvy")]
+z_index = -1
+position = Vector2(-1027, -403)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol6" parent="." unique_id=840182189 instance=ExtResource("5_lowvy")]
+z_index = -1
+position = Vector2(-1031, -1236)
+scale = Vector2(0.22, 0.22)
+
+[node name="Bordure foret verticale" parent="." unique_id=477169209 instance=ExtResource("10_gte6x")]
+position = Vector2(-916, 146.00002)
+scale = Vector2(2.52, 2.52)
+
+[node name="Bordure foret verticale2" parent="." unique_id=632598810 instance=ExtResource("10_gte6x")]
+position = Vector2(-938, -1161.9999)
+scale = Vector2(2.52, 2.52)
+
+[node name="Arbre4" parent="." unique_id=1874252714 instance=ExtResource("1_hos08")]
+z_index = 2
+position = Vector2(1215, -448)
+scale = Vector2(2.13, 2.13)
+
+[node name="Arbre2" parent="." unique_id=635109617 instance=ExtResource("1_hos08")]
+z_index = 2
+position = Vector2(664.00006, -548)
+scale = Vector2(2.13, 2.13)
+
+[node name="Arbre" parent="." unique_id=1758944745 instance=ExtResource("1_hos08")]
+z_index = 2
+position = Vector2(922, -392.00003)
+scale = Vector2(2.13, 2.13)
+
+[node name="Arbre3" parent="." unique_id=407187694 instance=ExtResource("1_hos08")]
+z_index = 2
+position = Vector2(1173, -267)
+scale = Vector2(2.13, 2.13)
