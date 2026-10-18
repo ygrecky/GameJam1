@@ -16,12 +16,13 @@ var speaker2 = ""
 var sprite2 
 var ending_func = func() : pass
 
-func open_window(dialogue, ending_func = func() : pass): #ouvre la boite de dialogue
+func open_window(dialogue, end_func = func() : pass): #ouvre la boite de dialogue
+	ending_func = end_func
 	state.show()
 	text_number = -1
-	Next(ending_func)
+	Next()
 
-func Next(ending_func) -> void: #passe d'un dialogue à un autre
+func Next() -> void: #passe d'un dialogue à un autre
 	text_number += 1
 	
 	if text_number < dialogue.size():
@@ -67,13 +68,12 @@ func _ready() -> void:
 	sprite.texture = sprite2
 	sprite.scale = Vector2(0.05,0.05)
 	
-	print($Sprite2D)
-	
-	print($Control/VBoxContainer/SpriteCharacter)
+
 	
 	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("action_1"):
+		Next()

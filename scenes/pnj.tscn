@@ -1,22 +1,27 @@
 [gd_scene format=3 uid="uid://c85teiosuenrx"]
 
-[ext_resource type="Texture2D" uid="uid://bfww10vqliay" path="res://assets/Personnages/renard1.jpg" id="1_0yhv8"]
 [ext_resource type="Script" uid="uid://bbyw1y6o1di1w" path="res://scripts/pnj.gd" id="1_xg58l"]
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_3is8m"]
+[ext_resource type="Texture2D" uid="uid://bvl85ybt41gdr" path="res://assets/Personnages/souris_pixel.png" id="3_3is8m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
+size = Vector2(86, 83)
 
 [node name="pnj" type="CharacterBody2D" unique_id=281381040 node_paths=PackedStringArray("sprite")]
 z_index = 5
 position = Vector2(200, 200)
+scale = Vector2(1.66, 1.66)
 script = ExtResource("1_xg58l")
 text_box = ExtResource("2_3is8m")
-image_link = "res://assets/souris.jpg"
+dialogue = Array[String](["QUOIIII", "Feur.", "Byyyyye"])
+image_link = "res://assets/Personnages/souris_pixel.png"
 sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
+position = Vector2(-5, 63.5)
+scale = Vector2(0.845, 0.845)
 shape = SubResource("RectangleShape2D_ayuyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("1_0yhv8")
+scale = Vector2(6.395, 6.395)
+texture = ExtResource("3_3is8m")
