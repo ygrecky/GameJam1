@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="3_6p2r5"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_cgeol"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_tisle"]
-[ext_resource type="PackedScene" uid="uid://c6x6lpru6jabe" path="res://scenes/PNJ/baron.tscn" id="6_6p2r5"]
+[ext_resource type="PackedScene" uid="uid://du4oy6kdwkxwc" path="res://scenes/PNJ/orso.tscn" id="6_6p2r5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(83.838684, 71.713356)
@@ -89,7 +89,6 @@ position = Vector2(2814, 1310)
 position = Vector2(2527, 383)
 rotation = 1.5707964
 
-[node name="baron" parent="." unique_id=281381040 instance=ExtResource("6_6p2r5")]
-z_index = -1
-position = Vector2(4247.0005, 536)
-scale = Vector2(1.3, 1.3)
+[node name="orso" parent="." unique_id=281381040 instance=ExtResource("6_6p2r5")]
+z_index = 3
+position = Vector2(4671, -164)

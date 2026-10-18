@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://r5mow7sb8cr7" path="res://assets/décor/pentagrame.png" id="3_h2wry"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_68xq0"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="6_mf8xv"]
-[ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="7_613va"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="7_klw4l"]
 
 [node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
@@ -57,8 +56,5 @@ position = Vector2(2749, 1317)
 [node name="Mur5" parent="." unique_id=1248534943 instance=ExtResource("5_68xq0")]
 position = Vector2(2462, 390)
 rotation = 1.5707964
-
-[node name="baronne" parent="." unique_id=281381040 instance=ExtResource("7_613va")]
-position = Vector2(3864, 214.99998)
 
 [editable path="parquet"]
