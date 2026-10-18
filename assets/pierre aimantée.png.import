@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j6e4e56pttt"
-path="res://.godot/imported/aimant.png-c5258db701a81ed6739bdc2a35a93cfb.ctex"
+uid="uid://dw7ud11hrm0ei"
+path="res://.godot/imported/pierre aimantée.png-ec83dfb82420a1baa921ffde3d6ac7fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Objets/aimant.png"
-dest_files=["res://.godot/imported/aimant.png-c5258db701a81ed6739bdc2a35a93cfb.ctex"]
+source_file="res://assets/pierre aimantée.png"
+dest_files=["res://.godot/imported/pierre aimantée.png-ec83dfb82420a1baa921ffde3d6ac7fd.ctex"]
 
 [params]
 
