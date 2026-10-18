@@ -48,8 +48,11 @@ func get_input(delta):
 		
 	if(not(aimant_activé) or velocity == Vector2(0,0)):
 		if Input.is_action_pressed("left"):
+			rotation_degrees = 90
+			sprite.rotation_degrees = -90
 			direction_x = -1
 			$Sprite2D.flip_h = false
+			
 			$Node2D.rotation_degrees = -90
 			facing_x = -1
 			facing_y = 0
@@ -57,6 +60,8 @@ func get_input(delta):
 
 			
 		if Input.is_action_pressed("right"):
+			rotation_degrees = -90
+			sprite.rotation_degrees = 90
 			direction_x = 1
 			$Sprite2D.flip_h = true
 			$Node2D.rotation_degrees = 90
@@ -65,6 +70,8 @@ func get_input(delta):
 
 			
 		if Input.is_action_pressed("down"):
+			rotation_degrees = 0
+			sprite.rotation_degrees = 0
 			direction_y = 1
 			$Node2D.rotation_degrees = 0
 			facing_x = 0
@@ -72,6 +79,8 @@ func get_input(delta):
 
 			
 		if Input.is_action_pressed("up"):
+			rotation_degrees = 180
+			sprite.rotation_degrees = 180
 			direction_y = -1
 			$Node2D.rotation_degrees = 180
 			facing_x = 0

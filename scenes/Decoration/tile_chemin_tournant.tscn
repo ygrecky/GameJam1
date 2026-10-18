@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://8ti3h7q5uibo"]
+
+[ext_resource type="Texture2D" uid="uid://bljbas00yub5o" path="res://assets/tiles/tile_chemin_en_T.png" id="1_rpthw"]
+
+[node name="tile_chemin_tournant" type="Node2D" unique_id=960793606]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1079730249]
+position = Vector2(0.99999994, -0.99999994)
+scale = Vector2(5, 5)
+texture = ExtResource("1_rpthw")

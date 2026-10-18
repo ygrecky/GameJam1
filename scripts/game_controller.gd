@@ -53,6 +53,11 @@ func switch_to_menu():
 	inventory.queue_free()
 	
 func restart_loop():
+	current_2d_scene_name="none"
+	for scene in scenes.keys():
+		print(scene)
+		scenes[scene].queue_free()
+		scenes.erase(scene)
 	Global.player.queue_free()
 	inventory.queue_free()
 	var player = load("res://scenes/player.tscn").instantiate()

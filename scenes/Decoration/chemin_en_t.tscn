@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dumw8xc8iqs2n"]
+
+[ext_resource type="PackedScene" uid="uid://csql6brr1dlkx" path="res://scenes/Decoration/chemin.tscn" id="1_52n34"]
+[ext_resource type="Texture2D" uid="uid://bljbas00yub5o" path="res://assets/tiles/tile_chemin_en_T.png" id="2_5sqby"]
+
+[node name="Chemin en T" type="Node2D" unique_id=1644778702]
+
+[node name="Chemin" parent="." unique_id=1271939013 instance=ExtResource("1_52n34")]
+position = Vector2(1874, 109)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=283723918]
+
+[node name="TileCheminEnT" type="Sprite2D" parent="." unique_id=763779769]
+position = Vector2(2625, 111)
+scale = Vector2(12.94, 12.94)
+texture = ExtResource("2_5sqby")
