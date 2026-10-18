@@ -2,13 +2,19 @@ extends Pnj
 
 
 var se_deplace = false
+var boucle = false
 
-func ending_func() : 
-	$CollisionShape2D.disabled = true
-	se_deplace = true
-	velocity = Vector2(speed*2, 0)
-	Global.game_controller.inventory.get_child(0).s1.add_objet()
+func new_dialogue():
+	dialogue = [["Viens me revoir dès que tu veux rejouer à cache cache, hihihi!"]]
 	
+func ending_func() : 
+	if boucle == false : 
+		Global.game_controller.inventory.get_child(0).s1.add_objet()
+		boucle = true
+		new_dialogue()
+	
+
+
 
 func talk_to():
 	var bdd = text_box.instantiate()
@@ -28,5 +34,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if se_deplace:
-		move_and_slide()
+	pass
+	
