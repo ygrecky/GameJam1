@@ -11,7 +11,7 @@ script = ExtResource("1_vq0e2")
 world2D = NodePath("World")
 gui = NodePath("Menu")
 current_gui_scene = NodePath("Menu")
-first_level = "res://scenes/Levels/Place village.tscn"
+first_level = "res://scenes/Levels/Forêt.tscn"
 
 [node name="World" type="Node2D" parent="." unique_id=1022516678]
 
