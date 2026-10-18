@@ -20,7 +20,7 @@ func ending_func() :
 
 func _ready() -> void:
 	pnj_name = "Petite fille"
-	dialogue = [["Voilà notre village ! C’est pas bien grand mais on y est heureux."],["Viens jouer à cache-cache avec moi !"]]
+	dialogue = [["Voilà notre village ! C’est pas bien grand mais on y est heureux."],["Viens jouer à cache-cache avec moi ! Je suis rapide comme l'éclair!!!"]]
 	speed = 3000
 	direction_x = 1
 	direction_y = 0 
