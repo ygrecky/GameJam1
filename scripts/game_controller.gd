@@ -22,6 +22,7 @@ var camera_limits = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	Global.game_controller = self
 	current_2d_scene_name = "none"
 	inventory = $Inventaire

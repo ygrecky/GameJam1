@@ -34,6 +34,7 @@ var arbalette_index = 2
 func _ready():
 	Global.player = self
 	interaction_label.visible = false
+	speed = 400
 
 func get_input(delta):
 	aimant_activé = actions_pressed[aimant_index]
