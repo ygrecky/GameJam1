@@ -8,9 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cpq1px774y8xe" path="res://scenes/Decoration/feuille_papier.tscn" id="4_lowvy"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="4_xcmwi"]
 [ext_resource type="PackedScene" uid="uid://b4q1fjw45e8nh" path="res://scenes/Decoration/sol.tscn" id="5_lowvy"]
-[ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="6_twwjl"]
-[ext_resource type="Script" uid="uid://uhnbr4rrjc57" path="res://scripts/pnj_départ.gd" id="8_epbjm"]
 [ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="10_gte6x"]
+[ext_resource type="PackedScene" uid="uid://caq46nj70doyh" path="res://scenes/PNJ/souris.tscn" id="10_hos08"]
 
 [node name="Forêt" type="Node2D" unique_id=1533303300]
 
@@ -46,11 +45,6 @@ position = Vector2(377, 4)
 z_index = -1
 position = Vector2(948, -403)
 scale = Vector2(0.22, 0.22)
-
-[node name="pnj" parent="." unique_id=281381040 instance=ExtResource("6_twwjl")]
-position = Vector2(994, 4.7683716e-07)
-script = ExtResource("8_epbjm")
-image_link = "res://assets/Personnages/souris transp.png"
 
 [node name="Bordure forêt7" parent="." unique_id=2057129823 instance=ExtResource("1_0tc75")]
 position = Vector2(160, -603)
@@ -116,3 +110,7 @@ scale = Vector2(2.13, 2.13)
 z_index = 2
 position = Vector2(1173, -267)
 scale = Vector2(2.13, 2.13)
+
+[node name="souris" parent="." unique_id=2110219903 instance=ExtResource("10_hos08")]
+position = Vector2(987, -42)
+scale = Vector2(1.1, 1.1)
