@@ -66,7 +66,7 @@ func _ready() -> void:
 	
 	
 	open_window(dialogue,ending_func)
-	print(sprite2)
+	
 	speaker.text = speaker2
 	sprite.texture = sprite2
 	sprite.scale = Vector2(0.05,0.05)
@@ -81,4 +81,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("action_1"):
+		Next()
