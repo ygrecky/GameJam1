@@ -4,7 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dns0lpcrs8k2k" path="res://assets/Objets/boussole.png" id="2_an05w"]
 [ext_resource type="Texture2D" uid="uid://csmt83arn1a0f" path="res://assets/Objets/aiguilles boussole.png" id="3_un8u3"]
 
-[node name="Bousole" type="Node2D" unique_id=538919682 node_paths=PackedStringArray("aiguille")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_u081y"]
+radius = 409.31
+
+[node name="Bousole" type="StaticBody2D" unique_id=958291561 node_paths=PackedStringArray("aiguille")]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_ehad8")
 aiguille = NodePath("Node2D")
@@ -22,3 +25,7 @@ rotation = 1.5707964
 scale = Vector2(0.9955645, 1)
 texture = ExtResource("3_un8u3")
 offset = Vector2(-115, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1806415901]
+position = Vector2(339.99997, 214.2857)
+shape = SubResource("CircleShape2D_u081y")

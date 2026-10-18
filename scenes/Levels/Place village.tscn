@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bj3lnj4da6ult" path="res://scenes/Decoration/Maison.tscn" id="6_4hvs0"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="7_0dq5c"]
 [ext_resource type="PackedScene" uid="uid://cqisqshyk32o7" path="res://scenes/Decoration/Eglise.tscn" id="8_qan31"]
+[ext_resource type="PackedScene" uid="uid://bfe54hqkti65k" path="res://scenes/bousole.tscn" id="10_m65ih"]
 
 [sub_resource type="PackedScene" id="PackedScene_0dq5c"]
 _bundled = {
@@ -72,10 +73,10 @@ position = Vector2(2608.0002, 338)
 scale = Vector2(10, 10)
 
 [node name="Chemin" parent="Gros sol" unique_id=1271939013 instance=ExtResource("5_kquo5")]
-position = Vector2(-204, 123)
+position = Vector2(-207, 106)
 
 [node name="Chemin" parent="Gros sol/Chemin" unique_id=975286042 instance=ExtResource("5_kquo5")]
-position = Vector2(298, 570)
+position = Vector2(383, 655)
 rotation = 1.5707964
 
 [node name="Chemin" parent="Gros sol/Chemin/Chemin" unique_id=1517600291 instance=ExtResource("5_kquo5")]
@@ -100,7 +101,7 @@ text_box = SubResource("PackedScene_0dq5c")
 image_link = "res://assets/Personnages/souris.jpg"
 
 [node name="Maison" parent="." unique_id=59623987 instance=ExtResource("6_4hvs0")]
-position = Vector2(638, -458)
+position = Vector2(653, -387.99994)
 scale = Vector2(8.585, 8.585)
 
 [node name="Maison2" parent="." unique_id=1323063652 instance=ExtResource("6_4hvs0")]
@@ -123,7 +124,11 @@ position = Vector2(2837.0002, 424)
 scale = Vector2(15.015, 15.015)
 
 [node name="Chemin" parent="." unique_id=486713908 instance=ExtResource("5_kquo5")]
-position = Vector2(681, 123)
+position = Vector2(673, 97)
 
 [node name="Chemin2" parent="." unique_id=774553325 instance=ExtResource("5_kquo5")]
-position = Vector2(2832, 1171)
+position = Vector2(2868, 1131)
+
+[node name="Bousole" parent="." unique_id=538919682 instance=ExtResource("10_m65ih")]
+position = Vector2(3459, 577)
+scale = Vector2(0.49, 0.49)
