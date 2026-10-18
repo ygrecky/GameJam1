@@ -81,7 +81,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(14, -5)
 zoom = Vector2(0.59, 0.59)
 position_smoothing_enabled = true
-script = null
 
 [connection signal="body_entered" from="short_action_zone" to="." method="_on_short_action_zone_body_entered"]
 [connection signal="body_exited" from="short_action_zone" to="." method="_on_short_action_zone_body_exited"]
