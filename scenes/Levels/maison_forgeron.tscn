@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://l0f6aaiy13e6"]
+
+[ext_resource type="PackedScene" uid="uid://dovg7m227or15" path="res://scenes/Decoration/parquet.tscn" id="1_83pjl"]
+[ext_resource type="Texture2D" uid="uid://bketv2sm038nn" path="res://assets/décor/enclume.png" id="2_qr5mn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(29.870966, 27.100977)
+
+[node name="Maison forgeron" type="Node2D" unique_id=1607215442]
+position = Vector2(-2944, -307)
+
+[node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_83pjl")]
+position = Vector2(6216.9995, -258)
+scale = Vector2(1.695, 1.45)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1776865817]
+position = Vector2(826, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
+position = Vector2(2134, -245)
+scale = Vector2(3.875, 4.796875)
+texture = ExtResource("2_qr5mn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=797289935]
+position = Vector2(2118, -223)
+scale = Vector2(3.875, 4.796875)
+shape = SubResource("RectangleShape2D_u081y")
