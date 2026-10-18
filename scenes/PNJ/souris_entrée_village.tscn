@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://7cahasrlxoj7"]
+
+[ext_resource type="Script" uid="uid://cuq8nlhu3ucmk" path="res://scenes/PNJ/souris_entrée_village.gd" id="1_eg7jr"]
+[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_qxdxp"]
+[ext_resource type="Texture2D" uid="uid://dy2mog5dvqljg" path="res://assets/Personnages/souris transp.png" id="3_anet3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
+size = Vector2(161.83081, 168.64124)
+
+[node name="souris_ev" type="CharacterBody2D" unique_id=281381040]
+z_index = 5
+position = Vector2(200, 200)
+scale = Vector2(1.66, 1.66)
+script = ExtResource("1_eg7jr")
+text_box = ExtResource("2_qxdxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
+position = Vector2(-6.927719, 63.419586)
+scale = Vector2(0.8449996, 0.8449996)
+shape = SubResource("RectangleShape2D_ayuyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
+position = Vector2(-4.2168636, 60.24096)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_anet3")
