@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cjt3cvbpfol0c"]
+
+[ext_resource type="PackedScene" uid="uid://b4q1fjw45e8nh" path="res://scenes/Decoration/sol.tscn" id="1_ha8ew"]
+
+[node name="Gros sol" type="Node2D" unique_id=1447059904]
+
+[node name="Sol3" parent="." unique_id=1363791764 instance=ExtResource("1_ha8ew")]
+position = Vector2(658, -1068)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol4" parent="." unique_id=935809190 instance=ExtResource("1_ha8ew")]
+position = Vector2(652, -236.00002)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol" parent="." unique_id=439445047 instance=ExtResource("1_ha8ew")]
+position = Vector2(664, -1885)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol2" parent="." unique_id=1641909667 instance=ExtResource("1_ha8ew")]
+position = Vector2(652, 601)
+scale = Vector2(0.22, 0.22)
+
+[node name="Gros sol" type="Node2D" parent="." unique_id=1424669194]
+
+[node name="Sol3" parent="Gros sol" unique_id=377005679 instance=ExtResource("1_ha8ew")]
+position = Vector2(2634, -1073.9999)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol4" parent="Gros sol" unique_id=44490375 instance=ExtResource("1_ha8ew")]
+position = Vector2(2627, -243)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol" parent="Gros sol" unique_id=1170437851 instance=ExtResource("1_ha8ew")]
+position = Vector2(2639, -1891.9999)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol2" parent="Gros sol" unique_id=1641422374 instance=ExtResource("1_ha8ew")]
+position = Vector2(2627, 594)
+scale = Vector2(0.22, 0.22)

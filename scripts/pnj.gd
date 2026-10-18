@@ -7,6 +7,9 @@ var direction_x = -1
 var direction_y = 0
 var speed = 200
 
+func ending_func() : pass
+@export var image_link : String
+@export var sprite : Sprite2D
 
 
 func talk_to():
@@ -17,9 +20,11 @@ func talk_to():
 	bdd.sprite2 = $Sprite2D.texture
 	Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	bdd.ending_func = ending_func
+	
 
 
 func _ready() -> void:
+	sprite.texture = load(image_link)
 	pass
 	
 func _process(delta: float) -> void:

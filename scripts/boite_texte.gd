@@ -16,12 +16,13 @@ var speaker2 = ""
 var sprite2 
 var ending_func = func() : pass
 
-func open_window(dialogue, ending_func = func() : pass): #ouvre la boite de dialogue
+func open_window(dialogue, end_func = func() : pass): #ouvre la boite de dialogue
 	state.show()
 	text_number = -1
-	Next(ending_func)
+	self.ending_func = end_func
+	Next()
 
-func Next(ending_func) -> void: #passe d'un dialogue à un autre
+func Next() -> void: #passe d'un dialogue à un autre
 	text_number += 1
 	
 	if text_number < dialogue.size():
@@ -63,15 +64,17 @@ func set_speaker(speaker) :
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
+	
 	open_window(dialogue,ending_func)
-	
-	set_speaker(speaker2)
-	
+	print(sprite2)
+	speaker.text = speaker2
+	sprite.texture = sprite2
+	sprite.scale = Vector2(0.05,0.05)
 	
 	print(sprite)
-	print($Sprite2D)
+
 	
-	print($Control/VBoxContainer/SpriteCharacter)
+
 	
 	
 

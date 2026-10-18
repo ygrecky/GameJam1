@@ -10,10 +10,12 @@
 position = Vector2(200, 200)
 script = ExtResource("1_xg58l")
 text_box = ExtResource("2_3is8m")
+image_link = "res://assets/souris.jpg"
+sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
 shape = SubResource("RectangleShape2D_ayuyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
-scale = Vector2(0.01, 0.01)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_0yhv8")
