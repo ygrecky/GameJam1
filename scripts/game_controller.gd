@@ -16,6 +16,8 @@ var inventory
 
 var restart_scene = "res://scenes/test_scene.tscn"
 
+var camera_limits = {}
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +26,7 @@ func _ready() -> void:
 	current_2d_scene_name = "none"
 	inventory = $Inventaire
 	
+	camera_limits["res://scenes/Levels/Forêt.tscn"] = [-910,-1043,935,993]
 	pass # Replace with function body.
 
 
@@ -87,6 +90,18 @@ func change_2d_scene(new_scene : String, delete : bool = false, keep_running : b
 		current_2d_scene = new
 		Global.player.position = Vector2(0,0)
 		current_2d_scene_name = new_scene
+	
+	if(new_scene in camera_limits):
+		var limits = camera_limits[new_scene]
+		Global.player.camera.limit_left = limits[0]
+		Global.player.camera.limit_top = limits[1]
+		Global.player.camera.limit_right = limits[2]
+		Global.player.camera.limit_bottom = limits[3]
+	else:
+		Global.player.camera.limit_left = -1000000000
+		Global.player.camera.limit_top = -1000000000
+		Global.player.camera.limit_right = 1000000000
+		Global.player.camera.limit_bottom = 100000000
 		
 	Global.player.inTransition=false
 	

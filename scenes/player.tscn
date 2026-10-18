@@ -16,7 +16,7 @@ size = Vector2(125.5, 81)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swyl7"]
 size = Vector2(116, 115)
 
-[node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_", "collision_shape2d", "sprite", "interaction_label")]
+[node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_", "collision_shape2d", "sprite", "camera", "interaction_label")]
 position = Vector2(91, 83)
 script = ExtResource("1_3vyb7")
 long_action_zone = NodePath("long_action_zone")
@@ -24,6 +24,7 @@ short_action_zone = NodePath("short_action_zone")
 collision_ = NodePath("Area2D")
 collision_shape2d = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
+camera = NodePath("Camera")
 fleche_delay = 1.0
 aimant_acceleration = 70.0
 interaction_label = NodePath("Node2D/interaction_label/Label")
@@ -73,10 +74,6 @@ text = "Press space to talk"
 [node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("3_qhqgy")]
 position = Vector2(-7, -12)
 zoom = Vector2(0.75, 0.75)
-limit_left = -1000
-limit_top = -1000
-limit_right = 1000
-limit_bottom = 1000
 position_smoothing_enabled = true
 
 [connection signal="body_entered" from="short_action_zone" to="." method="_on_short_action_zone_body_entered"]

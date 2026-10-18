@@ -7,16 +7,17 @@
 [node name="Forêt" type="Node2D" unique_id=1533303300]
 
 [node name="Bordure forêt" parent="." unique_id=170095540 instance=ExtResource("1_0tc75")]
-position = Vector2(66, -460)
-scale = Vector2(1.89, 1.02)
+position = Vector2(105, -727)
+scale = Vector2(1.89, 2.4)
 
 [node name="Bordure forêt2" parent="." unique_id=1914298677 instance=ExtResource("1_0tc75")]
-position = Vector2(46, 424)
-scale = Vector2(1.89, 1)
+position = Vector2(105, 639)
+scale = Vector2(1.89, 2.565)
 
 [node name="Bordure forêt3" parent="." unique_id=366830749 instance=ExtResource("1_0tc75")]
-position = Vector2(-639, -25)
+position = Vector2(-750, -64)
 rotation = 1.5707964
+scale = Vector2(1, 2.195)
 
 [node name="Autel" parent="." unique_id=1929311227 instance=ExtResource("2_idvjd")]
 position = Vector2(1, 14)
@@ -28,5 +29,5 @@ scale = Vector2(7.55, 5.2)
 destination_path = "res://scenes/game.tscn"
 
 [node name="Bordure forêt4" parent="." unique_id=1035199119 instance=ExtResource("1_0tc75")]
-position = Vector2(1197, -36)
+position = Vector2(1109, -16)
 rotation = 1.5707964

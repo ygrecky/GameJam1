@@ -7,6 +7,8 @@ class_name Player
 @export var collision_shape2d : CollisionShape2D
 @export var sprite : Sprite2D
 
+@export var camera : Camera2D
+
 var facing_x = 0
 var facing_y = -1
 var action_pressed = false
