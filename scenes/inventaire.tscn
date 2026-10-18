@@ -59,6 +59,14 @@ offset_right = -451.0
 offset_bottom = 313.0
 expand_mode = 1
 
+[node name="Label" type="Label" parent="Control/Inventaire_grid/Slot_1" unique_id=79973913]
+layout_mode = 0
+offset_left = -466.0
+offset_top = 289.0
+offset_right = -455.0
+offset_bottom = 312.0
+text = "1"
+
 [node name="Slot_2" type="Control" parent="Control/Inventaire_grid" unique_id=1937467634]
 layout_mode = 2
 script = ExtResource("3_8anfk")
@@ -79,6 +87,14 @@ offset_top = 236.0
 offset_right = -369.0
 offset_bottom = 304.0
 expand_mode = 1
+
+[node name="Label2" type="Label" parent="Control/Inventaire_grid/Slot_2" unique_id=67400193]
+layout_mode = 0
+offset_left = -366.0
+offset_top = 285.0
+offset_right = -355.0
+offset_bottom = 308.0
+text = "2"
 
 [node name="Slot_3" type="Control" parent="Control/Inventaire_grid" unique_id=1152076168]
 layout_mode = 2
@@ -102,6 +118,14 @@ offset_right = -257.0
 offset_bottom = 304.0
 expand_mode = 1
 
+[node name="Label3" type="Label" parent="Control/Inventaire_grid/Slot_3" unique_id=2081974956]
+layout_mode = 0
+offset_left = -267.0
+offset_top = 282.0
+offset_right = -257.0
+offset_bottom = 305.0
+text = "3"
+
 [node name="Slot_4" type="Control" parent="Control/Inventaire_grid" unique_id=410106739]
 layout_mode = 2
 script = ExtResource("8_bu67e")
@@ -123,6 +147,14 @@ offset_top = 220.0
 offset_right = -157.0
 offset_bottom = 304.0
 expand_mode = 1
+
+[node name="Label4" type="Label" parent="Control/Inventaire_grid/Slot_4" unique_id=1612152791]
+layout_mode = 0
+offset_left = -171.0
+offset_top = 277.0
+offset_right = -161.0
+offset_bottom = 300.0
+text = "4"
 
 [node name="Slot_5" type="Control" parent="Control/Inventaire_grid" unique_id=1737587880]
 layout_mode = 2
@@ -146,6 +178,14 @@ offset_right = -59.0
 offset_bottom = 302.0
 expand_mode = 1
 
+[node name="Label5" type="Label" parent="Control/Inventaire_grid/Slot_5" unique_id=118039125]
+layout_mode = 0
+offset_left = -74.0
+offset_top = 274.0
+offset_right = -64.0
+offset_bottom = 297.0
+text = "5"
+
 [node name="Slot_6" type="Control" parent="Control/Inventaire_grid" unique_id=1367112179]
 layout_mode = 2
 script = ExtResource("10_1dbyj")
@@ -167,3 +207,11 @@ offset_top = 212.0
 offset_right = 33.0
 offset_bottom = 298.0
 expand_mode = 1
+
+[node name="Label6" type="Label" parent="Control/Inventaire_grid/Slot_6" unique_id=108473093]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 270.0
+offset_right = 31.0
+offset_bottom = 293.0
+text = "6"
