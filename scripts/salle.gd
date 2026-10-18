@@ -17,7 +17,12 @@ func _ready() -> void:
 		pnj_i.position = liste_pnj[pnj][1]
 		pnj_i.name = liste_pnj[pnj][0]
 		pnj_i.dialogue = liste_pnj[pnj][2]
-		pnj.get_node("Sprite2D").texture = load("res://assets/"+pnj_i.name+".png")
+		pnj_i.get_node("Sprite2D").texture = load("res://assets/"+pnj_i.name+".png")
+		
+		if liste_pnj.size() == 4 :
+			pnj_i.ending_func = liste_pnj[3]
+			
+		
 		
 		liste_pnj_i += pnj_i
 

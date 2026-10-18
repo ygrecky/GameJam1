@@ -14,6 +14,7 @@ var text_number = 0
 var dialogue = []
 var speaker2 = ""
 var sprite2 
+var ending_func = func() : pass
 
 func open_window(dialogue, ending_func = func() : pass): #ouvre la boite de dialogue
 	state.show()
@@ -57,7 +58,7 @@ func close_window(ending_func):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	open_window(dialogue)
+	open_window(dialogue,ending_func)
 	
 	print(sprite2)
 	speaker.text = speaker2
