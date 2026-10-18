@@ -15,12 +15,12 @@ var dialogue = []
 var speaker2 = ""
 var sprite2 
 
-func open_window(dialogue): #ouvre la boite de dialogue
+func open_window(dialogue, ending_func = func() : pass): #ouvre la boite de dialogue
 	state.show()
 	text_number = -1
-	Next()
+	Next(ending_func)
 
-func Next() -> void: #passe d'un dialogue à un autre
+func Next(ending_func) -> void: #passe d'un dialogue à un autre
 	text_number += 1
 	
 	if text_number < dialogue.size():
@@ -30,7 +30,7 @@ func Next() -> void: #passe d'un dialogue à un autre
 	
 	else:
 		Global.player.isTalking = false
-		close_window()
+		close_window(ending_func)
 	
 
 func add_letters(target,avancement, version):
@@ -46,8 +46,9 @@ func add_letters(target,avancement, version):
 
 
 
-func close_window():
+func close_window(ending_func):
 	state.hide()
+	ending_func.call()
 	self.queue_free()
 	
 
