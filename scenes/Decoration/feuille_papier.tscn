@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cpq1px774y8xe"]
 
 [ext_resource type="Script" uid="uid://blgf3af4f2jge" path="res://scripts/feuille_papier.gd" id="1_x3uyg"]
-[ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="1_yv70s"]
+[ext_resource type="Texture2D" uid="uid://0g5m0sb31yko" path="res://assets/Objets/feuille_grimoire.png" id="2_x3uyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
-size = Vector2(347, 314)
+size = Vector2(3105, 2698)
 
 [node name="FeuillePapier" type="Node2D" unique_id=1749185933 node_paths=PackedStringArray("area")]
 script = ExtResource("1_x3uyg")
@@ -13,10 +13,10 @@ area = NodePath("Area2D")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1537941183]
 position = Vector2(-1, 2)
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("1_yv70s")
+texture = ExtResource("2_x3uyg")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1061743867]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=252913175]
-position = Vector2(0, 3)
+position = Vector2(-7.5, 9)
 shape = SubResource("RectangleShape2D_u081y")
