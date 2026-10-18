@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="3_ts4rt"]
 [ext_resource type="PackedScene" uid="uid://tmyu1glooduk" path="res://scenes/feuille_grimoire.tscn" id="4_rc0pn"]
 [ext_resource type="PackedScene" uid="uid://cnx2i1tywxq0i" path="res://scenes/menu.tscn" id="5_h843c"]
+[ext_resource type="PackedScene" uid="uid://b4wat2gbkosap" path="res://scenes/sceaux.tscn" id="6_e85df"]
 
 [node name="Game Controller" type="Node" unique_id=1399786066 node_paths=PackedStringArray("world2D", "gui", "current_gui_scene")]
 script = ExtResource("1_vq0e2")
@@ -29,3 +30,5 @@ offset_bottom = 40.0
 
 [node name="Feuille_grimoire" parent="." unique_id=1217721136 instance=ExtResource("4_rc0pn")]
 visible = false
+
+[node name="Sceaux" parent="." unique_id=1469191078 instance=ExtResource("6_e85df")]
