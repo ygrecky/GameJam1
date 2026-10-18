@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bg03lrcrtwok2" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(127, 128)
@@ -15,7 +16,7 @@ size = Vector2(125.5, 81)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swyl7"]
 size = Vector2(116, 115)
 
-[node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_", "collision_shape2d", "sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_", "collision_shape2d", "sprite", "interaction_label")]
 position = Vector2(91, 83)
 script = ExtResource("1_3vyb7")
 long_action_zone = NodePath("long_action_zone")
@@ -25,6 +26,7 @@ collision_shape2d = NodePath("CollisionShape2D")
 sprite = NodePath("Sprite2D")
 fleche_delay = 1.0
 aimant_acceleration = 70.0
+interaction_label = NodePath("Node2D/interaction_label/Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=240565828]
 position = Vector2(0, -9)
@@ -68,5 +70,12 @@ offset_bottom = 230.23914
 theme_override_font_sizes/font_size = 130
 text = "Press space to talk"
 
+[node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("3_qhqgy")]
+position = Vector2(-7, -12)
+zoom = Vector2(0.75, 0.75)
+position_smoothing_enabled = true
+
 [connection signal="body_entered" from="short_action_zone" to="." method="_on_short_action_zone_body_entered"]
 [connection signal="body_exited" from="short_action_zone" to="." method="_on_short_action_zone_body_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_player_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_player_area_exited"]

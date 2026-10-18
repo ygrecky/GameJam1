@@ -2,6 +2,7 @@ extends Node
 var game_controller : GameController
 var player : Player
 var time : int
+var inMenu = true
 
 func lancer_la_messe():
 	

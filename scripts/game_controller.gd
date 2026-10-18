@@ -5,7 +5,7 @@ class_name GameController
 
 @export var current_2d_scene : Node2D
 var current_2d_scene_name : String
-var current_gui_scene
+@export var current_gui_scene : Control
 
 var scenes = {}
 var player_pos = {}
@@ -15,21 +15,41 @@ var player_pos = {}
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.game_controller = self
-	current_2d_scene_name = "res://scenes/menu.tscn"
-	scenes[current_2d_scene_name] = current_2d_scene
-	player_pos[current_2d_scene_name] = Vector2(0,0)
+	current_2d_scene_name = "none"
+	
 	pass # Replace with function body.
+
+
+func delete_menu():
+	Global.inMenu = false
+	current_gui_scene.queue_free()
+	var player = load("res://scenes/player.tscn").instantiate()
+	get_tree().root.add_child(player)
+	
+func switch_to_menu():
+	Global.inMenu = true
+	current_gui_scene = load("res://scenes/menu.tscn").instantiate()
+	get_tree().root.add_child(current_gui_scene)
+	
+	current_2d_scene_name="none"
+	for scene in scenes.keys():
+		print(scene)
+		scenes[scene].queue_free()
+		scenes.erase(scene)
+	Global.player.queue_free()
+
 
 func change_2d_scene(new_scene : String, delete : bool = false, keep_running : bool = true):
 	Global.player.inTransition = true
-	if delete:
-		current_2d_scene.queue_free()
-	elif keep_running:
-		current_2d_scene.visible = false
-		current_2d_scene.process_mode = Node.PROCESS_MODE_DISABLED
-		player_pos[current_2d_scene_name] = Global.player.position
-	else:
-		world2D.remove_child(current_2d_scene)
+	if current_2d_scene_name != "none":
+		if delete:
+			current_2d_scene.queue_free()
+		elif keep_running:
+			current_2d_scene.visible = false
+			current_2d_scene.process_mode = Node.PROCESS_MODE_DISABLED
+			player_pos[current_2d_scene_name] = Global.player.position
+		else:
+			world2D.remove_child(current_2d_scene)
 	if(new_scene in scenes):
 		current_2d_scene = scenes[new_scene]
 		

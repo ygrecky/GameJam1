@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c5i35xne8a86i"]
 
-[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://xrskya04pwnm" path="res://scenes/texte.tscn" id="3_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dbgsqtuqtac8i" path="res://scenes/inventaire.tscn" id="4_lbhrr"]
@@ -19,15 +18,11 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Inventaire" parent="." unique_id=1760829572 instance=ExtResource("4_lbhrr")]
 
-[node name="Texte" parent="." unique_id=1090087195 instance=ExtResource("3_vtaks")]
-
-[node name="Boite_de_dialogue" parent="." unique_id=1665444524 instance=ExtResource("1_uwrxv")]
-
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("5_iywne")]
 position = Vector2(545, -123)
 
 [node name="ravin" parent="." unique_id=1464562848 instance=ExtResource("7_u5sy4")]
-position = Vector2(36, -2)
+position = Vector2(147, -7)
 
 [node name="pnj" parent="." unique_id=281381040 instance=ExtResource("8_0tnpc")]
 position = Vector2(-533, -332)
