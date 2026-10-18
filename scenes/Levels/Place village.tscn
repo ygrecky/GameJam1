@@ -18,6 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
 [ext_resource type="Texture2D" uid="uid://dwjhyeghglhqt" path="res://assets/grotte.png" id="17_dktky"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="18_dktky"]
+[ext_resource type="PackedScene" uid="uid://bcjyuhhxy1aoc" path="res://scenes/PNJ/souris_cachée2.tscn" id="19_cyp12"]
+[ext_resource type="PackedScene" uid="uid://dpyhkgr8gw33h" path="res://scenes/PNJ/souris_cachée1.tscn" id="20_0137w"]
+[ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="21_f8ss2"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -339,6 +342,16 @@ position = Vector2(1860, -4353)
 
 [node name="Bordure forêt10" parent="." unique_id=1474732096 instance=ExtResource("1_84da0")]
 position = Vector2(3042, -4353)
+
+[node name="souris_cachée2" parent="." unique_id=223147539 instance=ExtResource("19_cyp12")]
+z_index = 0
+position = Vector2(574.00024, 861.99994)
+
+[node name="souris_cachée1" parent="." unique_id=306419214 instance=ExtResource("20_0137w")]
+position = Vector2(972.0001, 925.00006)
+
+[node name="souris_ev2" parent="." unique_id=478708516 instance=ExtResource("21_f8ss2")]
+position = Vector2(126, -30)
 
 [editable path="Maison"]
 [editable path="Maison2"]
