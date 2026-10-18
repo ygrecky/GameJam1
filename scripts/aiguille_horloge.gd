@@ -12,7 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not Global.inMenu:
+	if not Global.inMenu and false:
 		Global.resart_boucle.visible = true
 		Global.player.isTalking = true
 		Global.player.position = aiguille.position
