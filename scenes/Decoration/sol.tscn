@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b4q1fjw45e8nh"]
+
+[ext_resource type="Texture2D" uid="uid://c8cfk3wp61fcl" path="res://assets/tiles/tile_green_1.png" id="1_wlbjv"]
+
+[node name="Sol" type="Node2D" unique_id=1363791764]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1031766034]
+texture_repeat = 2
+position = Vector2(-2595.0002, 1732.0001)
+scale = Vector2(20, 20)
+texture = ExtResource("1_wlbjv")
+region_enabled = true
+region_rect = Rect2(0, -158.4, 451.2, 190.4)

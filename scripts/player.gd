@@ -29,10 +29,11 @@ var arbalette_index = 2
 
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
+@export var interaction_label : Label
 
 func _ready():
 	Global.player = self
-	$Node2D/interaction_label.visible = false
+	interaction_label.visible = false
 
 func get_input(delta):
 	aimant_activé = actions_pressed[aimant_index]
@@ -147,7 +148,7 @@ func use_object(index,delta):
 
 func _on_short_action_zone_body_entered(body: Node2D) -> void:
 	if body is Pnj:
-		$Node2D/interaction_label.visible = true
+		
 		#$Node2D/interaction_label/Label.visible = true
 		interaction_label.visible = true
 		interaction_label.text = "Parler (Espace)"
@@ -159,7 +160,7 @@ func _on_short_action_zone_body_entered(body: Node2D) -> void:
 
 func _on_short_action_zone_body_exited(body: Node2D) -> void:
 	if body is Pnj:
-		$Node2D/interaction_label.visible = false
+		
 		#$Node2D/interaction_label/Label.visible = false
 		interaction_label.visible = false
 		
