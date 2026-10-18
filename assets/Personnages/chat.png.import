@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fieb6vadxspw"
-path="res://.godot/imported/panda.png-8c5e65beb190c703d6f487151b545cc1.ctex"
+uid="uid://sec0b8n31wyc"
+path="res://.godot/imported/chat.png-70ac6fb913fa019ad82fe77e2e32f85b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personnages/New perso/panda.png"
-dest_files=["res://.godot/imported/panda.png-8c5e65beb190c703d6f487151b545cc1.ctex"]
+source_file="res://assets/Personnages/chat.png"
+dest_files=["res://.godot/imported/chat.png-70ac6fb913fa019ad82fe77e2e32f85b.ctex"]
 
 [params]
 

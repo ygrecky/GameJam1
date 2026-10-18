@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck7v7bfv8fab5"
-path="res://.godot/imported/cerf.png-59654372ae1908489b4a01797112409d.ctex"
+uid="uid://cuusieowcv3j0"
+path="res://.godot/imported/ours.png-d0c600c9cdee7e0642e130028ac7d9da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personnages/New perso/cerf.png"
-dest_files=["res://.godot/imported/cerf.png-59654372ae1908489b4a01797112409d.ctex"]
+source_file="res://assets/Personnages/ours.png"
+dest_files=["res://.godot/imported/ours.png-d0c600c9cdee7e0642e130028ac7d9da.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm5vk6axjwm15"
-path="res://.godot/imported/bichette.png-f683421b0318420adb4a37fba6fee451.ctex"
+uid="uid://m37rb5lxoeh8"
+path="res://.godot/imported/chien.png-40dbd8bc0a28ea28d05b0502cc987a3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personnages/New perso/bichette.png"
-dest_files=["res://.godot/imported/bichette.png-f683421b0318420adb4a37fba6fee451.ctex"]
+source_file="res://assets/Personnages/chien.png"
+dest_files=["res://.godot/imported/chien.png-40dbd8bc0a28ea28d05b0502cc987a3f.ctex"]
 
 [params]
 

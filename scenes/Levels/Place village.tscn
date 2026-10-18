@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://8ti3h7q5uibo" path="res://scenes/Decoration/tile_chemin_tournant.tscn" id="16_2d8mv"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
 [ext_resource type="PackedScene" uid="uid://dpyhkgr8gw33h" path="res://scenes/PNJ/souris_cachée1.tscn" id="17_hvbxv"]
+[ext_resource type="Script" uid="uid://ccqekdiwep2y2" path="res://scenes/PNJ/pretre.gd" id="17_hvbxv"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -254,9 +255,9 @@ position = Vector2(14, -3328)
 position = Vector2(3960, -3267)
 
 [node name="ravin" parent="." unique_id=674203935 instance=ExtResource("16_hvbxv")]
-position = Vector2(1920, -2349)
+position = Vector2(1902.9999, -2306)
 rotation = 1.5707964
-scale = Vector2(1.94, 5.97)
+scale = Vector2(1.02, 5.97)
 
 [node name="Bordure foret verticale6" parent="." unique_id=100315914 instance=ExtResource("15_rhp8x")]
 position = Vector2(-43.999996, -2806)
@@ -279,7 +280,14 @@ position = Vector2(2531, -3372.9998)
 scale = Vector2(10, 10)
 
 [node name="Bloc magnétique9" parent="." unique_id=1976428260 instance=ExtResource("7_0dq5c")]
-position = Vector2(1827, -2691)
+position = Vector2(1840, -2644)
 
-[node name="souris" parent="." unique_id=1674638464 instance=ExtResource("17_hvbxv")]
-position = Vector2(4305, 2354)
+[node name="Bloc magnétique10" parent="." unique_id=1735558842 instance=ExtResource("7_0dq5c")]
+position = Vector2(2163, -1998)
+
+[node name="pnj2" parent="." unique_id=1086939031 instance=ExtResource("4_t8uv5")]
+position = Vector2(2832, 2305)
+script = ExtResource("17_hvbxv")
+image_link = "res://assets/Personnages/New perso/panda.png"
+
+[editable path="pnj2"]

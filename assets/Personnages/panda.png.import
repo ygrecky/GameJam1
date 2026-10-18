@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7byjkn0okqvj"
-path="res://.godot/imported/tortue.png-ba9466218d5ea4cc7d980f578e242801.ctex"
+uid="uid://fieb6vadxspw"
+path="res://.godot/imported/panda.png-1c23245484bf35e87fbb1049d61836d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personnages/New perso/tortue.png"
-dest_files=["res://.godot/imported/tortue.png-ba9466218d5ea4cc7d980f578e242801.ctex"]
+source_file="res://assets/Personnages/panda.png"
+dest_files=["res://.godot/imported/panda.png-1c23245484bf35e87fbb1049d61836d8.ctex"]
 
 [params]
 

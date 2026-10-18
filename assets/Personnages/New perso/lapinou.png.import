@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuusieowcv3j0"
-path="res://.godot/imported/ours.png-14f6df6a838d331ffae8987cbe78db46.ctex"
+uid="uid://csd8uo7mv1vpo"
+path="res://.godot/imported/lapinou.png-1aade3e8ed1c4372d22b497a178daa01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Personnages/New perso/ours.png"
-dest_files=["res://.godot/imported/ours.png-14f6df6a838d331ffae8987cbe78db46.ctex"]
+source_file="res://assets/Personnages/New perso/lapinou.png"
+dest_files=["res://.godot/imported/lapinou.png-1aade3e8ed1c4372d22b497a178daa01.ctex"]
 
 [params]
 
