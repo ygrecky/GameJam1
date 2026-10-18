@@ -3,6 +3,13 @@ extends Node2D
 
 
 var liste_pnj = []
+var liste_pnj_i = []
+
+
+func leave_salle():
+	for pnj_i in liste_pnj_i:
+		pnj_i.queuefree()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for pnj in liste_pnj : 
@@ -12,6 +19,7 @@ func _ready() -> void:
 		pnj_i.dialogue = liste_pnj[pnj][2]
 		pnj.get_node("Sprite2D").texture = load("res://assets/"+pnj_i.name+".png")
 		
+		liste_pnj_i += pnj_i
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
