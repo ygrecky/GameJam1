@@ -13,6 +13,7 @@ position = Vector2(200, 200)
 scale = Vector2(1.66, 1.66)
 script = ExtResource("1_c72gr")
 text_box = ExtResource("2_d3r43")
+image_link = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
 position = Vector2(-4.2168655, 63.419586)
