@@ -352,6 +352,13 @@ position = Vector2(972.0001, 925.00006)
 
 [node name="souris_ev2" parent="." unique_id=478708516 instance=ExtResource("21_f8ss2")]
 position = Vector2(126, -30)
+[node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("21_0137w")]
+position = Vector2(1126, -3319)
+min_scale = 0.5
+
+[node name="Feu2" parent="." unique_id=139269608 instance=ExtResource("21_0137w")]
+position = Vector2(1080, 689)
+min_scale = 0.5
 
 [editable path="Maison"]
 [editable path="Maison2"]
