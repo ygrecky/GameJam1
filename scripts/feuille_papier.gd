@@ -13,4 +13,6 @@ func _physics_process(delta: float) -> void:
 	for elt in area.get_overlapping_bodies():
 		if(elt is Player and elt.action_just_pressed):
 			print("Lecture de la feuille")
+			$Control.visible  = true
+			
 	pass

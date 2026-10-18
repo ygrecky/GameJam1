@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://tmyu1glooduk"]
+
+[ext_resource type="Script" uid="uid://blgf3af4f2jge" path="res://scripts/feuille_papier.gd" id="1_lt2nm"]
+[ext_resource type="Texture2D" uid="uid://0g5m0sb31yko" path="res://assets/Objets/feuille_grimoire.png" id="1_u0c74"]
+[ext_resource type="FontFile" uid="uid://02rf7b6ati7f" path="res://assets/fonts/squac___.TTF" id="2_lt2nm"]
+[ext_resource type="FontFile" uid="uid://dh3ighwjb5okn" path="res://assets/fonts/deigratia/DeiGrat.ttf" id="3_np212"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bg0ao"]
+font = ExtResource("2_lt2nm")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_78sch"]
+font = ExtResource("2_lt2nm")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_p7f0c"]
+font = ExtResource("2_lt2nm")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_43vfd"]
+font = ExtResource("3_np212")
+font_size = 12
+font_color = Color(0, 0, 0, 1)
+
+[node name="Feuille_grimoire" type="CanvasLayer" unique_id=1217721136]
+script = ExtResource("1_lt2nm")
+
+[node name="Control" type="Control" parent="." unique_id=316681931]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1062946036]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -218.0
+offset_top = -87.0
+offset_right = 218.0
+offset_bottom = 477.0
+grow_horizontal = 2
+texture = ExtResource("1_u0c74")
+expand_mode = 1
+
+[node name="lettrine" type="Label" parent="Control" unique_id=757134719]
+layout_mode = 0
+offset_left = -94.0
+offset_top = -12.0
+offset_right = -64.0
+offset_bottom = 24.0
+text = "C"
+label_settings = SubResource("LabelSettings_bg0ao")
+
+[node name="titre" type="Label" parent="Control" unique_id=56781276]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.0
+offset_right = 133.0
+offset_bottom = 25.0
+grow_horizontal = 2
+text = "omment invoquer"
+label_settings = SubResource("LabelSettings_78sch")
+
+[node name="titre2" type="Label" parent="Control" unique_id=474594687]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 27.0
+offset_right = 20.0
+offset_bottom = 50.0
+grow_horizontal = 2
+text = "un héros"
+label_settings = SubResource("LabelSettings_p7f0c")
+
+[node name="corps" type="Label" parent="Control" unique_id=1582852242]
+custom_maximum_size = Vector2(500, -1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 61.0
+offset_right = 187.0
+offset_bottom = 436.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed non risus. Suspendisse lectus tortor, dignissim sit
+amet, adipiscing nec, ultricies sed, dolor. Cras elementum
+ultrices diam. Maecenas ligula massa, varius a, semper
+congue, euismod non, mi.
+
+Proin porttitor, orci nec nonummy molestie, enim est
+eleifend mi, non fermentum diam nisl sit amet erat.
+ Duis semper. Duis arcu massa, scelerisque vitae,
+ ,consequat in, pretium a, enim.
+
+
+page 383       Grimoire d'invocation"
+label_settings = SubResource("LabelSettings_43vfd")
