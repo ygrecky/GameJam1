@@ -12,7 +12,8 @@ func ending_func() :
 
 
 func talk_to():
-	print(self)
+	print("Parler")
+	print(Global.player.isTalking)
 	var bdd = text_box.instantiate()
 	bdd.speakerPnj = self
 	bdd.dialogue = dialogue

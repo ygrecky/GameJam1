@@ -17,6 +17,7 @@ var sprite2
 var ending_func = func() : pass
 
 func open_window(dialogue, ending_func = func() : pass): #ouvre la boite de dialogue
+	Global.player.isTalking = true
 	state.show()
 	text_number = -1
 	Next(ending_func)
@@ -38,7 +39,6 @@ func Next(ending_func) -> void: #passe d'un dialogue à un autre
 func add_letters(target,avancement, version):
 	if version == text_number :
 		text.text += target[avancement]
-		print(text.text)
 		avancement += 1
 		
 		if avancement != target.length():

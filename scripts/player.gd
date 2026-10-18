@@ -98,7 +98,6 @@ func _physics_process(delta):
 	if(not isPaused):
 		for elt in short_action_zone.get_overlapping_bodies():
 			if(elt is Pnj and action_just_pressed):
-				isTalking = true
 				elt.talk_to()
 		for elt in collision_.get_overlapping_bodies():
 			if(elt!=self):

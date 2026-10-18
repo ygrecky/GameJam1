@@ -16,6 +16,7 @@ func ending_func() : pass
 
 
 func talk_to():
+	print("Parler")
 	var bdd = text_box.instantiate()
 	bdd.speakerPnj = self
 	bdd.dialogue = dialogue
