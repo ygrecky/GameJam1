@@ -6,7 +6,7 @@ var se_deplace = false
 func ending_func() : 
 	$CollisionShape2D.disabled = true
 	se_deplace = true
-	velocity = Vector2(speed*2, 0)
+	velocity = Vector2(speed*2, speed)
 	
 
 func talk_to():
@@ -22,6 +22,7 @@ func talk_to():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pnj_name = "Petite fille"
+	speed =1000
 	dialogue = [["Oh tu m’as trouvé hihi ! Si tu m’attrapes une fois de plus je te montrerai mon trésor."]]
 
 
@@ -29,5 +30,5 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if se_deplace:
 		move_and_slide()
-	if self.position.x > 1500 :
+	if self.position.x > 3000 :
 			self.queue_free()
