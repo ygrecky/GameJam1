@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="3_hlsi6"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_cxnd5"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_t8830"]
+[ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="6_h6rgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(29.870966, 27.100977)
@@ -60,3 +61,7 @@ position = Vector2(2749, 1317)
 [node name="Mur6" parent="." unique_id=221767368 instance=ExtResource("5_t8830")]
 position = Vector2(2462, 390)
 rotation = 1.5707964
+
+[node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("6_h6rgy")]
+position = Vector2(3789, 576)
+min_scale = 1.0
