@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://r0h8ehst1iip"]
 
-[ext_resource type="Texture2D" uid="uid://bpubtjeqx4gp6" path="res://assets/Inventaire_texture.png" id="1_6tv3b"]
+[ext_resource type="Texture2D" uid="uid://bpubtjeqx4gp6" path="res://assets/inventaire/Inventaire_texture.png" id="1_6tv3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(1577, 379)
 
-[node name="Mur" type="Node2D" unique_id=872404817]
+[node name="Mur" type="StaticBody2D" unique_id=1581529100]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1968108206]
 position = Vector2(-247, -85.50008)
@@ -15,5 +15,3 @@ texture = ExtResource("1_6tv3b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1894545570]
 position = Vector2(-238.5, -179.5)
 shape = SubResource("RectangleShape2D_u081y")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1295544609]

@@ -15,8 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="15_rhp8x"]
 [ext_resource type="PackedScene" uid="uid://8ti3h7q5uibo" path="res://scenes/Decoration/tile_chemin_tournant.tscn" id="16_2d8mv"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
-[ext_resource type="Script" uid="uid://ccqekdiwep2y2" path="res://scenes/PNJ/pretre.gd" id="17_hvbxv"]
-[ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="18_dktky"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="18_dktky"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
@@ -94,7 +92,7 @@ scale = Vector2(10, 10)
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("7_0dq5c")]
 position = Vector2(4337, 1)
 
-[node name="Node2D" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
+[node name="eglise" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
 position = Vector2(2847.0002, 511)
 scale = Vector2(15.015, 15.015)
 
@@ -104,9 +102,10 @@ position = Vector2(725, 101)
 [node name="Chemin2" parent="." unique_id=774553325 instance=ExtResource("5_kquo5")]
 position = Vector2(2875, 1215)
 
-[node name="Bousole" parent="." unique_id=538919682 instance=ExtResource("10_m65ih")]
+[node name="Bousole" parent="." unique_id=538919682 node_paths=PackedStringArray("target1") instance=ExtResource("10_m65ih")]
 position = Vector2(3459, 577)
 scale = Vector2(0.49, 0.49)
+target1 = NodePath("../eglise")
 
 [node name="Chemin virage" parent="." unique_id=1553690868 instance=ExtResource("11_d4wbx")]
 position = Vector2(2142, 1212)
@@ -280,8 +279,6 @@ position = Vector2(1840, -2644)
 [node name="Bloc magnétique10" parent="." unique_id=1735558842 instance=ExtResource("7_0dq5c")]
 position = Vector2(2163, -1998)
 
-
-
 [node name="souris_ev" parent="." unique_id=281381040 instance=ExtResource("18_dktky")]
 position = Vector2(178, -101)
 
@@ -289,3 +286,15 @@ position = Vector2(178, -101)
 position = Vector2(1428.0001, 657)
 scale = Vector2(3.35, 3.35)
 destination_path = "res://scenes/Levels/maison forgeron.tscn"
+
+[node name="TpZone2" parent="." unique_id=1891399501 instance=ExtResource("18_dktky")]
+position = Vector2(4449, 767)
+scale = Vector2(2.55, 2.55)
+destination_path = "res://scenes/Levels/interieur_biliotheque.tscn"
+
+[node name="TpZone3" parent="." unique_id=350350663 instance=ExtResource("18_dktky")]
+position = Vector2(2641, 1022)
+scale = Vector2(4.205, 4.205)
+destination_path = "res://scenes/Levels/intérieur église.tscn"
+
+[editable path="Bousole"]

@@ -1,32 +1,51 @@
 [gd_scene format=3 uid="uid://b4df146gfgy6h"]
 
 [ext_resource type="PackedScene" uid="uid://dovg7m227or15" path="res://scenes/Decoration/parquet.tscn" id="1_83pjl"]
-[ext_resource type="Texture2D" uid="uid://bketv2sm038nn" path="res://assets/décor/enclume.png" id="2_qr5mn"]
+[ext_resource type="Texture2D" uid="uid://b7u12lnyf5nel" path="res://assets/tiles/tile_stone_1.png" id="2_h2qx1"]
+[ext_resource type="Texture2D" uid="uid://c01bn5ss7ivlk" path="res://assets/décor/croix.png" id="3_h2qx1"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="3_sw7jt"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_aplpm"]
+[ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="4_hlsi6"]
+[ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_cxnd5"]
+[ext_resource type="PackedScene" uid="uid://cgndvvo5vpwh1" path="res://scenes/aimant.tscn" id="8_50rai"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
-size = Vector2(29.870966, 27.100977)
+size = Vector2(65.80645, 90.05863)
 
-[node name="Maison forgeron" type="Node2D" unique_id=1607215442]
+[node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
 position = Vector2(-2944, -307)
 
 [node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_83pjl")]
 position = Vector2(7043.9995, 107)
 scale = Vector2(1.695, 1.45)
 
+[node name="Sprite2D" parent="parquet" index="0" unique_id=1616649806]
+texture = ExtResource("2_h2qx1")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1776865817]
 position = Vector2(826, 72)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
-position = Vector2(2992, 204)
-scale = Vector2(3.875, 4.796875)
-texture = ExtResource("2_qr5mn")
+position = Vector2(3694, 183)
+scale = Vector2(14.935, 14.935)
+texture = ExtResource("3_h2qx1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=797289935]
-position = Vector2(2976, 231)
+position = Vector2(3689.5, 228)
 scale = Vector2(3.875, 4.796875)
 shape = SubResource("RectangleShape2D_u081y")
+
+[node name="Bloc magnétique" parent="StaticBody2D" unique_id=32234192 instance=ExtResource("4_hlsi6")]
+position = Vector2(3272, -60)
+
+[node name="Bloc magnétique2" parent="StaticBody2D" unique_id=890870522 instance=ExtResource("4_hlsi6")]
+position = Vector2(2810, 733)
+
+[node name="Bloc magnétique3" parent="StaticBody2D" unique_id=677380974 instance=ExtResource("4_hlsi6")]
+position = Vector2(2513, -197)
+
+[node name="Mur" parent="StaticBody2D" unique_id=872404817 instance=ExtResource("5_cxnd5")]
+position = Vector2(2930, -257)
 
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("3_sw7jt")]
 position = Vector2(2923.9998, 186)
@@ -39,3 +58,35 @@ position = Vector2(2911, 342)
 rotation = 1.5707964
 scale = Vector2(13.218752, 8.499999)
 texture = ExtResource("4_aplpm")
+
+[node name="Mur" parent="." unique_id=445528505 instance=ExtResource("5_cxnd5")]
+position = Vector2(5314, -193)
+
+[node name="Mur2" parent="." unique_id=1155897686 instance=ExtResource("5_cxnd5")]
+position = Vector2(4757, 754)
+rotation = 1.5707964
+
+[node name="Mur3" parent="." unique_id=212381130 instance=ExtResource("5_cxnd5")]
+position = Vector2(4301, 1261)
+
+[node name="Mur4" parent="." unique_id=2099488277 instance=ExtResource("5_cxnd5")]
+position = Vector2(2749, 1317)
+
+[node name="Mur5" parent="." unique_id=1248534943 instance=ExtResource("5_cxnd5")]
+position = Vector2(2462, 390)
+rotation = 1.5707964
+
+[node name="Aimant" parent="." unique_id=1938256992 instance=ExtResource("8_50rai")]
+position = Vector2(3924, 382)
+scale = Vector2(0.47, 0.47)
+
+[node name="Bloc magnétique3" parent="." unique_id=1797999041 instance=ExtResource("4_hlsi6")]
+position = Vector2(4265, 246)
+
+[node name="Bloc magnétique4" parent="." unique_id=15265005 instance=ExtResource("4_hlsi6")]
+position = Vector2(4265, 370)
+
+[node name="Bloc magnétique5" parent="." unique_id=1376411107 instance=ExtResource("4_hlsi6")]
+position = Vector2(4245, 500)
+
+[editable path="parquet"]

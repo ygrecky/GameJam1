@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bketv2sm038nn" path="res://assets/décor/enclume.png" id="2_h2qx1"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="3_hlsi6"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_cxnd5"]
+[ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_t8830"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(29.870966, 27.100977)
@@ -39,3 +40,23 @@ position = Vector2(2911, 342)
 rotation = 1.5707964
 scale = Vector2(13.218752, 8.499999)
 texture = ExtResource("4_cxnd5")
+
+[node name="Mur" parent="." unique_id=1581529100 instance=ExtResource("5_t8830")]
+position = Vector2(3747, -200)
+
+[node name="Mur2" parent="." unique_id=1100780419 instance=ExtResource("5_t8830")]
+position = Vector2(5314, -193)
+
+[node name="Mur3" parent="." unique_id=1300010248 instance=ExtResource("5_t8830")]
+position = Vector2(4757, 754)
+rotation = 1.5707964
+
+[node name="Mur4" parent="." unique_id=1313278603 instance=ExtResource("5_t8830")]
+position = Vector2(4301, 1261)
+
+[node name="Mur5" parent="." unique_id=1955559028 instance=ExtResource("5_t8830")]
+position = Vector2(2749, 1317)
+
+[node name="Mur6" parent="." unique_id=221767368 instance=ExtResource("5_t8830")]
+position = Vector2(2462, 390)
+rotation = 1.5707964

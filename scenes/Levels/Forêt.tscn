@@ -40,7 +40,7 @@ rotation = 1.5707964
 
 [node name="FeuillePapier" parent="." unique_id=1749185933 instance=ExtResource("4_lowvy")]
 position = Vector2(377, 4)
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.06, 0.06)
 
 [node name="Sol" parent="." unique_id=1363791764 instance=ExtResource("5_lowvy")]
 z_index = -1
