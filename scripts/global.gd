@@ -4,6 +4,7 @@ var player : Player
 var time : int
 var inMenu = true
 var lettre_grimoire = false
+var resart_boucle : Node2D
 
 func lancer_la_messe():
 	
@@ -11,7 +12,7 @@ func lancer_la_messe():
 	get_tree().create_timer(180.0).timeout.connect(func() : finir_le_jeu())
 	
 func finir_le_jeu():
-	pass	
+	Global.resart_boucle.visible = true
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

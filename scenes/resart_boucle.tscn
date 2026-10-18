@@ -1,7 +1,49 @@
 [gd_scene format=3 uid="uid://12ipmypu4oct"]
 
+[ext_resource type="Texture2D" uid="uid://xdyx72to5d8a" path="res://assets/Objets/horloge_new.png" id="1_o4scp"]
+[ext_resource type="Texture2D" uid="uid://b2j0heevgqdpt" path="res://assets/Objets/aiguilles horloge.png" id="2_wqryi"]
+[ext_resource type="Script" uid="uid://cailw0aohbs6f" path="res://scripts/aiguille_horloge.gd" id="3_wqryi"]
+
+[sub_resource type="Gradient" id="Gradient_wqryi"]
+offsets = PackedFloat32Array(0.6041667)
+colors = PackedColorArray(1, 0.75686276, 0.2901961, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_78sch"]
+gradient = SubResource("Gradient_wqryi")
+
 [node name="Resart_boucle" type="Control" unique_id=631673236]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_left = 0.5
+anchor_top = 0.13900001
+anchor_right = 0.5
+anchor_bottom = 0.13900001
+offset_left = -576.0
+offset_top = -90.07201
+offset_right = -536.0
+offset_bottom = -50.072006
+
+[node name="Restart_boucle" type="Node2D" parent="." unique_id=1368344611]
+script = ExtResource("3_wqryi")
+
+[node name="background" type="TextureRect" parent="Restart_boucle" unique_id=1188103597]
+z_index = 10
+offset_left = -1216.0
+offset_top = -713.0
+offset_right = 1214.0
+offset_bottom = 718.0
+texture = SubResource("GradientTexture1D_78sch")
+
+[node name="horloge" type="Sprite2D" parent="Restart_boucle" unique_id=1069769261]
+z_index = 10
+position = Vector2(0.99999976, 207.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_o4scp")
+
+[node name="aiguille" type="Node2D" parent="Restart_boucle" unique_id=2015240689]
+z_index = 10
+position = Vector2(0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Restart_boucle/aiguille" unique_id=1586701634]
+position = Vector2(0, -8)
+scale = Vector2(0.27962962, 0.2330247)
+texture = ExtResource("2_wqryi")
