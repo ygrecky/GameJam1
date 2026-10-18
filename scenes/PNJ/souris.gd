@@ -18,7 +18,6 @@ func talk_to():
 
 
 
-
 func _ready() -> void:
 	pnj_name = "Petite fille"
 	dialogue = [["Bonjour ! Vous m’avez l’air perdu monsieur le renard laissez moi vous guider vers la place du village"]]
