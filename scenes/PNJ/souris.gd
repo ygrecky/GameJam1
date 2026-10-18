@@ -14,11 +14,8 @@ func talk_to():
 	Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	bdd.ending_func = ending_func
 	
-var se_deplace = false 
 
-func ending_func() : 
-	$CollisionShape2D.disabled = true
-	se_deplace = true
+
 
 
 
