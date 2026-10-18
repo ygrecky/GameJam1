@@ -1,18 +1,56 @@
 [gd_scene format=3 uid="uid://dhhc5yxb43h51"]
 
-[ext_resource type="Texture2D" uid="uid://bpubtjeqx4gp6" path="res://assets/Inventaire_texture.png" id="1_3eq3l"]
+[ext_resource type="Texture2D" uid="uid://cesmted3jij5b" path="res://assets/décor/sap1.png" id="1_3eq3l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
-size = Vector2(1142, 304)
+size = Vector2(1142, 213)
 
 [node name="Bordure forêt" type="StaticBody2D" unique_id=170095540]
-position = Vector2(-1507, -489)
+position = Vector2(-1532, -482)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1426835892]
-position = Vector2(-3.999878, 92)
-scale = Vector2(0.47903225, 0.28962374)
+z_index = 1
+position = Vector2(-474.67993, -75.67999)
+scale = Vector2(11.895, 11.895)
 texture = ExtResource("1_3eq3l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2098699364]
-position = Vector2(6, 13)
+z_index = 1
+position = Vector2(1.3200684, 0.32000732)
 shape = SubResource("RectangleShape2D_u081y")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=605094413]
+z_index = 1
+position = Vector2(-321.67993, -79.67999)
+scale = Vector2(11.895, 11.895)
+texture = ExtResource("1_3eq3l")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1839500655]
+z_index = 1
+position = Vector2(-133.67993, -74.67999)
+scale = Vector2(11.895, 11.895)
+texture = ExtResource("1_3eq3l")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=485617159]
+z_index = 1
+position = Vector2(26.320068, -75.67999)
+scale = Vector2(11.895, 11.895)
+texture = ExtResource("1_3eq3l")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1354682496]
+z_index = 1
+position = Vector2(182.32007, -79.67999)
+scale = Vector2(11.895, 11.895)
+texture = ExtResource("1_3eq3l")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=102555458]
+z_index = 1
+position = Vector2(323.32007, -72.67999)
+scale = Vector2(11.895, 11.895)
+texture = ExtResource("1_3eq3l")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=2018771825]
+z_index = 1
+position = Vector2(479.32007, -79.67999)
+scale = Vector2(11.895, 11.895)
+texture = ExtResource("1_3eq3l")

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bf7i54xbyggli"]
+
+[ext_resource type="Texture2D" uid="uid://cesmted3jij5b" path="res://assets/décor/sap1.png" id="1_jh7mt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(169, 514)
+
+[node name="Bordure foret verticale" type="StaticBody2D" unique_id=477169209]
+position = Vector2(535, 107)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=726252845]
+position = Vector2(-22.99997, -231)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1945958603]
+position = Vector2(60.000023, -193)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2064292927]
+position = Vector2(-35.999996, -105)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=161961255]
+position = Vector2(74, -64)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1380029963]
+position = Vector2(-21.99999, 23)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=251651148]
+position = Vector2(87, 55)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1887016989]
+position = Vector2(-43.99999, 113.99999)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=881657762]
+position = Vector2(65.000015, 153.99998)
+scale = Vector2(6.14, 6.14)
+texture = ExtResource("1_jh7mt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=769107769]
+position = Vector2(17.5, 1)
+shape = SubResource("RectangleShape2D_u081y")

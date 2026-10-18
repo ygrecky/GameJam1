@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1vxwqj6ukppx"]
+
+[ext_resource type="Texture2D" uid="uid://cesmted3jij5b" path="res://assets/décor/sap1.png" id="1_xvcuy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(177, 134)
+
+[node name="Arbre" type="StaticBody2D" unique_id=1874252714]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1820589058]
+position = Vector2(0, 1)
+scale = Vector2(7.475, 7.475)
+texture = ExtResource("1_xvcuy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1255315609]
+position = Vector2(-1.5, 57)
+shape = SubResource("RectangleShape2D_u081y")
