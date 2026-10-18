@@ -1,18 +1,10 @@
+extends Pnj
 
 
-@export var text_box: PackedScene
 
 
-var pnj_name = "Grand Maistre"
-var direction_x = -1
-var direction_y = 0
-var speed = 200
 
-var dialogue = [["test"],["test"],["aaaazaaaa"]]
 
-func ending_func() : pass
-@export var image_link : String
-@export var sprite : Sprite2D
 
 
 func talk_to():
@@ -27,6 +19,7 @@ func talk_to():
 
 
 func _ready() -> void:
+	pnj_name = "Petite fille"
 	sprite.texture = load(image_link)
 	pass
 	
