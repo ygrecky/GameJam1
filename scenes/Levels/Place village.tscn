@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://ccqekdiwep2y2" path="res://scenes/PNJ/pretre.gd" id="17_hvbxv"]
 [ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="18_dktky"]
 
+[ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="18_dktky"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -293,5 +294,9 @@ image_link = "res://assets/Personnages/panda.png"
 
 [node name="souris_ev" parent="." unique_id=281381040 instance=ExtResource("18_dktky")]
 position = Vector2(178, -101)
+[node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("18_dktky")]
+position = Vector2(1428.0001, 657)
+scale = Vector2(3.35, 3.35)
+destination_path = "res://scenes/Levels/maison_forgeron.tscn"
 
 [editable path="pnj2"]
