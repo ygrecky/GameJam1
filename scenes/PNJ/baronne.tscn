@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b6ghf6mmprp0a"]
+
+[ext_resource type="Script" uid="uid://dbmisocuq7sl3" path="res://scenes/PNJ/baronne.gd" id="1_vmnnp"]
+[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_1bfd2"]
+[ext_resource type="Texture2D" uid="uid://cm5vk6axjwm15" path="res://assets/Personnages/bichette.png" id="2_jlmai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
+size = Vector2(132.60144, 168.64124)
+
+[node name="baronne" type="CharacterBody2D" unique_id=281381040]
+z_index = 5
+position = Vector2(200, 200)
+scale = Vector2(1.66, 1.66)
+script = ExtResource("1_vmnnp")
+text_box = ExtResource("2_1bfd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
+position = Vector2(-4.2168655, 63.419586)
+scale = Vector2(0.8449998, 0.8449998)
+shape = SubResource("RectangleShape2D_ayuyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
+position = Vector2(-4.2168636, 60.24096)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_jlmai")

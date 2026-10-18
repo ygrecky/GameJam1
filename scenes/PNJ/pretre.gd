@@ -5,8 +5,10 @@ extends Pnj
 func _ready() -> void:
 	pnj_name = "Prêtre"
 	sprite.texture = load(image_link)
-	dialogue = [["Bienvenue chez nous voyageur !"],["Malheureusement tu arrives au pire moment… Un démon s’est infiltré parmi nous et la paranoïa nous ronge."],["Mais ta venue parmi nous dans ce curieux accoutrement est un signe divin !"],["J’en suis persuadé, tu es la réponse à mes prières !"]]
-	pass
+	dialogue = [["Bienvenue chez nous voyageur !"],
+	["Malheureusement tu arrives au pire moment… Un démon s’est infiltré parmi nous et la paranoïa nous ronge."],
+	["Mais ta venue parmi nous dans ce curieux accoutrement est un signe divin !"],
+	["J’en suis persuadé, tu es la réponse à mes prières !"]]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

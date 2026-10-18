@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://du4oy6kdwkxwc"]
 
-[ext_resource type="Script" uid="uid://c6riskk414qfs" path="res://souris_cachée1.gd" id="1_175hb"]
+[ext_resource type="Script" uid="uid://bie1mbmqxd45b" path="res://scenes/PNJ/orso.gd" id="1_175hb"]
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_lmtjx"]
 [ext_resource type="Texture2D" uid="uid://cuusieowcv3j0" path="res://assets/Personnages/ours.png" id="3_175hb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
 size = Vector2(132.60144, 168.64124)
 
-[node name="souris_cachée1" type="CharacterBody2D" unique_id=281381040]
+[node name="orso" type="CharacterBody2D" unique_id=281381040]
 z_index = 5
 position = Vector2(200, 200)
 scale = Vector2(1.66, 1.66)
