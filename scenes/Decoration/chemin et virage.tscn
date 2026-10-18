@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cm3it50luwt1b"]
+
+[ext_resource type="PackedScene" uid="uid://csql6brr1dlkx" path="res://scenes/Decoration/chemin.tscn" id="1_px5ou"]
+[ext_resource type="PackedScene" uid="uid://dtsvsklgqr5s0" path="res://scenes/Decoration/chemin_virage.tscn" id="2_re3at"]
+
+[node name="Node2D" type="Node2D" unique_id=1867184124]
+
+[node name="Chemin" parent="." unique_id=1271939013 instance=ExtResource("1_px5ou")]
+position = Vector2(2154, 490)
+rotation = 1.5707964
+
+[node name="Chemin2" parent="." unique_id=1547768559 instance=ExtResource("1_px5ou")]
+position = Vector2(2885, 1203)
+
+[node name="Chemin virage" parent="." unique_id=1553690868 instance=ExtResource("2_re3at")]
+position = Vector2(2163, 1212)
+rotation = -1.5707964
+scale = Vector2(11.905, 11.905)

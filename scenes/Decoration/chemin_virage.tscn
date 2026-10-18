@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dtsvsklgqr5s0"]
+
+[ext_resource type="Texture2D" uid="uid://dirfmhh42jgsd" path="res://assets/tiles/tile_chemin_virage.png" id="1_18uck"]
+
+[node name="Chemin virage" type="Node2D" unique_id=1553690868]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1975493869]
+texture = ExtResource("1_18uck")
