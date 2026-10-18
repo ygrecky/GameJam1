@@ -69,7 +69,7 @@ func add_letters(target,avancement, version):
 		avancement += 1
 		
 		if avancement != target.length():
-			get_tree().create_timer(0.05).timeout.connect(func() : add_letters(target,avancement,version))
+			get_tree().create_timer(0.006).timeout.connect(func() : add_letters(target,avancement,version))
 		
 	
 
