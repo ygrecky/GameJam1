@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://rfwu7hewpvwa" path="res://scenes/Decoration/fontaine.tscn" id="14_2d8mv"]
 [ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="15_rhp8x"]
 [ext_resource type="PackedScene" uid="uid://8ti3h7q5uibo" path="res://scenes/Decoration/tile_chemin_tournant.tscn" id="16_2d8mv"]
+[ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -70,7 +71,7 @@ position = Vector2(3934, 3318)
 position = Vector2(3934, 3318)
 
 [node name="Gros sol5" parent="." unique_id=1715114615 instance=ExtResource("3_o2a7o")]
-position = Vector2(5895, -11)
+position = Vector2(5926, -11)
 
 [node name="pnj" parent="." unique_id=281381040 instance=ExtResource("4_t8uv5")]
 position = Vector2(1011.00006, -235)
@@ -94,7 +95,7 @@ position = Vector2(4275, 1995)
 scale = Vector2(10, 10)
 
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("7_0dq5c")]
-position = Vector2(3436, 38)
+position = Vector2(4337, 1)
 
 [node name="Node2D" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
 position = Vector2(2847.0002, 511)
@@ -104,7 +105,7 @@ scale = Vector2(15.015, 15.015)
 position = Vector2(725, 101)
 
 [node name="Chemin2" parent="." unique_id=774553325 instance=ExtResource("5_kquo5")]
-position = Vector2(2864, 1198)
+position = Vector2(2875, 1215)
 
 [node name="Bousole" parent="." unique_id=538919682 instance=ExtResource("10_m65ih")]
 position = Vector2(3459, 577)
@@ -147,27 +148,27 @@ position = Vector2(-125, 2879)
 scale = Vector2(1.895, 1.895)
 
 [node name="tile_chemin_tournant" parent="." unique_id=960793606 instance=ExtResource("16_2d8mv")]
-position = Vector2(2142, 36)
-scale = Vector2(2.425, 2.425)
+position = Vector2(2139, 77)
+scale = Vector2(2.28, 2.28)
 
 [node name="tile_chemin_tournant2" parent="." unique_id=1795786529 instance=ExtResource("16_2d8mv")]
-position = Vector2(1798, 68.00012)
+position = Vector2(1796.0001, 94.00001)
 rotation = 3.1415927
 scale = Vector2(2.49, 2.49)
 
 [node name="Chemin3" parent="." unique_id=459566223 instance=ExtResource("5_kquo5")]
-position = Vector2(2880, 9)
+position = Vector2(2855, 67)
 
 [node name="Chemin4" parent="." unique_id=1933248949 instance=ExtResource("5_kquo5")]
-position = Vector2(3927, 6)
+position = Vector2(3671, 44)
 
 [node name="tile_chemin_tournant3" parent="." unique_id=15712333 instance=ExtResource("16_2d8mv")]
-position = Vector2(4082, 15)
-scale = Vector2(2.18, 2.18)
+position = Vector2(4072.0002, 33.000004)
+scale = Vector2(2.41, 2.41)
 
 [node name="tile_chemin_tournant4" parent="." unique_id=1941920257 instance=ExtResource("16_2d8mv")]
-position = Vector2(3617, 1228)
-scale = Vector2(2.18, 2.18)
+position = Vector2(3614, 1218.0001)
+scale = Vector2(2.255, 2.255)
 
 [node name="Chemin5" parent="." unique_id=1029818583 instance=ExtResource("5_kquo5")]
 position = Vector2(3627, 1937)
@@ -196,3 +197,85 @@ scale = Vector2(10, 10)
 position = Vector2(3631, 2668)
 rotation = 3.1415927
 scale = Vector2(11.755, 11.755)
+
+[node name="Bloc magnétique2" parent="." unique_id=983161246 instance=ExtResource("7_0dq5c")]
+position = Vector2(4046, 1364)
+
+[node name="Bloc magnétique2" parent="Bloc magnétique2" unique_id=157584098 instance=ExtResource("7_0dq5c")]
+position = Vector2(4038, 1356)
+
+[node name="Bloc magnétique3" parent="." unique_id=1720512056 instance=ExtResource("7_0dq5c")]
+position = Vector2(4046, 1364)
+
+[node name="Bloc magnétique2" parent="Bloc magnétique3" unique_id=1241959831 instance=ExtResource("7_0dq5c")]
+position = Vector2(4038, 1356)
+
+[node name="Bloc magnétique4" parent="." unique_id=1635385630 instance=ExtResource("7_0dq5c")]
+position = Vector2(2111, 2983)
+
+[node name="Bloc magnétique5" parent="." unique_id=728732266 instance=ExtResource("7_0dq5c")]
+position = Vector2(2168, -125)
+
+[node name="Bloc magnétique6" parent="." unique_id=596887682 instance=ExtResource("7_0dq5c")]
+position = Vector2(1911, 1238)
+
+[node name="Bloc magnétique7" parent="." unique_id=715411418 instance=ExtResource("7_0dq5c")]
+position = Vector2(3913, 2592)
+
+[node name="Bloc magnétique8" parent="." unique_id=408522568 instance=ExtResource("7_0dq5c")]
+position = Vector2(3659, -211)
+
+[node name="Chemin7" parent="." unique_id=1516029318 instance=ExtResource("5_kquo5")]
+position = Vector2(1813, -1675)
+rotation = 1.5707964
+
+[node name="Gros sol6" parent="." unique_id=1741710933 instance=ExtResource("3_o2a7o")]
+position = Vector2(1968, 0)
+
+[node name="Maison3" parent="Gros sol6" unique_id=786246546 instance=ExtResource("6_4hvs0")]
+position = Vector2(2699.0002, 438)
+scale = Vector2(10, 10)
+
+[node name="Chemin" parent="Gros sol6" unique_id=1897774032 instance=ExtResource("5_kquo5")]
+position = Vector2(-207, 106)
+
+[node name="Chemin" parent="Gros sol6/Chemin" unique_id=327550441 instance=ExtResource("5_kquo5")]
+position = Vector2(383, 655)
+rotation = 1.5707964
+
+[node name="Chemin" parent="Gros sol6/Chemin/Chemin" unique_id=1782841656 instance=ExtResource("5_kquo5")]
+position = Vector2(-1357, 334.00012)
+
+[node name="Gros sol7" parent="." unique_id=1593091993 instance=ExtResource("3_o2a7o")]
+position = Vector2(14, -3328)
+
+[node name="Gros sol8" parent="." unique_id=1314176705 instance=ExtResource("3_o2a7o")]
+position = Vector2(3960, -3267)
+
+[node name="ravin" parent="." unique_id=674203935 instance=ExtResource("16_hvbxv")]
+position = Vector2(1920, -2349)
+rotation = 1.5707964
+scale = Vector2(1.94, 5.97)
+
+[node name="Bordure foret verticale6" parent="." unique_id=100315914 instance=ExtResource("15_rhp8x")]
+position = Vector2(-43.999996, -2806)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale7" parent="." unique_id=1569850904 instance=ExtResource("15_rhp8x")]
+position = Vector2(-62.999996, -3809)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale8" parent="." unique_id=233248505 instance=ExtResource("15_rhp8x")]
+position = Vector2(3822, -3826)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale9" parent="." unique_id=693230614 instance=ExtResource("15_rhp8x")]
+position = Vector2(3822, -2931)
+scale = Vector2(1.895, 1.895)
+
+[node name="Maison6" parent="." unique_id=2090207498 instance=ExtResource("6_4hvs0")]
+position = Vector2(2531, -3372.9998)
+scale = Vector2(10, 10)
+
+[node name="Bloc magnétique9" parent="." unique_id=1976428260 instance=ExtResource("7_0dq5c")]
+position = Vector2(1827, -2691)

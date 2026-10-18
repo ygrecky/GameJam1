@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
-size = Vector2(127, 128)
+size = Vector2(126.5, 134)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7o8b"]
 size = Vector2(126.75, 2533)
@@ -14,11 +14,12 @@ size = Vector2(126.75, 2533)
 size = Vector2(125.5, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swyl7"]
-size = Vector2(116, 115)
+size = Vector2(100, 100)
 
 [node name="Player" type="CharacterBody2D" unique_id=310191065 node_paths=PackedStringArray("long_action_zone", "short_action_zone", "collision_", "collision_shape2d", "sprite", "camera", "interaction_label")]
-position = Vector2(91, 83)
+position = Vector2(-448, -88)
 script = ExtResource("1_3vyb7")
+speed = 2400
 long_action_zone = NodePath("long_action_zone")
 short_action_zone = NodePath("short_action_zone")
 collision_ = NodePath("Area2D")
@@ -30,34 +31,37 @@ aimant_acceleration = 70.0
 interaction_label = NodePath("Node2D/interaction_label/Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=240565828]
-position = Vector2(0, -9)
+position = Vector2(-1.0000005, 0.99999803)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_qhqgy")
+region_enabled = true
+region_rect = Rect2(100, 400, 2180, 3508)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1509566794]
-position = Vector2(-0.5, -9)
+position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_u081y")
 
 [node name="long_action_zone" type="Area2D" parent="." unique_id=1103071841]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="long_action_zone" unique_id=855740907]
-position = Vector2(0, 1322)
+position = Vector2(2, 1333)
 shape = SubResource("RectangleShape2D_y7o8b")
 
 [node name="short_action_zone" type="Area2D" parent="." unique_id=1003492248]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="short_action_zone" unique_id=62575915]
-position = Vector2(1, 99)
+position = Vector2(-2, 107)
 shape = SubResource("RectangleShape2D_2q88c")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=339435706]
 position = Vector2(1, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=178689436]
-position = Vector2(-1, -5)
+position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_swyl7")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=354769263]
+position = Vector2(5, -4)
 
 [node name="interaction_label" type="Sprite2D" parent="Node2D" unique_id=1277862772]
 z_index = 1
@@ -71,9 +75,10 @@ offset_right = 700.0
 offset_bottom = 230.23914
 theme_override_font_sizes/font_size = 130
 text = "Press space to talk"
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera" parent="." unique_id=1820779306 instance=ExtResource("3_qhqgy")]
-position = Vector2(-7, -12)
+position = Vector2(14, -5)
 zoom = Vector2(0.59, 0.59)
 position_smoothing_enabled = true
 script = null
