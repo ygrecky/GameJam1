@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6riskk414qfs" path="res://souris_cachée1.gd" id="1_175hb"]
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_lmtjx"]
-[ext_resource type="Texture2D" uid="uid://dy2mog5dvqljg" path="res://assets/Personnages/souris transp.png" id="3_0bulm"]
+[ext_resource type="Texture2D" uid="uid://cuusieowcv3j0" path="res://assets/Personnages/ours.png" id="3_175hb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
 size = Vector2(132.60144, 168.64124)
@@ -22,4 +22,4 @@ shape = SubResource("RectangleShape2D_ayuyq")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
 position = Vector2(-4.2168636, 60.24096)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("3_0bulm")
+texture = ExtResource("3_175hb")
