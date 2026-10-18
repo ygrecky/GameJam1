@@ -49,8 +49,8 @@ scale = Vector2(0.22, 0.22)
 
 [node name="pnj" parent="." unique_id=281381040 instance=ExtResource("6_twwjl")]
 position = Vector2(994, 4.7683716e-07)
-scale = Vector2(1.29, 1.29)
 script = ExtResource("8_epbjm")
+image_link = "res://assets/Personnages/souris transp.png"
 
 [node name="Bordure forêt7" parent="." unique_id=2057129823 instance=ExtResource("1_0tc75")]
 position = Vector2(160, -603)
