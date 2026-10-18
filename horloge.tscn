@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://deupogefs70cw"]
+
+[ext_resource type="Texture2D" uid="uid://xdyx72to5d8a" path="res://assets/Objets/horloge_new.png" id="1_icfim"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(198, 219)
+
+[node name="Node2D" type="StaticBody2D" unique_id=1693104251]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258618672]
+position = Vector2(-2, 283.5)
+shape = SubResource("RectangleShape2D_u081y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1683993300]
+position = Vector2(6.000001, 4.0000005)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("1_icfim")

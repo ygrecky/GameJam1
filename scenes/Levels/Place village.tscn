@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://dpyhkgr8gw33h" path="res://scenes/PNJ/souris_cachée1.tscn" id="20_0137w"]
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="21_0137w"]
 [ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="21_f8ss2"]
+[ext_resource type="PackedScene" uid="uid://deupogefs70cw" path="res://horloge.tscn" id="23_v51xb"]
+[ext_resource type="PackedScene" uid="uid://c1vxwqj6ukppx" path="res://scenes/Decoration/arbre.tscn" id="24_tnbrp"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -364,6 +366,17 @@ min_scale = 0.5
 [node name="Feu2" parent="." unique_id=1923670286 instance=ExtResource("21_0137w")]
 position = Vector2(1918, -3104)
 min_scale = 0.5
+
+[node name="Node2D" parent="." unique_id=1693104251 instance=ExtResource("23_v51xb")]
+position = Vector2(3384, -596)
+
+[node name="Arbre" parent="." unique_id=1874252714 instance=ExtResource("24_tnbrp")]
+position = Vector2(785.00006, 1494.0001)
+scale = Vector2(2.935, 2.935)
+
+[node name="Arbre2" parent="." unique_id=813020469 instance=ExtResource("24_tnbrp")]
+position = Vector2(804, 2478)
+scale = Vector2(2.935, 2.935)
 
 [editable path="Maison"]
 [editable path="Maison2"]
