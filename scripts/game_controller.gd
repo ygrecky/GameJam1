@@ -28,6 +28,7 @@ func _ready() -> void:
 	
 	camera_limits["res://scenes/Levels/Forêt.tscn"] = [-910,-1043,1350,993]
 	camera_limits["res://scenes/Levels/Place village.tscn"] = [-100,-5000,5000,5000]
+	camera_limits["res://scenes/Levels/maison_forgeron.tscn"] = [-1000,-1000,900,100]
 	pass # Replace with function body.
 
 

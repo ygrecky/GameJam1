@@ -1,4 +1,8 @@
 extends Pnj
+var se_deplace = false
+func ending_func() : 
+	$CollisionShape2D.disabled = true
+	se_deplace = true
 
 
 func talk_to():
