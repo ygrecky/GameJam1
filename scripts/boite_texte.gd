@@ -53,6 +53,11 @@ func close_window(ending_func):
 	self.queue_free()
 	
 
+func set_speaker(speaker) :
+	speaker.text = speaker
+	sprite.texture = "res://assets/Personnages/"+speaker+".jpg"
+	sprite.scale = Vector2(0.05,0.05)
+	
 		
 
 # Called when the node enters the scene tree for the first time.
@@ -60,10 +65,8 @@ func _ready() -> void:
 	
 	open_window(dialogue,ending_func)
 	
-	print(sprite2)
-	speaker.text = speaker2
-	sprite.texture = sprite2
-	sprite.scale = Vector2(0.05,0.05)
+	set_speaker(speaker2)
+	
 	
 	print(sprite)
 	print($Sprite2D)
