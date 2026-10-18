@@ -5,7 +5,7 @@ class_name Pnj
 
 
 var pnj_name = "Grand Maistre"
-var dialogue = ["Bonjour ","Comment vas tu?","QuOIIIIIIIIIIII","CIAO"]
+var dialogue = [["Bonjour "],["Comment vas tu?"],["Super!","QuOIIIIIIIIIIII","Super!","Mal :( "],["CIAO"]]
 var direction_x = -1
 var direction_y = 0
 var speed = 200
