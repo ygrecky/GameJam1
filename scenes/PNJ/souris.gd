@@ -16,6 +16,7 @@ func talk_to():
 	Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	bdd.ending_func = ending_func
 	
+	
 
 
 func _ready() -> void:

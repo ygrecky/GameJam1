@@ -7,7 +7,7 @@ class_name Pnj
 var pnj_name = "Grand Maistre"
 var direction_x = -1
 var direction_y = 0
-var speed = 200
+var speed = 500
 
 var dialogue = [["test"],["test"],["aaaazaaaa"]]
 
