@@ -19,7 +19,6 @@ func talk_to():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pnj_name = "Orso le forgeron"
-	print("skibidi")
 	dialogue = [["Eh BAH! Comment je fais moi pour forger si j’peux même pas souffler mon feu!!"],
 	["C’est toi qui a volé mon soufflet l’inconnu ?"], ["Mais qu’est ce que tu veux? Moi j’peux pas t’aider j’peux même pas travailler ! Alors fiche moi le camp !"]]
 
