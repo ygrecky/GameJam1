@@ -15,8 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="15_rhp8x"]
 [ext_resource type="PackedScene" uid="uid://8ti3h7q5uibo" path="res://scenes/Decoration/tile_chemin_tournant.tscn" id="16_2d8mv"]
 [ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
-[ext_resource type="Script" uid="uid://ccqekdiwep2y2" path="res://scenes/PNJ/pretre.gd" id="17_hvbxv"]
-[ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="18_dktky"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="18_dktky"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
@@ -280,8 +278,6 @@ position = Vector2(1840, -2644)
 [node name="Bloc magnétique10" parent="." unique_id=1735558842 instance=ExtResource("7_0dq5c")]
 position = Vector2(2163, -1998)
 
-
-
 [node name="souris_ev" parent="." unique_id=281381040 instance=ExtResource("18_dktky")]
 position = Vector2(178, -101)
 
@@ -289,3 +285,13 @@ position = Vector2(178, -101)
 position = Vector2(1428.0001, 657)
 scale = Vector2(3.35, 3.35)
 destination_path = "res://scenes/Levels/maison forgeron.tscn"
+
+[node name="TpZone2" parent="." unique_id=1891399501 instance=ExtResource("18_dktky")]
+position = Vector2(4449, 767)
+scale = Vector2(2.55, 2.55)
+destination_path = "res://scenes/Levels/interieur_biliotheque.tscn"
+
+[node name="TpZone3" parent="." unique_id=350350663 instance=ExtResource("18_dktky")]
+position = Vector2(2641, 1022)
+scale = Vector2(4.205, 4.205)
+destination_path = "res://scenes/Levels/intérieur église.tscn"
