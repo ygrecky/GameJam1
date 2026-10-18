@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dxoqlvh3iwc81"]
+
+[ext_resource type="Texture2D" uid="uid://d331fgajhdxke" path="res://assets/décor/puits.png" id="1_d8qq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(168, 111.5)
+
+[node name="Puit" type="StaticBody2D" unique_id=111173393]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=468309088]
+z_index = 1
+position = Vector2(62, -244)
+scale = Vector2(5.315, 5.315)
+texture = ExtResource("1_d8qq5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1232735366]
+position = Vector2(62, -138.25)
+shape = SubResource("RectangleShape2D_u081y")

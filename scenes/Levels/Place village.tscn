@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="7_0dq5c"]
 [ext_resource type="PackedScene" uid="uid://cqisqshyk32o7" path="res://scenes/Decoration/Eglise.tscn" id="8_qan31"]
 [ext_resource type="PackedScene" uid="uid://bfe54hqkti65k" path="res://scenes/bousole.tscn" id="10_m65ih"]
+[ext_resource type="PackedScene" uid="uid://dtsvsklgqr5s0" path="res://scenes/Decoration/chemin_virage.tscn" id="11_d4wbx"]
+[ext_resource type="PackedScene" uid="uid://cm3it50luwt1b" path="res://scenes/Decoration/chemin et virage.tscn" id="12_n1env"]
+[ext_resource type="PackedScene" uid="uid://dxoqlvh3iwc81" path="res://scenes/Decoration/puit.tscn" id="13_rhp8x"]
+[ext_resource type="PackedScene" uid="uid://rfwu7hewpvwa" path="res://scenes/Decoration/fontaine.tscn" id="14_2d8mv"]
 
 [sub_resource type="PackedScene" id="PackedScene_0dq5c"]
 _bundled = {
@@ -69,7 +73,7 @@ scale = Vector2(0.22, 0.22)
 position = Vector2(1968, 0)
 
 [node name="Maison3" parent="Gros sol" unique_id=1596774400 instance=ExtResource("6_4hvs0")]
-position = Vector2(2608.0002, 338)
+position = Vector2(2629.0002, 424.00003)
 scale = Vector2(10, 10)
 
 [node name="Chemin" parent="Gros sol" unique_id=1271939013 instance=ExtResource("5_kquo5")]
@@ -113,22 +117,38 @@ position = Vector2(1676, 331.0001)
 scale = Vector2(10, 10)
 
 [node name="Maison4" parent="." unique_id=1822626747 instance=ExtResource("6_4hvs0")]
-position = Vector2(4478, -1038.0001)
+position = Vector2(4275, 1995)
 scale = Vector2(10, 10)
 
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("7_0dq5c")]
 position = Vector2(3436, 38)
 
 [node name="Node2D" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
-position = Vector2(2837.0002, 424)
+position = Vector2(2847.0002, 511)
 scale = Vector2(15.015, 15.015)
 
 [node name="Chemin" parent="." unique_id=486713908 instance=ExtResource("5_kquo5")]
 position = Vector2(673, 97)
 
 [node name="Chemin2" parent="." unique_id=774553325 instance=ExtResource("5_kquo5")]
-position = Vector2(2868, 1131)
+position = Vector2(2864, 1198)
 
 [node name="Bousole" parent="." unique_id=538919682 instance=ExtResource("10_m65ih")]
 position = Vector2(3459, 577)
 scale = Vector2(0.49, 0.49)
+
+[node name="Chemin virage" parent="." unique_id=1553690868 instance=ExtResource("11_d4wbx")]
+position = Vector2(2142, 1212)
+rotation = -1.5707964
+scale = Vector2(11.905, 11.905)
+
+[node name="Node2D2" parent="." unique_id=1867184124 instance=ExtResource("12_n1env")]
+position = Vector2(2870, 3363)
+rotation = -1.5707964
+
+[node name="Puit" parent="." unique_id=1140440893 instance=ExtResource("13_rhp8x")]
+position = Vector2(3080, 62)
+
+[node name="Fontaine" parent="." unique_id=1356898558 instance=ExtResource("14_2d8mv")]
+position = Vector2(2830, 1531.9999)
+scale = Vector2(1.755, 1.755)

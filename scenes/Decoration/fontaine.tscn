@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://rfwu7hewpvwa"]
+
+[ext_resource type="Texture2D" uid="uid://duvj0eabo1v4c" path="res://assets/décor/fontaine.png" id="1_fo84c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y7o8b"]
+radius = 78.0
+height = 344.0
+
+[node name="Fontaine" type="StaticBody2D" unique_id=1356898558]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=910490546]
+position = Vector2(8, -54)
+scale = Vector2(5.27, 5.27)
+texture = ExtResource("1_fo84c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=976610999]
+position = Vector2(7, 9)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_y7o8b")
