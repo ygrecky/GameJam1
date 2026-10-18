@@ -1,4 +1,8 @@
 extends Pnj
+var se_deplace = false
+func ending_func() : 
+	$CollisionShape2D.disabled = true
+	se_deplace = true
 
 
 func talk_to():
@@ -20,7 +24,7 @@ func ending_func() :
 
 func _ready() -> void:
 	pnj_name = "Petite fille"
-	dialogue = [["Bonjour ! Vous m’avez l’air perdu monsieur le renard laissez moi vous guider vers la place du village"],["Voilà notre village ! C’est pas bien grand mais on y est heureux."], ["Je ne devrais peut être pas révéler ça à un étranger mais mes parents m’ont dit qu’un horrible démon a pris possession d’un villageois !! Ah mais voilà M. le prêtre qui arrive il vous expliquera ça mieux que moi."],["Venez jouer à cache-cache avec moi !"]]
+	dialogue = [["Bonjour ! Vous m’avez l’air perdu monsieur le renard laissez moi vous guider vers la place du village"],["Voilà notre village ! C’est pas bien grand mais on y est heureux."], ["Je ne devrais peut être pas révéler ça à un étranger mais mes parents m’ont dit qu’un horrible démon a pris possession d’un villageois !! Ah mais voilà M. le prêtre qui arrive il vous expliquera ça mieux que moi."]]
 	speed = 300
 	direction_x = 1
 	direction_y = 0 

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dovg7m227or15"]
+
+[ext_resource type="Texture2D" uid="uid://bvv3r4lil7u72" path="res://assets/tiles/tile_parquet.png" id="1_eoixe"]
+
+[node name="parquet" type="Node2D" unique_id=1679442053]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1616649806]
+texture_repeat = 2
+position = Vector2(-1902.0001, 155)
+scale = Vector2(3.8753824, 3.5375)
+texture = ExtResource("1_eoixe")
+region_enabled = true
+region_rect = Rect2(0, -208, 327.2, 240)
