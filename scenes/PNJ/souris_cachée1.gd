@@ -30,5 +30,3 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if se_deplace:
 		move_and_slide()
-	if self.position.x > 3000 :
-			self.queue_free()
