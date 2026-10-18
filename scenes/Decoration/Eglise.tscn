@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cqisqshyk32o7"]
+
+[ext_resource type="Texture2D" uid="uid://dlnsn66x36jg1" path="res://assets/eglise.png" id="1_bjpdu"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_u081y"]
+points = PackedVector2Array(-31, 2, 32, 0, 32, 16, 16, 31, -32, 32)
+
+[node name="Eglise" type="StaticBody2D" unique_id=708541613]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1139098166]
+position = Vector2(0, -0.5)
+scale = Vector2(1, 1.015625)
+texture = ExtResource("1_bjpdu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=566392718]
+shape = SubResource("ConvexPolygonShape2D_u081y")

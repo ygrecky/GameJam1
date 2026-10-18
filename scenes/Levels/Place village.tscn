@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dbkwm5rarlq06" path="res://scripts/boite_texte.gd" id="5_4hvs0"]
 [ext_resource type="PackedScene" uid="uid://bj3lnj4da6ult" path="res://scenes/Decoration/Maison.tscn" id="6_4hvs0"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="7_0dq5c"]
+[ext_resource type="PackedScene" uid="uid://cqisqshyk32o7" path="res://scenes/Decoration/Eglise.tscn" id="8_qan31"]
 
 [sub_resource type="PackedScene" id="PackedScene_0dq5c"]
 _bundled = {
@@ -105,3 +106,7 @@ scale = Vector2(10, 10)
 
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("7_0dq5c")]
 position = Vector2(3436, 38)
+
+[node name="Node2D" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
+position = Vector2(2879, -901.0001)
+scale = Vector2(15.015, 15.015)
