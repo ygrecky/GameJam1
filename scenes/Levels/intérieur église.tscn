@@ -7,11 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_aplpm"]
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="4_hlsi6"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_cxnd5"]
+[ext_resource type="PackedScene" uid="uid://cgndvvo5vpwh1" path="res://scenes/aimant.tscn" id="8_50rai"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(65.80645, 90.05863)
 
-[node name="Maison forgeron" type="Node2D" unique_id=1607215442]
+[node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
 position = Vector2(-2944, -307)
 
 [node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_83pjl")]
@@ -74,5 +75,18 @@ position = Vector2(2749, 1317)
 [node name="Mur5" parent="." unique_id=1248534943 instance=ExtResource("5_cxnd5")]
 position = Vector2(2462, 390)
 rotation = 1.5707964
+
+[node name="Aimant" parent="." unique_id=1938256992 instance=ExtResource("8_50rai")]
+position = Vector2(3924, 382)
+scale = Vector2(0.47, 0.47)
+
+[node name="Bloc magnétique3" parent="." unique_id=1797999041 instance=ExtResource("4_hlsi6")]
+position = Vector2(4265, 246)
+
+[node name="Bloc magnétique4" parent="." unique_id=15265005 instance=ExtResource("4_hlsi6")]
+position = Vector2(4265, 370)
+
+[node name="Bloc magnétique5" parent="." unique_id=1376411107 instance=ExtResource("4_hlsi6")]
+position = Vector2(4245, 500)
 
 [editable path="parquet"]

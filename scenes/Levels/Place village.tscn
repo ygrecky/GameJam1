@@ -92,7 +92,7 @@ scale = Vector2(10, 10)
 [node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("7_0dq5c")]
 position = Vector2(4337, 1)
 
-[node name="Node2D" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
+[node name="eglise" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
 position = Vector2(2847.0002, 511)
 scale = Vector2(15.015, 15.015)
 
@@ -102,9 +102,10 @@ position = Vector2(725, 101)
 [node name="Chemin2" parent="." unique_id=774553325 instance=ExtResource("5_kquo5")]
 position = Vector2(2875, 1215)
 
-[node name="Bousole" parent="." unique_id=538919682 instance=ExtResource("10_m65ih")]
+[node name="Bousole" parent="." unique_id=538919682 node_paths=PackedStringArray("target1") instance=ExtResource("10_m65ih")]
 position = Vector2(3459, 577)
 scale = Vector2(0.49, 0.49)
+target1 = NodePath("../eglise")
 
 [node name="Chemin virage" parent="." unique_id=1553690868 instance=ExtResource("11_d4wbx")]
 position = Vector2(2142, 1212)
@@ -295,3 +296,5 @@ destination_path = "res://scenes/Levels/interieur_biliotheque.tscn"
 position = Vector2(2641, 1022)
 scale = Vector2(4.205, 4.205)
 destination_path = "res://scenes/Levels/intérieur église.tscn"
+
+[editable path="Bousole"]
