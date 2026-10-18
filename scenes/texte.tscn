@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xrskya04pwnm"]
 
-[ext_resource type="FontFile" uid="uid://dh3ighwjb5okn" path="res://assets/fonts/deigratia/DeiGrat.ttf" id="1_kid4x"]
+[ext_resource type="FontFile" uid="uid://baa7xenqyqwhf" path="res://assets/fonts/bouncy_2/Bouncy-Black-PERSONAL_USE_ONLY.otf" id="1_kid4x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_78sch"]
 font = ExtResource("1_kid4x")
