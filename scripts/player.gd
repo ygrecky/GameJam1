@@ -143,12 +143,14 @@ func use_object(index,delta):
 			await get_tree().create_timer(fleche_delay).timeout
 			(func(): fleche_ready = true).call_deferred()
 		
-			
-	
+
+
 
 
 func _on_short_action_zone_body_entered(body: Node2D) -> void:
 	if body is Pnj:
+		$Node2D/interaction_label.visible = true
+		#$Node2D/interaction_label/Label.visible = true
 		interaction_label.visible = true
 		interaction_label.text = "Talk (Space)"
 	
@@ -159,6 +161,8 @@ func _on_short_action_zone_body_entered(body: Node2D) -> void:
 
 func _on_short_action_zone_body_exited(body: Node2D) -> void:
 	if body is Pnj:
+		$Node2D/interaction_label.visible = false
+		#$Node2D/interaction_label/Label.visible = false
 		interaction_label.visible = false
 		
 
