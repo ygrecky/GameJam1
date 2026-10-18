@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://csql6brr1dlkx"]
+
+[ext_resource type="Texture2D" uid="uid://bpubtjeqx4gp6" path="res://assets/inventaire/Inventaire_texture.png" id="1_xsaet"]
+
+[node name="Chemin" type="Node2D" unique_id=1271939013]
+position = Vector2(-599, 260)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=72501410]
+position = Vector2(8, -2.000001)
+scale = Vector2(0.464, 0.302)
+texture = ExtResource("1_xsaet")
