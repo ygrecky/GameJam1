@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bg03lrcrtwok2" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://c353tuvpl12xx" path="res://icon.svg" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://dh54uq3krx6kc" path="res://assets/Objets/arbalète avec carreau.png" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(127, 128)
@@ -60,7 +59,14 @@ shape = SubResource("RectangleShape2D_swyl7")
 z_index = 1
 position = Vector2(-2, -149.00005)
 scale = Vector2(0.15, 0.134)
-texture = ExtResource("3_qhqgy")
+
+[node name="Label" type="Label" parent="Node2D/interaction_label" unique_id=2001153775]
+offset_left = -539.9995
+offset_top = 52.239136
+offset_right = 627.0005
+offset_bottom = 230.23914
+theme_override_font_sizes/font_size = 130
+text = "Press space to talk"
 
 [connection signal="body_entered" from="short_action_zone" to="." method="_on_short_action_zone_body_entered"]
 [connection signal="body_exited" from="short_action_zone" to="." method="_on_short_action_zone_body_exited"]
