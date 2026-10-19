@@ -11,6 +11,7 @@ func ending_func() :
 func talk_to():
 	Global.speaker = "baron"
 	var bdd = text_box.instantiate()
+	Global.speaker = "baronne"
 	bdd.speakerPnj = self
 	bdd.dialogue = dialogue
 	bdd.speaker2 = pnj_name
@@ -27,6 +28,7 @@ func _ready() -> void:
 	["Est ce que cette merveille est pratiquée dans tes contrées Voyageur ?"],
 	["Ah mais quel plaisir de savoir que nous partageons une telle passion."],
 	["Comme gage de mon amitié permet moi de t’offrir mon arbalète."],
+	["Si jamais tu trouves une proie digne de ce bijou n’hésite pas et tire, le plus tôt sera le mieux."],
 	["A mon grand désespoir, je n’ai plus de carreaux."],
 	["Mais tu pourras peut-être en récupérer chez notre (mauvais) forgeron s’il daigne ne pas être méprisant comme à son habitude."]
 	]

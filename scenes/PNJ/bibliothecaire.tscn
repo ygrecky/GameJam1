@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://csrdymgiyodnx"]
+
+[ext_resource type="Script" uid="uid://v3u0ij4losng" path="res://scenes/PNJ/baron.gd" id="1_2vupl"]
+[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_r2lk2"]
+[ext_resource type="Texture2D" uid="uid://b237bkcwxvrgj" path="res://assets/Personnages/tortue transp.png" id="3_2vupl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
+size = Vector2(132.60144, 168.64124)
+
+[node name="biblioth" type="CharacterBody2D" unique_id=281381040]
+z_index = 5
+position = Vector2(200, 200)
+scale = Vector2(1.66, 1.66)
+script = ExtResource("1_2vupl")
+text_box = ExtResource("2_r2lk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
+position = Vector2(-4.2168655, 63.419586)
+scale = Vector2(0.8449998, 0.8449998)
+shape = SubResource("RectangleShape2D_ayuyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
+position = Vector2(-16.867466, 56.626503)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_2vupl")

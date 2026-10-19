@@ -13,5 +13,5 @@ func _process(_delta: float) -> void:
 
 func add_objet():
 	objet_is_unlocked = true
-	$objet_texture.texture = load("res://assets/Objets/arbalète avec carreau.png")
+	$objet_texture.texture = load("res://assets/Objets/traducteur_dico.png")
 	Global.player.object_unlocked[5]=true

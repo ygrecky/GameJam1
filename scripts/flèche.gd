@@ -20,7 +20,11 @@ func _physics_process(delta) -> void:
 			print("flèche a touché")
 			print(elt)
 			if(elt is Pnj):
-				Global.game_controller.restart_loop()
+				Global.game_controller.sound_effect.play()
+				elt.dialogue = [["AAAAAAAAARG... L'étranger m'attaque, au secours..."]]
+				Global.player.isTalking = true
+				elt.talk_to_bis(func end_func() : 
+					Global.restart_boucle = true)
 			queue_free()
 	move_and_slide()
 	pass

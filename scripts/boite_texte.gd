@@ -79,6 +79,7 @@ func close_window(ending_func):
 	state.hide()
 	ending_func.call()
 	self.queue_free()
+	Global.showSceau = false
 	
 
 		

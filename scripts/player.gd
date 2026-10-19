@@ -21,8 +21,8 @@ var inTransition = false
 
 var isTalking = false
 
-var object_unlocked = [false,false,true,false,false,false]
-var carreau = false
+var object_unlocked = [false,true,true,false,false,true]
+var carreau = true
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
@@ -119,6 +119,10 @@ func _physics_process(delta):
 			if(elt is Pnj and action_just_pressed):
 				isTalking = true
 				elt.talk_to()
+			
+			if(elt is Biblio and action_just_pressed):
+				isTalking=true
+				elt.read()
 		for elt in collision_.get_overlapping_bodies():
 			if(elt!=self):
 				print(elt)
@@ -149,7 +153,6 @@ func use_object(index,delta):
 				velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
 	
 	if(index==2):
-		
 		if(fleche_ready):
 			fleche_ready = false
 			
@@ -169,7 +172,33 @@ func use_object(index,delta):
 			await get_tree().create_timer(fleche_delay).timeout
 			(func(): fleche_ready = true).call_deferred()
 			
-	
+	if(index==5):
+		if(true):
+			print("test")
+			for elt in short_action_zone.get_overlapping_bodies():
+				if elt is Pnj:
+					var bdd = load("res://scenes/boite_texte.tscn").instantiate()
+					bdd.dialogue = [["Voici le seau de cet habitant"]]
+					Global.speaker = elt.pnj_name
+					if(elt.pnj_name=="Petite fille"):
+						Global.speaker = "souris"
+					if(elt.pnj_name=="Orso le forgeron"):
+						Global.speaker = "forgeron"
+					if(elt.pnj_name=="Eusebio"):
+						Global.speaker = "eusebio"
+					if(elt.pnj_name=="Baron"):
+						Global.speaker = "baronne"
+					if(elt.pnj_name=="Baronne"):
+						Global.speaker = "baronne"
+					if(elt.pnj_name=="Prêtre"):
+						Global.speaker = "prêtre"
+					if(elt.pnj_name=="Paysan" or elt.pnj_name=="Paysane"):
+						Global.speaker = "paysans"
+					
+					
+					Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+					Global.showSceau = true
+					
 	if(index==6):
 		Global.game_controller.restart_loop()
 	if(index==3):
@@ -183,10 +212,13 @@ func use_object(index,delta):
 
 func _on_short_action_zone_body_entered(body: Node2D) -> void:
 	if body is Pnj:
-		
 		#$Node2D/interaction_label/Label.visible = true
 		interaction_label.visible = true
 		interaction_label.text = "Parler (Espace)"
+	
+	if body is Biblio:
+		interaction_label.visible = true
+		interaction_label.text = "Lire (Espace)"
 	
 
 		
@@ -194,7 +226,7 @@ func _on_short_action_zone_body_entered(body: Node2D) -> void:
 
 
 func _on_short_action_zone_body_exited(body: Node2D) -> void:
-	if body is Pnj:
+	if body is Pnj or body is Biblio:
 		
 		#$Node2D/interaction_label/Label.visible = false
 		interaction_label.visible = false
@@ -211,6 +243,9 @@ func _on_player_area_entered(area: Area2D) -> void:
 	elif area.get_parent() is Aimant:
 		interaction_label.visible = true
 		interaction_label.text = "Récupérer (Espace)"
+	elif area.get_parent() is Bottes:
+		interaction_label.visible = true
+		interaction_label.text = "Récupérer (Espace)"
 		
 	pass # Replace with function body.
 
@@ -220,6 +255,6 @@ func _on_player_area_exited(area: Area2D) -> void:
 		interaction_label.visible = false
 	elif area.get_parent() is Papier:
 		interaction_label.visible = false
-	elif area.get_parent() is Aimant:
+	elif area.get_parent() is Aimant or area.get_parent() is Bottes:
 		interaction_label.visible = false
 	pass # Replace with function body.

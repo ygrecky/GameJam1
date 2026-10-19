@@ -6,6 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_68xq0"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="6_mf8xv"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="7_klw4l"]
+[ext_resource type="PackedScene" uid="uid://c6x6lpru6jabe" path="res://scenes/PNJ/baron.tscn" id="7_obqx2"]
+[ext_resource type="Script" uid="uid://c6ap1vvgrqme6" path="res://scenes/PNJ/baron2.gd" id="8_in2po"]
+[ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="9_gsjf5"]
+[ext_resource type="Script" uid="uid://po6xipwvpniu" path="res://scenes/PNJ/baronne3.gd" id="10_mf8xv"]
+[ext_resource type="PackedScene" uid="uid://csrdymgiyodnx" path="res://scenes/PNJ/bibliothecaire.tscn" id="11_klw4l"]
+[ext_resource type="PackedScene" uid="uid://bm8klquhqcli" path="res://scenes/PNJ/paysan.tscn" id="12_bxycj"]
+[ext_resource type="PackedScene" uid="uid://hsv7huumhis7" path="res://scenes/PNJ/paysane.tscn" id="13_5tdvq"]
+[ext_resource type="Script" uid="uid://b1a1hpelpndhq" path="res://scenes/PNJ/paysan.gd" id="13_bxycj"]
+[ext_resource type="Script" uid="uid://bhqglm08utjau" path="res://scenes/PNJ/bibliothecaire.gd" id="14_klw4l"]
+[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="15_vi086"]
+[ext_resource type="Script" uid="uid://irlc005im3n4" path="res://scenes/PNJ/paysane2.gd" id="17_ngi7f"]
 
 [node name="Maison forgeron3" type="Node2D" unique_id=1607215442]
 position = Vector2(-2944, -307)
@@ -57,5 +68,26 @@ position = Vector2(2749, 1317)
 [node name="Mur5" parent="." unique_id=1248534943 instance=ExtResource("5_68xq0")]
 position = Vector2(2462, 390)
 rotation = 1.5707964
+
+[node name="baron" parent="." unique_id=281381040 instance=ExtResource("7_obqx2")]
+position = Vector2(3498, 150.00003)
+script = ExtResource("8_in2po")
+
+[node name="baronne" parent="." unique_id=503995352 instance=ExtResource("9_gsjf5")]
+position = Vector2(4192, 476)
+script = ExtResource("10_mf8xv")
+
+[node name="biblioth" parent="." unique_id=612348783 instance=ExtResource("11_klw4l")]
+position = Vector2(4218, 78)
+script = ExtResource("14_klw4l")
+
+[node name="paysant" parent="." unique_id=1626584444 instance=ExtResource("12_bxycj")]
+position = Vector2(3862, -123)
+script = ExtResource("13_bxycj")
+text_box = ExtResource("15_vi086")
+
+[node name="Paysane" parent="." unique_id=1203371247 instance=ExtResource("13_5tdvq")]
+position = Vector2(3586, 573)
+script = ExtResource("17_ngi7f")
 
 [editable path="parquet"]
