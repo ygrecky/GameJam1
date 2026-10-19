@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cnx2i1tywxq0i" path="res://scenes/menu.tscn" id="5_h843c"]
 [ext_resource type="PackedScene" uid="uid://b4wat2gbkosap" path="res://scenes/sceaux.tscn" id="6_e85df"]
 [ext_resource type="AudioStream" uid="uid://3npousnyfm2o" path="res://assets/sons/Impact de balle de Rémi.mp3" id="7_burlk"]
+[ext_resource type="PackedScene" uid="uid://c7r6vi002c7t2" path="res://scenes/fin_du_jeu.tscn" id="8_h0hye"]
 
 [node name="Game Controller" type="Node" unique_id=1399786066 node_paths=PackedStringArray("world2D", "gui", "current_gui_scene")]
 script = ExtResource("1_vq0e2")
@@ -36,3 +37,5 @@ visible = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1615356023]
 stream = ExtResource("7_burlk")
+
+[node name="Fin_du_jeu" parent="." unique_id=614941436 instance=ExtResource("8_h0hye")]

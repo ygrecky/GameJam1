@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://c7r6vi002c7t2"]
+
+[ext_resource type="FontFile" uid="uid://dh3ighwjb5okn" path="res://assets/fonts/deigratia/DeiGrat.ttf" id="1_brvt7"]
+
+[sub_resource type="Gradient" id="Gradient_wc53i"]
+offsets = PackedFloat32Array(0.8618421)
+colors = PackedColorArray(0.05882353, 0.019607844, 0.41960785, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_78sch"]
+gradient = SubResource("Gradient_wc53i")
+
+[sub_resource type="LabelSettings" id="LabelSettings_78sch"]
+font = ExtResource("1_brvt7")
+font_size = 65
+
+[sub_resource type="LabelSettings" id="LabelSettings_bg0ao"]
+font_size = 65
+
+[node name="Fin_du_jeu" type="CanvasLayer" unique_id=614941436]
+
+[node name="Control" type="Control" parent="." unique_id=103235870]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -861.0
+offset_right = 45.0
+offset_bottom = -821.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1026628534]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -680.0
+offset_top = 413.0
+offset_right = 645.0
+offset_bottom = 1236.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_78sch")
+
+[node name="bravo" type="Label" parent="Control" unique_id=618465738]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -470.0
+offset_top = 531.0
+offset_right = 428.0
+offset_bottom = 658.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Bravo tu as tué le démon !"
+label_settings = SubResource("LabelSettings_78sch")
+
+[node name="crédits" type="Label" parent="Control" unique_id=632342946]
+layout_mode = 0
+offset_left = -89.0
+offset_top = 813.0
+offset_right = 70.0
+offset_bottom = 903.0
+text = "Rémi"
+label_settings = SubResource("LabelSettings_bg0ao")
+
+[node name="crédits2" type="Label" parent="Control" unique_id=325958572]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 907.0
+offset_right = 302.0
+offset_bottom = 1090.0
+text = "Yaël
+Arthur"
+label_settings = SubResource("LabelSettings_bg0ao")
+
+[node name="crédits3" type="Label" parent="Control" unique_id=312131195]
+layout_mode = 0
+offset_left = -251.0
+offset_top = 908.0
+offset_right = 12.0
+offset_bottom = 1091.0
+text = "Vassili
+Maxime"
+label_settings = SubResource("LabelSettings_bg0ao")
