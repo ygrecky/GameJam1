@@ -5,7 +5,8 @@ var se_deplace = false
 
 func ending_func() : 
 	Global.game_controller.switch_to_menu()
-	
+	Global.ecran_de_fin = false
+	$"..".queue_free()
 
 func talk_to():
 	var bdd = text_box.instantiate()

@@ -50,8 +50,8 @@ func Next(n=0) -> void: #passe d'un dialogue à un autre
 		if dialogue[text_number+1].size() > 1 :
 			reponse = -1
 			toggle_button(false)
-			$Control/VBoxContainer/HBoxContainer/Button1.text = dialogue[text_number+1][2]
-			$Control/VBoxContainer/HBoxContainer/Button2.text = dialogue[text_number+1][3]
+			$Control/VBoxContainer/HBoxContainer/Button1.text = dialogue[text_number+1][2]+ " (1)"
+			$Control/VBoxContainer/HBoxContainer/Button2.text = dialogue[text_number+1][3]+ " (2)"
 			text.text = ""  #rafraichit la boite de dialogue
 			add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
 			
@@ -104,7 +104,13 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("action_1") and reponse == 0:
 		Next()
-
+		
+	if reponse == -1 and Input.is_action_just_pressed("Slot 1"):
+		Next(2)
+		Global.last_answer = 1
+	if reponse == -1 and Input.is_action_just_pressed("Slot 2"):
+		Next(1)
+		Global.last_answer = 2
 
 func Next1() -> void:
 	Next(2)

@@ -9,10 +9,11 @@ var speaker = ""
 var durée_boucle = 210
 var last_answer = 0
 var showSceau = false
+var ecran_de_fin = true
 
 
 func finir_le_jeu():
-	if (Global.time - Time.get_ticks_msec()) * 1000 >= durée_boucle :
+	if (Global.time - Time.get_ticks_msec()) * 1000 >= durée_boucle and !ecran_de_fin:
 		restart_boucle = true
 		time = Time.get_ticks_msec() * 1000
 		get_tree().create_timer(durée_boucle).timeout.connect(func() : finir_le_jeu())
