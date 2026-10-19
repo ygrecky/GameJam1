@@ -10,7 +10,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (not Global.inMenu) and Global.player.isTalking and (not Global.restart_boucle):
-		$sceaux/sceaux_texture.texture = load("res://assets/Sceaux/"+Global.speaker+".png")
+		if Global.speaker == Global.player.demon:
+			$sceaux/sceaux_texture.texture = load("res://assets/Sceaux/"+Global.player.demon+" démon.png")
+		else:
+			$sceaux/sceaux_texture.texture = load("res://assets/Sceaux/"+Global.speaker+".png")
 		$sceaux.visible = true
 	else:
 		$sceaux.visible = false

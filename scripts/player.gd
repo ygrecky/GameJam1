@@ -27,6 +27,8 @@ var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
 var arbalette_index = 2
+var demon = ""
+var liste_perso = ["souris", "eusebio", "forgeron", "paysan", "prêtre", "baron", "baronne"]
 
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
@@ -36,15 +38,14 @@ var barrone_aimant = false
 var show_baronne2 = false
 
 func demon_random():
-	var liste_perso = ["souris", "eusebio", "forgeron", "paysan", "prêtre", "baron", "baronne"]
-	var demon = liste_perso[randi_range(0, 6)]
-	
+	return liste_perso[randi_range(0, len(liste_perso)-1)]
+
 
 func _ready():
 	Global.player = self
 	interaction_label.visible = false
 	speed = 400
-	demon_random()
+	demon = demon_random()
 
 func get_input(delta):
 	aimant_activé = actions_pressed[aimant_index]
