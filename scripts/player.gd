@@ -148,7 +148,6 @@ func use_object(index,delta):
 				velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
 	
 	if(index==2):
-		
 		if(fleche_ready):
 			fleche_ready = false
 			

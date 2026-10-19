@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="25_jchdh"]
 [ext_resource type="Script" uid="uid://xmysjnd08dvq" path="res://scenes/PNJ/baronne2.gd" id="26_hnfw8"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="28_iboa3"]
+[ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="28_rqpt2"]
+[ext_resource type="Script" uid="uid://ccqekdiwep2y2" path="res://scenes/PNJ/pretre.gd" id="29_7skwn"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -425,6 +427,11 @@ rotation = 1.5707964
 
 [node name="Bordure forêt11" parent="." unique_id=102346779 instance=ExtResource("1_84da0")]
 position = Vector2(5358, -4608)
+
+[node name="pnj" parent="." unique_id=1620235926 instance=ExtResource("28_rqpt2")]
+position = Vector2(3099, 1520)
+script = ExtResource("29_7skwn")
+text_box = null
 
 [editable path="Maison"]
 [editable path="Maison2"]
