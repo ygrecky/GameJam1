@@ -118,6 +118,10 @@ func _physics_process(delta):
 			if(elt is Pnj and action_just_pressed):
 				isTalking = true
 				elt.talk_to()
+			
+			if(elt is Biblio and action_just_pressed):
+				isTalking=true
+				elt.read()
 		for elt in collision_.get_overlapping_bodies():
 			if(elt!=self):
 				print(elt)
@@ -181,10 +185,13 @@ func use_object(index,delta):
 
 func _on_short_action_zone_body_entered(body: Node2D) -> void:
 	if body is Pnj:
-		
 		#$Node2D/interaction_label/Label.visible = true
 		interaction_label.visible = true
 		interaction_label.text = "Parler (Espace)"
+	
+	if body is Biblio:
+		interaction_label.visible = true
+		interaction_label.text = "Lire (Espace)"
 	
 
 		
@@ -192,7 +199,7 @@ func _on_short_action_zone_body_entered(body: Node2D) -> void:
 
 
 func _on_short_action_zone_body_exited(body: Node2D) -> void:
-	if body is Pnj:
+	if body is Pnj or body is Biblio:
 		
 		#$Node2D/interaction_label/Label.visible = false
 		interaction_label.visible = false

@@ -429,9 +429,10 @@ rotation = 1.5707964
 position = Vector2(5358, -4608)
 
 [node name="pnj" parent="." unique_id=1620235926 instance=ExtResource("28_rqpt2")]
-position = Vector2(3099, 1520)
+position = Vector2(2989, 1513)
+scale = Vector2(3.22, 3.22)
 script = ExtResource("29_7skwn")
-text_box = null
+image_link = "res://assets/Personnages/panda.png"
 
 [editable path="Maison"]
 [editable path="Maison2"]

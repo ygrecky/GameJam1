@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ssw3bonufco"]
+
+[ext_resource type="Script" uid="uid://dhyirlqrfey05" path="res://scripts/biblio.gd" id="1_1qbvp"]
+[ext_resource type="Texture2D" uid="uid://c88d07ibiq6r0" path="res://assets/décor/etagere.png" id="1_85vs6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(65, 46)
+
+[node name="Biblio" type="StaticBody2D" unique_id=1735855837]
+script = ExtResource("1_1qbvp")
+texte = Array[String](["test1", "test2"])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1537236937]
+texture = ExtResource("1_85vs6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=265888185]
+z_index = 1
+position = Vector2(-1, 8)
+shape = SubResource("RectangleShape2D_u081y")
