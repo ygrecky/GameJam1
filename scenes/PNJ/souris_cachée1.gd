@@ -7,7 +7,7 @@ func ending_func() :
 	$CollisionShape2D.disabled = true
 	se_deplace = true
 	velocity = Vector2(speed*2, speed)
-	
+	$"../souris_cachée2".apparait()
 
 func talk_to():
 	Global.speaker = "souris"
@@ -22,6 +22,7 @@ func talk_to():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	disparait()
 	pnj_name = "Petite fille"
 	speed =1000
 	dialogue = [["Oh tu m’as trouvé hihi ! Si tu m’attrapes une fois de plus je te montrerai mon trésor."]]

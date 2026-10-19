@@ -29,7 +29,8 @@ func talk_to():
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void:	
+	disparait()
 	pnj_name = "Petite fille"
 	dialogue = [["Bravo tu m'as attrapée à nouveau hihi !"],
 	["Voici mon trésor !"]]

@@ -15,7 +15,14 @@ func ending_func() : pass
 @export var image_link : String
 @export var sprite : Sprite2D
 
+func disparait():
+	self.visible = false
+	$CollisionShape2D.disabled = true
 
+func apparait():
+	self.visible = true
+	$CollisionShape2D.disabled = false
+	
 func talk_to():
 	print(self)
 	var bdd = text_box.instantiate()
