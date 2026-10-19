@@ -8,6 +8,8 @@ class_name Player
 @export var sprite : Sprite2D
 
 @export var camera : Camera2D
+var music_ow
+var music_house
 
 var facing_x = 0
 var facing_y = -1
@@ -21,9 +23,8 @@ var inTransition = false
 
 var isTalking = false
 
-var object_unlocked = [true,true,true,false,false,true]
-var carreau = false
-var arbalete = false
+var object_unlocked = [false,false,true,false,false,true]
+var carreau = true
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
@@ -43,6 +44,8 @@ func demon_random():
 
 
 func _ready():
+	music_ow = $AudioStreamPlayer2D
+	music_house = $AudioStreamPlayer2D2
 	Global.player = self
 	interaction_label.visible = false
 	speed = 400
@@ -130,6 +133,15 @@ func _physics_process(delta):
 				print(elt)
 		for elt in collision_.get_overlapping_areas():
 			if(elt.get_parent() is TpZone and action_just_pressed):
+				if(elt.get_parent().play_music_ow):
+					music_ow.play()
+				if(elt.get_parent().stop_music_ow):
+					music_ow.stop()
+				if(elt.get_parent().play_music_house):
+					music_house.play()
+				if(elt.get_parent().stop_music_house):
+					music_house.stop()
+				
 				Global.game_controller.change_2d_scene(elt.get_parent().destination_path,false,true)
 				
 			
@@ -178,6 +190,7 @@ func use_object(index,delta):
 			print("test")
 			for elt in short_action_zone.get_overlapping_bodies():
 				if elt is Pnj:
+					Global.showSceau = true
 					var bdd = load("res://scenes/boite_texte.tscn").instantiate()
 					bdd.dialogue = [["Voici le seau de cet habitant"]]
 					Global.speaker = elt.pnj_name
@@ -195,10 +208,13 @@ func use_object(index,delta):
 						Global.speaker = "prêtre"
 					if(elt.pnj_name=="Paysan" or elt.pnj_name=="Paysane"):
 						Global.speaker = "paysan"
+					if(elt.pnj_name=="Bibliothécaire "):
+						bdd.dialogue = [["Ce villageois n'as pas de sceau"]]
+						Global.showSceau = false
 					
 					
 					Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
-					Global.showSceau = true
+					
 					
 	if(index==6):
 		Global.game_controller.restart_loop()

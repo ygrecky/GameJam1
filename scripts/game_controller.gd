@@ -19,9 +19,13 @@ var restart_scene = "res://scenes/Levels/Forêt.tscn"
 var camera_limits = {}
 
 var sound_effect
+var music_ow
 var fin_jeu
+var sound_effect_tic
 
-
+func restart_boucle():
+	Global.game_controller.sound_effect_tic.play()
+	Global.restart_boucle = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,6 +34,8 @@ func _ready() -> void:
 	current_2d_scene_name = "none"
 	inventory = $Inventaire
 	fin_jeu = $Fin_du_jeu
+	sound_effect_tic = $AudioTic
+	music_ow = $Musique
 	
 	camera_limits["res://scenes/Levels/Forêt.tscn"] = [-910,-1043,1350,993]
 	camera_limits["res://scenes/Levels/Place village.tscn"] = [-100,-4800,5000,3400]
@@ -63,6 +69,8 @@ func switch_to_menu():
 	
 func restart_loop():
 	Global.time = Time.get_ticks_msec() * 1000
+	Global.player.music_ow.stop()
+	Global.player.music_house.stop()
 	current_2d_scene_name="none"
 	for scene in scenes.keys():
 		print(scene)

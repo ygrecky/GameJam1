@@ -11,8 +11,9 @@ script = ExtResource("1_0ouyg")
 hurt_box = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=925283809]
-rotation = 0.48171088
-scale = Vector2(0.065, 0.065)
+position = Vector2(5, -17.000002)
+rotation = 1.9809487
+scale = Vector2(0.115, 0.115)
 texture = ExtResource("2_0ouyg")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=241511895]

@@ -33,7 +33,8 @@ func _ready() -> void:
 	disparait()
 	pnj_name = "Petite fille"
 	dialogue = [["Bravo tu m'as attrapée à nouveau hihi !"],
-	["Voici mon trésor !"]]
+	["Voici mon trésor ! Une magnifique technologie permettant de propager du feu !!"],
+	["J'espère que ce cadeau te plait :)"]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

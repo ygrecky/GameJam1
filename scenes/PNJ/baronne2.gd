@@ -16,10 +16,12 @@ func ending_func() :
 
 func talk_to():
 	Global.speaker = "baronne"
-	
-	dialogue = [["Ces blocs de métal très anciens ont d'étrange propriétes :"],
-	["Quand j'oriente l'aimant vers eux, je ressens une force énorme qui s'applique"],
-	["La force est si puissante qu'elle me permet de traverser ce gouffre, regardez donc !"]]
+	if(not(traversé)):
+		dialogue = [["Ces blocs de métal très anciens ont d'étrange propriétes :"],
+		["Quand j'oriente l'aimant vers eux, je ressens une force énorme qui s'applique"],
+		["La force est si puissante qu'elle me permet de traverser ce gouffre, regardez donc !"]]
+	else:
+		dialogue = [["Tu as vu ce pouvoir immense ? Fait en bon usage, Héros"]]
 	
 	var bdd = text_box.instantiate()
 	bdd.speakerPnj = self

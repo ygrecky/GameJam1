@@ -21,6 +21,8 @@ position = Vector2(62.99951, -93.00003)
 rotation = 1.5707964
 scale = Vector2(5.415, 5.415)
 destination_path = "res://scenes/Levels/Place village.tscn"
+play_music_ow = true
+stop_music_house = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231976449]
 position = Vector2(50, 63)
@@ -66,7 +68,7 @@ texte = Array[String](["Aimant", "Son utilité reste mystérieuse, on raconte qu
 [node name="Biblio4" parent="." unique_id=1040922899 instance=ExtResource("5_6p2r5")]
 position = Vector2(1512.0005, -411)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Le livre a pour étiquette \"Ne pas emprunter\"", "Vous décidez de braver cette interdiction, et obtenez le grimoire d'invocation"])
+texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Il y a une section raturée, où vous pouvez lire \"Comment briser la boucle\"", "Le livre a pour étiquette \"Ne pas emprunter\"", "Vous décidez de braver cette interdiction, et obtenez le grimoire d'invocation"])
 donner_livre = true
 
 [node name="biblioth" parent="." unique_id=281381040 instance=ExtResource("6_6p2r5")]

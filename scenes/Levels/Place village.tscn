@@ -35,6 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://sec0b8n31wyc" path="res://assets/Personnages/chat.png" id="33_4ad6r"]
 [ext_resource type="PackedScene" uid="uid://bt4ld81nya6uo" path="res://bottes.tscn" id="34_8kkna"]
 [ext_resource type="PackedScene" uid="uid://c1ogsywam0741" path="res://scenes/PNJ/euzebio.tscn" id="35_1v2g5"]
+[ext_resource type="Texture2D" uid="uid://cleta8hjtlexx" path="res://assets/décor/panneau_baron.png" id="36_oalrg"]
+[ext_resource type="Texture2D" uid="uid://c6d3rok2r2iqr" path="res://assets/décor/panneau_forge.png" id="37_11ybl"]
+[ext_resource type="Texture2D" uid="uid://b0jlnnf4j21sk" path="res://assets/décor/panneau_bibliothèque.png" id="38_6vmdp"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -128,7 +131,7 @@ scale = Vector2(15.015, 15.015)
 position = Vector2(725, 101)
 
 [node name="Chemin2" parent="." unique_id=774553325 instance=ExtResource("5_kquo5")]
-position = Vector2(2875, 1215)
+position = Vector2(2873.785, 1215)
 
 [node name="Bousole" parent="." unique_id=538919682 node_paths=PackedStringArray("target1") instance=ExtResource("10_m65ih")]
 position = Vector2(3459, 577)
@@ -221,9 +224,11 @@ scale = Vector2(10, 10)
 position = Vector2(-27.800026, 36.800003)
 scale = Vector2(0.465, 0.465)
 destination_path = "res://scenes/Levels/maison baron.tscn"
+stop_music_ow = true
+play_music_house = true
 
 [node name="Chemin virage3" parent="." unique_id=604175554 instance=ExtResource("11_d4wbx")]
-position = Vector2(3631, 2668)
+position = Vector2(3630.685, 2668)
 rotation = 3.1415927
 scale = Vector2(11.755, 11.755)
 
@@ -322,21 +327,27 @@ position = Vector2(178, -101)
 position = Vector2(1428.0001, 657)
 scale = Vector2(3.35, 3.35)
 destination_path = "res://scenes/Levels/maison forgeron.tscn"
+stop_music_ow = true
+play_music_house = true
 
 [node name="TpZone2" parent="." unique_id=1891399501 instance=ExtResource("18_dktky")]
 position = Vector2(4449, 767)
 scale = Vector2(2.55, 2.55)
 destination_path = "res://scenes/Levels/interieur_biliotheque.tscn"
+stop_music_ow = true
+play_music_house = true
 
 [node name="TpZone3" parent="." unique_id=350350663 instance=ExtResource("18_dktky")]
 position = Vector2(2641, 1022)
 scale = Vector2(4.205, 4.205)
 destination_path = "res://scenes/Levels/intérieur église.tscn"
+stop_music_ow = true
 
 [node name="TpZone4" parent="." unique_id=365409938 instance=ExtResource("18_dktky")]
 position = Vector2(2495, -3032)
 scale = Vector2(3.625, 3.625)
 destination_path = "res://scenes/Levels/intérieur cave.tscn"
+stop_music_ow = true
 
 [node name="Bordure forêt4" parent="." unique_id=963673157 instance=ExtResource("1_84da0")]
 position = Vector2(671, -4614)
@@ -463,6 +474,30 @@ scale = Vector2(1.51, 1.51)
 [node name="Euzebio" parent="." unique_id=1934437601 instance=ExtResource("35_1v2g5")]
 position = Vector2(2164, -541)
 scale = Vector2(0.085, 0.085)
+
+[node name="Chemin8" parent="." unique_id=1192016359 instance=ExtResource("5_kquo5")]
+position = Vector2(2858, 57)
+
+[node name="Mur10" parent="." unique_id=1581529100 instance=ExtResource("28_iboa3")]
+position = Vector2(709, 3727)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=615910317]
+z_index = 2
+position = Vector2(1822.0001, 2167.0002)
+scale = Vector2(5.595, 5.595)
+texture = ExtResource("36_oalrg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1537421926]
+z_index = 2
+position = Vector2(1923.0001, 539.00024)
+scale = Vector2(5.595, 5.595)
+texture = ExtResource("37_11ybl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1262117233]
+z_index = 2
+position = Vector2(4936, 693.00024)
+scale = Vector2(5.595, 5.595)
+texture = ExtResource("38_6vmdp")
 
 [editable path="Maison"]
 [editable path="Maison2"]

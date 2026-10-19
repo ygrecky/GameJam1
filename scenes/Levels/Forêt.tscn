@@ -33,6 +33,7 @@ position = Vector2(1303, -196.99998)
 rotation = 1.5707964
 scale = Vector2(7.55, 5.2)
 destination_path = "res://scenes/Levels/Place village.tscn"
+play_music_ow = true
 
 [node name="Bordure forêt4" parent="." unique_id=1035199119 instance=ExtResource("1_0tc75")]
 position = Vector2(1485, -205)

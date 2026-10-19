@@ -11,6 +11,7 @@ func _process(_delta: float) -> void:
 				
 		Global.player.actions_pressed[4] = Input.is_action_pressed("Slot 5")
 
+
 func add_objet():
 	objet_is_unlocked = true
 	$objet_texture.texture = load("res://assets/Objets/grimoire.png")

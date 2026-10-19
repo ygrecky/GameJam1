@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bg03lrcrtwok2" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://bmaukylsqcpdt" path="res://assets/Personnages/renard transparent.png" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://jl3uil1gu81r" path="res://scenes/camera.tscn" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://d34lfo1kwihsc" path="res://assets/sons/theme1 (2).wav" id="4_dqkch"]
+[ext_resource type="AudioStream" uid="uid://p75s03lfwcxx" path="res://assets/sons/theme2 (3).wav" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(126.5, 134)
@@ -86,6 +88,12 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(14, -5)
 zoom = Vector2(0.59, 0.59)
 position_smoothing_enabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1795931477]
+stream = ExtResource("4_dqkch")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=271044780]
+stream = ExtResource("5_qlg0r")
 
 [connection signal="body_entered" from="short_action_zone" to="." method="_on_short_action_zone_body_entered"]
 [connection signal="body_exited" from="short_action_zone" to="." method="_on_short_action_zone_body_exited"]

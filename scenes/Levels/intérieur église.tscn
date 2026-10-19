@@ -52,6 +52,7 @@ position = Vector2(5.9995117, -155.00003)
 rotation = 1.5707964
 scale = Vector2(5.415, 5.415)
 destination_path = "res://scenes/Levels/Place village.tscn"
+play_music_ow = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231976449]
 position = Vector2(-7, 1)

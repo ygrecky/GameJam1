@@ -34,13 +34,13 @@ func _process(delta: float) -> void:
 			Global.player.isTalking = true
 			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
 			bdd.dialogue = [["Au feu !! L'étranger met feu à la forêt, qu'on le banisse immédiatement !!"]]
-			bdd.ending_func = (func  end_func(): Global.restart_boucle = true)
+			bdd.ending_func = (func  end_func(): Global.game_controller.restart_boucle())
 			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 		if elt is Maison:
 			Global.player.isTalking = true
 			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
 			bdd.dialogue = [["Au feu !! L'étranger met feu à nos maisons, qu'on le banisse immédiatement !!"]]
-			bdd.ending_func = (func  end_func(): Global.restart_boucle = true)
+			bdd.ending_func = (func  end_func(): Global.game_controller.restart_boucle())
 			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	pass
 	

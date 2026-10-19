@@ -10,14 +10,16 @@ var speed = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.player.facing_x == 1 :
-		self.rotate(90)
-	
-	if Global.player.facing_x == -1 :
-		self.rotate(-90)
-		
-	if Global.player.facing_y == 1 :
-		self.rotate(180)
+	if(direction_x==1):
+		rotation=0
+	if(direction_x==-1):
+		rotation_degrees=180
+	if(direction_y==1):
+		rotation_degrees=90
+	if(direction_y==-1):
+		rotation_degrees=-90
+
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,12 +30,14 @@ func _physics_process(delta) -> void:
 			print("flèche a touché")
 			print(elt)
 			if(elt is Pnj and elt.nom_fichier != Global.player.demon):
+				Global.game_controller.sound_effect.stream = load("res://assets/sons/Impact de balle de Rémi.wav")
 				Global.game_controller.sound_effect.play()
 				elt.dialogue = [["AAAAAAAAARG... L'étranger m'attaque, au secours..."]]
 				Global.player.isTalking = true
 				elt.talk_to_bis(func end_func() : 
-					Global.restart_boucle = true)
+					Global.game_controller.restart_boucle())
 			elif(elt is Pnj and elt.nom_fichier == Global.player.demon):
+				Global.game_controller.sound_effect.stream = load("res://assets/sons/Impact de balle de Rémi.mp3")
 				Global.game_controller.sound_effect.play()
 				elt.dialogue = [["COMMENT AS TU SU ????? C'est impossible, je ne peux pas mourrir, nonnnnnnnnnnnn"]]
 				Global.player.isTalking = true
