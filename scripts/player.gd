@@ -23,14 +23,17 @@ var inTransition = false
 
 var isTalking = false
 
-var object_unlocked = [false,false,true,false,false,true]
-var carreau = true
+var object_unlocked = [false,false,false,false,false,false]
+var carreau = false
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
 var arbalette_index = 2
+var arbalete = false
 var demon = ""
 var liste_perso = ["souris", "eusebio", "forgeron", "paysan", "prêtre", "baron", "baronne"]
+
+var sound_effect
 
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
@@ -44,6 +47,7 @@ func demon_random():
 
 
 func _ready():
+	sound_effect = $AudioStreamPlayer2D3
 	music_ow = $AudioStreamPlayer2D
 	music_house = $AudioStreamPlayer2D2
 	Global.player = self
@@ -170,7 +174,7 @@ func use_object(index,delta):
 		if(fleche_ready):
 			fleche_ready = false
 			
-			if(carreau and arbalete):
+			if(carreau):
 				print("ok")
 				var fleche = load("res://scenes/flèche.tscn").instantiate()
 				fleche_ready = false

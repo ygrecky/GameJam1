@@ -43,6 +43,7 @@ func _ready() -> void:
 	camera_limits["res://scenes/Levels/interieur_biliotheque.tscn"] = [0,-550,1700,550]
 	camera_limits["res://scenes/Levels/intérieur église.tscn"] = [0,-550,1700,550]
 	camera_limits["res://scenes/Levels/intérieur cave.tscn"] = [0,-550,1700,550]
+	camera_limits["res://scenes/Levels/maison baron.tscn"] = [0,-550,1700,550]
 	pass # Replace with function body.
 
 

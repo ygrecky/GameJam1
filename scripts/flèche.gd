@@ -1,6 +1,6 @@
 extends CharacterBody2D
 class_name Fleche
-var direction_x = 1
+var direction_x =1
 var direction_y = 0
 var speed = 500
 
@@ -30,8 +30,8 @@ func _physics_process(delta) -> void:
 			print("flèche a touché")
 			print(elt)
 			if(elt is Pnj and elt.nom_fichier != Global.player.demon):
-				Global.game_controller.sound_effect.stream = load("res://assets/sons/Impact de balle de Rémi.wav")
-				Global.game_controller.sound_effect.play()
+	
+				Global.player.sound_effect.play()
 				elt.dialogue = [["AAAAAAAAARG... L'étranger m'attaque, au secours..."]]
 				Global.player.isTalking = true
 				
@@ -39,9 +39,9 @@ func _physics_process(delta) -> void:
 				elt.talk_to_bis(func end_func() : 
 					Global.game_controller.restart_boucle())
 			elif(elt is Pnj and elt.nom_fichier == Global.player.demon):
-				Global.game_controller.sound_effect.stream = load("res://assets/sons/Impact de balle de Rémi.mp3")
-				Global.game_controller.sound_effect.play()
-				elt.dialogue = [["COMMENT AS TU SU ????? C'est impossible, je ne peux pas mourrir"], ["NOOOOOOOOOOOOON"]]
+				
+				Global.player.sound_effect.play()
+				elt.dialogue = [["COMMENT AS TU SU ????? C'est impossible, je ne peux pas mourrir, nonnnnnnnnnnnn"]]
 				Global.player.isTalking = true
 				elt.talk_to_bis(func end_func() : 
 					Global.game_controller.fin_jeu.visible = true
