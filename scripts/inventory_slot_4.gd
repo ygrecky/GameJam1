@@ -14,4 +14,4 @@ func _process(_delta: float) -> void:
 func add_objet():
 	objet_is_unlocked = true
 	$objet_texture.texture = load("res://assets/Objets/miroir.png")
-	Global.player.object_unlocked[4]=true
+	Global.player.object_unlocked[3]=true
