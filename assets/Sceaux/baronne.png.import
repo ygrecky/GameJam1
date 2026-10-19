@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpewmy6bejkca"
-path="res://.godot/imported/baron et baronne.png-5297dd61b6c724689bd5e5daad6afc11.ctex"
+path="res://.godot/imported/baronne.png-0c56cd42c625f38bfa0e427527709075.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sceaux/baron et baronne.png"
-dest_files=["res://.godot/imported/baron et baronne.png-5297dd61b6c724689bd5e5daad6afc11.ctex"]
+source_file="res://assets/Sceaux/baronne.png"
+dest_files=["res://.godot/imported/baronne.png-0c56cd42c625f38bfa0e427527709075.ctex"]
 
 [params]
 

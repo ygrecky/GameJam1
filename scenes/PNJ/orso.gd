@@ -13,6 +13,7 @@ func unlock_carreau():
 	Global.player.carreau = true
 	forgé = true
 func talk_to():
+	Global.speaker = "forgeron"
 	var bdd = text_box.instantiate()
 	if(not(Global.player.object_unlocked[0])):
 		dialogue = [["Eh BAH! Comment je fais moi pour forger si j’peux même pas souffler mon feu!!"],

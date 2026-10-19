@@ -34,10 +34,16 @@ var arbalette_index = 2
 
 var barrone_aimant
 
+func demon_random():
+	var liste_perso = ["souris", "eusebio", "forgeron", "paysan", "prêtre", "baron", "baronne"]
+	var demon = liste_perso[randi_range(0, 6)]
+	
+
 func _ready():
 	Global.player = self
 	interaction_label.visible = false
 	speed = 400
+	demon_random()
 
 func get_input(delta):
 	aimant_activé = actions_pressed[aimant_index]
