@@ -5,6 +5,8 @@ var nom_fichier = "forgeron"
 var se_deplace = false
 var forgé = false
 
+
+
 func unlock_miroir():
 	Global.game_controller.inventory.get_child(0).s4.add_objet()
 	forgé = true
@@ -13,6 +15,20 @@ func unlock_miroir():
 func unlock_carreau():
 	Global.player.carreau = true
 	forgé = true
+	
+	
+	
+func ending_func():	
+	match Global.last_answer:
+		1:
+			unlock_miroir()
+			print("unlock mirroir")
+		2:
+			unlock_carreau()
+			print('unlock carreau')
+		_:
+			pass	
+	
 func talk_to():
 	Global.speaker = "forgeron"
 	var bdd = text_box.instantiate()
@@ -20,14 +36,11 @@ func talk_to():
 		dialogue = [["Eh BAH! Comment je fais moi pour forger si j’peux même pas souffler mon feu!!"],
 		["C’est toi qui a volé mon soufflet l’inconnu ?"], ["Qu’est ce que tu veux? Moi j’peux pas t’aider j’peux même pas travailler ! Alors fiche moi le camp !"]]
 	elif(not(forgé)):
-		if(Input.is_action_pressed("A")):
-			dialogue = [["Excellent choix ! Voici ton miroir !"], ["A la revoyure mon bonhomme"]]
-			unlock_miroir()
-		elif(Input.is_action_pressed("E")):
-			dialogue = [["Hmmm notre étranger est un tueur, soit. Voici ton carreau, utilise le à bon escient."], ["A la revoyure mon bonhomme"]]
-			unlock_carreau()
-		else:
-			dialogue = [["Eh mais c'est mon soufflet !!"], ["Et tu dis que c'est cette chipie de souris qui l'avait ?"], ["La prochaine fois que je la vois elle va voir de quel bois je me chauffe..."], ["Enfin bref, merci étranger !"],["Avec ce soufflet et ma forge, je peut te fabriquer une technologie pour t'aider dans ton aventure :"], ["Un magnifique miroir réfléchissant, ma dernière invention, qui permet à celui qui le porte de s'admirer lui même"], ["Ou bien un carreau d'arbalette, si tu te sens d'humeur chasseuse."], ["( Parlez à Orso en maintenant A si vous voulez le miroir, ou E si vous voulez le carreau)"]]
+
+
+		dialogue = [["Eh mais c'est mon soufflet !!"], ["Et tu dis que c'est cette chipie de souris qui l'avait ?"], ["La prochaine fois que je la vois elle va voir de quel bois je me chauffe..."], ["Enfin bref, merci étranger !"],["Avec ce soufflet et ma forge, je peut te fabriquer une technologie pour t'aider dans ton aventure :"], ["Un magnifique miroir réfléchissant, ma dernière invention, qui permet à celui qui le porte de s'admirer lui même"], ["Ou bien un carreau d'arbalette, si tu te sens d'humeur chasseuse."],
+		["Excellent choix ! Voici ton miroir !","Hmmm notre étranger est un tueur, soit. Voici ton carreau, utilise le à bon escient.","choisir le carreau","choisir le miroir"],
+		["A la revoyure mon bonhomme"]]
 	
 	else:
 		dialogue = [["Tu en redemande ? Je ne peut plus rien pour toi petit, va et vogue vers l'inconnu !"], ["Je te laisse mon soufflet pour l'instant, mais fait attention, c'est dangereux de jouer avec le feu..."]]

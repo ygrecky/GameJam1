@@ -25,6 +25,7 @@ func toggle_button(state):
 	$Control/VBoxContainer/HBoxContainer.visible = !state
 	
 func open_window(dialogue, ending_f = func() : pass): #ouvre la boite de dialogue
+	Global.last_answer = 0
 	state.show()
 	text_number = -1
 	Next()
@@ -49,8 +50,8 @@ func Next(n=0) -> void: #passe d'un dialogue à un autre
 		if dialogue[text_number+1].size() > 1 :
 			reponse = -1
 			toggle_button(false)
-			$Control/VBoxContainer/HBoxContainer/Button1.text = dialogue[text_number+1][-1]
-			$Control/VBoxContainer/HBoxContainer/Button2.text = dialogue[text_number+1][-2]
+			$Control/VBoxContainer/HBoxContainer/Button1.text = dialogue[text_number+1][2]
+			$Control/VBoxContainer/HBoxContainer/Button2.text = dialogue[text_number+1][3]
 			text.text = ""  #rafraichit la boite de dialogue
 			add_letters(dialogue[text_number][n],0,text_number) #la remplit
 			
@@ -108,7 +109,9 @@ func _process(_delta: float) -> void:
 
 func Next1() -> void:
 	Next(1)
+	Global.last_answer = 1
 
 
 func Next2() -> void:
 	Next(2)
+	Global.last_answer = 2

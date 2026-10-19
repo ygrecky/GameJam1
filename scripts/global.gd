@@ -7,7 +7,7 @@ var lettre_grimoire = false
 var restart_boucle = true
 var speaker = ""
 var durée_boucle = 210
-
+var last_answer = 0
 var showSceau = false
 
 
