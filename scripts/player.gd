@@ -32,6 +32,8 @@ var arbalette_index = 2
 @export var aimant_max_speed = 600
 @export var interaction_label : Label
 
+var barrone_aimant
+
 func _ready():
 	Global.player = self
 	interaction_label.visible = false

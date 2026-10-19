@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if(Global.player.aimant_activé):
+	if(Global.player.aimant_activé or Global.player.barrone_aimant):
 		collision_.disabled = true
 	else:
 		collision_.disabled = false
