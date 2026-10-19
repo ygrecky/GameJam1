@@ -1,5 +1,6 @@
 extends Pnj
 
+var nom_fichier = "baronne secte"
 
 var se_deplace = false
 
@@ -26,7 +27,7 @@ func _ready() -> void:
 	image_link = "res://assets/Personnages/cerf.png"
 	dialogue = [["Je vois que tu as trouvé notre antre."],
 	["Cet endroit est de toute beauté, mais pas aussi beau que moi"],
-	["Nous nous réunissons pour résister contre démon caché parmis nous"],
+	["Nous nous réunissons pour résister contrele  démon caché parmis nous"],
 	["Prenez ceci Héros, vous parviendrez peut être à déterminer qui c'est et l'éliminer pour de bon"]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

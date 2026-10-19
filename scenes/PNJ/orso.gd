@@ -1,5 +1,6 @@
 extends Pnj
 
+var nom_fichier = "forgeron"
 
 var se_deplace = false
 var forgé = false
@@ -26,7 +27,7 @@ func talk_to():
 			dialogue = [["Hmmm notre étranger est un tueur, soit. Voici ton carreau, utilise le à bon escient."], ["A la revoyure mon bonhomme"]]
 			unlock_carreau()
 		else:
-			dialogue = [["Eh mais c'est mon soufflet !!"], ["Et tu dis que c'est cette chipie de souris qui l'avait ?"], ["La prochaine fois que je la vois elle va voir de quel bois je me chauffe..."], ["Enfin bref, merci étranger !"],["Avec ce soufflet et ma forge, je peut te fabriquer une technologie pour t'aider dans ton aventure :"], ["Un magnifique miroir réfléchissant, ma dernière invention, qui permet à celui qui le porte de s'admirer lui même"], ["Ou bien un carreau d'arbalette, si tu te sens d'humeur chasseuse."], ["(Appuyez sur A si vous voulez le miroir, ou E si vous voulez le carreau)"]]
+			dialogue = [["Eh mais c'est mon soufflet !!"], ["Et tu dis que c'est cette chipie de souris qui l'avait ?"], ["La prochaine fois que je la vois elle va voir de quel bois je me chauffe..."], ["Enfin bref, merci étranger !"],["Avec ce soufflet et ma forge, je peut te fabriquer une technologie pour t'aider dans ton aventure :"], ["Un magnifique miroir réfléchissant, ma dernière invention, qui permet à celui qui le porte de s'admirer lui même"], ["Ou bien un carreau d'arbalette, si tu te sens d'humeur chasseuse."], ["( Parlez à Orso en maintenant A si vous voulez le miroir, ou E si vous voulez le carreau)"]]
 	
 	else:
 		dialogue = [["Tu en redemande ? Je ne peut plus rien pour toi petit, va et vogue vers l'inconnu !"], ["Je te laisse mon soufflet pour l'instant, mais fait attention, c'est dangereux de jouer avec le feu..."]]

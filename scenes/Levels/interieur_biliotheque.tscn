@@ -5,64 +5,70 @@
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_cgeol"]
 [ext_resource type="PackedScene" uid="uid://ssw3bonufco" path="res://biblio.tscn" id="5_6p2r5"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_tisle"]
+[ext_resource type="PackedScene" uid="uid://csrdymgiyodnx" path="res://scenes/PNJ/bibliothecaire.tscn" id="6_6p2r5"]
+[ext_resource type="Script" uid="uid://dwl30giovnkfq" path="res://scenes/PNJ/bibliothecaire2.gd" id="7_cgeol"]
 
 [node name="Maison forgeron" type="Node2D" unique_id=1607215442]
-position = Vector2(-2944, -307)
+position = Vector2(-4, 2)
 
 [node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_lnvyp")]
 z_index = -2
-position = Vector2(7043.9995, 107)
+position = Vector2(4182.999, -172)
 scale = Vector2(1.695, 1.45)
 
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("3_6p2r5")]
-position = Vector2(2923.9998, 186)
+position = Vector2(62.99951, -93.00003)
 rotation = 1.5707964
 scale = Vector2(5.415, 5.415)
 destination_path = "res://scenes/Levels/Place village.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231976449]
-position = Vector2(2911, 342)
+position = Vector2(50, 63)
 rotation = 1.5707964
 scale = Vector2(13.218752, 8.499999)
 texture = ExtResource("4_cgeol")
 
 [node name="Mur" parent="." unique_id=1581529100 instance=ExtResource("5_tisle")]
-position = Vector2(3822, -277)
+position = Vector2(961, -556)
 
 [node name="Mur2" parent="." unique_id=1412547997 instance=ExtResource("5_tisle")]
-position = Vector2(5392, -291)
+position = Vector2(2531, -570)
 
 [node name="Mur3" parent="." unique_id=967585770 instance=ExtResource("5_tisle")]
-position = Vector2(4822, 747)
+position = Vector2(1961, 468)
 rotation = 1.5707964
 
 [node name="Mur4" parent="." unique_id=969461974 instance=ExtResource("5_tisle")]
-position = Vector2(4366, 1254)
+position = Vector2(1505, 975)
 
 [node name="Mur5" parent="." unique_id=1001436651 instance=ExtResource("5_tisle")]
-position = Vector2(2814, 1310)
+position = Vector2(-47, 1031)
 
 [node name="Mur6" parent="." unique_id=655327515 instance=ExtResource("5_tisle")]
-position = Vector2(2527, 383)
+position = Vector2(-334, 104)
 rotation = 1.5707964
 
 [node name="Biblio" parent="." unique_id=904807564 instance=ExtResource("5_6p2r5")]
-position = Vector2(3498.0002, -130)
+position = Vector2(637.00024, -409)
 scale = Vector2(3.475, 3.475)
 texte = Array[String](["Utiliser un objet", "Lorsque vous débloquez un objet, appuyez sur la touche du pavé numérique associée pour l'utiliser"])
 
 [node name="Biblio2" parent="." unique_id=1735855837 instance=ExtResource("5_6p2r5")]
-position = Vector2(3759, -128)
+position = Vector2(898, -407)
 scale = Vector2(3.475, 3.475)
 texte = Array[String](["Soufflet", "Une technologie astucieuse utilisée pour propager du feu."])
 
 [node name="Biblio3" parent="." unique_id=784989000 instance=ExtResource("5_6p2r5")]
-position = Vector2(4060.0002, -128)
+position = Vector2(1199.0002, -407)
 scale = Vector2(3.475, 3.475)
 texte = Array[String](["Aimant", "Son utilité reste mystérieuse, on raconte que son champ magnétique est extrèmement puissant"])
 
 [node name="Biblio4" parent="." unique_id=1040922899 instance=ExtResource("5_6p2r5")]
-position = Vector2(4373.0005, -132)
+position = Vector2(1512.0005, -411)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Le livre a pour étiquette \"Ne pas emprunter\""])
+texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Le livre a pour étiquette \"Ne pas emprunter\"", "Vous décidez de braver cette interdiction, et obtenez le grimoire d'invocation"])
 donner_livre = true
+
+[node name="biblioth" parent="." unique_id=281381040 instance=ExtResource("6_6p2r5")]
+position = Vector2(1698, -84)
+script = ExtResource("7_cgeol")

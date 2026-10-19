@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhkmroh058lyp"
-path="res://.godot/imported/paysans.png-568a3de0684fe9b609b94e9661942d78.ctex"
+path="res://.godot/imported/paysan.png-a6a24ebfe9a41fac1be6aba602fbeb3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sceaux/paysans.png"
-dest_files=["res://.godot/imported/paysans.png-568a3de0684fe9b609b94e9661942d78.ctex"]
+source_file="res://assets/Sceaux/paysan.png"
+dest_files=["res://.godot/imported/paysan.png-a6a24ebfe9a41fac1be6aba602fbeb3a.ctex"]
 
 [params]
 

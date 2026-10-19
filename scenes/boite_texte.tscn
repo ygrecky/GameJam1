@@ -47,6 +47,8 @@ layout_mode = 2
 [node name="Button2" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=1925130411]
 layout_mode = 2
 
+[node name="Sprite2D" type="Sprite2D" parent="Control/VBoxContainer" unique_id=1914500378]
+
 [connection signal="button_down" from="Control/VBoxContainer/Button" to="." method="Next"]
 [connection signal="button_down" from="Control/VBoxContainer/HBoxContainer/Button1" to="." method="Next1"]
 [connection signal="button_down" from="Control/VBoxContainer/HBoxContainer/Button2" to="." method="Next2"]

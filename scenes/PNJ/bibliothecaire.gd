@@ -1,5 +1,6 @@
 extends Pnj
 
+var nom_fichier = "bibliothécaire secte"
 
 var se_deplace = false
 

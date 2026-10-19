@@ -1,5 +1,6 @@
 extends Pnj
 
+var nom_fichier = "souris"
 
 var se_deplace = false
 var boucle = false

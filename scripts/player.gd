@@ -113,6 +113,7 @@ func _process(delta: float) -> void:
 		
 
 func _physics_process(delta):
+	carreau = true
 	var isPaused = isTalking
 	if(not isPaused):
 		for elt in short_action_zone.get_overlapping_bodies():
@@ -187,13 +188,13 @@ func use_object(index,delta):
 					if(elt.pnj_name=="Eusebio"):
 						Global.speaker = "eusebio"
 					if(elt.pnj_name=="Baron"):
-						Global.speaker = "baronne"
+						Global.speaker = "baron"
 					if(elt.pnj_name=="Baronne"):
 						Global.speaker = "baronne"
 					if(elt.pnj_name=="Prêtre"):
 						Global.speaker = "prêtre"
 					if(elt.pnj_name=="Paysan" or elt.pnj_name=="Paysane"):
-						Global.speaker = "paysans"
+						Global.speaker = "paysan"
 					
 					
 					Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)

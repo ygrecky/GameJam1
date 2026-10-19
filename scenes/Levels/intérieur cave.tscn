@@ -19,10 +19,10 @@
 [ext_resource type="Script" uid="uid://irlc005im3n4" path="res://scenes/PNJ/paysane2.gd" id="17_ngi7f"]
 
 [node name="Maison forgeron3" type="Node2D" unique_id=1607215442]
-position = Vector2(-2944, -307)
+position = Vector2(-17, 27)
 
 [node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_in2po")]
-position = Vector2(7043.9995, 107)
+position = Vector2(4159.999, -208)
 scale = Vector2(1.695, 1.45)
 
 [node name="Sprite2D" parent="parquet" index="0" unique_id=1616649806]
@@ -33,61 +33,61 @@ texture = ExtResource("2_obqx2")
 position = Vector2(826, 72)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
-position = Vector2(3029, 301)
+position = Vector2(145, -14)
 scale = Vector2(14.935, 14.935)
 texture = ExtResource("3_h2wry")
 
 [node name="Mur" parent="StaticBody2D" unique_id=872404817 instance=ExtResource("5_68xq0")]
-position = Vector2(2930, -257)
+position = Vector2(46, -572)
 
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("6_mf8xv")]
-position = Vector2(2923.9998, 186)
+position = Vector2(39.99951, -129.00003)
 rotation = 1.5707964
 scale = Vector2(5.415, 5.415)
 destination_path = "res://scenes/Levels/Place village.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231976449]
-position = Vector2(2911, 342)
+position = Vector2(27, 27)
 rotation = 1.5707964
 scale = Vector2(13.218752, 8.499999)
 texture = ExtResource("7_klw4l")
 
 [node name="Mur" parent="." unique_id=445528505 instance=ExtResource("5_68xq0")]
-position = Vector2(5314, -193)
+position = Vector2(2430, -508)
 
 [node name="Mur2" parent="." unique_id=1155897686 instance=ExtResource("5_68xq0")]
-position = Vector2(4757, 754)
+position = Vector2(1873, 439)
 rotation = 1.5707964
 
 [node name="Mur3" parent="." unique_id=212381130 instance=ExtResource("5_68xq0")]
-position = Vector2(4301, 1261)
+position = Vector2(1417, 946)
 
 [node name="Mur4" parent="." unique_id=2099488277 instance=ExtResource("5_68xq0")]
-position = Vector2(2749, 1317)
+position = Vector2(-135, 1002)
 
 [node name="Mur5" parent="." unique_id=1248534943 instance=ExtResource("5_68xq0")]
-position = Vector2(2462, 390)
+position = Vector2(-422, 75)
 rotation = 1.5707964
 
 [node name="baron" parent="." unique_id=281381040 instance=ExtResource("7_obqx2")]
-position = Vector2(3498, 150.00003)
+position = Vector2(614.00024, -164.99994)
 script = ExtResource("8_in2po")
 
 [node name="baronne" parent="." unique_id=503995352 instance=ExtResource("9_gsjf5")]
-position = Vector2(4192, 476)
+position = Vector2(1308.0002, 161.00003)
 script = ExtResource("10_mf8xv")
 
 [node name="biblioth" parent="." unique_id=612348783 instance=ExtResource("11_klw4l")]
-position = Vector2(4218, 78)
+position = Vector2(1334.0002, -236.99997)
 script = ExtResource("14_klw4l")
 
 [node name="paysant" parent="." unique_id=1626584444 instance=ExtResource("12_bxycj")]
-position = Vector2(3862, -123)
+position = Vector2(978.00024, -437.99997)
 script = ExtResource("13_bxycj")
 text_box = ExtResource("15_vi086")
 
 [node name="Paysane" parent="." unique_id=1203371247 instance=ExtResource("13_5tdvq")]
-position = Vector2(3586, 573)
+position = Vector2(702.00024, 258.00003)
 script = ExtResource("17_ngi7f")
 
 [editable path="parquet"]

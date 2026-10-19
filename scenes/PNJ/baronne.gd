@@ -1,5 +1,6 @@
 extends Pnj
 
+var nom_fichier = "baronne"
 
 var se_deplace = false
 

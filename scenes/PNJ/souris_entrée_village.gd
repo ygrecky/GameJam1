@@ -1,5 +1,6 @@
 extends Pnj
 
+var nom_fichier = "souris"
 
 func talk_to():
 	Global.speaker = "souris"

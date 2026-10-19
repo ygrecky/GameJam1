@@ -19,9 +19,15 @@ func _physics_process(delta) -> void:
 		if(not(elt is Ravin) and not(elt is Player)):
 			print("flèche a touché")
 			print(elt)
-			if(elt is Pnj):
+			if(elt is Pnj and elt.nom_fichier != Global.player.demon):
 				Global.game_controller.sound_effect.play()
 				elt.dialogue = [["AAAAAAAAARG... L'étranger m'attaque, au secours..."]]
+				Global.player.isTalking = true
+				elt.talk_to_bis(func end_func() : 
+					Global.restart_boucle = true)
+			elif(elt is Pnj and elt.nom_fichier == Global.player.demon):
+				Global.game_controller.sound_effect.play()
+				elt.dialogue = [["COMMENT AS TU SU ????? C'est impossible, je ne peux pas mourrir, nonnnnnnnnnnnn"]]
 				Global.player.isTalking = true
 				elt.talk_to_bis(func end_func() : 
 					Global.restart_boucle = true)

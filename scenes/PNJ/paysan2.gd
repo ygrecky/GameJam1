@@ -1,6 +1,7 @@
 extends Pnj
 
 
+var nom_fichier = "paysan"
 
 var se_deplace = false
 

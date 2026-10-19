@@ -8,7 +8,7 @@ func _ready() -> void:
 	if(Global.player.demon == "souris"):
 		target2 = Vector2(4532.0,1855.0)
 	if(Global.player.demon == "eusebio"):
-		target2 = Vector2(0,0)
+		target2 = Vector2(2164.0,-541.0)
 	if(Global.player.demon == "forgeron"):
 		target2 = Vector2(1676.0,331.0)
 	if(Global.player.demon == "paysan"):

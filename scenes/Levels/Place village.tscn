@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://cjw3xjwc06ocg" path="res://scenes/PNJ/paysane.gd" id="32_dbm7k"]
 [ext_resource type="Texture2D" uid="uid://sec0b8n31wyc" path="res://assets/Personnages/chat.png" id="33_4ad6r"]
 [ext_resource type="PackedScene" uid="uid://bt4ld81nya6uo" path="res://bottes.tscn" id="34_8kkna"]
+[ext_resource type="PackedScene" uid="uid://c1ogsywam0741" path="res://scenes/PNJ/euzebio.tscn" id="35_1v2g5"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -444,6 +445,7 @@ position = Vector2(1537, -184)
 script = ExtResource("30_7skwn")
 
 [node name="Sprite2D" parent="pnj2" index="1" unique_id=156503641]
+position = Vector2(-0.44447136, 0.4444425)
 texture = ExtResource("30_rqpt2")
 
 [node name="pnj3" parent="." unique_id=942366090 instance=ExtResource("28_rqpt2")]
@@ -457,6 +459,10 @@ texture = ExtResource("33_4ad6r")
 [node name="Node2D" parent="pnj3" unique_id=1134015067 instance=ExtResource("34_8kkna")]
 position = Vector2(1529.7778, -1528.4445)
 scale = Vector2(1.51, 1.51)
+
+[node name="Euzebio" parent="." unique_id=1934437601 instance=ExtResource("35_1v2g5")]
+position = Vector2(2164, -541)
+scale = Vector2(0.085, 0.085)
 
 [editable path="Maison"]
 [editable path="Maison2"]

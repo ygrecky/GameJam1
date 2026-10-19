@@ -12,11 +12,11 @@
 size = Vector2(62.709667, 32.104237)
 
 [node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
-position = Vector2(-2944, -307)
+position = Vector2(-1, -35)
 
 [node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_frwyd")]
 z_index = -2
-position = Vector2(7049.9995, 131)
+position = Vector2(4144.999, -215)
 scale = Vector2(1.695, 1.45)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1776865817]
@@ -24,51 +24,51 @@ z_index = 10
 position = Vector2(826, 72)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
-position = Vector2(3040.5627, 246.48436)
+position = Vector2(135.56274, -99.51564)
 scale = Vector2(6.9824166, 6.6401367)
 texture = ExtResource("2_h2qx1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=797289935]
 z_index = 10
-position = Vector2(3012.5, 314)
+position = Vector2(107.5, -32)
 scale = Vector2(3.875, 4.796875)
 shape = SubResource("RectangleShape2D_u081y")
 
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("3_hlsi6")]
-position = Vector2(2923.9998, 186)
+position = Vector2(18.999512, -160.00003)
 rotation = 1.5707964
 scale = Vector2(5.415, 5.415)
 destination_path = "res://scenes/Levels/Place village.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231976449]
-position = Vector2(2911, 342)
+position = Vector2(6, -4)
 rotation = 1.5707964
 scale = Vector2(13.218752, 8.499999)
 texture = ExtResource("4_cxnd5")
 
 [node name="Mur" parent="." unique_id=1581529100 instance=ExtResource("5_t8830")]
-position = Vector2(3747, -200)
+position = Vector2(842, -546)
 
 [node name="Mur2" parent="." unique_id=1100780419 instance=ExtResource("5_t8830")]
-position = Vector2(5314, -193)
+position = Vector2(2409, -539)
 
 [node name="Mur3" parent="." unique_id=1300010248 instance=ExtResource("5_t8830")]
-position = Vector2(4757, 754)
+position = Vector2(1852, 408)
 rotation = 1.5707964
 
 [node name="Mur4" parent="." unique_id=1313278603 instance=ExtResource("5_t8830")]
-position = Vector2(4301, 1261)
+position = Vector2(1396, 915)
 
 [node name="Mur5" parent="." unique_id=1955559028 instance=ExtResource("5_t8830")]
-position = Vector2(2749, 1317)
+position = Vector2(-156, 971)
 
 [node name="Mur6" parent="." unique_id=221767368 instance=ExtResource("5_t8830")]
-position = Vector2(2462, 390)
+position = Vector2(-443, 44)
 rotation = 1.5707964
 
 [node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("6_h6rgy")]
-position = Vector2(3789, 576)
+position = Vector2(884, 230)
 min_scale = 1.0
 
 [node name="orso" parent="." unique_id=281381040 instance=ExtResource("7_6hh3w")]
-position = Vector2(3844.9998, 53.999985)
+position = Vector2(940, -292)

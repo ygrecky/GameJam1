@@ -1,6 +1,8 @@
 extends Pnj
 
 
+var nom_fichier = "baron"
+
 var se_deplace = false
 
 func ending_func() : 
