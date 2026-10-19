@@ -6,7 +6,7 @@ var inMenu = true
 var lettre_grimoire = false
 var restart_boucle = true
 var speaker = ""
-var durée_boucle = 5
+var durée_boucle = 210
 
 
 func finir_le_jeu():

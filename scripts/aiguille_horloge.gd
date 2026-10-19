@@ -6,7 +6,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.restart_boucle = false
-	visible = true
+	visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 		set_position(Global.player.position)
 		Global.player.camera.zoom = Vector2(Global.player.camera.zoom.x*1.006, Global.player.camera.zoom.y*1.006)
 		if Global.player.camera.zoom.x > 2:
-			Global.inMenu = true
 			Global.restart_boucle = false
 			visible = false
 			Global.game_controller.restart_loop()
