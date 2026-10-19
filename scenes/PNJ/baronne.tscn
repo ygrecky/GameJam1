@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cm5vk6axjwm15" path="res://assets/Personnages/bichette.png" id="2_jlmai"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
-size = Vector2(132.60144, 168.64124)
+size = Vector2(132.60144, 47.765038)
 
 [node name="baronne" type="CharacterBody2D" unique_id=281381040]
 z_index = 5
@@ -15,8 +15,8 @@ script = ExtResource("1_vmnnp")
 text_box = ExtResource("2_1bfd2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
-position = Vector2(-4.2168655, 63.419586)
-scale = Vector2(0.8449998, 0.8449998)
+position = Vector2(-4.2168655, 121.987946)
+scale = Vector2(0.84499955, 0.84499955)
 shape = SubResource("RectangleShape2D_ayuyq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]

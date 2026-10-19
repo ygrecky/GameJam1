@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="21_f8ss2"]
 [ext_resource type="PackedScene" uid="uid://deupogefs70cw" path="res://horloge.tscn" id="23_v51xb"]
 [ext_resource type="PackedScene" uid="uid://c1vxwqj6ukppx" path="res://scenes/Decoration/arbre.tscn" id="24_tnbrp"]
+[ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="25_jchdh"]
+[ext_resource type="Script" uid="uid://xmysjnd08dvq" path="res://scenes/PNJ/baronne2.gd" id="26_hnfw8"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -382,6 +384,10 @@ scale = Vector2(2.935, 2.935)
 z_index = 1
 position = Vector2(804, 2478)
 scale = Vector2(2.935, 2.935)
+
+[node name="baronne" parent="." unique_id=485327435 instance=ExtResource("25_jchdh")]
+position = Vector2(1831.9999, -2321)
+script = ExtResource("26_hnfw8")
 
 [editable path="Maison"]
 [editable path="Maison2"]

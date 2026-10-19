@@ -1,0 +1,398 @@
+[gd_scene format=3 uid="uid://c4v1hpahldyio"]
+
+[ext_resource type="PackedScene" uid="uid://dhhc5yxb43h51" path="res://scenes/Decoration/bordure_forêt.tscn" id="1_84da0"]
+[ext_resource type="PackedScene" uid="uid://b4q1fjw45e8nh" path="res://scenes/Decoration/sol.tscn" id="2_vkgck"]
+[ext_resource type="PackedScene" uid="uid://cjt3cvbpfol0c" path="res://scenes/Decoration/gros sol.tscn" id="3_o2a7o"]
+[ext_resource type="PackedScene" uid="uid://csql6brr1dlkx" path="res://scenes/Decoration/chemin.tscn" id="5_kquo5"]
+[ext_resource type="PackedScene" uid="uid://bj3lnj4da6ult" path="res://scenes/Decoration/Maison.tscn" id="6_4hvs0"]
+[ext_resource type="Texture2D" uid="uid://d1mefj16jo70f" path="res://assets/maison_bleue.png" id="6_hvbxv"]
+[ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="7_0dq5c"]
+[ext_resource type="PackedScene" uid="uid://cqisqshyk32o7" path="res://scenes/Decoration/Eglise.tscn" id="8_qan31"]
+[ext_resource type="PackedScene" uid="uid://bfe54hqkti65k" path="res://scenes/bousole.tscn" id="10_m65ih"]
+[ext_resource type="PackedScene" uid="uid://dtsvsklgqr5s0" path="res://scenes/Decoration/chemin_virage.tscn" id="11_d4wbx"]
+[ext_resource type="PackedScene" uid="uid://cm3it50luwt1b" path="res://scenes/Decoration/chemin et virage.tscn" id="12_n1env"]
+[ext_resource type="PackedScene" uid="uid://dxoqlvh3iwc81" path="res://scenes/Decoration/puit.tscn" id="13_rhp8x"]
+[ext_resource type="PackedScene" uid="uid://rfwu7hewpvwa" path="res://scenes/Decoration/fontaine.tscn" id="14_2d8mv"]
+[ext_resource type="PackedScene" uid="uid://bf7i54xbyggli" path="res://scenes/Decoration/bordure_foret_verticale.tscn" id="15_rhp8x"]
+[ext_resource type="PackedScene" uid="uid://8ti3h7q5uibo" path="res://scenes/Decoration/tile_chemin_tournant.tscn" id="16_2d8mv"]
+[ext_resource type="PackedScene" uid="uid://b6dposcgekuv2" path="res://scenes/Decoration/ravin.tscn" id="16_hvbxv"]
+[ext_resource type="Texture2D" uid="uid://dwjhyeghglhqt" path="res://assets/grotte.png" id="17_dktky"]
+[ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="18_dktky"]
+[ext_resource type="PackedScene" uid="uid://bcjyuhhxy1aoc" path="res://scenes/PNJ/souris_cachée2.tscn" id="19_cyp12"]
+[ext_resource type="PackedScene" uid="uid://dpyhkgr8gw33h" path="res://scenes/PNJ/souris_cachée1.tscn" id="20_0137w"]
+[ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="21_0137w"]
+[ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="21_f8ss2"]
+[ext_resource type="PackedScene" uid="uid://deupogefs70cw" path="res://horloge.tscn" id="23_v51xb"]
+[ext_resource type="PackedScene" uid="uid://c1vxwqj6ukppx" path="res://scenes/Decoration/arbre.tscn" id="24_tnbrp"]
+[ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="25_jchdh"]
+[ext_resource type="Script" uid="uid://xmysjnd08dvq" path="res://scenes/PNJ/baronne2.gd" id="26_hnfw8"]
+
+[node name="PlaceVillage" type="Node2D" unique_id=190258638]
+
+[node name="Sol3" parent="." unique_id=1363791764 instance=ExtResource("2_vkgck")]
+position = Vector2(658, -1068)
+scale = Vector2(0.235, 0.235)
+
+[node name="Sol4" parent="." unique_id=603736029 instance=ExtResource("2_vkgck")]
+position = Vector2(652, -236.00002)
+scale = Vector2(0.22, 0.22)
+
+[node name="Bordure forêt" parent="." unique_id=170095540 instance=ExtResource("1_84da0")]
+position = Vector2(-508, -284)
+
+[node name="Bordure forêt2" parent="." unique_id=929363572 instance=ExtResource("1_84da0")]
+position = Vector2(-503, 321)
+
+[node name="Bordure forêt3" parent="." unique_id=882547539 instance=ExtResource("1_84da0")]
+position = Vector2(-742, 23)
+
+[node name="Sol" parent="." unique_id=1354794877 instance=ExtResource("2_vkgck")]
+position = Vector2(664, -1885)
+scale = Vector2(0.22, 0.22)
+
+[node name="Sol2" parent="." unique_id=1754212459 instance=ExtResource("2_vkgck")]
+position = Vector2(652, 601)
+scale = Vector2(0.22, 0.22)
+
+[node name="Gros sol" parent="." unique_id=1447059904 instance=ExtResource("3_o2a7o")]
+position = Vector2(1968, 0)
+
+[node name="Maison3" parent="Gros sol" unique_id=1596774400 instance=ExtResource("6_4hvs0")]
+position = Vector2(2699.0002, 438)
+scale = Vector2(10, 10)
+
+[node name="Chemin" parent="Gros sol" unique_id=1271939013 instance=ExtResource("5_kquo5")]
+position = Vector2(-207, 106)
+
+[node name="Chemin" parent="Gros sol/Chemin" unique_id=975286042 instance=ExtResource("5_kquo5")]
+position = Vector2(383, 655)
+rotation = 1.5707964
+
+[node name="Chemin" parent="Gros sol/Chemin/Chemin" unique_id=1517600291 instance=ExtResource("5_kquo5")]
+position = Vector2(-1357, 334.00012)
+
+[node name="Gros sol2" parent="." unique_id=1137020346 instance=ExtResource("3_o2a7o")]
+position = Vector2(-7, 3325)
+
+[node name="Gros sol3" parent="." unique_id=575887699 instance=ExtResource("3_o2a7o")]
+position = Vector2(3934, 3318)
+
+[node name="Gros sol4" parent="." unique_id=87450878 instance=ExtResource("3_o2a7o")]
+position = Vector2(3934, 3318)
+
+[node name="Gros sol5" parent="." unique_id=1715114615 instance=ExtResource("3_o2a7o")]
+position = Vector2(5926, -11)
+
+[node name="Maison" parent="." unique_id=59623987 instance=ExtResource("6_4hvs0")]
+position = Vector2(653, -387.99994)
+scale = Vector2(8.585, 8.585)
+
+[node name="Sprite2D" parent="Maison" index="0" unique_id=1361344285]
+texture = ExtResource("6_hvbxv")
+
+[node name="Maison2" parent="." unique_id=1323063652 instance=ExtResource("6_4hvs0")]
+position = Vector2(2329, -1087)
+scale = Vector2(10, 10)
+
+[node name="Sprite2D" parent="Maison2" index="0" unique_id=1361344285]
+texture = ExtResource("6_hvbxv")
+
+[node name="Maison3" parent="." unique_id=727810482 instance=ExtResource("6_4hvs0")]
+position = Vector2(1676, 331.0001)
+scale = Vector2(10, 10)
+
+[node name="Maison4" parent="." unique_id=1822626747 instance=ExtResource("6_4hvs0")]
+position = Vector2(4275, 1995)
+scale = Vector2(10, 10)
+
+[node name="Sprite2D" parent="Maison4" index="0" unique_id=1361344285]
+texture = ExtResource("6_hvbxv")
+
+[node name="Bloc magnétique" parent="." unique_id=32234192 instance=ExtResource("7_0dq5c")]
+position = Vector2(4337, 1)
+
+[node name="eglise" parent="." unique_id=708541613 instance=ExtResource("8_qan31")]
+position = Vector2(2847.0002, 511)
+scale = Vector2(15.015, 15.015)
+
+[node name="Chemin" parent="." unique_id=486713908 instance=ExtResource("5_kquo5")]
+position = Vector2(725, 101)
+
+[node name="Chemin2" parent="." unique_id=774553325 instance=ExtResource("5_kquo5")]
+position = Vector2(2875, 1215)
+
+[node name="Bousole" parent="." unique_id=538919682 node_paths=PackedStringArray("target1") instance=ExtResource("10_m65ih")]
+position = Vector2(3459, 577)
+scale = Vector2(0.49, 0.49)
+target1 = NodePath("../eglise")
+
+[node name="Chemin virage" parent="." unique_id=1553690868 instance=ExtResource("11_d4wbx")]
+position = Vector2(2142, 1212)
+rotation = -1.5707964
+scale = Vector2(11.905, 11.905)
+
+[node name="Node2D2" parent="." unique_id=1867184124 instance=ExtResource("12_n1env")]
+position = Vector2(2870, 3363)
+rotation = -1.5707964
+
+[node name="Puit" parent="." unique_id=1140440893 instance=ExtResource("13_rhp8x")]
+position = Vector2(2942, -181)
+
+[node name="Fontaine" parent="." unique_id=1356898558 instance=ExtResource("14_2d8mv")]
+position = Vector2(2858.9998, 1913)
+scale = Vector2(1.755, 1.755)
+
+[node name="Bordure foret verticale" parent="." unique_id=477169209 instance=ExtResource("15_rhp8x")]
+position = Vector2(-74, -831.99994)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale2" parent="." unique_id=361195184 instance=ExtResource("15_rhp8x")]
+position = Vector2(-58, -1801)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale3" parent="." unique_id=1551033340 instance=ExtResource("15_rhp8x")]
+position = Vector2(-127, 904)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale4" parent="." unique_id=857446747 instance=ExtResource("15_rhp8x")]
+position = Vector2(-125, 1891)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale5" parent="." unique_id=160729286 instance=ExtResource("15_rhp8x")]
+position = Vector2(-125, 2879)
+scale = Vector2(1.895, 1.895)
+
+[node name="tile_chemin_tournant" parent="." unique_id=960793606 instance=ExtResource("16_2d8mv")]
+position = Vector2(2139, 77)
+scale = Vector2(2.28, 2.28)
+
+[node name="tile_chemin_tournant2" parent="." unique_id=1795786529 instance=ExtResource("16_2d8mv")]
+position = Vector2(1796.0001, 94.00001)
+rotation = 3.1415927
+scale = Vector2(2.49, 2.49)
+
+[node name="Chemin3" parent="." unique_id=459566223 instance=ExtResource("5_kquo5")]
+position = Vector2(2855, 67)
+
+[node name="Chemin4" parent="." unique_id=1933248949 instance=ExtResource("5_kquo5")]
+position = Vector2(3671, 44)
+
+[node name="tile_chemin_tournant3" parent="." unique_id=15712333 instance=ExtResource("16_2d8mv")]
+position = Vector2(4072.0002, 33.000004)
+scale = Vector2(2.41, 2.41)
+
+[node name="tile_chemin_tournant4" parent="." unique_id=1941920257 instance=ExtResource("16_2d8mv")]
+position = Vector2(3614, 1218.0001)
+scale = Vector2(2.255, 2.255)
+
+[node name="Chemin5" parent="." unique_id=1029818583 instance=ExtResource("5_kquo5")]
+position = Vector2(3628, 1937)
+rotation = 1.5707964
+
+[node name="tile_chemin_tournant5" parent="." unique_id=602192115 instance=ExtResource("16_2d8mv")]
+position = Vector2(2148, 1235)
+rotation = -1.5707964
+scale = Vector2(2.18, 2.18)
+
+[node name="Chemin6" parent="." unique_id=821761867 instance=ExtResource("5_kquo5")]
+position = Vector2(2159, 1927)
+rotation = 1.5707964
+
+[node name="Chemin virage2" parent="." unique_id=116358973 instance=ExtResource("11_d4wbx")]
+position = Vector2(1692, 3040)
+
+[node name="Node2D3" parent="." unique_id=865819399 instance=ExtResource("12_n1env")]
+position = Vector2(10, 1459)
+
+[node name="Maison5" parent="." unique_id=968460437 instance=ExtResource("6_4hvs0")]
+position = Vector2(1575.0002, 1960)
+scale = Vector2(10, 10)
+
+[node name="TpZone" parent="Maison5" unique_id=1066630093 instance=ExtResource("18_dktky")]
+position = Vector2(-27.800026, 36.800003)
+scale = Vector2(0.465, 0.465)
+destination_path = "res://scenes/Levels/maison baron.tscn"
+
+[node name="Chemin virage3" parent="." unique_id=604175554 instance=ExtResource("11_d4wbx")]
+position = Vector2(3631, 2668)
+rotation = 3.1415927
+scale = Vector2(11.755, 11.755)
+
+[node name="Bloc magnétique2" parent="." unique_id=983161246 instance=ExtResource("7_0dq5c")]
+position = Vector2(4046, 1364)
+
+[node name="Bloc magnétique2" parent="Bloc magnétique2" unique_id=157584098 instance=ExtResource("7_0dq5c")]
+position = Vector2(4038, 1356)
+
+[node name="Bloc magnétique3" parent="." unique_id=1720512056 instance=ExtResource("7_0dq5c")]
+position = Vector2(4046, 1364)
+
+[node name="Bloc magnétique2" parent="Bloc magnétique3" unique_id=1241959831 instance=ExtResource("7_0dq5c")]
+position = Vector2(4038, 1356)
+
+[node name="Bloc magnétique4" parent="." unique_id=1635385630 instance=ExtResource("7_0dq5c")]
+position = Vector2(2111, 2983)
+
+[node name="Bloc magnétique5" parent="." unique_id=728732266 instance=ExtResource("7_0dq5c")]
+position = Vector2(2168, -125)
+
+[node name="Bloc magnétique6" parent="." unique_id=596887682 instance=ExtResource("7_0dq5c")]
+position = Vector2(1911, 1238)
+
+[node name="Bloc magnétique7" parent="." unique_id=715411418 instance=ExtResource("7_0dq5c")]
+position = Vector2(3913, 2592)
+
+[node name="Bloc magnétique8" parent="." unique_id=408522568 instance=ExtResource("7_0dq5c")]
+position = Vector2(3659, -211)
+
+[node name="Chemin7" parent="." unique_id=1516029318 instance=ExtResource("5_kquo5")]
+position = Vector2(1813, -1675)
+rotation = 1.5707964
+
+[node name="Gros sol6" parent="." unique_id=1741710933 instance=ExtResource("3_o2a7o")]
+position = Vector2(1968, 0)
+
+[node name="Maison3" parent="Gros sol6" unique_id=786246546 instance=ExtResource("6_4hvs0")]
+position = Vector2(2699.0002, 438)
+scale = Vector2(10, 10)
+
+[node name="Chemin" parent="Gros sol6" unique_id=1897774032 instance=ExtResource("5_kquo5")]
+position = Vector2(-207, 106)
+
+[node name="Chemin" parent="Gros sol6/Chemin" unique_id=327550441 instance=ExtResource("5_kquo5")]
+position = Vector2(383, 655)
+rotation = 1.5707964
+
+[node name="Chemin" parent="Gros sol6/Chemin/Chemin" unique_id=1782841656 instance=ExtResource("5_kquo5")]
+position = Vector2(-1357, 334.00012)
+
+[node name="Gros sol7" parent="." unique_id=1593091993 instance=ExtResource("3_o2a7o")]
+position = Vector2(14, -3328)
+
+[node name="Gros sol8" parent="." unique_id=1314176705 instance=ExtResource("3_o2a7o")]
+position = Vector2(3960, -3267)
+
+[node name="ravin" parent="." unique_id=674203935 instance=ExtResource("16_hvbxv")]
+position = Vector2(1903.9999, -2336.0002)
+rotation = 1.5707964
+scale = Vector2(2.725, 6.01)
+
+[node name="Bordure foret verticale6" parent="." unique_id=100315914 instance=ExtResource("15_rhp8x")]
+position = Vector2(-43.999996, -2806)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale7" parent="." unique_id=1569850904 instance=ExtResource("15_rhp8x")]
+position = Vector2(-62.999996, -3809)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale8" parent="." unique_id=233248505 instance=ExtResource("15_rhp8x")]
+position = Vector2(3822, -3826)
+scale = Vector2(1.895, 1.895)
+
+[node name="Bordure foret verticale9" parent="." unique_id=693230614 instance=ExtResource("15_rhp8x")]
+position = Vector2(3822, -2931)
+scale = Vector2(1.895, 1.895)
+
+[node name="Maison6" parent="." unique_id=2090207498 instance=ExtResource("6_4hvs0")]
+position = Vector2(2531, -3372.9998)
+scale = Vector2(10, 10)
+
+[node name="Sprite2D" parent="Maison6" index="0" unique_id=1361344285]
+texture = ExtResource("17_dktky")
+
+[node name="Bloc magnétique9" parent="." unique_id=1976428260 instance=ExtResource("7_0dq5c")]
+position = Vector2(1840, -2644)
+
+[node name="Bloc magnétique10" parent="." unique_id=1735558842 instance=ExtResource("7_0dq5c")]
+position = Vector2(2163, -1998)
+
+[node name="souris_ev" parent="." unique_id=281381040 instance=ExtResource("18_dktky")]
+position = Vector2(178, -101)
+
+[node name="TpZone" parent="." unique_id=2016305339 instance=ExtResource("18_dktky")]
+position = Vector2(1428.0001, 657)
+scale = Vector2(3.35, 3.35)
+destination_path = "res://scenes/Levels/maison forgeron.tscn"
+
+[node name="TpZone2" parent="." unique_id=1891399501 instance=ExtResource("18_dktky")]
+position = Vector2(4449, 767)
+scale = Vector2(2.55, 2.55)
+destination_path = "res://scenes/Levels/interieur_biliotheque.tscn"
+
+[node name="TpZone3" parent="." unique_id=350350663 instance=ExtResource("18_dktky")]
+position = Vector2(2641, 1022)
+scale = Vector2(4.205, 4.205)
+destination_path = "res://scenes/Levels/intérieur église.tscn"
+
+[node name="TpZone4" parent="." unique_id=365409938 instance=ExtResource("18_dktky")]
+position = Vector2(2495, -3032)
+scale = Vector2(3.625, 3.625)
+destination_path = "res://scenes/Levels/intérieur cave.tscn"
+
+[node name="Bordure forêt4" parent="." unique_id=963673157 instance=ExtResource("1_84da0")]
+position = Vector2(671, -4614)
+
+[node name="Bordure forêt5" parent="." unique_id=861078726 instance=ExtResource("1_84da0")]
+position = Vector2(1824, -4606)
+
+[node name="Bordure forêt6" parent="." unique_id=505605979 instance=ExtResource("1_84da0")]
+position = Vector2(2993, -4600)
+
+[node name="Bordure forêt7" parent="." unique_id=1783542592 instance=ExtResource("1_84da0")]
+position = Vector2(4165, -4608)
+
+[node name="Bordure forêt8" parent="." unique_id=1155885851 instance=ExtResource("1_84da0")]
+position = Vector2(710, -4353)
+
+[node name="Bordure forêt9" parent="." unique_id=579897377 instance=ExtResource("1_84da0")]
+position = Vector2(1860, -4353)
+
+[node name="Bordure forêt10" parent="." unique_id=1474732096 instance=ExtResource("1_84da0")]
+position = Vector2(3042, -4353)
+
+[node name="souris_cachée2" parent="." unique_id=223147539 instance=ExtResource("19_cyp12")]
+z_index = -1
+position = Vector2(4532, 1855)
+scale = Vector2(1, 1)
+
+[node name="souris_cachée1" parent="." unique_id=306419214 instance=ExtResource("20_0137w")]
+position = Vector2(3395.0002, -367)
+scale = Vector2(1.3, 1.3)
+
+[node name="souris_ev2" parent="." unique_id=478708516 instance=ExtResource("21_f8ss2")]
+position = Vector2(263.00003, -86.99994)
+scale = Vector2(1.3, 1.3)
+
+[node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("21_0137w")]
+position = Vector2(1125, 671)
+min_scale = 0.5
+
+[node name="Feu2" parent="." unique_id=1923670286 instance=ExtResource("21_0137w")]
+position = Vector2(1918, -3104)
+min_scale = 0.5
+
+[node name="Node2D" parent="." unique_id=1693104251 instance=ExtResource("23_v51xb")]
+z_index = 1
+position = Vector2(3291, -588)
+
+[node name="Arbre" parent="." unique_id=1874252714 instance=ExtResource("24_tnbrp")]
+z_index = 1
+position = Vector2(785.00006, 1494.0001)
+scale = Vector2(2.935, 2.935)
+
+[node name="Arbre2" parent="." unique_id=813020469 instance=ExtResource("24_tnbrp")]
+z_index = 1
+position = Vector2(804, 2478)
+scale = Vector2(2.935, 2.935)
+
+[node name="baronne" parent="." unique_id=485327435 instance=ExtResource("25_jchdh")]
+position = Vector2(1834.9999, -2153)
+script = ExtResource("26_hnfw8")
+image_link = null
+
+[editable path="Maison"]
+[editable path="Maison2"]
+[editable path="Maison4"]
+[editable path="Bousole"]
+[editable path="Maison5"]
+[editable path="Maison6"]
