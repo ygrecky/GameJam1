@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://c0tk2qqokmxjw" path="res://scenes/bloc_magnétique.tscn" id="4_hlsi6"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_cxnd5"]
 [ext_resource type="PackedScene" uid="uid://cgndvvo5vpwh1" path="res://scenes/aimant.tscn" id="8_50rai"]
-[ext_resource type="PackedScene" uid="uid://c6x6lpru6jabe" path="res://scenes/PNJ/baron.tscn" id="9_fglit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(65.80645, 90.05863)
@@ -89,8 +88,5 @@ position = Vector2(4265, 370)
 
 [node name="Bloc magnétique5" parent="." unique_id=1376411107 instance=ExtResource("4_hlsi6")]
 position = Vector2(4245, 500)
-
-[node name="baron" parent="." unique_id=281381040 instance=ExtResource("9_fglit")]
-position = Vector2(4651, 640)
 
 [editable path="parquet"]

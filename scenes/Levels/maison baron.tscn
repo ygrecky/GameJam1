@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://d4goc5k6kw6tt"]
+
+[ext_resource type="PackedScene" uid="uid://dovg7m227or15" path="res://scenes/Decoration/parquet.tscn" id="1_6ab6m"]
+[ext_resource type="Texture2D" uid="uid://cb2xggdrerfcf" path="res://assets/décor/table.png" id="2_oafrx"]
+[ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="3_ooaht"]
+[ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_m2xn6"]
+[ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_igiox"]
+[ext_resource type="PackedScene" uid="uid://c6x6lpru6jabe" path="res://scenes/PNJ/baron.tscn" id="6_6ab6m"]
+[ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="7_uvqvh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(110.19354, 34.60586)
+
+[node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
+position = Vector2(-2944, -307)
+
+[node name="parquet" parent="." unique_id=1679442053 instance=ExtResource("1_6ab6m")]
+z_index = -2
+position = Vector2(7043.9995, 107)
+scale = Vector2(1.695, 1.45)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1776865817]
+z_index = 10
+position = Vector2(826, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
+position = Vector2(3081.75, 318.00003)
+scale = Vector2(14.140628, 11.210937)
+texture = ExtResource("2_oafrx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=797289935]
+z_index = 10
+position = Vector2(3072.5, 414)
+scale = Vector2(3.875, 4.796875)
+shape = SubResource("RectangleShape2D_u081y")
+
+[node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("3_ooaht")]
+position = Vector2(2923.9998, 186)
+rotation = 1.5707964
+scale = Vector2(5.415, 5.415)
+destination_path = "res://scenes/Levels/Place village.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231976449]
+position = Vector2(2911, 342)
+rotation = 1.5707964
+scale = Vector2(13.218752, 8.499999)
+texture = ExtResource("4_m2xn6")
+
+[node name="Mur" parent="." unique_id=1581529100 instance=ExtResource("5_igiox")]
+position = Vector2(3747, -200)
+
+[node name="Mur2" parent="." unique_id=1100780419 instance=ExtResource("5_igiox")]
+position = Vector2(5314, -193)
+
+[node name="Mur3" parent="." unique_id=1300010248 instance=ExtResource("5_igiox")]
+position = Vector2(4757, 754)
+rotation = 1.5707964
+
+[node name="Mur4" parent="." unique_id=1313278603 instance=ExtResource("5_igiox")]
+position = Vector2(4301, 1261)
+
+[node name="Mur5" parent="." unique_id=1955559028 instance=ExtResource("5_igiox")]
+position = Vector2(2749, 1317)
+
+[node name="Mur6" parent="." unique_id=221767368 instance=ExtResource("5_igiox")]
+position = Vector2(2462, 390)
+rotation = 1.5707964
+
+[node name="baron" parent="." unique_id=281381040 instance=ExtResource("6_6ab6m")]
+position = Vector2(3838, 133.00002)
+
+[node name="baronne" parent="." unique_id=159852332 instance=ExtResource("7_uvqvh")]
+position = Vector2(4043, 119.00001)

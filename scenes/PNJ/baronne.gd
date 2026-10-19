@@ -4,12 +4,19 @@ extends Pnj
 var se_deplace = false
 
 func ending_func() : 
-	$CollisionShape2D.disabled = true
 	se_deplace = true
 	velocity = Vector2(speed*2, 0)
 	
 
 func talk_to():
+	if(not(Global.player.object_unlocked[3])):
+		dialogue = [["NON CE N’EST PLUS POSSIBLE"],
+		["ÇA ne peut pas continuer. Tous ces serviteurs, pleins de compliments… Plutôt plein de mensonge je dirais."],
+		["Je ne vois aucune sincérité chez eux. Humpf"],
+		["Ce fichu Euzebio n'est-il pas fichu de dire une vérité une fois dans sa vie ?"],
+		["Comment je peux savoir combien je suis ravissante si personne de fiable ne m'entoure ?"]]
+	else:
+		dialogue = [["Eh mais c'est mon miroir que je voit là ?"], ["DONNEZ LE MOI !"], ["Ah, ça fait du bien de te revoir, Camélia. Toujours aussi belle à ce que je vois"], ["Merci, étranger. Je vois que vous, vous êtes digne de confiance !"], ["Pour vous remercier, laissez moi vous montrer quelque chose."]]
 	var bdd = text_box.instantiate()
 	bdd.speakerPnj = self
 	bdd.dialogue = dialogue
@@ -21,12 +28,8 @@ func talk_to():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pnj_name = "Baron"
-	dialogue = [["NON CE N’EST PLUS POSSIBLE"],
-	["ÇA ne peut pas continuer. Tous ces serviteurs, pleins de compliments… Plutôt plein de mensonge je dirais."],
-	["Je ne vois aucune sincérité chez eux. Humpf"],
-	["Comment je peux savoir combien je suis ravissante ?"], 
-	["si personne de fiable ne m’entoure ?"]]
+	pnj_name = "Baronne"
+	
 
 
 

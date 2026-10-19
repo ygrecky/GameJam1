@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://7cahasrlxoj7" path="res://scenes/PNJ/souris_entrée_village.tscn" id="21_f8ss2"]
 [ext_resource type="PackedScene" uid="uid://deupogefs70cw" path="res://horloge.tscn" id="23_v51xb"]
 [ext_resource type="PackedScene" uid="uid://c1vxwqj6ukppx" path="res://scenes/Decoration/arbre.tscn" id="24_tnbrp"]
-[ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="25_jchdh"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -207,8 +206,10 @@ position = Vector2(10, 1459)
 position = Vector2(1575.0002, 1960)
 scale = Vector2(10, 10)
 
-[node name="Sprite2D" parent="Maison5" index="0" unique_id=1361344285]
-texture = ExtResource("6_hvbxv")
+[node name="TpZone" parent="Maison5" unique_id=1066630093 instance=ExtResource("18_dktky")]
+position = Vector2(-27.800026, 36.800003)
+scale = Vector2(0.465, 0.465)
+destination_path = "res://scenes/Levels/maison baron.tscn"
 
 [node name="Chemin virage3" parent="." unique_id=604175554 instance=ExtResource("11_d4wbx")]
 position = Vector2(3631, 2668)
@@ -306,7 +307,7 @@ position = Vector2(2163, -1998)
 [node name="souris_ev" parent="." unique_id=281381040 instance=ExtResource("18_dktky")]
 position = Vector2(178, -101)
 
-[node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("18_dktky")]
+[node name="TpZone" parent="." unique_id=2016305339 instance=ExtResource("18_dktky")]
 position = Vector2(1428.0001, 657)
 scale = Vector2(3.35, 3.35)
 destination_path = "res://scenes/Levels/maison forgeron.tscn"
@@ -349,11 +350,11 @@ position = Vector2(3042, -4353)
 
 [node name="souris_cachée2" parent="." unique_id=223147539 instance=ExtResource("19_cyp12")]
 z_index = -1
-position = Vector2(4481, 4182)
+position = Vector2(4532, 1855)
 scale = Vector2(1, 1)
 
 [node name="souris_cachée1" parent="." unique_id=306419214 instance=ExtResource("20_0137w")]
-position = Vector2(4480, 1960.0001)
+position = Vector2(3395.0002, -367)
 scale = Vector2(1.3, 1.3)
 
 [node name="souris_ev2" parent="." unique_id=478708516 instance=ExtResource("21_f8ss2")]
@@ -369,18 +370,18 @@ position = Vector2(1918, -3104)
 min_scale = 0.5
 
 [node name="Node2D" parent="." unique_id=1693104251 instance=ExtResource("23_v51xb")]
-position = Vector2(3384, -596)
+z_index = 1
+position = Vector2(3291, -588)
 
 [node name="Arbre" parent="." unique_id=1874252714 instance=ExtResource("24_tnbrp")]
+z_index = 1
 position = Vector2(785.00006, 1494.0001)
 scale = Vector2(2.935, 2.935)
 
 [node name="Arbre2" parent="." unique_id=813020469 instance=ExtResource("24_tnbrp")]
+z_index = 1
 position = Vector2(804, 2478)
 scale = Vector2(2.935, 2.935)
-
-[node name="baronne" parent="." unique_id=1743447705 instance=ExtResource("25_jchdh")]
-position = Vector2(218, -4239)
 
 [editable path="Maison"]
 [editable path="Maison2"]

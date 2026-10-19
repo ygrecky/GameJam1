@@ -15,6 +15,7 @@ position = Vector2(7043.9995, 107)
 scale = Vector2(1.695, 1.45)
 
 [node name="Sprite2D" parent="parquet" index="0" unique_id=1616649806]
+position = Vector2(-1916.8137, 162.75862)
 texture = ExtResource("2_obqx2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1776865817]

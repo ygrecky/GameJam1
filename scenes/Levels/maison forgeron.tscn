@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_cxnd5"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_t8830"]
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="6_h6rgy"]
+[ext_resource type="PackedScene" uid="uid://du4oy6kdwkxwc" path="res://scenes/PNJ/orso.tscn" id="7_6hh3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(29.870966, 27.100977)
@@ -19,15 +20,17 @@ position = Vector2(7043.9995, 107)
 scale = Vector2(1.695, 1.45)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1776865817]
+z_index = 10
 position = Vector2(826, 72)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
-position = Vector2(2992, 204)
+position = Vector2(2998, 192)
 scale = Vector2(3.875, 4.796875)
 texture = ExtResource("2_h2qx1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=797289935]
-position = Vector2(2976, 231)
+z_index = 10
+position = Vector2(2976, 234)
 scale = Vector2(3.875, 4.796875)
 shape = SubResource("RectangleShape2D_u081y")
 
@@ -66,3 +69,6 @@ rotation = 1.5707964
 [node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("6_h6rgy")]
 position = Vector2(3789, 576)
 min_scale = 1.0
+
+[node name="orso" parent="." unique_id=281381040 instance=ExtResource("7_6hh3w")]
+position = Vector2(3823.9998, 54.000004)

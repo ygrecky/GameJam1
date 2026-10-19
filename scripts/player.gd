@@ -22,6 +22,7 @@ var inTransition = false
 var isTalking = false
 
 var object_unlocked = [false,false,false,false,false,false]
+var carreau = false
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
@@ -147,8 +148,12 @@ func use_object(index,delta):
 			await get_tree().create_timer(fleche_delay).timeout
 			(func(): fleche_ready = true).call_deferred()
 	
-	if(index==3):
+	if(index==6):
 		Global.game_controller.restart_loop()
+	if(index==3):
+		var bdd = load("res://scenes/boite_texte.tscn").instantiate()
+		bdd.dialogue = [["Un joli miroir, vous pouvez admirer votre beauté dans le reflet"]]
+		Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 		
 
 

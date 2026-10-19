@@ -4,9 +4,7 @@ extends Pnj
 var se_deplace = false
 
 func ending_func() : 
-	$CollisionShape2D.disabled = true
-	se_deplace = true
-	velocity = Vector2(speed*2, 0)
+	Global.game_controller.inventory.get_child(0).s3.add_objet()
 	
 
 func talk_to():
