@@ -19,6 +19,7 @@ font_size = 65
 [node name="Fin_du_jeu" type="CanvasLayer" unique_id=614941436]
 
 [node name="Control" type="Control" parent="." unique_id=103235870]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
