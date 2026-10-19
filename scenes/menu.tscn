@@ -46,7 +46,7 @@ grow_vertical = 2
 theme = SubResource("Theme_mae5d")
 texture = SubResource("GradientTexture1D_vsb4k")
 
-[node name="Label" type="Label" parent="." unique_id=95019067]
+[node name="Titre" type="Label" parent="." unique_id=95019067]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,7 +59,7 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Titre du jeu"
+text = "Le village oublié"
 label_settings = SubResource("LabelSettings_78sch")
 
 [node name="Button_play" type="Button" parent="." unique_id=1091491459]

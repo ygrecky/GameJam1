@@ -14,7 +14,7 @@ var player_pos = {}
 
 var inventory
 
-var restart_scene = "res://scenes/test_scene.tscn"
+var restart_scene = "res://scenes/Levels/Forêt.tscn"
 
 var camera_limits = {}
 
