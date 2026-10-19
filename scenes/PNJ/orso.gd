@@ -20,10 +20,10 @@ func unlock_carreau():
 	
 func ending_func():	
 	match Global.last_answer:
-		1:
+		2:
 			unlock_miroir()
 			print("unlock mirroir")
-		2:
+		1:
 			unlock_carreau()
 			print('unlock carreau')
 		_:

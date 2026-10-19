@@ -28,6 +28,9 @@
 [ext_resource type="PackedScene" uid="uid://caq46nj70doyh" path="res://scenes/PNJ/souris.tscn" id="26_fun0h"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="27_dvq1l"]
 [ext_resource type="Script" uid="uid://dvjaues1rapxc" path="res://scenes/PNJ/pnj-fin1.gd" id="27_nmawd"]
+[ext_resource type="PackedScene" uid="uid://c1ogsywam0741" path="res://scenes/PNJ/euzebio.tscn" id="29_gpo0m"]
+[ext_resource type="PackedScene" uid="uid://bm8klquhqcli" path="res://scenes/PNJ/paysan.tscn" id="30_30m2t"]
+[ext_resource type="PackedScene" uid="uid://hsv7huumhis7" path="res://scenes/PNJ/paysane.tscn" id="31_6nhnv"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 script = ExtResource("1_fun0h")
@@ -231,7 +234,7 @@ position = Vector2(4038, 1356)
 position = Vector2(4046, 1364)
 
 [node name="Bloc magnétique2" parent="Bloc magnétique3" unique_id=1241959831 instance=ExtResource("7_oxv6d")]
-position = Vector2(4038, 1356)
+position = Vector2(789, 1166)
 
 [node name="Bloc magnétique4" parent="." unique_id=1635385630 instance=ExtResource("7_oxv6d")]
 position = Vector2(2111, 2983)
@@ -412,11 +415,11 @@ rotation = 1.5707964
 position = Vector2(5358, -4608)
 
 [node name="baron" parent="." unique_id=1805454112 instance=ExtResource("23_34l7p")]
-position = Vector2(2295.0002, 1768.0001)
+position = Vector2(2696.0002, 2219)
 scale = Vector2(2.6, 2.6)
 
 [node name="baronne" parent="." unique_id=1942972998 instance=ExtResource("25_k3p0i")]
-position = Vector2(2329, 1987)
+position = Vector2(3074.0002, 2166)
 scale = Vector2(2.7556, 2.7556)
 
 [node name="orso" parent="." unique_id=920764572 instance=ExtResource("25_h7qvp")]
@@ -428,6 +431,16 @@ script = ExtResource("27_nmawd")
 position = Vector2(3646, 2235)
 scale = Vector2(3, 3)
 image_link = ""
+
+[node name="Euzebio" parent="." unique_id=1043686965 instance=ExtResource("29_gpo0m")]
+position = Vector2(2086, 2541)
+
+[node name="paysant" parent="." unique_id=69046072 instance=ExtResource("30_30m2t")]
+position = Vector2(2124, 2579)
+scale = Vector2(0.3154, 0.3154)
+
+[node name="biblioth" parent="." unique_id=1232425052 instance=ExtResource("31_6nhnv")]
+position = Vector2(2183, 1991.9999)
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="child_entered_tree" from="Gros sol8" to="." method="_on_gros_sol_8_child_entered_tree"]
