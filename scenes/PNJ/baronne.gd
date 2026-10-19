@@ -9,6 +9,7 @@ func ending_func() :
 	
 
 func talk_to():
+	Global.speaker = "baronne"
 	if(not(Global.player.object_unlocked[3])):
 		dialogue = [["NON CE N’EST PLUS POSSIBLE"],
 		["ÇA ne peut pas continuer. Tous ces serviteurs, pleins de compliments… Plutôt plein de mensonge je dirais."],

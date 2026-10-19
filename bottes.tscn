@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bt4ld81nya6uo"]
+
+[ext_resource type="Texture2D" uid="uid://0g5m0sb31yko" path="res://assets/Objets/feuille_grimoire.png" id="1_eja4b"]
+[ext_resource type="Script" uid="uid://bqfrf1sggv7f5" path="res://bottes.gd" id="1_ml5uk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(127, 144)
+
+[node name="Node2D" type="Node2D" unique_id=1134015067]
+script = ExtResource("1_ml5uk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1464103112]
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("1_eja4b")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=964810898]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1700203640]
+position = Vector2(1.5, 3)
+shape = SubResource("RectangleShape2D_u081y")

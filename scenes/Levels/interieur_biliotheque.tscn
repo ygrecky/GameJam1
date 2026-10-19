@@ -65,3 +65,4 @@ texte = Array[String](["Aimant", "Son utilité reste mystérieuse, on raconte qu
 position = Vector2(4373.0005, -132)
 scale = Vector2(3.475, 3.475)
 texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Le livre a pour étiquette \"Ne pas emprunter\""])
+donner_livre = true

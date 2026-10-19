@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tmyu1glooduk" path="res://scenes/feuille_grimoire.tscn" id="4_rc0pn"]
 [ext_resource type="PackedScene" uid="uid://cnx2i1tywxq0i" path="res://scenes/menu.tscn" id="5_h843c"]
 [ext_resource type="PackedScene" uid="uid://b4wat2gbkosap" path="res://scenes/sceaux.tscn" id="6_e85df"]
+[ext_resource type="AudioStream" uid="uid://3npousnyfm2o" path="res://assets/sons/Impact de balle de Rémi.mp3" id="7_burlk"]
 
 [node name="Game Controller" type="Node" unique_id=1399786066 node_paths=PackedStringArray("world2D", "gui", "current_gui_scene")]
 script = ExtResource("1_vq0e2")
@@ -32,3 +33,6 @@ offset_bottom = 40.0
 visible = false
 
 [node name="Sceaux" parent="." unique_id=1469191078 instance=ExtResource("6_e85df")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1615356023]
+stream = ExtResource("7_burlk")

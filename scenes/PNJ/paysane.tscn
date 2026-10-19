@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://hsv7huumhis7"]
+
+[ext_resource type="Script" uid="uid://v3u0ij4losng" path="res://scenes/PNJ/baron.gd" id="1_jyaar"]
+[ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_x0kpj"]
+[ext_resource type="Texture2D" uid="uid://sec0b8n31wyc" path="res://assets/Personnages/chat.png" id="3_jyaar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuyq"]
+size = Vector2(132.60144, 66.69498)
+
+[node name="biblioth" type="CharacterBody2D" unique_id=281381040]
+z_index = 5
+position = Vector2(200, 200)
+scale = Vector2(1.66, 1.66)
+script = ExtResource("1_jyaar")
+text_box = ExtResource("2_x0kpj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1291735682]
+position = Vector2(-4.2168655, 106.49185)
+scale = Vector2(0.8449997, 0.8449997)
+shape = SubResource("RectangleShape2D_ayuyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=156503641]
+position = Vector2(-8.433731, 70.481926)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("3_jyaar")

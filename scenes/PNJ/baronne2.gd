@@ -14,6 +14,7 @@ func ending_func() :
 	
 
 func talk_to():
+	Global.speaker = "baronne"
 	
 	dialogue = [["Ces blocs de métal très anciens ont d'étrange propriétes :"],
 	["Quand j'oriente l'aimant vers eux, je ressens une force énorme qui s'applique"],

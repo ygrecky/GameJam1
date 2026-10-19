@@ -8,6 +8,8 @@ var restart_boucle = true
 var speaker = ""
 var durée_boucle = 210
 
+var showSceau = false
+
 
 func finir_le_jeu():
 	restart_boucle = true

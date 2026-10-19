@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://ckjg6x3ci74k7"]
 
 [ext_resource type="PackedScene" uid="uid://dovg7m227or15" path="res://scenes/Decoration/parquet.tscn" id="1_frwyd"]
-[ext_resource type="Texture2D" uid="uid://bketv2sm038nn" path="res://assets/décor/enclume.png" id="2_h2qx1"]
+[ext_resource type="Texture2D" uid="uid://cb2xggdrerfcf" path="res://assets/décor/table.png" id="2_h6rgy"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="3_hlsi6"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="4_cxnd5"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_t8830"]
 [ext_resource type="PackedScene" uid="uid://cspr5mvrkw23x" path="res://scenes/feu.tscn" id="6_h6rgy"]
-[ext_resource type="PackedScene" uid="uid://du4oy6kdwkxwc" path="res://scenes/PNJ/orso.tscn" id="7_6hh3w"]
+[ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="7_6hh3w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
-size = Vector2(29.870966, 27.100977)
+size = Vector2(123.09679, 49.824104)
 
 [node name="Maison forgeron2" type="Node2D" unique_id=1607215442]
 position = Vector2(-2944, -307)
@@ -24,13 +24,13 @@ z_index = 10
 position = Vector2(826, 72)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
-position = Vector2(2998, 192)
-scale = Vector2(3.875, 4.796875)
-texture = ExtResource("2_h2qx1")
+position = Vector2(3416, 155)
+scale = Vector2(16.328125, 15.246095)
+texture = ExtResource("2_h6rgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=797289935]
 z_index = 10
-position = Vector2(2976, 234)
+position = Vector2(3414, 280)
 scale = Vector2(3.875, 4.796875)
 shape = SubResource("RectangleShape2D_u081y")
 
@@ -70,5 +70,10 @@ rotation = 1.5707964
 position = Vector2(3789, 576)
 min_scale = 1.0
 
-[node name="orso" parent="." unique_id=281381040 instance=ExtResource("7_6hh3w")]
-position = Vector2(3823.9998, 54.000004)
+[node name="pnj" parent="." unique_id=281381040 instance=ExtResource("7_6hh3w")]
+position = Vector2(4414, 94.00003)
+
+[node name="pnj2" parent="." unique_id=2124738118 instance=ExtResource("7_6hh3w")]
+position = Vector2(4149, 104)
+
+[editable path="pnj"]

@@ -18,11 +18,13 @@ var restart_scene = "res://scenes/Levels/Forêt.tscn"
 
 var camera_limits = {}
 
+var sound_effect
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	sound_effect = $AudioStreamPlayer2D
 	Global.game_controller = self
 	current_2d_scene_name = "none"
 	inventory = $Inventaire
@@ -32,6 +34,7 @@ func _ready() -> void:
 	camera_limits["res://scenes/Levels/maison forgeron.tscn"] = [0,-550,1700,550]
 	camera_limits["res://scenes/Levels/interieur_biliotheque.tscn"] = [0,-550,1700,550]
 	camera_limits["res://scenes/Levels/intérieur église.tscn"] = [0,-550,1700,550]
+	camera_limits["res://scenes/Levels/intérieur cave.tscn"] = [0,-550,1700,550]
 	pass # Replace with function body.
 
 

@@ -29,6 +29,11 @@
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="28_iboa3"]
 [ext_resource type="PackedScene" uid="uid://c85teiosuenrx" path="res://scenes/pnj.tscn" id="28_rqpt2"]
 [ext_resource type="Script" uid="uid://ccqekdiwep2y2" path="res://scenes/PNJ/pretre.gd" id="29_7skwn"]
+[ext_resource type="Script" uid="uid://cwe7yv0k5vobn" path="res://scenes/PNJ/paysan2.gd" id="30_7skwn"]
+[ext_resource type="Texture2D" uid="uid://m37rb5lxoeh8" path="res://assets/Personnages/chien.png" id="30_rqpt2"]
+[ext_resource type="Script" uid="uid://cjw3xjwc06ocg" path="res://scenes/PNJ/paysane.gd" id="32_dbm7k"]
+[ext_resource type="Texture2D" uid="uid://sec0b8n31wyc" path="res://assets/Personnages/chat.png" id="33_4ad6r"]
+[ext_resource type="PackedScene" uid="uid://bt4ld81nya6uo" path="res://bottes.tscn" id="34_8kkna"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -434,9 +439,30 @@ scale = Vector2(3.22, 3.22)
 script = ExtResource("29_7skwn")
 image_link = "res://assets/Personnages/panda.png"
 
+[node name="pnj2" parent="." unique_id=1651305557 instance=ExtResource("28_rqpt2")]
+position = Vector2(1537, -184)
+script = ExtResource("30_7skwn")
+
+[node name="Sprite2D" parent="pnj2" index="1" unique_id=156503641]
+texture = ExtResource("30_rqpt2")
+
+[node name="pnj3" parent="." unique_id=942366090 instance=ExtResource("28_rqpt2")]
+position = Vector2(1153, -516)
+script = ExtResource("32_dbm7k")
+
+[node name="Sprite2D" parent="pnj3" index="1" unique_id=156503641]
+position = Vector2(-2.222249, 4.8888936)
+texture = ExtResource("33_4ad6r")
+
+[node name="Node2D" parent="pnj3" unique_id=1134015067 instance=ExtResource("34_8kkna")]
+position = Vector2(1529.7778, -1528.4445)
+scale = Vector2(1.51, 1.51)
+
 [editable path="Maison"]
 [editable path="Maison2"]
 [editable path="Maison4"]
 [editable path="Bousole"]
 [editable path="Maison5"]
 [editable path="Maison6"]
+[editable path="pnj2"]
+[editable path="pnj3"]

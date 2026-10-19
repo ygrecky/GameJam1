@@ -26,6 +26,16 @@ func talk_to():
 	Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	bdd.ending_func = ending_func
 	
+func talk_to_bis(end_func):
+	print(self)
+	var bdd = text_box.instantiate()
+	bdd.speakerPnj = self
+	bdd.dialogue = dialogue
+	bdd.speaker2 = pnj_name
+	bdd.sprite2 = $Sprite2D.texture
+	Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+	bdd.ending_func = end_func
+	
 
 
 func _ready() -> void:
