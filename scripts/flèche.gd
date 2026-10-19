@@ -16,9 +16,11 @@ func _ready() -> void:
 func _physics_process(delta) -> void:
 	velocity = delta*speed*Vector2(direction_x,direction_y)*60
 	for elt in hurt_box.get_overlapping_bodies():
-		if(not(elt is Ravin)):
+		if(not(elt is Ravin) and not(elt is Player)):
 			print("flèche a touché")
 			print(elt)
+			if(elt is Pnj):
+				Global.game_controller.restart_loop()
 			queue_free()
 	move_and_slide()
 	pass

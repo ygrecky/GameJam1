@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c1vxwqj6ukppx" path="res://scenes/Decoration/arbre.tscn" id="24_tnbrp"]
 [ext_resource type="PackedScene" uid="uid://b6ghf6mmprp0a" path="res://scenes/PNJ/baronne.tscn" id="25_jchdh"]
 [ext_resource type="Script" uid="uid://xmysjnd08dvq" path="res://scenes/PNJ/baronne2.gd" id="26_hnfw8"]
+[ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="28_iboa3"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -159,7 +160,7 @@ position = Vector2(-125, 1891)
 scale = Vector2(1.895, 1.895)
 
 [node name="Bordure foret verticale5" parent="." unique_id=160729286 instance=ExtResource("15_rhp8x")]
-position = Vector2(-125, 2879)
+position = Vector2(-132, 2899)
 scale = Vector2(1.895, 1.895)
 
 [node name="tile_chemin_tournant" parent="." unique_id=960793606 instance=ExtResource("16_2d8mv")]
@@ -388,6 +389,42 @@ scale = Vector2(2.935, 2.935)
 [node name="baronne" parent="." unique_id=485327435 instance=ExtResource("25_jchdh")]
 position = Vector2(-1808.9998, -2639)
 script = ExtResource("26_hnfw8")
+
+[node name="Mur" parent="." unique_id=1617951129 instance=ExtResource("28_iboa3")]
+position = Vector2(2321, 3773)
+
+[node name="Mur2" parent="." unique_id=957510922 instance=ExtResource("28_iboa3")]
+position = Vector2(3920, 3781)
+
+[node name="Mur3" parent="." unique_id=1224472831 instance=ExtResource("28_iboa3")]
+position = Vector2(5526, 3781)
+
+[node name="Mur4" parent="." unique_id=537576780 instance=ExtResource("28_iboa3")]
+position = Vector2(5054, 2846)
+rotation = 1.5707964
+
+[node name="Mur5" parent="." unique_id=1671141061 instance=ExtResource("28_iboa3")]
+position = Vector2(5067, 1285)
+rotation = 1.5707964
+
+[node name="Mur6" parent="." unique_id=1359340246 instance=ExtResource("28_iboa3")]
+position = Vector2(5079, -305)
+rotation = 1.5707964
+
+[node name="Mur7" parent="." unique_id=1584505899 instance=ExtResource("28_iboa3")]
+position = Vector2(5087, -1863)
+rotation = 1.5707964
+
+[node name="Mur8" parent="." unique_id=705559261 instance=ExtResource("28_iboa3")]
+position = Vector2(5096, -3446)
+rotation = 1.5707964
+
+[node name="Mur9" parent="." unique_id=1616104885 instance=ExtResource("28_iboa3")]
+position = Vector2(5093, -4986)
+rotation = 1.5707964
+
+[node name="Bordure forêt11" parent="." unique_id=102346779 instance=ExtResource("1_84da0")]
+position = Vector2(5358, -4608)
 
 [editable path="Maison"]
 [editable path="Maison2"]

@@ -21,7 +21,7 @@ var inTransition = false
 
 var isTalking = false
 
-var object_unlocked = [false,false,false,false,false,false]
+var object_unlocked = [false,false,true,false,false,false]
 var carreau = false
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
@@ -124,8 +124,9 @@ func _physics_process(delta):
 		for elt in collision_.get_overlapping_areas():
 			if(elt.get_parent() is TpZone and action_just_pressed):
 				Global.game_controller.change_2d_scene(elt.get_parent().destination_path,false,true)
+				
 			
-
+		
 		get_input(delta)
 		for i in range(6):
 			if(actions_pressed[i] and object_unlocked[i]):
@@ -146,16 +147,27 @@ func use_object(index,delta):
 				aimant_activé = true
 				velocity = velocity + Vector2(facing_x,facing_y)*aimant_acceleration
 	
-	if(index==arbalette_index):
+	if(index==2):
+		
 		if(fleche_ready):
-			var fleche = load("res://scenes/flèche.tscn").instantiate()
 			fleche_ready = false
-			fleche.position = position + facing_x*sprite.get_rect().size.x*Vector2(1,0) + facing_y*sprite.get_rect().size.y*Vector2(0,1)
-			fleche.direction_x =facing_x
-			fleche.direction_y = facing_y
-			Global.game_controller.current_2d_scene.add_child(fleche)
+			
+			if(carreau):
+				print("ok")
+				var fleche = load("res://scenes/flèche.tscn").instantiate()
+				fleche_ready = false
+				carreau = false
+				fleche.position = position 
+				fleche.direction_x =facing_x
+				fleche.direction_y = facing_y
+				Global.game_controller.current_2d_scene.add_child(fleche)
+			else:
+				var bdd = load("res://scenes/boite_texte.tscn").instantiate()
+				bdd.dialogue = [["Vous n'avez pas de carreau"]]
+				Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 			await get_tree().create_timer(fleche_delay).timeout
 			(func(): fleche_ready = true).call_deferred()
+			
 	
 	if(index==6):
 		Global.game_controller.restart_loop()
