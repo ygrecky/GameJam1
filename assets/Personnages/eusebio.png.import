@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bw6mj7nainxtc"
-path="res://.godot/imported/eusebio.png-d4e9373e3a61656dcf522609e0905ebc.ctex"
+path="res://.godot/imported/eusebio.png-b1a35a13abb1f79201c2baf6d18f87d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/PNJ/eusebio.png"
-dest_files=["res://.godot/imported/eusebio.png-d4e9373e3a61656dcf522609e0905ebc.ctex"]
+source_file="res://assets/Personnages/eusebio.png"
+dest_files=["res://.godot/imported/eusebio.png-b1a35a13abb1f79201c2baf6d18f87d8.ctex"]
 
 [params]
 
