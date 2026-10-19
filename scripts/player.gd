@@ -32,7 +32,8 @@ var arbalette_index = 2
 @export var aimant_max_speed = 600
 @export var interaction_label : Label
 
-var barrone_aimant
+var barrone_aimant = false
+var show_baronne2 = false
 
 func demon_random():
 	var liste_perso = ["souris", "eusebio", "forgeron", "paysan", "prêtre", "baron", "baronne"]
