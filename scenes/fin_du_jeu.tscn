@@ -19,7 +19,6 @@ font_size = 65
 [node name="Fin_du_jeu" type="CanvasLayer" unique_id=614941436]
 
 [node name="Control" type="Control" parent="." unique_id=103235870]
-visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -66,29 +65,47 @@ label_settings = SubResource("LabelSettings_78sch")
 
 [node name="crédits" type="Label" parent="Control" unique_id=632342946]
 layout_mode = 0
-offset_left = -89.0
-offset_top = 813.0
-offset_right = 70.0
-offset_bottom = 903.0
+offset_left = -87.0
+offset_top = 905.0
+offset_right = 72.0
+offset_bottom = 995.0
 text = "Rémi"
 label_settings = SubResource("LabelSettings_bg0ao")
 
 [node name="crédits2" type="Label" parent="Control" unique_id=325958572]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 907.0
-offset_right = 302.0
-offset_bottom = 1090.0
+offset_left = 170.0
+offset_top = 859.0
+offset_right = 433.0
+offset_bottom = 1042.0
 text = "Yaël
 Arthur"
 label_settings = SubResource("LabelSettings_bg0ao")
 
 [node name="crédits3" type="Label" parent="Control" unique_id=312131195]
 layout_mode = 0
-offset_left = -251.0
-offset_top = 908.0
-offset_right = 12.0
-offset_bottom = 1091.0
+offset_left = -386.0
+offset_top = 866.0
+offset_right = -123.0
+offset_bottom = 1049.0
 text = "Vassili
 Maxime"
+label_settings = SubResource("LabelSettings_bg0ao")
+
+[node name="crédits4" type="Label" parent="Control" unique_id=542197612]
+layout_mode = 0
+offset_left = -204.0
+offset_top = 678.0
+offset_right = 204.0
+offset_bottom = 768.0
+text = "Jeu créé par :"
+label_settings = SubResource("LabelSettings_bg0ao")
+
+[node name="crédits5" type="Label" parent="Control" unique_id=1402532810]
+layout_mode = 0
+offset_left = -346.0
+offset_top = 1107.0
+offset_right = 409.0
+offset_bottom = 1197.0
+text = "Retour au menu (Echap)"
 label_settings = SubResource("LabelSettings_bg0ao")

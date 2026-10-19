@@ -13,7 +13,6 @@ func ending_func() :
 func talk_to():
 	Global.speaker = "baron"
 	var bdd = text_box.instantiate()
-	Global.speaker = "baronne"
 	bdd.speakerPnj = self
 	bdd.dialogue = dialogue
 	bdd.speaker2 = pnj_name

@@ -19,6 +19,7 @@ var restart_scene = "res://scenes/Levels/Forêt.tscn"
 var camera_limits = {}
 
 var sound_effect
+var fin_jeu
 
 
 
@@ -28,6 +29,7 @@ func _ready() -> void:
 	Global.game_controller = self
 	current_2d_scene_name = "none"
 	inventory = $Inventaire
+	fin_jeu = $Fin_du_jeu
 	
 	camera_limits["res://scenes/Levels/Forêt.tscn"] = [-910,-1043,1350,993]
 	camera_limits["res://scenes/Levels/Place village.tscn"] = [-100,-4800,5000,3400]
@@ -120,4 +122,6 @@ func change_2d_scene(new_scene : String, delete : bool = false, keep_running : b
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if(Input.is_action_just_pressed("echap")):
+		fin_jeu.visible = false
 	pass

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bf7i54xbyggli"]
 
+[ext_resource type="Script" uid="uid://bgwluom5dfesr" path="res://scripts/bordure_forêt.gd" id="1_e4b8y"]
 [ext_resource type="Texture2D" uid="uid://cesmted3jij5b" path="res://assets/décor/sap1.png" id="1_jh7mt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
@@ -7,6 +8,7 @@ size = Vector2(169, 514)
 
 [node name="Bordure foret verticale" type="StaticBody2D" unique_id=477169209]
 position = Vector2(535, 107)
+script = ExtResource("1_e4b8y")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=726252845]
 position = Vector2(-22.99997, -231)

@@ -7,8 +7,10 @@ class_name Feu
 @export var min_scale = 0.1
 var current_child = [self,self,self,self]
 var can_have_child = [true,true,true,true]
-@export var child_spacing = 80
-@export var random_propag = 20
+var child_spacing = 80
+var random_propag = 20
+
+@export var zone : Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	scale = Vector2(0,0)
@@ -19,6 +21,27 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(scale< Vector2(min_scale,min_scale)):
 		scale +=  scale_speed*delta*Vector2(1,1)
+	
+	for elt in zone.get_overlapping_bodies():
+		if elt is Pnj:
+			Global.game_controller.sound_effect.play()
+			Global.player.isTalking = true
+			elt.dialogue = [["AAAAAAAAARG... Je brule au secours !! Qu'on banisse l'étranger sur le champ !"]]
+			Global.player.isTalking = true
+			elt.talk_to_bis(func end_func() : 
+				Global.restart_boucle = true)
+		if elt is Arbre:
+			Global.player.isTalking = true
+			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
+			bdd.dialogue = [["Au feu !! L'étranger met feu à la forêt, qu'on le banisse immédiatement !!"]]
+			bdd.ending_func = (func  end_func(): Global.restart_boucle = true)
+			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+		if elt is Maison:
+			Global.player.isTalking = true
+			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
+			bdd.dialogue = [["Au feu !! L'étranger met feu à nos maisons, qu'on le banisse immédiatement !!"]]
+			bdd.ending_func = (func  end_func(): Global.restart_boucle = true)
+			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	pass
 	
 func grow(delta, player_facingX, player_facingY):

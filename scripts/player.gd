@@ -21,7 +21,7 @@ var inTransition = false
 
 var isTalking = false
 
-var object_unlocked = [false,true,true,false,false,true]
+var object_unlocked = [true,true,true,false,false,true]
 var carreau = true
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0

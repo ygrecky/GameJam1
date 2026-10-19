@@ -39,3 +39,4 @@ visible = false
 stream = ExtResource("7_burlk")
 
 [node name="Fin_du_jeu" parent="." unique_id=614941436 instance=ExtResource("8_h0hye")]
+visible = false

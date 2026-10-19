@@ -4,11 +4,13 @@ var direction_x =1
 var direction_y = 0
 var speed = 500
 
+
 @export var hurt_box : Area2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+
 	pass # Replace with function body.
 
 
@@ -30,7 +32,8 @@ func _physics_process(delta) -> void:
 				elt.dialogue = [["COMMENT AS TU SU ????? C'est impossible, je ne peux pas mourrir, nonnnnnnnnnnnn"]]
 				Global.player.isTalking = true
 				elt.talk_to_bis(func end_func() : 
-					Global.restart_boucle = true)
+					Global.game_controller.fin_jeu.visible = true
+					Global.game_controller.switch_to_menu())
 			queue_free()
 	move_and_slide()
 	pass
