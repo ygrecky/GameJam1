@@ -8,6 +8,7 @@ var se_deplace = false
 func ending_func() : 
 	Global.game_controller.inventory.get_child(0).s3.add_objet()
 	Global.player.object_unlocked[2] = true
+	Global.player.arbalete = true
 	
 
 func talk_to():

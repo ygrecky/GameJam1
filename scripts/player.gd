@@ -22,7 +22,8 @@ var inTransition = false
 var isTalking = false
 
 var object_unlocked = [true,true,true,false,false,true]
-var carreau = true
+var carreau = false
+var arbalete = false
 var actions_pressed = [false,false,false,false,false,false]
 var soufleur_index = 0
 var aimant_index = 1
@@ -113,7 +114,7 @@ func _process(delta: float) -> void:
 		
 
 func _physics_process(delta):
-	carreau = true
+
 	var isPaused = isTalking
 	if(not isPaused):
 		for elt in short_action_zone.get_overlapping_bodies():
@@ -157,11 +158,10 @@ func use_object(index,delta):
 		if(fleche_ready):
 			fleche_ready = false
 			
-			if(carreau):
+			if(carreau and arbalete):
 				print("ok")
 				var fleche = load("res://scenes/flèche.tscn").instantiate()
 				fleche_ready = false
-				carreau = false
 				fleche.position = position 
 				fleche.direction_x =facing_x
 				fleche.direction_y = facing_y
