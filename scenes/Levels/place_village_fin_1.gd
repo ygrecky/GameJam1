@@ -13,8 +13,10 @@ func _process(delta: float) -> void:
 
 
 
-func _on_orso_tree_entered() -> void:
+
+
+
+func _on_tree_entered() -> void:
+	Global.ecran_de_fin = true
 	Global.player.position = Vector2(3300,1500)
 	$orso.talk_to()
-	Global.game_controller.switch_to_menu()
-	self.queue_free()
