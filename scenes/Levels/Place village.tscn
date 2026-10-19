@@ -386,7 +386,7 @@ position = Vector2(804, 2478)
 scale = Vector2(2.935, 2.935)
 
 [node name="baronne" parent="." unique_id=485327435 instance=ExtResource("25_jchdh")]
-position = Vector2(1831.9999, -2321)
+position = Vector2(-1808.9998, -2639)
 script = ExtResource("26_hnfw8")
 
 [editable path="Maison"]

@@ -4,8 +4,8 @@ extends Pnj
 var se_deplace = false
 
 func ending_func() : 
-	se_deplace = true
-	velocity = Vector2(speed*2, 0)
+	Global.player.show_baronne2 = true
+	
 	
 
 func talk_to():
@@ -16,7 +16,7 @@ func talk_to():
 		["Ce fichu Euzebio n'est-il pas fichu de dire une vérité une fois dans sa vie ?"],
 		["Comment je peux savoir combien je suis ravissante si personne de fiable ne m'entoure ?"]]
 	else:
-		dialogue = [["Eh mais c'est mon miroir que je voit là ?"], ["DONNEZ LE MOI !"], ["Ah, ça fait du bien de te revoir, Camélia. Toujours aussi belle à ce que je vois"], ["Merci, étranger. Je vois que vous, vous êtes digne de confiance !"], ["Pour vous remercier, laissez moi vous montrer quelque chose."]]
+		dialogue = [["Eh mais c'est mon miroir que je voit là ?"], ["DONNEZ LE MOI !"], ["Ah, ça fait du bien de te revoir, Camélia. Toujours aussi belle à ce que je vois"], ["Merci, étranger. Je vois que vous, vous êtes digne de confiance !"], ["Pour vous remercier, laissez moi vous montrer quelque chose, rejoignez moi au ravin."]]
 	var bdd = text_box.instantiate()
 	bdd.speakerPnj = self
 	bdd.dialogue = dialogue

@@ -37,6 +37,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if(Global.player.show_baronne2):
+		position = Vector2(1832.0,-2321.0)
+		Global.player.show_baronne2 = false
 	if(se_deplace):
 		if(position.y< -2700 and not(traversé)):
 			Global.player.barrone_aimant = false
@@ -45,7 +48,7 @@ func _physics_process(delta: float) -> void:
 			velocity = velocity + Vector2(0,-1)*aimant_acceleration
 			Global.player.barrone_aimant = true
 		else:
-			velocity = speed*Vector2(1,0)*delta
+			position = Vector2(2257.0,-2757.0)
 		
 		move_and_slide()
 	pass
