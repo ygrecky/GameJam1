@@ -44,7 +44,7 @@ func Next(n=0) -> void: #passe d'un dialogue à un autre
 		reponse = 0
 		toggle_button(true)
 		text.text = ""  #rafraichit la boite de dialogue
-		add_letters(dialogue[text_number][n],0,text_number) #la remplit
+		add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
 		
 	else:
 		if dialogue[text_number+1].size() > 1 :
@@ -53,20 +53,19 @@ func Next(n=0) -> void: #passe d'un dialogue à un autre
 			$Control/VBoxContainer/HBoxContainer/Button1.text = dialogue[text_number+1][2]
 			$Control/VBoxContainer/HBoxContainer/Button2.text = dialogue[text_number+1][3]
 			text.text = ""  #rafraichit la boite de dialogue
-			add_letters(dialogue[text_number][n],0,text_number) #la remplit
+			add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
 			
 		else :
 			reponse = 0
 			toggle_button(true)
 			text.text = ""  #rafraichit la boite de dialogue
-			add_letters(dialogue[text_number][n],0,text_number) #la remplit
+			add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
 				
 	
 
 func add_letters(target,avancement, version):
 	if version == text_number :
 		text.text += target[avancement]
-		print(text.text)
 		avancement += 1
 		
 		if avancement != target.length():
@@ -108,10 +107,10 @@ func _process(_delta: float) -> void:
 
 
 func Next1() -> void:
-	Next(1)
+	Next(2)
 	Global.last_answer = 1
 
 
 func Next2() -> void:
-	Next(2)
+	Next(1)
 	Global.last_answer = 2
