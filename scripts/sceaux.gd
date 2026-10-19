@@ -1,11 +1,16 @@
 extends Node
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$sceaux.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if (not Global.inMenu) and Global.player.isTalking:
+		$sceaux/sceaux_texture.texture = load("res://assets/Sceaux/"+Global.speaker+".png")
+		$sceaux.visible = true
+	else:
+		$sceaux.visible = false

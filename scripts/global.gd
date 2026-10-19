@@ -5,6 +5,7 @@ var time : int
 var inMenu = true
 var lettre_grimoire = false
 var resart_boucle : Node2D
+var speaker = ""
 
 
 func finir_le_jeu():

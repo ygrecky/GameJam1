@@ -11,7 +11,10 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="sceaux" unique_id=1159643167]
+[node name="sceaux_texture" type="TextureRect" parent="sceaux" unique_id=1316075740]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1011.0
+offset_top = 469.0
+offset_right = 1144.0
+offset_bottom = 653.0
+expand_mode = 1

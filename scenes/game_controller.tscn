@@ -19,6 +19,7 @@ first_level = "res://scenes/Levels/Forêt.tscn"
 [node name="Menu" parent="." unique_id=1638473399 instance=ExtResource("5_h843c")]
 
 [node name="Resart_boucle" parent="." unique_id=631673236 instance=ExtResource("3_h843c")]
+visible = false
 
 [node name="UI" type="Control" parent="." unique_id=1748935202]
 layout_mode = 3
