@@ -12,9 +12,10 @@ var showSceau = false
 
 
 func finir_le_jeu():
-	restart_boucle = true
-	time = Time.get_ticks_msec() * 1000
-	get_tree().create_timer(durée_boucle).timeout.connect(func() : finir_le_jeu())
+	if (Global.time - Time.get_ticks_msec()) * 1000 >= durée_boucle :
+		restart_boucle = true
+		time = Time.get_ticks_msec() * 1000
+		get_tree().create_timer(durée_boucle).timeout.connect(func() : finir_le_jeu())
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

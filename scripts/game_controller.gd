@@ -62,6 +62,7 @@ func switch_to_menu():
 	inventory.queue_free()
 	
 func restart_loop():
+	Global.time = Time.get_ticks_msec() * 1000
 	current_2d_scene_name="none"
 	for scene in scenes.keys():
 		print(scene)
