@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c1ogsywam0741"]
 
 [ext_resource type="Script" uid="uid://fsmuj2wb806r" path="res://scenes/PNJ/euzebio.gd" id="1_51ks4"]
-[ext_resource type="Texture2D" uid="uid://csd8uo7mv1vpo" path="res://assets/Personnages/New perso/lapinou.png" id="1_mik5k"]
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="2_lfi0d"]
+[ext_resource type="Texture2D" uid="uid://bw6mj7nainxtc" path="res://assets/Personnages/eusebio.png" id="3_lfi0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7o8b"]
 size = Vector2(1015, 1000)
@@ -14,7 +14,7 @@ text_box = ExtResource("2_lfi0d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=762480652]
 position = Vector2(-97, 223)
-texture = ExtResource("1_mik5k")
+texture = ExtResource("3_lfi0d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=691324537]
 position = Vector2(-8.5, 440)

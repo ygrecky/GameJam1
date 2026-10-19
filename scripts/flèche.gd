@@ -1,6 +1,6 @@
 extends CharacterBody2D
 class_name Fleche
-var direction_x =1
+var direction_x = 1
 var direction_y = 0
 var speed = 500
 
@@ -10,8 +10,14 @@ var speed = 500
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-
-	pass # Replace with function body.
+	if Global.player.facing_x == 1 :
+		self.rotate(90)
+	
+	if Global.player.facing_x == -1 :
+		self.rotate(-90)
+		
+	if Global.player.facing_y == 1 :
+		self.rotate(180)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

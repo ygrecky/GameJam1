@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcgjlvmvxyi47"]
 
 [ext_resource type="Script" uid="uid://dpkyssbpb3vmn" path="res://scripts/flèche.gd" id="1_0ouyg"]
-[ext_resource type="Texture2D" uid="uid://cp0x3rqpet3cu" path="res://assets/Objets/flamme.png" id="1_xcas5"]
+[ext_resource type="Texture2D" uid="uid://b7v0mrmr3v6pi" path="res://assets/Objets/carreau d'arbalète.png" id="2_0ouyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
 size = Vector2(85, 100)
@@ -11,8 +11,9 @@ script = ExtResource("1_0ouyg")
 hurt_box = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=925283809]
+rotation = 0.48171088
 scale = Vector2(0.065, 0.065)
-texture = ExtResource("1_xcas5")
+texture = ExtResource("2_0ouyg")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=241511895]
 
