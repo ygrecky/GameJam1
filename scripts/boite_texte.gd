@@ -36,8 +36,9 @@ func Next(n=0) -> void: #passe d'un dialogue à un autre
 	text_number += 1
 	
 	if text_number >= dialogue.size():
-		Global.player.isTalking = false
+		await get_tree().create_timer(0.1).timeout
 		close_window(ending_func)
+		Global.player.isTalking = false
 	
 	
 	elif text_number == dialogue.size() - 1 :
@@ -101,7 +102,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("action_1") and reponse == 0:
 		Next()
 		

@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://cleta8hjtlexx" path="res://assets/décor/panneau_baron.png" id="36_oalrg"]
 [ext_resource type="Texture2D" uid="uid://c6d3rok2r2iqr" path="res://assets/décor/panneau_forge.png" id="37_11ybl"]
 [ext_resource type="Texture2D" uid="uid://b0jlnnf4j21sk" path="res://assets/décor/panneau_bibliothèque.png" id="38_6vmdp"]
+[ext_resource type="PackedScene" uid="uid://cpq1px774y8xe" path="res://scenes/Decoration/feuille_papier.tscn" id="39_11ybl"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -232,23 +233,8 @@ position = Vector2(3630.685, 2668)
 rotation = 3.1415927
 scale = Vector2(11.755, 11.755)
 
-[node name="Bloc magnétique2" parent="." unique_id=983161246 instance=ExtResource("7_0dq5c")]
-position = Vector2(4046, 1364)
-
-[node name="Bloc magnétique2" parent="Bloc magnétique2" unique_id=157584098 instance=ExtResource("7_0dq5c")]
-position = Vector2(4038, 1356)
-
-[node name="Bloc magnétique3" parent="." unique_id=1720512056 instance=ExtResource("7_0dq5c")]
-position = Vector2(4046, 1364)
-
-[node name="Bloc magnétique2" parent="Bloc magnétique3" unique_id=1241959831 instance=ExtResource("7_0dq5c")]
-position = Vector2(4038, 1356)
-
 [node name="Bloc magnétique4" parent="." unique_id=1635385630 instance=ExtResource("7_0dq5c")]
 position = Vector2(2111, 2983)
-
-[node name="Bloc magnétique5" parent="." unique_id=728732266 instance=ExtResource("7_0dq5c")]
-position = Vector2(2168, -125)
 
 [node name="Bloc magnétique6" parent="." unique_id=596887682 instance=ExtResource("7_0dq5c")]
 position = Vector2(1911, 1238)
@@ -263,21 +249,21 @@ position = Vector2(3659, -211)
 position = Vector2(1813, -1675)
 rotation = 1.5707964
 
-[node name="Gros sol6" parent="." unique_id=1741710933 instance=ExtResource("3_o2a7o")]
+[node name="Bloc magnétique11" parent="." unique_id=1741710933 instance=ExtResource("3_o2a7o")]
 position = Vector2(1968, 0)
 
-[node name="Maison3" parent="Gros sol6" unique_id=786246546 instance=ExtResource("6_4hvs0")]
+[node name="Maison3" parent="Bloc magnétique11" unique_id=786246546 instance=ExtResource("6_4hvs0")]
 position = Vector2(2699.0002, 438)
 scale = Vector2(10, 10)
 
-[node name="Chemin" parent="Gros sol6" unique_id=1897774032 instance=ExtResource("5_kquo5")]
+[node name="Chemin" parent="Bloc magnétique11" unique_id=1897774032 instance=ExtResource("5_kquo5")]
 position = Vector2(-207, 106)
 
-[node name="Chemin" parent="Gros sol6/Chemin" unique_id=327550441 instance=ExtResource("5_kquo5")]
+[node name="Chemin" parent="Bloc magnétique11/Chemin" unique_id=327550441 instance=ExtResource("5_kquo5")]
 position = Vector2(383, 655)
 rotation = 1.5707964
 
-[node name="Chemin" parent="Gros sol6/Chemin/Chemin" unique_id=1782841656 instance=ExtResource("5_kquo5")]
+[node name="Chemin" parent="Bloc magnétique11/Chemin/Chemin" unique_id=1782841656 instance=ExtResource("5_kquo5")]
 position = Vector2(-1357, 334.00012)
 
 [node name="Gros sol7" parent="." unique_id=1593091993 instance=ExtResource("3_o2a7o")]
@@ -319,9 +305,6 @@ position = Vector2(1840, -2644)
 
 [node name="Bloc magnétique10" parent="." unique_id=1735558842 instance=ExtResource("7_0dq5c")]
 position = Vector2(2163, -1998)
-
-[node name="souris_ev" parent="." unique_id=281381040 instance=ExtResource("18_dktky")]
-position = Vector2(178, -101)
 
 [node name="TpZone" parent="." unique_id=2016305339 instance=ExtResource("18_dktky")]
 position = Vector2(1428.0001, 657)
@@ -380,7 +363,7 @@ position = Vector2(3395.0002, -367)
 scale = Vector2(1.3, 1.3)
 
 [node name="souris_ev2" parent="." unique_id=478708516 instance=ExtResource("21_f8ss2")]
-position = Vector2(263.00003, -86.99994)
+position = Vector2(227, -101)
 scale = Vector2(1.3, 1.3)
 
 [node name="Feu" parent="." unique_id=1264664788 instance=ExtResource("21_0137w")]
@@ -468,6 +451,7 @@ position = Vector2(-2.222249, 4.8888936)
 texture = ExtResource("33_4ad6r")
 
 [node name="Node2D" parent="pnj3" unique_id=1134015067 instance=ExtResource("34_8kkna")]
+z_index = 2
 position = Vector2(1529.7778, -1528.4445)
 scale = Vector2(1.51, 1.51)
 
@@ -498,6 +482,31 @@ z_index = 2
 position = Vector2(4936, 693.00024)
 scale = Vector2(5.595, 5.595)
 texture = ExtResource("38_6vmdp")
+
+[node name="TpZone5" parent="." unique_id=1086154112 instance=ExtResource("18_dktky")]
+position = Vector2(-62, -106)
+rotation = 1.5707964
+scale = Vector2(4.375, 4.375)
+destination_path = "res://scenes/Levels/Forêt.tscn"
+stop_music_ow = true
+
+[node name="Bloc magnétique5" parent="." unique_id=746695454 instance=ExtResource("7_0dq5c")]
+position = Vector2(5539, 2876)
+
+[node name="Bloc magnétique2" parent="." unique_id=893596690 instance=ExtResource("7_0dq5c")]
+position = Vector2(4294, 1323)
+
+[node name="FeuillePapier" parent="." unique_id=1749185933 instance=ExtResource("39_11ybl")]
+position = Vector2(478.00024, -3801.9998)
+scale = Vector2(0.08, 0.08)
+
+[node name="FeuillePapier2" parent="." unique_id=214803058 instance=ExtResource("39_11ybl")]
+position = Vector2(3287, 270)
+scale = Vector2(0.08, 0.08)
+
+[node name="FeuillePapier3" parent="." unique_id=1371924350 instance=ExtResource("39_11ybl")]
+position = Vector2(4913, 2925)
+scale = Vector2(0.08, 0.08)
 
 [editable path="Maison"]
 [editable path="Maison2"]

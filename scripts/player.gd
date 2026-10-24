@@ -34,6 +34,8 @@ var demon = ""
 var liste_perso = ["souris", "eusebio", "forgeron", "paysan", "prêtre", "baron", "baronne"]
 
 var sound_effect
+var feuilles_grimoire_max = 4
+var feuilles_grimoire = 0
 
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
@@ -121,7 +123,6 @@ func _process(delta: float) -> void:
 		
 
 func _physics_process(delta):
-
 	var isPaused = isTalking
 	if(not isPaused):
 		for elt in short_action_zone.get_overlapping_bodies():
@@ -225,6 +226,14 @@ func use_object(index,delta):
 	if(index==3):
 		var bdd = load("res://scenes/boite_texte.tscn").instantiate()
 		bdd.dialogue = [["Un joli miroir, vous pouvez admirer votre beauté dans le reflet"]]
+		Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+	
+	if(index==4):
+		var bdd = load("res://scenes/boite_texte.tscn").instantiate()
+		if(not(feuilles_grimoire==feuilles_grimoire)):
+			bdd.dialogue = [["Il manque "+ str(feuilles_grimoire_max-feuilles_grimoire)+" pages au grimoire, impossible de le lire"]]
+		else:
+			bdd.dialogue = [["Le grimoire est à présent complet [TODO]"]]
 		Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 		
 
