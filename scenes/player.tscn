@@ -98,6 +98,7 @@ stream = ExtResource("5_qlg0r")
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=928334702]
 stream = ExtResource("6_tuyoq")
+volume_db = 10.745
 
 [connection signal="body_entered" from="short_action_zone" to="." method="_on_short_action_zone_body_entered"]
 [connection signal="body_exited" from="short_action_zone" to="." method="_on_short_action_zone_body_exited"]
