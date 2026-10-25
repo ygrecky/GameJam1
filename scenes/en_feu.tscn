@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c71q7iswrgo5"]
+
+[ext_resource type="Script" uid="uid://cgr8hu13ieip2" path="res://scenes/en_feu.gd" id="1_xvheg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u081y"]
+size = Vector2(68, 72)
+
+[node name="En feu" type="Node2D" unique_id=1901563582]
+script = ExtResource("1_xvheg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=527968252]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=891242944]
+position = Vector2(24, 26)
+shape = SubResource("RectangleShape2D_u081y")

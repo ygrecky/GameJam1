@@ -58,17 +58,17 @@ texte = Array[String](["Utiliser un objet", "Lorsque vous débloquez un objet, a
 [node name="Biblio2" parent="." unique_id=1735855837 instance=ExtResource("5_6p2r5")]
 position = Vector2(898, -407)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Soufflet", "Une technologie astucieuse utilisée pour propager du feu."])
+texte = Array[String](["Soufflet", "Une technologie astucieuse utilisée pour propager du feu.", "On raconte que le soufflet a une portée infinie"])
 
 [node name="Biblio3" parent="." unique_id=784989000 instance=ExtResource("5_6p2r5")]
 position = Vector2(1199.0002, -407)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Aimant", "Son utilité reste mystérieuse, on raconte que son champ magnétique est extrèmement puissant"])
+texte = Array[String](["Aimant", "Son utilité reste mystérieuse, on raconte que son champ magnétique est extrèmement puissant", "On raconte qu'on peut orienter l'aimant dans différentes directions avec les flèches"])
 
 [node name="Biblio4" parent="." unique_id=1040922899 instance=ExtResource("5_6p2r5")]
 position = Vector2(1512.0005, -411)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Il y a une section raturée, où vous pouvez lire \"Comment briser la boucle\"", "Le livre a pour étiquette \"Ne pas emprunter\"", "Vous décidez de braver cette interdiction, et obtenez le grimoire d'invocation"])
+texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Il y a une section déchiréee, où vous pouvez lire \"Comment briser la boucle\"", "Le livre a pour étiquette \"Ne pas emprunter\"", "Vous décidez de braver cette interdiction, et obtenez le grimoire d'invocation"])
 donner_livre = true
 
 [node name="biblioth" parent="." unique_id=281381040 instance=ExtResource("6_6p2r5")]

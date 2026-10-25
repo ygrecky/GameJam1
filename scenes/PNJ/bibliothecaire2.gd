@@ -24,7 +24,8 @@ func _ready() -> void:
 	pnj_name = "Bibliothécaire "
 	dialogue = [["Bienvenue étranger !"],
 	["Voici la collection de livre très anciens du village. Il contient tout le savoir accumulé jusqu'à présent"],
-	["N'hésite pas à les lire, ils contiennent peut être des savoirs essentiels pour ta quête ! "]]
+	["Enfin, j'ai dû faire un peu de tri quand même, il y avait des livres comme ''Voir son espérance de vie avec la touche T'' qui n'avaient vraiment aucun sens..."],
+	["Bref, n'hésite pas à lire mes livres, ils contiennent peut être des savoirs essentiels pour ta quête ! "]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

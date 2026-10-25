@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://c3aieflnwhic0" path="res://assets/sons/tic tac.wav" id="8_d6ul8"]
 [ext_resource type="PackedScene" uid="uid://c7r6vi002c7t2" path="res://scenes/fin_du_jeu.tscn" id="8_h0hye"]
 [ext_resource type="AudioStream" uid="uid://d34lfo1kwihsc" path="res://assets/sons/theme1 (2).wav" id="8_qtg6w"]
+[ext_resource type="PackedScene" uid="uid://pdpbc00ahatn" path="res://scenes/temps.tscn" id="11_1awvl"]
 
 [node name="Game Controller" type="Node" unique_id=1399786066 node_paths=PackedStringArray("world2D", "gui", "current_gui_scene")]
 script = ExtResource("1_vq0e2")
@@ -47,4 +48,7 @@ stream = ExtResource("8_qtg6w")
 stream = ExtResource("8_d6ul8")
 
 [node name="Fin_du_jeu" parent="." unique_id=614941436 instance=ExtResource("8_h0hye")]
+visible = false
+
+[node name="Timer" parent="." unique_id=397395023 instance=ExtResource("11_1awvl")]
 visible = false

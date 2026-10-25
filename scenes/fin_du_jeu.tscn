@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c7r6vi002c7t2"]
 
 [ext_resource type="FontFile" uid="uid://dh3ighwjb5okn" path="res://assets/fonts/deigratia/DeiGrat.ttf" id="1_brvt7"]
+[ext_resource type="Script" uid="uid://ds38f6di2xr00" path="res://scripts/fin.gd" id="1_wc53i"]
 
 [sub_resource type="Gradient" id="Gradient_wc53i"]
 offsets = PackedFloat32Array(0.8618421)
@@ -17,6 +18,7 @@ font_size = 65
 font_size = 65
 
 [node name="Fin_du_jeu" type="CanvasLayer" unique_id=614941436]
+script = ExtResource("1_wc53i")
 
 [node name="Control" type="Control" parent="." unique_id=103235870]
 layout_mode = 3
@@ -54,13 +56,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -470.0
-offset_top = 531.0
-offset_right = 428.0
-offset_bottom = 658.0
+offset_left = -598.00006
+offset_top = 527.0
+offset_right = 687.99994
+offset_bottom = 654.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Bravo tu as tué le démon !"
+scale = Vector2(0.895, 0.895)
+text = "Bravo tu as tué le démon ! (fin 1/2)"
 label_settings = SubResource("LabelSettings_78sch")
 
 [node name="crédits" type="Label" parent="Control" unique_id=632342946]

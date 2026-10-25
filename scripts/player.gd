@@ -36,6 +36,7 @@ var liste_perso = ["souris", "eusebio", "forgeron", "paysan", "prêtre", "baron"
 var sound_effect
 var feuilles_grimoire_max = 4
 var feuilles_grimoire = 0
+var stop_time = false
 
 @export var aimant_acceleration = 0.1
 @export var aimant_max_speed = 600
@@ -43,6 +44,14 @@ var feuilles_grimoire = 0
 
 var barrone_aimant = false
 var show_baronne2 = false
+
+
+var brule_feuille = false
+var miroir_casse = false
+var feuille_283 = false
+var time= 0
+var loop_duration = 180
+var first_time = 0
 
 func demon_random():
 	return liste_perso[randi_range(0, len(liste_perso)-1)]
@@ -56,6 +65,7 @@ func _ready():
 	interaction_label.visible = false
 	speed = 400
 	demon = demon_random()
+	first_time = Time.get_ticks_msec()/1000
 
 func get_input(delta):
 	aimant_activé = actions_pressed[aimant_index]
@@ -108,18 +118,26 @@ func get_input(delta):
 			facing_x = 0
 			facing_y = -1
 		
-	if Input.is_action_just_pressed("debug1"):
-		Global.player.inTransition = true
-		Global.game_controller.change_2d_scene("res://scenes/test_scene.tscn",false,true)
-		
-	if Input.is_action_just_pressed("debug2"):
-		Global.player.inTransition = true
-		Global.game_controller.change_2d_scene("res://scenes/game.tscn",false,true)
+	if Input.is_action_just_pressed("hide_time"):
+		if(Global.game_controller.timer.visible):
+			Global.game_controller.timer.visible = false
+		else:
+			Global.game_controller.timer.visible = true
 	if(not(aimant_activé)):
 		velocity = Vector2(direction_x, direction_y) * speed*delta*60
 	
 func _process(delta: float) -> void:
+	if(not(stop_time)):
+		time = Time.get_ticks_msec()/1000 - first_time
+	 
+	if(time>=loop_duration):
+		loop_duration = 10000000
+		Global.game_controller.restart_boucle()
 	pass
+	if((loop_duration-time)%60<10):
+		Global.game_controller.timer.get_child(0).text = "0"+str((loop_duration-time)/60)+":0"+str((loop_duration-time)%60)
+	else:
+		Global.game_controller.timer.get_child(0).text = "0"+str((loop_duration-time)/60)+":"+str((loop_duration-time)%60)
 		
 
 func _physics_process(delta):
@@ -226,14 +244,34 @@ func use_object(index,delta):
 	if(index==3):
 		var bdd = load("res://scenes/boite_texte.tscn").instantiate()
 		bdd.dialogue = [["Un joli miroir, vous pouvez admirer votre beauté dans le reflet"]]
+		for elt in collision_.get_overlapping_areas():
+				if(elt.get_parent() is Pentacle):
+					bdd.dialogue = [["Vous cassez le miroir"]]
+					miroir_casse = true
 		Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	
 	if(index==4):
 		var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-		if(not(feuilles_grimoire==feuilles_grimoire)):
+		if(not(brule_feuille) and not(feuilles_grimoire==feuilles_grimoire_max)):
 			bdd.dialogue = [["Il manque "+ str(feuilles_grimoire_max-feuilles_grimoire)+" pages au grimoire, impossible de le lire"]]
-		else:
-			bdd.dialogue = [["Le grimoire est à présent complet [TODO]"]]
+		elif(feuilles_grimoire==feuilles_grimoire_max):
+			bdd.dialogue = [["Le grimoire est à présent complet. Vous y lisez :"],["To break the loop, you must first find the cursed object and burn it ."], ["To find it, hold your magnet at the start of the village, and let the magnetic fields guide you"],["At the end of the magnetic road, you will find the cursed object lying on the floor."],["After burning it, break a mirror in the center of a pentagram, and read the incantation of the 383th page of this grimoire to break the loop."]]
+		elif(brule_feuille and not(miroir_casse)):
+			bdd.dialogue = [["Le grimoire s'est mis à briller."]]
+		elif(miroir_casse and not(feuille_283)):
+			bdd.dialogue = [["La page 283 où serait inscrite l'invocation est manquante"]]
+		elif(miroir_casse and feuille_283):
+			bdd.dialogue = [["Il faut lire l'invocation dans le pentagramme"]]
+			for elt in collision_.get_overlapping_areas():
+				if(elt.get_parent() is Pentacle):
+					stop_time = true
+					bdd.dialogue = [["Vous lisez l'invocation :"], ["'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'"],["Vous entendez un bruit sourd. ça y est, vous êtes libre, la boucle est brisée"]]
+					bdd.ending_func = (func end_func() :
+						if(not(Global.game_controller.fin_jeu.visible)):
+							Global.game_controller.fin_jeu.visible = true
+							Global.game_controller.fin_jeu.bravo.text = "Bravo tu as brisé la boucle !(fin 2/2)"
+							Global.game_controller.switch_to_menu())
+			
 		Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 		
 
@@ -269,7 +307,10 @@ func _on_player_area_entered(area: Area2D) -> void:
 		interaction_label.text = "Entrer (Espace)"
 	elif area.get_parent() is Papier:
 		interaction_label.visible = true
-		interaction_label.text = "Lire (Espace)"
+		if(object_unlocked[4]):
+			interaction_label.text = "Ramasser (Espace)"
+		else:
+			interaction_label.text = "Lire (Espace)"
 	elif area.get_parent() is Aimant:
 		interaction_label.visible = true
 		interaction_label.text = "Récupérer (Espace)"

@@ -45,6 +45,7 @@ func _physics_process(delta) -> void:
 				Global.player.isTalking = true
 				elt.talk_to_bis(func end_func() : 
 					Global.game_controller.fin_jeu.visible = true
+					Global.game_controller.fin_jeu.bravo.text = "Bravo tu as tué le démon ! (fin 1/2)"
 					Global.game_controller.switch_to_menu())
 			queue_free()
 	move_and_slide()

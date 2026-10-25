@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://c6d3rok2r2iqr" path="res://assets/décor/panneau_forge.png" id="37_11ybl"]
 [ext_resource type="Texture2D" uid="uid://b0jlnnf4j21sk" path="res://assets/décor/panneau_bibliothèque.png" id="38_6vmdp"]
 [ext_resource type="PackedScene" uid="uid://cpq1px774y8xe" path="res://scenes/Decoration/feuille_papier.tscn" id="39_11ybl"]
+[ext_resource type="PackedScene" uid="uid://c71q7iswrgo5" path="res://scenes/en_feu.tscn" id="40_6vmdp"]
 
 [node name="PlaceVillage" type="Node2D" unique_id=190258638]
 
@@ -507,6 +508,10 @@ scale = Vector2(0.08, 0.08)
 [node name="FeuillePapier3" parent="." unique_id=1371924350 instance=ExtResource("39_11ybl")]
 position = Vector2(4913, 2925)
 scale = Vector2(0.08, 0.08)
+
+[node name="En feu" parent="." unique_id=1901563582 instance=ExtResource("40_6vmdp")]
+position = Vector2(4897, 2878)
+scale = Vector2(1.84, 1.84)
 
 [editable path="Maison"]
 [editable path="Maison2"]

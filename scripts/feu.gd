@@ -42,6 +42,16 @@ func _process(delta: float) -> void:
 			bdd.dialogue = [["Au feu !! L'étranger met feu à nos maisons, qu'on le banisse immédiatement !!"]]
 			bdd.ending_func = (func  end_func(): Global.game_controller.restart_boucle())
 			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+	
+	for elt in zone.get_overlapping_areas():
+		if(elt.get_parent() is En_feu):
+			Global.player.isTalking = true
+			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
+			bdd.dialogue = [["Une odeur de brulée s'échappe dans l'air"]]
+			Global.player.brule_feuille = true
+			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+			elt.get_parent().queue_free()
+			
 	pass
 	
 func grow(delta, player_facingX, player_facingY):

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dovg7m227or15" path="res://scenes/Decoration/parquet.tscn" id="1_in2po"]
 [ext_resource type="Texture2D" uid="uid://b7u12lnyf5nel" path="res://assets/tiles/tile_stone_1.png" id="2_obqx2"]
 [ext_resource type="Texture2D" uid="uid://r5mow7sb8cr7" path="res://assets/décor/pentagrame.png" id="3_h2wry"]
+[ext_resource type="Script" uid="uid://c5bh2le0w46kq" path="res://scripts/pentacle.gd" id="3_ngi7f"]
 [ext_resource type="PackedScene" uid="uid://r0h8ehst1iip" path="res://scenes/Decoration/mur.tscn" id="5_68xq0"]
 [ext_resource type="PackedScene" uid="uid://cbrakomq1kfn3" path="res://scenes/tp_zone.tscn" id="6_mf8xv"]
 [ext_resource type="Texture2D" uid="uid://hf3qh4exiway" path="res://assets/décor/paillasson.png" id="7_klw4l"]
@@ -18,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://cs6uqe11x4rm3" path="res://scenes/boite_texte.tscn" id="15_vi086"]
 [ext_resource type="Script" uid="uid://irlc005im3n4" path="res://scenes/PNJ/paysane2.gd" id="17_ngi7f"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7o8b"]
+radius = 96.04687
+
 [node name="Maison forgeron3" type="Node2D" unique_id=1607215442]
 position = Vector2(-17, 27)
 
@@ -31,14 +35,21 @@ texture = ExtResource("2_obqx2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1776865817]
 position = Vector2(826, 72)
+script = ExtResource("3_ngi7f")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2122540993]
 position = Vector2(145, -14)
 scale = Vector2(14.935, 14.935)
 texture = ExtResource("3_h2wry")
 
-[node name="Mur" parent="StaticBody2D" unique_id=872404817 instance=ExtResource("5_68xq0")]
-position = Vector2(46, -572)
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=2099265755]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=1224128099]
+position = Vector2(150, -23)
+shape = SubResource("CircleShape2D_y7o8b")
+
+[node name="Mur6" parent="." unique_id=872404817 instance=ExtResource("5_68xq0")]
+position = Vector2(872, -500)
 
 [node name="TpZone" parent="." unique_id=1066630093 instance=ExtResource("6_mf8xv")]
 position = Vector2(39.99951, -129.00003)
