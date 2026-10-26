@@ -215,7 +215,7 @@ func use_object(index,delta):
 				if elt is Pnj:
 					Global.showSceau = true
 					var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-					bdd.dialogue = [["Voici le seau de cet habitant"]]
+					bdd.dialogue = [["Here is the seal for this townsfolk","Voici le sceau de cet habitant"]]
 					Global.speaker = elt.pnj_name
 					if(elt.pnj_name=="Petite fille"):
 						Global.speaker = "souris"
@@ -232,7 +232,7 @@ func use_object(index,delta):
 					if(elt.pnj_name=="Paysan" or elt.pnj_name=="Paysane"):
 						Global.speaker = "paysan"
 					if(elt.pnj_name=="Bibliothécaire "):
-						bdd.dialogue = [["Ce villageois n'as pas de sceau"]]
+						bdd.dialogue = [["This townsfalk hasn't any seal","Ce villageois n'as pas de sceau"]]
 						Global.showSceau = false
 					
 					
@@ -243,10 +243,10 @@ func use_object(index,delta):
 		Global.game_controller.restart_loop()
 	if(index==3):
 		var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-		bdd.dialogue = [["Un joli miroir, vous pouvez admirer votre beauté dans le reflet"]]
+		bdd.dialogue = [["A beautiful mirror, you can admire yourself in the reflection","Un joli miroir, vous pouvez admirer votre beauté dans le reflet"]]
 		for elt in collision_.get_overlapping_areas():
 				if(elt.get_parent() is Pentacle):
-					bdd.dialogue = [["Vous cassez le miroir"]]
+					bdd.dialogue = [["You break the mirror","Vous cassez le miroir"]]
 					miroir_casse = true
 		Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	
