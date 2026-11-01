@@ -26,20 +26,20 @@ func _process(delta: float) -> void:
 		if elt is Pnj:
 			Global.game_controller.sound_effect.play()
 			Global.player.isTalking = true
-			elt.dialogue = [["AAAAAAAAARG... Je brule au secours !! Qu'on banisse l'étranger sur le champ !"]]
+			elt.dialogue = [["AAAAAAAAARG... I'm burning!! HELP !! Please ban the stranger !","AAAAAAAAARG... Je brule au secours !! Qu'on banisse l'étranger sur le champ !"]]
 			Global.player.isTalking = true
 			elt.talk_to_bis(func end_func() : 
 				Global.restart_boucle = true)
 		if elt is Arbre:
 			Global.player.isTalking = true
 			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-			bdd.dialogue = [["Au feu !! L'étranger met feu à la forêt, qu'on le banisse immédiatement !!"]]
+			bdd.dialogue = [["Fire! The stranger put the fire to the forest, we have ton ban him NOW !!","Au feu !! L'étranger met feu à la forêt, qu'on le banisse immédiatement !!"]]
 			bdd.ending_func = (func  end_func(): Global.game_controller.restart_boucle())
 			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 		if elt is Maison:
 			Global.player.isTalking = true
 			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-			bdd.dialogue = [["Au feu !! L'étranger met feu à nos maisons, qu'on le banisse immédiatement !!"]]
+			bdd.dialogue = [["Fire! The stranger put the fire to the village, we have ton ban him NOW !!","Au feu !! L'étranger met feu à nos maisons, qu'on le banisse immédiatement !!"]]
 			bdd.ending_func = (func  end_func(): Global.game_controller.restart_boucle())
 			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	
@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 		if(elt.get_parent() is En_feu):
 			Global.player.isTalking = true
 			var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-			bdd.dialogue = [["Une odeur de brulée s'échappe dans l'air"]]
+			bdd.dialogue = [["The scent of smoke drifts through the air.","Une odeur de brulée s'échappe dans l'air"]]
 			Global.player.brule_feuille = true
 			Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 			elt.get_parent().queue_free()

@@ -24,9 +24,9 @@ func talk_to():
 func _ready() -> void:
 	pnj_name = "Eusebio"
 	image_link = "res://assets/Personnages/cerf.png"
-	dialogue = [["Bienvenue héros ! Un démon rôde dans le village et menace de le détruire, mais moi, je sais qui c’est ;)"],
-	["On raconte que la religion est à l’origine du mal et fédère le culte démoniste."],
-	["il faut éradiquer la source de la religion à l’aide d’une arbalète bénite pour libérer le village !!"]]
+	dialogue = [["Welcome, Hero. A demon wander in the village, and menace it. But I know who it is ;) ","Bienvenue héros ! Un démon rôde dans le village et menace de le détruire, mais moi, je sais qui c’est ;)"],
+	["Rumour has it that religion is the root of the evil and federe the demonist cult","On raconte que la religion est à l’origine du mal et fédère le culte démoniste."],
+	["You have to eliminate the source of the religion thanks to a holy crossbow to free the village.","il faut éradiquer la source de la religion à l’aide d’une arbalète bénite pour libérer le village !!"]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

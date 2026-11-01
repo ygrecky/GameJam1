@@ -32,7 +32,7 @@ func _physics_process(delta) -> void:
 			if(elt is Pnj and elt.nom_fichier != Global.player.demon):
 	
 				Global.player.sound_effect.play()
-				elt.dialogue = [["AAAAAAAAARG... L'étranger m'attaque, au secours..."]]
+				elt.dialogue = [["AAAAAAAAARG..., the stranger is attacking me, heeeelp!!","AAAAAAAAARG... L'étranger m'attaque, au secours..."]]
 				Global.player.isTalking = true
 				
 				
@@ -41,7 +41,7 @@ func _physics_process(delta) -> void:
 			elif(elt is Pnj and elt.nom_fichier == Global.player.demon):
 				
 				Global.player.sound_effect.play()
-				elt.dialogue = [["COMMENT AS TU SU ????? C'est impossible, je ne peux pas mourrir, nonnnnnnnnnnnn"]]
+				elt.dialogue = [["HOW DID YOU KNOW ???? It is impossible, I ca't die... I can't... Nooooooooooo","COMMENT AS TU SU ????? C'est impossible, je ne peux pas mourrir, nonnnnnnnnnnnn"]]
 				Global.player.isTalking = true
 				elt.talk_to_bis(func end_func() : 
 					Global.game_controller.fin_jeu.visible = true

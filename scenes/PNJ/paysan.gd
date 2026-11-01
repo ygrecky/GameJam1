@@ -26,7 +26,7 @@ func _ready() -> void:
 	pnj_name = "Paysan"
 	image_link = "res://assets/Personnages/cerf.png"
 	dialogue = [
-	["Ouaf"]]
+	["Woof","Ouaf"]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

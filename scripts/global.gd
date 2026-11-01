@@ -10,7 +10,18 @@ var durée_boucle = 210
 var last_answer = 0
 var showSceau = false
 var ecran_de_fin = true
+var langue 
+var nbr_langue = 2
 
+
+func dialogue_langue(dialogue) :
+	return  dialogue.map(
+	func(d):
+		var taille = d.size() / nbr_langue
+		
+		print(d.slice(taille * langue, taille * (langue + 1)))
+		return d.slice(taille * langue, taille * (langue + 1))
+)
 
 func finir_le_jeu():
 	if (Global.time - Time.get_ticks_msec()) * 1000 >= durée_boucle and !ecran_de_fin:

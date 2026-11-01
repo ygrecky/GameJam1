@@ -6,7 +6,7 @@ var se_deplace = false
 var boucle = false
 
 func new_dialogue():
-	dialogue = [["Viens me revoir dès que tu veux rejouer à cache cache, hihihi!"]]
+	dialogue = [["Come see me again if you want to play again","Viens me revoir dès que tu veux rejouer à cache cache, hihihi!"]]
 	
 func ending_func() : 
 	if boucle == false : 
@@ -32,9 +32,9 @@ func talk_to():
 func _ready() -> void:	
 	disparait()
 	pnj_name = "Petite fille"
-	dialogue = [["Bravo tu m'as attrapée à nouveau hihi !"],
-	["Voici mon trésor ! Une magnifique technologie permettant de propager du feu !!"],
-	["J'espère que ce cadeau te plait :)"]]
+	dialogue = [["Congrats, you found me, hihi","Bravo tu m'as attrapée à nouveau hihi !"],
+	["Here is my dearest treasure! A beautiful technologie making a toy from the fire","Voici mon trésor ! Une magnifique technologie permettant de propager du feu !!"],
+	["Hope you like it ^^","J'espère que ce cadeau te plait :)"]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

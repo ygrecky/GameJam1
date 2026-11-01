@@ -16,10 +16,10 @@ func talk_to():
 func _ready() -> void:
 	pnj_name = "Prêtre"
 	sprite.texture = load(image_link)
-	dialogue = [["Bienvenue chez nous voyageur !"],
-	["Malheureusement tu arrives au pire moment… Un démon s’est infiltré parmi nous et la paranoïa nous ronge."],
-	["Mais ta venue parmi nous dans ce curieux accoutrement est un signe divin !"],
-	["J’en suis persuadé, tu es la réponse à mes prières !"]]
+	dialogue = [["You are welcome, traveler !","Bienvenue chez nous voyageur !"],
+	["Unfortunately, it is the  worst time to come visit… A demon has snuck in, the paranoia is consuming us","Malheureusement tu arrives au pire moment… Un démon s’est infiltré parmi nous et la paranoïa nous ronge."],
+	["But maybe your arrival among us in this curious attire is a sign from God ","Mais ta venue parmi nous dans ce curieux accoutrement est un signe divin !"],
+	["Now I am sure, you are the answer to my prayers !","J’en suis persuadé, tu es la réponse à mes prières !"]]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
