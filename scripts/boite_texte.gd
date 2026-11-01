@@ -20,11 +20,13 @@ var ending_func = func() : pass
 var reponse = 0
 
 
+
 func toggle_button(state):
 	$Control/VBoxContainer/Button.visible = state
 	$Control/VBoxContainer/HBoxContainer.visible = !state
 	
-func open_window(dialogue, ending_f = func() : pass): #ouvre la boite de dialogue
+func open_window(dial, ending_f = func() : pass): #ouvre la boite de dialogue
+	dialogue = Global.dialogue_langue(dial)
 	Global.last_answer = 0
 	state.show()
 	text_number = -1
@@ -32,8 +34,10 @@ func open_window(dialogue, ending_f = func() : pass): #ouvre la boite de dialogu
 	ending_func = ending_f
 
 func Next(n=0) -> void: #passe d'un dialogue à un autre
-
+	print(dialogue)
 	text_number += 1
+	
+	
 	
 	if text_number >= dialogue.size():
 		await get_tree().create_timer(0.1).timeout
@@ -41,27 +45,30 @@ func Next(n=0) -> void: #passe d'un dialogue à un autre
 		Global.player.isTalking = false
 	
 	
-	elif text_number == dialogue.size() - 1 :
-		reponse = 0
-		toggle_button(true)
-		text.text = ""  #rafraichit la boite de dialogue
-		add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
-		
 	else:
-		if dialogue[text_number+1].size() > 1 :
-			reponse = -1
-			toggle_button(false)
-			$Control/VBoxContainer/HBoxContainer/Button1.text = dialogue[text_number+1][2]+ " (1)"
-			$Control/VBoxContainer/HBoxContainer/Button2.text = dialogue[text_number+1][3]+ " (2)"
-			text.text = ""  #rafraichit la boite de dialogue
-			add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
-			
-		else :
+
+		if text_number == dialogue.size() - 1 :
 			reponse = 0
 			toggle_button(true)
 			text.text = ""  #rafraichit la boite de dialogue
 			add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
+			
+		else:
+			if dialogue[text_number+1].size() > 1:
+					
+				reponse = -1
+				toggle_button(false)
+				$Control/VBoxContainer/HBoxContainer/Button1.text = dialogue[text_number+1][2]+ " (1)"
+				$Control/VBoxContainer/HBoxContainer/Button2.text = dialogue[text_number+1][3]+ " (2)"
+				text.text = ""  #rafraichit la boite de dialogue
+				add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
 				
+			else :
+				reponse = 0
+				toggle_button(true)
+				text.text = ""  #rafraichit la boite de dialogue
+				add_letters(dialogue[text_number][n-1],0,text_number) #la remplit
+					
 	
 
 func add_letters(target,avancement, version):
@@ -69,6 +76,7 @@ func add_letters(target,avancement, version):
 		text.text += target[avancement]
 		avancement += 1
 		
+
 		if avancement != target.length():
 			get_tree().create_timer(0.006).timeout.connect(func() : add_letters(target,avancement,version))
 		

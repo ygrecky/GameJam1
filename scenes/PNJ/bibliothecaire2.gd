@@ -22,10 +22,10 @@ func talk_to():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pnj_name = "Bibliothécaire "
-	dialogue = [["Bienvenue étranger !"],
-	["Voici la collection de livre très anciens du village. Il contient tout le savoir accumulé jusqu'à présent"],
-	["Enfin, j'ai dû faire un peu de tri quand même, il y avait des livres comme ''Voir son espérance de vie avec la touche T'' qui n'avaient vraiment aucun sens..."],
-	["Bref, n'hésite pas à lire mes livres, ils contiennent peut être des savoirs essentiels pour ta quête ! "]]
+	dialogue = [["Welcome stranger!","Bienvenue étranger !"],
+	["Here is my modest collection of the very old books from the village. It contains all the knowledge gathered until this very moment.","Voici ma modeste collection de livre très anciens du village. Il contient tout le savoir accumulé jusqu'à présent"],
+	["Although I have to admit, I had to make some cleaning. There were books like 'How to see your life expectancy with the touch T ' that didn't make any sense","Enfin, j'ai dû faire un peu de tri quand même, il y avait des livres comme ''Voir son espérance de vie avec la touche T'' qui n'avaient vraiment aucun sens..."],
+	["Anyway! Don't mind me and read to your heart's content. My books contain all you need to know to complete your quest","Bref, n'hésite pas à lire mes livres, ils contiennent peut être des savoirs essentiels pour ta quête ! "]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

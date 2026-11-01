@@ -9,9 +9,12 @@ func ending_func():
 	Global.player.object_unlocked[4] = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for elt in texte:
-		dialogue.append([elt])
-	pass # Replace with function body.
+	
+	for i in texte.size()/Global.nbr_langue:
+		dialogue.append([texte[i*Global.nbr_langue]])
+		for j in range(Global.nbr_langue - 1):
+			dialogue[-1].append(texte[i*Global.nbr_langue + j+1])
+	print(dialogue)
 
 func read():
 	var bdd = load("res://scenes/boite_texte.tscn").instantiate()
@@ -20,7 +23,6 @@ func read():
 		bdd.ending_func = ending_func
 	Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 	
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

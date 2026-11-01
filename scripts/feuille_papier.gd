@@ -26,14 +26,11 @@ func _physics_process(delta: float) -> void:
 					Global.lettre_grimoire = true
 					deja_lu = true
 					
-				elif not(deja_lu):
-					var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-					bdd.dialogue = [["Vous ne comprenez pas un mot de ce que vous lisez"]]
-					Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 				else:
 					var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-					bdd.dialogue = [["Vous avez déjà essayé de lire cette lettre..."]]
+					bdd.dialogue = [["You don't understand a word of what's written","Vous ne comprenez pas un mot de ce que vous lisez"]]
 					Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
+
 			elif not Global.lettre_grimoire:
 				print("lettre ramassée")
 				if(readable):
@@ -42,8 +39,8 @@ func _physics_process(delta: float) -> void:
 				var bdd = load("res://scenes/boite_texte.tscn").instantiate()
 				Global.player.feuilles_grimoire +=1
 				
-				bdd.dialogue = [["Vous ramassez la feuille de grimoire."], ["Il vous en manque " + str(Global.player.feuilles_grimoire_max - Global.player.feuilles_grimoire)]]
+				bdd.dialogue = [["You pick up the sheet from the grimoire","Vous ramassez la feuille de grimoire."],["You miss" + str(Global.player.feuilles_grimoire_max - Global.player.feuilles_grimoire),"Il vous en manque " + str(Global.player.feuilles_grimoire_max - Global.player.feuilles_grimoire)]]
 				if(Global.player.feuilles_grimoire_max ==Global.player.feuilles_grimoire):
-					bdd.dialogue = [["Vous ramassez la feuille de grimoire."], ["Le grimoire est maintenant complet, vous pouvez le lire"]]
+					bdd.dialogue = [["You pick up the sheet from the grimoire","Vous ramassez la feuille de grimoire."], ["The grimoire is now completed. You can read it","Le grimoire est maintenant complet, vous pouvez le lire"]]
 				bdd.ending_func = destroy
 				Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)

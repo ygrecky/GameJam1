@@ -26,8 +26,8 @@ func _ready() -> void:
 	pnj_name = "Paysane"
 	image_link = "res://assets/Personnages/cerf.png"
 	dialogue = [
-	["Miaou"],
-	["Faites attention, si l'un d'entre nous est le démon, le tuer dans la secte ne le rendra que plus fort..."]]
+	["Meow","Miaou"],
+	["Be aware, if one of us is the demon, to kill him next to the pentagram will only make him stronger...","Faites attention, si l'un d'entre nous est le démon, le tuer dans la secte ne le rendra que plus fort..."]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

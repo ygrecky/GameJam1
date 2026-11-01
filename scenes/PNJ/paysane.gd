@@ -25,10 +25,10 @@ func _ready() -> void:
 	pnj_name = "Paysane"
 	image_link = "res://assets/Personnages/cerf.png"
 	dialogue = [
-	["Miaou"],
-	["C'est terrible cette malédiction... Qu'allons nous devenir ?"],
-	["On raconte qu'un démon rode autour du village, et que si nous ne le trouvons pas au plus vite, nous serons perdus..."],
-	["Aidez nous, je vous en supplie..."]]
+	["Meow","Miaou"],
+	["This curse is terrifying... What will the village become?","C'est terrible cette malédiction... Qu'allons nous devenir ?"],
+	["A rumor say that a demon wander around the village, and that if we don't find him quickly, we are doom!","On raconte qu'un démon rode autour du village, et que si nous ne le trouvons pas au plus vite, nous serons perdus..."],
+	["Help us, I beg you!! ","Aidez nous, je vous en supplie..."]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

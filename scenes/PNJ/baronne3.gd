@@ -4,7 +4,7 @@ var nom_fichier = "baronne secte"
 
 var se_deplace = false
 
-func ending_func() : 
+func ending_func() :
 	Global.game_controller.inventory.get_child(0).s6.add_objet()
 	Global.player.object_unlocked[5] = true
 	
@@ -25,10 +25,10 @@ func talk_to():
 func _ready() -> void:
 	pnj_name = "Baronne"
 	image_link = "res://assets/Personnages/cerf.png"
-	dialogue = [["Je vois que tu as trouvé notre antre."],
-	["Cet endroit est de toute beauté, mais pas aussi beau que moi"],
-	["Nous nous réunissons pour résister contrele  démon caché parmis nous"],
-	["Prenez ceci Héros, vous parviendrez peut être à déterminer qui c'est et l'éliminer pour de bon"]]
+	dialogue = [["I see you found our lair.","Je vois que tu as trouvé notre antre."],
+	["I find this place beautiful, although not as much I myself","Cet endroit est de toute beauté, mais pas aussi beau que moi"],
+	["It allows us to gather and resist against the demon hiding among us","Nous nous réunissons pour résister contre le démon caché parmis nous"],
+	["Take this, dear Hero. It may allows you to expose then slay him for good","Prenez ceci Héros, vous parviendrez peut être à déterminer qui c'est et l'éliminer pour de bon"]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

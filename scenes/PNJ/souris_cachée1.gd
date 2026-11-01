@@ -25,7 +25,7 @@ func _ready() -> void:
 	disparait()
 	pnj_name = "Petite fille"
 	speed =1000
-	dialogue = [["Oh tu m’as trouvé hihi ! Si tu m’attrapes une fois de plus je te montrerai mon trésor."]]
+	dialogue = [["Oh you found me! Let's do an other round","Oh tu m’as trouvé hihi ! Si tu m’attrapes une fois de plus je te montrerai mon trésor."]]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

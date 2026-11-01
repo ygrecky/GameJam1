@@ -203,7 +203,7 @@ func use_object(index,delta):
 				Global.game_controller.current_2d_scene.add_child(fleche)
 			else:
 				var bdd = load("res://scenes/boite_texte.tscn").instantiate()
-				bdd.dialogue = [["Vous n'avez pas de carreau"]]
+				bdd.dialogue = [["You miss a crossbow or bolts","Vous n'avez pas de carreau"]]
 				Global.game_controller.current_2d_scene.add_child.call_deferred(bdd)
 			await get_tree().create_timer(fleche_delay).timeout
 			(func(): fleche_ready = true).call_deferred()
@@ -253,19 +253,19 @@ func use_object(index,delta):
 	if(index==4):
 		var bdd = load("res://scenes/boite_texte.tscn").instantiate()
 		if(not(brule_feuille) and not(feuilles_grimoire==feuilles_grimoire_max)):
-			bdd.dialogue = [["Il manque "+ str(feuilles_grimoire_max-feuilles_grimoire)+" pages au grimoire, impossible de le lire"]]
+			bdd.dialogue = [["You are missing "+ str(feuilles_grimoire_max-feuilles_grimoire)+" grimoire's pages, making it impossible to read","Il manque "+ str(feuilles_grimoire_max-feuilles_grimoire)+" pages au grimoire, impossible de le lire"]]
 		elif(feuilles_grimoire==feuilles_grimoire_max):
-			bdd.dialogue = [["Le grimoire est à présent complet. Vous y lisez :"],["To break the loop, you must first find the cursed object and burn it ."], ["To find it, hold your magnet at the start of the village, and let the magnetic fields guide you"],["At the end of the magnetic road, you will find the cursed object lying on the floor."],["After burning it, break a mirror in the center of a pentagram, and read the incantation of the 383th page of this grimoire to break the loop."]]
+			bdd.dialogue = [["The grimoire is now completed. You can read :","Le grimoire est à présent complet. Vous y lisez :"],["To break the loop, you must first find the cursed object and burn it .","Pour briser la boucle, trouvez l'objet maudit et brûler le"], ["To find it, hold your magnet at the start of the village, and let the magnetic fields guide you","Pour le trouver, utilisez l'aimant à l'entrée du village, et laissez-vous vous faire guider."],["At the end of the magnetic road, you will find the cursed object lying on the floor.","Au bout du chemin magnétique, vous trouverez alors l'objet maudit sur le sol"],["After burning it, break a mirror in the center of a pentagram, and read the incantation of the 383th page of this grimoire to break the loop.","Quand vous l'aurez brûlé, cassez le miroir au centre du pentagram d'invocation, et lisez la bonne incantation du grimoir pour briser la boucle"]]
 		elif(brule_feuille and not(miroir_casse)):
-			bdd.dialogue = [["Le grimoire s'est mis à briller."]]
+			bdd.dialogue = [["The grimoir started to shine","Le grimoire s'est mis à briller."]]
 		elif(miroir_casse and not(feuille_283)):
-			bdd.dialogue = [["La page 283 où serait inscrite l'invocation est manquante"]]
+			bdd.dialogue = [["You are missing the page with the right incantation ","La page 283 où serait inscrite l'invocation est manquante"]]
 		elif(miroir_casse and feuille_283):
-			bdd.dialogue = [["Il faut lire l'invocation dans le pentagramme"]]
+			bdd.dialogue = [["You just had to read the incantation in the pentagramme","Il faut lire l'invocation dans le pentagramme"]]
 			for elt in collision_.get_overlapping_areas():
 				if(elt.get_parent() is Pentacle):
 					stop_time = true
-					bdd.dialogue = [["Vous lisez l'invocation :"], ["'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'"],["Vous entendez un bruit sourd. ça y est, vous êtes libre, la boucle est brisée"]]
+					bdd.dialogue = [["You read the incantation","Vous lisez l'invocation :"], ["'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'","'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'"],["You hear a dull sound...Here it is, you are freed of the loop. You return to your world leaving the village to its fate", "Vous entendez un bruit sourd... ça y est, vous êtes libre, la boucle est brisée, vous rentrez dans votre monde, abandonnant le village à son sort"]]
 					bdd.ending_func = (func end_func() :
 						if(not(Global.game_controller.fin_jeu.visible)):
 							Global.game_controller.fin_jeu.visible = true

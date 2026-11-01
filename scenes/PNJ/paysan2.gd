@@ -25,10 +25,10 @@ func talk_to():
 func _ready() -> void:
 	pnj_name = "Paysan"
 	dialogue = [
-	["Bonjour, vous devez être l'étranger dont tout le monde parle ici !"],
-	["J'espère que notre fille ne vous pose pas trop de soucis, elle adore jouer à cache cache et nous mettons parfois plusieurs heures à la retrouver..."],
-	["Elle adore voler les technologies anciennes des villageois, j'ai entendu le forgeron grogner à travers sa fenêtre.."],
-	["A ce propos, on dirait que notre antique bousole est cassée : L'aiguille pointe depuis quelques jours uniquement vers l'église, c'est très étrange..."]]
+	["Hello, you must be the stranger from all this rumors","Bonjour, vous devez être l'étranger dont tout le monde parle ici !"],
+	["I hope that our daugther is not bothering you too much. She just loves to play hide-and-seek, sometimes it takes us many hours to find her.","J'espère que notre fille ne vous pose pas trop de soucis, elle adore jouer à cache cache et nous mettons parfois plusieurs heures à la retrouver..."],
+	["She also loves to steal the old technologies from the villagers. I heard some grumblings from the blacksmith from the window...","Elle adore voler les technologies anciennes des villageois, j'ai entendu le forgeron grogner à travers sa fenêtre..."],
+	["Also it seems that the antic compass is broken : since the demon is here, it points to the church. That is so weird ","A ce propos, on dirait que notre antique bousole est cassée : L'aiguille pointe depuis quelques jours uniquement vers l'église, c'est très étrange..."]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

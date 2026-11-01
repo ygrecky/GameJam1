@@ -24,11 +24,11 @@ func talk_to():
 func _ready() -> void:
 	pnj_name = "Baron"
 	image_link = "res://assets/Personnages/cerf.png"
-	dialogue = [["Oyez oyez brave héros ! Nous t’avons invoqué dans notre monde pour que tu viennes à bout du démon qui nous hante !"],
-	["… enfin surtout car cet empaffé de prêtre n’est pas capable de s’en occuper."],
-	["Hum hum, nous avons effectivement besoin de toi mais nos activités doivent rester secrètes aux yeux du prêtre."],
-	["En es tu capable oh héros ?"],
-	["Pour briser la malediction, il faut tuer le démon d'une flèche dans le coeur, en êtes vous capable ?"]]
+	dialogue = [["Hear ye, Hear ye brave Hero! We invoked yo to this world for you to end the demon haunting us","Oyez oyez brave héros ! Nous t’avons invoqué dans notre monde pour que tu viennes à bout du démon qui nous hante !"],
+	["Well… It is mainly because this good-for-nothing priest isn't capable of helping himself", "… enfin surtout car cet empaffé de prêtre n’est pas capable de s’en occuper."],
+	["Hum Hum, indeed we nedd your help tho our activity has to stay secret","Hum hum, nous avons effectivement besoin de toi mais nos activités doivent rester secrètes aux yeux du prêtre."],
+	["Are you able to help us please oh hero?","En es tu capable oh héros ?"],
+	["To slay the demon, you have to kill him froms an arrow staight to the heart. May you be able to do it.","Pour briser la malediction, il faut tuer le démon d'une flèche dans le coeur, en êtes vous capable ?"]]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

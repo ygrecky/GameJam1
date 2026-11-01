@@ -53,22 +53,22 @@ rotation = 1.5707964
 [node name="Biblio" parent="." unique_id=904807564 instance=ExtResource("5_6p2r5")]
 position = Vector2(637.00024, -409)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Utiliser un objet", "Lorsque vous débloquez un objet, appuyez sur la touche du pavé numérique associée pour l'utiliser"])
+texte = Array[String](["Use an object", "Utiliser un objet", "From the moment you unlock an item, you can use it thanks to the touch on the num pad assocciated", "Après l'avoir débloqué, vous pouvez utiliser un objet avec la touche sur le clavier numérique correspondante"])
 
 [node name="Biblio2" parent="." unique_id=1735855837 instance=ExtResource("5_6p2r5")]
 position = Vector2(898, -407)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Soufflet", "Une technologie astucieuse utilisée pour propager du feu.", "On raconte que le soufflet a une portée infinie"])
+texte = Array[String](["Bellow", "Soufflet", "An astucious technologie allowing to propagate any fire", "Une technologie astucieuse utilisée pour propager du feu.", "It is said that the bellows has an infinite range", "On raconte que le soufflet a une portée infinie"])
 
 [node name="Biblio3" parent="." unique_id=784989000 instance=ExtResource("5_6p2r5")]
 position = Vector2(1199.0002, -407)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Aimant", "Son utilité reste mystérieuse, on raconte que son champ magnétique est extrèmement puissant", "On raconte qu'on peut orienter l'aimant dans différentes directions avec les flèches"])
+texte = Array[String](["Magnet", "Aimant", "Its magnetic field is extremely powerful, yet its utility isn't known anymore ", "Son utilité reste mystérieuse, on raconte que son champ magnétique est extrèmement puissant", "It is said that one can aim at any direction with the magnet thanks to the directional arrows", "On raconte qu'on peut orienter l'aimant dans différentes directions avec les flèches"])
 
 [node name="Biblio4" parent="." unique_id=1040922899 instance=ExtResource("5_6p2r5")]
 position = Vector2(1512.0005, -411)
 scale = Vector2(3.475, 3.475)
-texte = Array[String](["Grimoire d'invocation", "Un grimoire sur l'invocation de héros en cas d'urgence", "Une page est déchirée", "Il y a une section déchiréee, où vous pouvez lire \"Comment briser la boucle\"", "Le livre a pour étiquette \"Ne pas emprunter\"", "Vous décidez de braver cette interdiction, et obtenez le grimoire d'invocation"])
+texte = Array[String](["Invocation Grimoire", "Grimoire d'invocation", "A grimoire teaching how to invoke a hero if the situation requires it.", "Un grimoire sur l'invocation de héros en cas d'urgence", "A page is ripped", "Une page est déchirée", "There is a a section pretty torn too, you can still read \"How to stop the loop\"", "Il y a une section déchiréee, où vous pouvez lire \"Comment briser la boucle\"", "The book is labeled 'Do not borrow.'", "Le livre a pour étiquette \"Ne pas emprunter\"", "You decide to disobey, and to get the Invocation Grimoire", "Vous décidez de braver cette interdiction, et obtenez le grimoire d'invocation\""])
 donner_livre = true
 
 [node name="biblioth" parent="." unique_id=281381040 instance=ExtResource("6_6p2r5")]
